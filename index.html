@@ -1,1992 +1,2560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Fashionixa Klotho | Custom T-Shirt Printing</title>
-  <meta name="description" content="Fashionixa Klotho offers custom DTF, DTG, screen printing and vinyl printing for individuals, businesses, schools, churches, teams and events.">
-
-  <style>
-    :root {
-      --green: #159447;
-      --dark-green: #087333;
-      --yellow: #ffd21c;
-      --light-yellow: #fff8c9;
-      --dark: #172019;
-      --gray: #68716b;
-      --light: #f7faf7;
-      --white: #ffffff;
-      --border: #e3e8e3;
-      --shadow: 0 10px 30px rgba(0,0,0,.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .navbar {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .logo-box {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-placeholder {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--green), var(--yellow));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 900;
-      color: white;
-    }
-
-    .brand {
-      font-size: 21px;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .brand span {
-      color: var(--green);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      list-style: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    .quote-btn {
-      background: var(--green);
-      color: white !important;
-      padding: 12px 19px;
-      border-radius: 8px;
-      font-weight: 800;
-    }
-
-    .quote-btn:hover {
-      background: var(--dark-green);
-    }
-
-    .menu-btn {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(255,210,28,.45), transparent 25%),
-        radial-gradient(circle at 10% 90%, rgba(21,148,71,.18), transparent 30%),
-        linear-gradient(135deg, #fafffa, #fffef0);
-      padding: 95px 0 85px;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      align-items: center;
-      gap: 55px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--light-yellow);
-      color: #705b00;
-      border: 1px solid #f2dc63;
-      padding: 8px 14px;
-      border-radius: 50px;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 1.02;
-      margin-bottom: 22px;
-      letter-spacing: -2px;
-    }
-
-    .hero h1 span {
-      color: var(--green);
-    }
-
-    .hero p {
-      color: var(--gray);
-      font-size: 18px;
-      max-width: 620px;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 23px;
-      border-radius: 9px;
-      font-weight: 800;
-      transition: .2s;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background: var(--dark-green);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: white;
-      border: 2px solid var(--dark);
-    }
-
-    .btn-secondary:hover {
-      background: var(--dark);
-      color: white;
-    }
-
-    .hero-card {
-      background: white;
-      border-radius: 25px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-      transform: rotate(1deg);
-    }
-
-    .shirt-preview {
-      min-height: 420px;
-      border-radius: 18px;
-      background:
-        linear-gradient(135deg, rgba(21,148,71,.9), rgba(255,210,28,.85)),
-        #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .shirt {
-      width: 240px;
-      height: 280px;
-      background: #222;
-      clip-path: polygon(
-        25% 0,
-        38% 9%,
-        50% 13%,
-        62% 9%,
-        75% 0,
-        100% 20%,
-        85% 45%,
-        73% 35%,
-        73% 100%,
-        27% 100%,
-        27% 35%,
-        15% 45%,
-        0 20%
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 900;
-      font-size: 24px;
-      text-align: center;
-      padding: 50px;
-    }
-
-    .preview-label {
-      position: absolute;
-      bottom: 18px;
-      left: 18px;
-      background: white;
-      padding: 10px 15px;
-      border-radius: 9px;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 45px;
-    }
-
-    .section-heading .mini {
-      color: var(--green);
-      font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 8px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      color: var(--gray);
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      background: var(--light);
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: white;
-      padding: 30px 23px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      transition: .25s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-      border-color: var(--green);
-    }
-
-    .service-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 13px;
-      background: var(--light-yellow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 27px;
-      margin-bottom: 20px;
-    }
-
-    .service-card h3 {
-      margin-bottom: 9px;
-      font-size: 21px;
-    }
-
-    .service-card p {
-      color: var(--gray);
-      font-size: 14px;
-    }
-
-    /* =========================
-       WHO WE SERVE
-    ========================= */
-
-    .serve-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .serve-item {
-      padding: 23px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      text-align: center;
-      font-weight: 800;
-      background: white;
-    }
-
-    .serve-item span {
-      display: block;
-      font-size: 27px;
-      margin-bottom: 7px;
-    }
-
-    /* =========================
-       GALLERY
-    ========================= */
-
-    .gallery {
-      background: #fbfbf8;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .gallery-card {
-      height: 280px;
-      border-radius: 15px;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, #159447, #ffd21c);
-    }
-
-    .gallery-card:nth-child(2) {
-      background: linear-gradient(135deg, #222, #159447);
-    }
-
-    .gallery-card:nth-child(3) {
-      background: linear-gradient(135deg, #ffd21c, #ffffff);
-    }
-
-    .gallery-card:nth-child(4) {
-      background: linear-gradient(135deg, #159447, #ffffff);
-    }
-
-    .gallery-card:nth-child(5) {
-      background: linear-gradient(135deg, #333, #ffd21c);
-    }
-
-    .gallery-card:nth-child(6) {
-      background: linear-gradient(135deg, #159447, #333);
-    }
-
-    .gallery-card:nth-child(7) {
-      background: linear-gradient(135deg, #fff, #ffd21c);
-    }
-
-    .gallery-card:nth-child(8) {
-      background: linear-gradient(135deg, #159447, #ffd21c);
-    }
-
-    .gallery-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 18px;
-      color: white;
-      font-weight: 900;
-      background: linear-gradient(transparent, rgba(0,0,0,.75));
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-image {
-      min-height: 400px;
-      border-radius: 22px;
-      background:
-        linear-gradient(135deg, rgba(21,148,71,.9), rgba(255,210,28,.85));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 38px;
-      font-weight: 900;
-      text-align: center;
-      padding: 30px;
-    }
-
-    .about-text h2 {
-      font-size: 43px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .about-text p {
-      color: var(--gray);
-      margin-bottom: 18px;
-    }
-
-    .check-list {
-      list-style: none;
-      margin-top: 20px;
-    }
-
-    .check-list li {
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      color: var(--green);
-      font-weight: 900;
-      margin-right: 10px;
-    }
-
-    /* =========================
-       PROCESS
-    ========================= */
-
-    .process {
-      background: var(--light);
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .process-card {
-      background: white;
-      padding: 28px;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .number {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin: 0 auto 15px;
-      background: var(--yellow);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: 900;
-    }
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    .faq-list {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .faq-question {
-      width: 100%;
-      background: white;
-      border: none;
-      padding: 22px 5px;
-      display: flex;
-      justify-content: space-between;
-      text-align: left;
-      font-size: 17px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      display: none;
-      color: var(--gray);
-      padding: 0 5px 20px;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-item.active .faq-question span {
-      transform: rotate(45deg);
-    }
-
-    .faq-question span {
-      font-size: 24px;
-      transition: .2s;
-    }
-
-    /* =========================
-       QUOTE
-    ========================= */
-
-    .quote-section {
-      background:
-        linear-gradient(135deg, var(--green), var(--dark-green));
-      color: white;
-    }
-
-    .quote-wrapper {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .quote-info h2 {
-      font-size: 44px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .quote-info p {
-      opacity: .9;
-      margin-bottom: 25px;
-    }
-
-    .contact-box {
-      margin-top: 25px;
-    }
-
-    .contact-box div {
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .quote-form {
-      background: white;
-      color: var(--dark);
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 17px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .form-group.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid #d6ddd6;
-      border-radius: 8px;
-      padding: 13px;
-      font: inherit;
-      outline: none;
-      background: #fff;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(21,148,71,.1);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .file-note {
-      font-size: 12px;
-      color: var(--gray);
-    }
-
-    .submit-btn {
-      margin-top: 20px;
-      width: 100%;
-      border: none;
-      padding: 15px;
-      border-radius: 8px;
-      background: var(--yellow);
-      color: #222;
-      font-weight: 900;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #f2c400;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-section {
-      background: #fff;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .contact-card .icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .contact-card h3 {
-      margin-bottom: 7px;
-    }
-
-    .contact-card p {
-      color: var(--gray);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #111711;
-      color: white;
-      padding: 45px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr;
-      gap: 40px;
-      padding-bottom: 35px;
-    }
-
-    footer .brand {
-      color: white;
-      margin-bottom: 13px;
-      display: inline-block;
-    }
-
-    footer p {
-      color: #b9c0ba;
-      font-size: 14px;
-    }
-
-    footer h3 {
-      margin-bottom: 15px;
-    }
-
-    .footer-links {
-      list-style: none;
-    }
-
-    .footer-links li {
-      margin-bottom: 9px;
-      color: #b9c0ba;
-    }
-
-    .footer-links a:hover {
-      color: var(--yellow);
-    }
-
-    .copyright {
-      border-top: 1px solid #303630;
-      padding-top: 20px;
-      color: #929a93;
-      font-size: 13px;
-      text-align: center;
-    }
-
-    /* =========================
-       MOBILE BAR
-    ========================= */
-
-    .mobile-bar {
-      display: none;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 950px) {
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 78px;
-        left: 0;
-        right: 0;
-        background: white;
-        flex-direction: column;
-        padding: 25px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .hero-grid,
-      .about-grid,
-      .quote-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .service-grid,
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .serve-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .container {
-        width: 92%;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-
-      .hero {
-        padding: 65px 0;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .shirt-preview {
-        min-height: 320px;
-      }
-
-      .service-grid,
-      .process-grid,
-      .gallery-grid,
-      .serve-grid,
-      .contact-grid,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .form-group.full {
-        grid-column: auto;
-      }
-
-      .about-text h2,
-      .quote-info h2 {
-        font-size: 35px;
-      }
-
-      footer {
-        padding-bottom: 90px;
-      }
-
-      .mobile-bar {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 62px;
-        background: white;
-        border-top: 1px solid var(--border);
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        z-index: 2000;
-        box-shadow: 0 -5px 20px rgba(0,0,0,.1);
-      }
-
-      .mobile-bar a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 800;
-      }
-
-      .mobile-bar a:nth-child(2) {
-        border-left: 1px solid var(--border);
-        border-right: 1px solid var(--border);
-      }
-
-      .mobile-bar a:last-child {
-        background: var(--green);
-        color: white;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="TEXAS LIGHT - Professional LED lighting for commercial, residential, outdoor and specialty applications across the United States.">
+
+<title>TEXAS LIGHT | Professional LED Lighting</title>
+
+<style>
+:root{
+    --orange:#f47b20;
+    --orange-dark:#d9610c;
+    --black:#111111;
+    --dark:#1a1a1a;
+    --gray:#f5f5f5;
+    --light:#fafafa;
+    --white:#ffffff;
+    --text:#333333;
+    --muted:#777777;
+    --border:#e5e5e5;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --radius:14px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    max-width:1400px;
+    margin:auto;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:.5px;
+    color:var(--black);
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border:3px solid var(--orange);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    position:relative;
+    color:var(--orange);
+    font-size:22px;
+}
+
+.logo-icon:after{
+    content:"TX";
+    position:absolute;
+    font-size:10px;
+    font-weight:900;
+    color:var(--black);
+    bottom:-5px;
+    right:-8px;
+    background:#fff;
+    padding:0 3px;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.nav-menu{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    list-style:none;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-menu a{
+    transition:.2s;
+}
+
+.nav-menu a:hover{
+    color:var(--orange);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.cart-btn{
+    border:1px solid var(--border);
+    background:#fff;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.cart-count{
+    background:var(--orange);
+    color:#fff;
+    border-radius:50%;
+    padding:2px 7px;
+    margin-left:4px;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.68) 40%,rgba(0,0,0,.15) 100%),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:80px 25px;
+    color:#fff;
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-kicker{
+    color:var(--orange);
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:56px;
+    line-height:1.08;
+    margin-bottom:22px;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:var(--orange);
+}
+
+.hero p{
+    font-size:19px;
+    max-width:600px;
+    color:#eee;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    cursor:pointer;
+    padding:14px 24px;
+    border-radius:7px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn-orange{
+    background:var(--orange);
+    color:#fff;
+}
+
+.btn-orange:hover{
+    background:var(--orange-dark);
+    transform:translateY(-2px);
+}
+
+.btn-white{
+    background:#fff;
+    color:#111;
+}
+
+.btn-white:hover{
+    transform:translateY(-2px);
+}
+
+.btn-black{
+    background:#111;
+    color:#fff;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:0 25px;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title .small{
+    color:var(--orange);
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    color:var(--black);
+    font-size:38px;
+    margin:7px 0 10px;
+}
+
+.section-title p{
+    max-width:650px;
+    margin:auto;
+    color:var(--muted);
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.category-card{
+    position:relative;
+    height:330px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    color:#fff;
+    box-shadow:var(--shadow);
+}
+
+.category-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.category-card:hover img{
+    transform:scale(1.06);
+}
+
+.category-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent 25%,rgba(0,0,0,.85));
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:30px;
+}
+
+.category-overlay h3{
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+.category-overlay p{
+    color:#eee;
+    margin-bottom:15px;
+}
+
+.category-link{
+    color:var(--orange);
+    font-weight:800;
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product-controls{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.filter-btn{
+    border:1px solid var(--border);
+    background:#fff;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:var(--orange);
+    border-color:var(--orange);
+    color:#fff;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    transition:.25s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.product-image{
+    height:270px;
+    background:#f6f6f6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-category{
+    color:var(--orange);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.product-name{
+    font-size:19px;
+    font-weight:800;
+    color:#111;
+    margin:5px 0;
+}
+
+.product-description{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:14px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:900;
+    color:#111;
+}
+
+.add-cart{
+    background:var(--orange);
+    color:#fff;
+    border:0;
+    padding:10px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.add-cart:hover{
+    background:var(--orange-dark);
+}
+
+/* =========================
+   SOLUTIONS
+========================= */
+
+.solution-section{
+    background:var(--gray);
+}
+
+.solution-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.solution-card{
+    min-height:330px;
+    padding:42px;
+    border-radius:var(--radius);
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+    position:relative;
+}
+
+.solution-card:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.82));
+}
+
+.solution-content{
+    position:relative;
+    z-index:1;
+}
+
+.solution-content h3{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.solution-content p{
+    color:#eee;
+    margin-bottom:18px;
+}
+
+/* =========================
+   SPECIALTY
+========================= */
+
+.specialty-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.specialty-item{
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:25px;
+    text-align:center;
+    background:#fff;
+    transition:.2s;
+}
+
+.specialty-item:hover{
+    box-shadow:var(--shadow);
+    transform:translateY(-3px);
+}
+
+.specialty-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.specialty-item h3{
+    color:#111;
+    font-size:18px;
+}
+
+/* =========================
+   WHY US
+========================= */
+
+.why-section{
+    background:#111;
+    color:#fff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    border:1px solid #333;
+    padding:30px 23px;
+    border-radius:var(--radius);
+    background:#171717;
+}
+
+.why-number{
+    font-size:35px;
+    color:var(--orange);
+    font-weight:900;
+}
+
+.why-card h3{
+    margin:7px 0;
+}
+
+.why-card p{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project-card{
+    height:270px;
+    border-radius:var(--radius);
+    overflow:hidden;
+    position:relative;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
+}
+
+.project-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:20px;
+    color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
+}
+
+.project-caption h3{
+    font-size:19px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review-section{
+    background:var(--gray);
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.review{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:30px;
+    border:1px solid var(--border);
+}
+
+.stars{
+    color:var(--orange);
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.review p{
+    color:#555;
+    margin-bottom:18px;
+}
+
+.reviewer{
+    font-weight:900;
+}
+
+/* =========================
+   DEALS
+========================= */
+
+.deals{
+    background:var(--orange);
+    color:#fff;
+}
+
+.deals-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.deals h2{
+    font-size:38px;
+}
+
+.deals p{
+    max-width:650px;
+}
+
+/* =========================
+   BRANDS
+========================= */
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
+}
+
+.brand{
+    height:90px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:900;
+    color:#555;
+    background:#fff;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section{
+    background:#111;
+    color:#fff;
+}
+
+.quote-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.quote-text h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.quote-text h2 span{
+    color:var(--orange);
+}
+
+.quote-text p{
+    color:#bbb;
+}
+
+.quote-points{
+    margin-top:25px;
+    list-style:none;
+}
+
+.quote-points li{
+    margin:10px 0;
+}
+
+.quote-points li:before{
+    content:"✓";
+    color:var(--orange);
+    font-weight:900;
+    margin-right:10px;
+}
+
+.form-box{
+    background:#fff;
+    color:#111;
+    border-radius:var(--radius);
+    padding:30px;
+}
+
+.form-box h3{
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.form-group{
+    margin-bottom:13px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:27px;
+    text-align:center;
+}
+
+.contact-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.contact-card h3{
+    color:#111;
+}
+
+.contact-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111;
+    color:#fff;
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:45px;
+}
+
+.footer-logo{
+    font-size:25px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer-logo span{
+    color:var(--orange);
+}
+
+footer p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.footer-col h3{
+    margin-bottom:15px;
+}
+
+.footer-col a{
+    display:block;
+    color:#aaa;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-col a:hover{
+    color:var(--orange);
+}
+
+.footer-bottom{
+    margin-top:45px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    text-align:center;
+    color:#888;
+    font-size:13px;
+}
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-button{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:0;
+    background:var(--orange);
+    color:#fff;
+    font-size:25px;
+    cursor:pointer;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    z-index:1200;
+}
+
+.chat-box{
+    display:none;
+    position:fixed;
+    right:22px;
+    bottom:90px;
+    width:330px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 15px 45px rgba(0,0,0,.2);
+    overflow:hidden;
+    z-index:1200;
+}
+
+.chat-header{
+    background:#111;
+    color:#fff;
+    padding:15px;
+    font-weight:800;
+}
+
+.chat-body{
+    padding:15px;
+}
+
+.chat-body textarea{
+    width:100%;
+    height:100px;
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:7px;
+    resize:none;
+}
+
+/* =========================
+   MOBILE BAR
+========================= */
+
+.mobile-bar{
+    display:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .nav-menu{
+        gap:13px;
+        font-size:13px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .specialty-grid,
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:850px){
+
+    .navbar{
+        height:68px;
+    }
+
+    .nav-menu{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+        background:#fff;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px 25px;
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-menu.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-actions{
+        margin-left:auto;
+        margin-right:10px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .category-grid,
+    .solution-grid,
+    .quote-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .project-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contact-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .deals-inner{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .mobile-bar{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        position:fixed;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index:1100;
+        background:#111;
+    }
+
+    .mobile-bar a{
+        color:#fff;
+        text-align:center;
+        padding:10px 4px;
+        font-size:12px;
+        border-right:1px solid #333;
+    }
+
+    .mobile-bar span{
+        display:block;
+        font-size:18px;
+    }
+
+    footer{
+        padding-bottom:80px;
+    }
+}
+
+@media(max-width:550px){
+
+    .section{
+        padding:55px 0;
+    }
+
+    .hero-content{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .specialty-grid,
+    .why-grid,
+    .contact-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .chat-box{
+        left:15px;
+        right:15px;
+        width:auto;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .logo-icon{
+        width:36px;
+        height:36px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================= -->
+<!-- =========================
+     HEADER
+========================= -->
 
-  <header>
-    <div class="container navbar">
+<header>
 
-      <a href="#home" class="logo-box">
+<nav class="navbar">
 
-        <!-- LOGO PLACEHOLDER -->
-        <div class="logo-placeholder">FK</div>
+<a href="#home" class="logo">
+    <div class="logo-icon">💡</div>
+    TEXAS <span>LIGHT</span>
+</a>
 
-        <div class="brand">
-          Fashionixa <span>Klotho</span>
-        </div>
+<ul class="nav-menu" id="navMenu">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#shop">SHOP</a></li>
+    <li><a href="#commercial">COMMERCIAL</a></li>
+    <li><a href="#residential">RESIDENTIAL</a></li>
+    <li><a href="#specialty">SPECIALTY</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#deals">DEALS / SALE</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+</ul>
 
-      </a>
+<div class="nav-actions">
+    <button class="cart-btn" onclick="showCart()">
+        🛒 CART
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
 
-      <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</div>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#quote" class="quote-btn">Request a Quote</a></li>
-      </ul>
+</nav>
 
-    </div>
-  </header>
+</header>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-  <section class="hero" id="home">
+<section class="hero" id="home">
 
-    <div class="container hero-grid">
+<div class="hero-content">
 
-      <div>
+<div class="hero-text">
 
-        <div class="badge">
-          CUSTOM APPAREL PRINTING
-        </div>
+<div class="hero-kicker">
+PROFESSIONAL LED LIGHTING
+</div>
 
-        <h1>
-          Bring Your
-          <span>Design</span>
-          to Life.
-        </h1>
+<h1>
+TEXAS LIGHT —
+<span>PROFESSIONAL LED LIGHTING FOR EVERY SPACE</span>
+</h1>
 
-        <p>
-          Custom T-shirt and apparel printing for individuals,
-          businesses, schools, churches, teams, organizations,
-          events and more.
-        </p>
+<p>
+Commercial, residential, outdoor and specialty LED lighting solutions
+designed for contractors, businesses, designers and homeowners across the USA.
+</p>
 
-        <div class="hero-buttons">
+<div class="hero-buttons">
+    <a href="#shop" class="btn btn-orange">SHOP LIGHTING</a>
+    <a href="#quote" class="btn btn-white">GET A QUOTE</a>
+</div>
 
-          <a href="#quote" class="btn btn-primary">
-            Request a Quote
-          </a>
+</div>
 
-          <a href="#services" class="btn btn-secondary">
-            Explore Services
-          </a>
+</div>
 
-        </div>
+</section>
 
-      </div>
 
+<!-- =========================
+     SHOP BY CATEGORY
+========================= -->
 
-      <div class="hero-card">
+<section class="section" id="shop">
 
-        <div class="shirt-preview">
+<div class="container">
 
-          <div class="shirt">
-            YOUR<br>
-            DESIGN<br>
-            HERE
-          </div>
+<div class="section-title">
+    <div class="small">SHOP TEXAS LIGHT</div>
+    <h2>Lighting For Every Application</h2>
+    <p>
+        Explore professional LED lighting solutions for commercial,
+        residential and specialty applications.
+    </p>
+</div>
 
-          <div class="preview-label">
-            Custom Printed Apparel
-          </div>
+<div class="category-grid">
 
-        </div>
+<a href="#commercial" class="category-card">
 
-      </div>
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80" alt="Commercial lighting">
 
-    </div>
+<div class="category-overlay">
+    <h3>Commercial & Outdoor</h3>
+    <p>High-performance lighting for businesses and outdoor spaces.</p>
+    <div class="category-link">SHOP COMMERCIAL →</div>
+</div>
 
-  </section>
+</a>
 
 
-  <!-- =========================
-       SERVICES
-  ========================= -->
+<a href="#residential" class="category-card">
 
-  <section class="services" id="services">
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="Residential lighting">
 
-    <div class="container">
+<div class="category-overlay">
+    <h3>Indoor & Residential</h3>
+    <p>Modern lighting for homes, apartments, hotels and interiors.</p>
+    <div class="category-link">SHOP RESIDENTIAL →</div>
+</div>
 
-      <div class="section-heading">
+</a>
 
-        <div class="mini">
-          What We Do
-        </div>
 
-        <h2>
-          Printing Services
-        </h2>
+<a href="#specialty" class="category-card">
 
-        <p>
-          Choose the printing method that works best for
-          your apparel and design.
-        </p>
+<img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=80" alt="Specialty lighting">
 
-      </div>
+<div class="category-overlay">
+    <h3>Specialty & Technology</h3>
+    <p>EV chargers, signage lighting, strips and specialty products.</p>
+    <div class="category-link">SHOP SPECIALTY →</div>
+</div>
 
+</a>
 
-      <div class="service-grid">
+</div>
 
-        <div class="service-card">
+</div>
 
-          <div class="service-icon">🔥</div>
+</section>
 
-          <h3>DTF Printing</h3>
 
-          <p>
-            Vibrant, detailed designs printed onto film
-            and transferred onto your apparel.
-          </p>
+<!-- =========================
+     FEATURED PRODUCTS
+========================= -->
 
-        </div>
+<section class="section" id="products">
 
+<div class="container">
 
-        <div class="service-card">
+<div class="section-title">
 
-          <div class="service-icon">🎨</div>
+<div class="small">FEATURED PRODUCTS</div>
 
-          <h3>DTG Printing</h3>
+<h2>Popular LED Lighting</h2>
 
-          <p>
-            High-quality direct-to-garment printing
-            for detailed and colorful designs.
-          </p>
+<p>
+Product specifications and pricing can be updated as your catalog is added.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card">
+<div class="product-controls">
 
-          <div class="service-icon">👕</div>
+<button class="filter-btn active" onclick="filterProducts('all',this)">
+ALL
+</button>
 
-          <h3>Screen Printing</h3>
+<button class="filter-btn" onclick="filterProducts('commercial',this)">
+COMMERCIAL
+</button>
 
-          <p>
-            Reliable and durable printing for
-            groups, teams, businesses and events.
-          </p>
+<button class="filter-btn" onclick="filterProducts('residential',this)">
+RESIDENTIAL
+</button>
 
-        </div>
+<button class="filter-btn" onclick="filterProducts('specialty',this)">
+SPECIALTY
+</button>
 
+</div>
 
-        <div class="service-card">
 
-          <div class="service-icon">✂️</div>
+<div class="product-grid" id="productGrid">
 
-          <h3>Vinyl Printing</h3>
 
-          <p>
-            Great for names, numbers, logos,
-            uniforms and custom apparel.
-          </p>
+<!-- PRODUCT 1 -->
 
-        </div>
+<div class="product-card" data-category="commercial">
 
-      </div>
+<div class="product-image">
 
-    </div>
+<img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80"
+alt="LED Flood Light">
 
-  </section>
+</div>
 
+<div class="product-info">
 
-  <!-- =========================
-       WHO WE SERVE
-  ========================= -->
+<div class="product-category">Commercial</div>
 
-  <section>
+<div class="product-name">
+LED Flood Light
+</div>
 
-    <div class="container">
+<div class="product-description">
+Professional outdoor LED flood lighting.
+</div>
 
-      <div class="section-heading">
+<div class="product-bottom">
 
-        <div class="mini">
-          Made For You
-        </div>
+<div class="price">
+PRICE TBD
+</div>
 
-        <h2>
-          Who We Serve
-        </h2>
+<button class="add-cart" onclick="addToCart('LED Flood Light')">
+ADD TO CART
+</button>
 
-        <p>
-          Custom apparel for almost any occasion.
-        </p>
+</div>
 
-      </div>
+</div>
 
+</div>
 
-      <div class="serve-grid">
 
-        <div class="serve-item">
-          <span>👤</span>
-          Individuals
-        </div>
+<!-- PRODUCT 2 -->
 
-        <div class="serve-item">
-          <span>🏢</span>
-          Businesses
-        </div>
+<div class="product-card" data-category="commercial">
 
-        <div class="serve-item">
-          <span>🎓</span>
-          Schools
-        </div>
+<div class="product-image">
 
-        <div class="serve-item">
-          <span>⛪</span>
-          Churches
-        </div>
+<img src="https://images.unsplash.com/photo-1558449033-1cfb4c4d8d3b?auto=format&fit=crop&w=800&q=80"
+alt="LED Shoebox Light">
 
-        <div class="serve-item">
-          <span>🏆</span>
-          Teams
-        </div>
+</div>
 
-        <div class="serve-item">
-          <span>👥</span>
-          Organizations
-        </div>
+<div class="product-info">
 
-        <div class="serve-item">
-          <span>🎉</span>
-          Events
-        </div>
+<div class="product-category">Commercial</div>
 
-        <div class="serve-item">
-          <span>✨</span>
-          Special Occasions
-        </div>
+<div class="product-name">
+LED Shoebox Light
+</div>
 
-      </div>
+<div class="product-description">
+Outdoor area and parking lot lighting.
+</div>
 
-    </div>
+<div class="product-bottom">
 
-  </section>
+<div class="price">
+PRICE TBD
+</div>
 
+<button class="add-cart" onclick="addToCart('LED Shoebox Light')">
+ADD TO CART
+</button>
 
-  <!-- =========================
-       GALLERY
-  ========================= -->
+</div>
 
-  <section class="gallery" id="gallery">
+</div>
 
-    <div class="container">
+</div>
 
-      <div class="section-heading">
 
-        <div class="mini">
-          Our Work
-        </div>
+<!-- PRODUCT 3 -->
 
-        <h2>
-          Custom Apparel Gallery
-        </h2>
+<div class="product-card" data-category="residential">
 
-        <p>
-          Your actual project photos can be added here.
-        </p>
+<div class="product-image">
 
-      </div>
+<img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=800&q=80"
+alt="LED Downlight">
 
+</div>
 
-      <div class="gallery-grid">
+<div class="product-info">
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            T-Shirts
-          </div>
-        </div>
+<div class="product-category">Residential</div>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Hoodies
-          </div>
-        </div>
+<div class="product-name">
+LED Downlight
+</div>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Uniforms
-          </div>
-        </div>
+<div class="product-description">
+Modern recessed LED lighting for indoor spaces.
+</div>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Events
-          </div>
-        </div>
+<div class="product-bottom">
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Custom Designs
-          </div>
-        </div>
+<div class="price">
+PRICE TBD
+</div>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Team Apparel
-          </div>
-        </div>
+<button class="add-cart" onclick="addToCart('LED Downlight')">
+ADD TO CART
+</button>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            Business Apparel
-          </div>
-        </div>
+</div>
 
-        <div class="gallery-card">
-          <div class="gallery-label">
-            More Coming Soon
-          </div>
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
 
-  </section>
+<!-- PRODUCT 4 -->
 
+<div class="product-card" data-category="specialty">
 
-  <!-- =========================
-       ABOUT
-  ========================= -->
+<div class="product-image">
 
-  <section id="about">
+<img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80"
+alt="EV Charger">
 
-    <div class="container about-grid">
+</div>
 
-      <div class="about-image">
-        FASHIONIXA<br>
-        KLOTHO
-      </div>
+<div class="product-info">
 
+<div class="product-category">Specialty</div>
 
-      <div class="about-text">
+<div class="product-name">
+EV Charger
+</div>
 
-        <div class="section-heading"
-             style="text-align:left;margin:0 0 20px;">
+<div class="product-description">
+EV charging solutions for homes and businesses.
+</div>
 
-          <div class="mini">
-            About Us
-          </div>
+<div class="product-bottom">
 
-          <h2>
-            Your Design.<br>
-            Your Style.
-          </h2>
+<div class="price">
+PRICE TBD
+</div>
 
-        </div>
+<button class="add-cart" onclick="addToCart('EV Charger')">
+ADD TO CART
+</button>
 
-        <p>
-          Fashionixa Klotho provides custom apparel printing
-          for customers looking to turn their ideas and designs
-          into high-quality printed clothing.
-        </p>
+</div>
 
-        <p>
-          We work with individuals, businesses, schools,
-          churches, teams, organizations and events.
-        </p>
+</div>
 
-        <ul class="check-list">
+</div>
 
-          <li>DTF Printing</li>
-          <li>DTG Printing</li>
-          <li>Screen Printing</li>
-          <li>Vinyl Printing</li>
-          <li>Standard & Rush Orders</li>
+</div>
 
-        </ul>
+</div>
 
-      </div>
+</section>
 
-    </div>
 
-  </section>
+<!-- =========================
+     COMMERCIAL
+========================= -->
 
+<section class="section solution-section" id="commercial">
 
-  <!-- =========================
-       PROCESS
-  ========================= -->
+<div class="container">
 
-  <section class="process">
+<div class="section-title">
 
-    <div class="container">
+<div class="small">COMMERCIAL LIGHTING</div>
 
-      <div class="section-heading">
+<h2>Built For Business</h2>
 
-        <div class="mini">
-          Simple Process
-        </div>
+<p>
+Lighting solutions for warehouses, retail, offices, gas stations,
+apartments, hotels, parking areas and commercial projects.
+</p>
 
-        <h2>
-          How It Works
-        </h2>
+</div>
 
-        <p>
-          Getting your custom apparel started is easy.
-        </p>
 
-      </div>
+<div class="solution-grid">
 
+<div class="solution-card"
+style="background-image:url('https://images.unsplash.com/photo-1586528116493-da8e1e2f2f8c?auto=format&fit=crop&w=1200&q=80');">
 
-      <div class="process-grid">
+<div class="solution-content">
 
-        <div class="process-card">
+<h3>Warehouse & Industrial</h3>
 
-          <div class="number">1</div>
+<p>
+High-output LED solutions for industrial facilities and warehouses.
+</p>
 
-          <h3>Send Your Design</h3>
+<a href="#quote" class="btn btn-orange">
+REQUEST QUOTE
+</a>
 
-          <p>
-            Upload your artwork with your quote request.
-          </p>
+</div>
 
-        </div>
+</div>
 
 
-        <div class="process-card">
+<div class="solution-card"
+style="background-image:url('https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=1200&q=80');">
 
-          <div class="number">2</div>
+<div class="solution-content">
 
-          <h3>Get a Quote</h3>
+<h3>Parking & Outdoor</h3>
 
-          <p>
-            Tell us what you need and we'll provide
-            your custom quote.
-          </p>
+<p>
+Reliable LED lighting for parking lots, buildings and outdoor areas.
+</p>
 
-        </div>
+<a href="#quote" class="btn btn-orange">
+REQUEST QUOTE
+</a>
 
+</div>
 
-        <div class="process-card">
+</div>
 
-          <div class="number">3</div>
+</div>
 
-          <h3>Approve</h3>
+</div>
 
-          <p>
-            Review the details and approve your order.
-          </p>
+</section>
 
-        </div>
 
+<!-- =========================
+     RESIDENTIAL
+========================= -->
 
-        <div class="process-card">
+<section class="section" id="residential">
 
-          <div class="number">4</div>
+<div class="container">
 
-          <h3>We Print</h3>
+<div class="section-title">
 
-          <p>
-            Your custom apparel is printed and prepared.
-          </p>
+<div class="small">RESIDENTIAL LIGHTING</div>
 
-        </div>
+<h2>Light Your Home Better</h2>
 
-      </div>
+<p>
+Modern LED products for kitchens, bedrooms, bathrooms,
+living spaces, garages and outdoor areas.
+</p>
 
-    </div>
+</div>
 
-  </section>
 
+<div class="product-grid">
 
-  <!-- =========================
-       FAQ
-  ========================= -->
+<div class="product-card">
 
-  <section id="faq">
+<div class="product-image">
 
-    <div class="container">
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80"
+alt="Residential LED lighting">
 
-      <div class="section-heading">
+</div>
 
-        <div class="mini">
-          Questions
-        </div>
+<div class="product-info">
 
-        <h2>
-          Frequently Asked Questions
-        </h2>
+<div class="product-category">Residential</div>
 
-      </div>
+<div class="product-name">
+LED Downlights
+</div>
 
+<div class="product-description">
+Clean modern recessed lighting.
+</div>
 
-      <div class="faq-list">
+</div>
 
-        <div class="faq-item">
+</div>
 
-          <button class="faq-question">
-            What printing methods do you offer?
-            <span>+</span>
-          </button>
 
-          <div class="faq-answer">
-            We offer DTF, DTG, screen printing and vinyl printing.
-          </div>
+<div class="product-card">
 
-        </div>
+<div class="product-image">
 
+<img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=800&q=80"
+alt="Chandelier">
 
-        <div class="faq-item">
+</div>
 
-          <button class="faq-question">
-            Can I provide my own design?
-            <span>+</span>
-          </button>
+<div class="product-info">
 
-          <div class="faq-answer">
-            Yes. You can upload your design when requesting a quote.
-          </div>
+<div class="product-category">Residential</div>
 
-        </div>
+<div class="product-name">
+Chandeliers
+</div>
 
+<div class="product-description">
+Decorative lighting for modern interiors.
+</div>
 
-        <div class="faq-item">
+</div>
 
-          <button class="faq-question">
-            Do you accept rush orders?
-            <span>+</span>
-          </button>
+</div>
 
-          <div class="faq-answer">
-            Yes. Standard and rush orders are available. Please
-            mention your deadline when requesting a quote.
-          </div>
 
-        </div>
+<div class="product-card">
 
+<div class="product-image">
 
-        <div class="faq-item">
+<img src="https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=800&q=80"
+alt="Vanity lighting">
 
-          <button class="faq-question">
-            Do you print for businesses and organizations?
-            <span>+</span>
-          </button>
+</div>
 
-          <div class="faq-answer">
-            Yes. We work with businesses, schools, churches,
-            teams, organizations, events and individuals.
-          </div>
+<div class="product-info">
 
-        </div>
+<div class="product-category">Residential</div>
 
+<div class="product-name">
+Vanity Lights
+</div>
 
-        <div class="faq-item">
+<div class="product-description">
+Modern bathroom and vanity lighting.
+</div>
 
-          <button class="faq-question">
-            How do I get a price?
-            <span>+</span>
-          </button>
+</div>
 
-          <div class="faq-answer">
-            Submit the Request a Quote form with your quantity,
-            printing method and design. We will review your request.
-          </div>
+</div>
 
-        </div>
 
-      </div>
+<div class="product-card">
 
-    </div>
+<div class="product-image">
 
-  </section>
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
+alt="Indoor LED lighting">
 
+</div>
 
-  <!-- =========================
-       QUOTE
-  ========================= -->
+<div class="product-info">
 
-  <section class="quote-section" id="quote">
+<div class="product-category">Residential</div>
 
-    <div class="container quote-wrapper">
+<div class="product-name">
+Indoor LED Lighting
+</div>
 
-      <div class="quote-info">
+<div class="product-description">
+Lighting solutions for everyday living spaces.
+</div>
 
-        <h2>
-          Let's Print Your
-          Next Design.
-        </h2>
+</div>
 
-        <p>
-          Tell us what you need and we'll get back to you
-          with a custom quote.
-        </p>
+</div>
 
-        <div class="contact-box">
+</div>
 
-          <div>
-            📞 214-923-7638
-          </div>
+</div>
 
-          <div>
-            ✉️ info@fashionixaklotho.com
-          </div>
+</section>
 
-        </div>
 
-      </div>
+<!-- =========================
+     SPECIALTY
+========================= -->
 
+<section class="section" id="specialty">
 
-      <form
-        class="quote-form"
-        action="https://formsubmit.co/info@fashionixaklotho.com"
-        method="POST"
-        enctype="multipart/form-data"
-      >
+<div class="container">
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Fashionixa Klotho Quote Request"
-        >
+<div class="section-title">
 
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false"
-        >
+<div class="small">SPECIALTY & TECHNOLOGY</div>
 
-        <input
-          type="hidden"
-          name="_template"
-          value="table"
-        >
+<h2>Specialized Lighting Solutions</h2>
 
-        <div class="form-grid">
+<p>
+Products designed for specialized commercial, architectural
+and technology applications.
+</p>
 
-          <div class="form-group">
+</div>
 
-            <label for="name">
-              Name *
-            </label>
 
-            <input
-              id="name"
-              type="text"
-              name="Name"
-              placeholder="Your name"
-              required
-            >
+<div class="specialty-grid">
 
-          </div>
+<div class="specialty-item">
+<div class="specialty-icon">💡</div>
+<h3>Signage Lights</h3>
+</div>
 
+<div class="specialty-item">
+<div class="specialty-icon">⛽</div>
+<h3>Gas Price Sign</h3>
+</div>
 
-          <div class="form-group">
+<div class="specialty-item">
+<div class="specialty-icon">⚡</div>
+<h3>EV Chargers</h3>
+</div>
 
-            <label for="phone">
-              Phone *
-            </label>
+<div class="specialty-item">
+<div class="specialty-icon">〰️</div>
+<h3>LED Strip Lights</h3>
+</div>
 
-            <input
-              id="phone"
-              type="tel"
-              name="Phone"
-              placeholder="Your phone number"
-              required
-            >
+<div class="specialty-item">
+<div class="specialty-icon">🔲</div>
+<h3>LED Panels</h3>
+</div>
 
-          </div>
+<div class="specialty-item">
+<div class="specialty-icon">🔆</div>
+<h3>Up & Down Lights</h3>
+</div>
 
+<div class="specialty-item">
+<div class="specialty-icon">🪞</div>
+<h3>LED Mirrors</h3>
+</div>
 
-          <div class="form-group">
+<div class="specialty-item">
+<div class="specialty-icon">🏨</div>
+<h3>Hotel Bed Lamps</h3>
+</div>
 
-            <label for="email">
-              Email *
-            </label>
+</div>
 
-            <input
-              id="email"
-              type="email"
-              name="Email"
-              placeholder="Your email"
-              required
-            >
+</div>
 
-          </div>
+</section>
 
 
-          <div class="form-group">
+<!-- =========================
+     WHY TEXAS LIGHT
+========================= -->
 
-            <label for="quantity">
-              Quantity *
-            </label>
+<section class="section why-section" id="about">
 
-            <input
-              id="quantity"
-              type="number"
-              name="Quantity"
-              min="1"
-              placeholder="How many?"
-              required
-            >
+<div class="container">
 
-          </div>
+<div class="section-title">
 
+<div class="small">WHY TEXAS LIGHT</div>
 
-          <div class="form-group full">
+<h2 style="color:white;">
+Professional Lighting. Straightforward Service.
+</h2>
 
-            <label for="printing">
-              Printing Type *
-            </label>
+<p style="color:#aaa;">
+A lighting partner for contractors, businesses, designers and homeowners.
+</p>
 
-            <select
-              id="printing"
-              name="Printing Type"
-              required
-            >
+</div>
 
-              <option value="">
-                Select printing type
-              </option>
 
-              <option value="DTF">
-                DTF Printing
-              </option>
+<div class="why-grid">
 
-              <option value="DTG">
-                DTG Printing
-              </option>
+<div class="why-card">
 
-              <option value="Screen Printing">
-                Screen Printing
-              </option>
+<div class="why-number">01</div>
 
-              <option value="Vinyl Printing">
-                Vinyl Printing
-              </option>
+<h3>Wide Product Selection</h3>
 
-              <option value="Not Sure">
-                I'm Not Sure
-              </option>
+<p>
+Commercial, residential, outdoor and specialty lighting products.
+</p>
 
-            </select>
+</div>
 
-          </div>
 
+<div class="why-card">
 
-          <div class="form-group full">
+<div class="why-number">02</div>
 
-            <label for="design">
-              Upload Your Design
-            </label>
+<h3>Project Support</h3>
 
-            <input
-              id="design"
-              type="file"
-              name="Design"
-              accept=".png,.jpg,.jpeg,.pdf,.svg"
-              multiple
-            >
+<p>
+Get assistance with product selection and commercial lighting projects.
+</p>
 
-            <div class="file-note">
-              PNG, JPG, PDF or SVG — multiple files allowed.
-            </div>
+</div>
 
-          </div>
 
+<div class="why-card">
 
-          <div class="form-group full">
+<div class="why-number">03</div>
 
-            <label for="message">
-              Additional Details
-            </label>
+<h3>Bulk & Commercial Quotes</h3>
 
-            <textarea
-              id="message"
-              name="Additional Details"
-              placeholder="Tell us about your order, colors, sizes, deadline, etc."
-            ></textarea>
+<p>
+Request pricing for large orders, projects and custom requirements.
+</p>
 
-          </div>
+</div>
 
-        </div>
 
+<div class="why-card">
 
-        <button
-          type="submit"
-          class="submit-btn"
-        >
-          REQUEST MY QUOTE
-        </button>
+<div class="why-number">04</div>
 
-      </form>
+<h3>Nationwide Service</h3>
 
-    </div>
+<p>
+Serving customers across all 50 U.S. states.
+</p>
 
-  </section>
+</div>
 
+</div>
 
-  <!-- =========================
-       CONTACT
-  ========================= -->
+</div>
 
-  <section class="contact-section" id="contact">
+</section>
 
-    <div class="container">
 
-      <div class="section-heading">
+<!-- =========================
+     PROJECTS
+========================= -->
 
-        <div class="mini">
-          Get In Touch
-        </div>
+<section class="section" id="projects">
 
-        <h2>
-          Contact Fashionixa Klotho
-        </h2>
+<div class="container">
 
-        <p>
-          Have a question? We're here to help.
-        </p>
+<div class="section-title">
 
-      </div>
+<div class="small">PROJECTS</div>
 
+<h2>Lighting In Action</h2>
 
-      <div class="contact-grid">
+<p>
+Project photos and installations can be added here as your portfolio grows.
+</p>
 
-        <div class="contact-card">
+</div>
 
-          <div class="icon">📞</div>
 
-          <h3>Call Us</h3>
+<div class="project-grid">
 
-          <p>
-            <a href="tel:2149237638">
-              214-923-7638
-            </a>
-          </p>
+<div class="project-card">
 
-        </div>
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=80"
+alt="Commercial project">
 
+<div class="project-caption">
+<h3>Commercial Office</h3>
+</div>
 
-        <div class="contact-card">
+</div>
 
-          <div class="icon">✉️</div>
 
-          <h3>Email Us</h3>
+<div class="project-card">
 
-          <p>
-            <a href="mailto:info@fashionixaklotho.com">
-              info@fashionixaklotho.com
-            </a>
-          </p>
+<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80"
+alt="Industrial project">
 
-        </div>
+<div class="project-caption">
+<h3>Industrial Facility</h3>
+</div>
 
+</div>
 
-        <div class="contact-card">
 
-          <div class="icon">💬</div>
+<div class="project-card">
 
-          <h3>Request a Quote</h3>
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+alt="Business project">
 
-          <p>
-            <a href="#quote">
-              Start Your Quote
-            </a>
-          </p>
+<div class="project-caption">
+<h3>Business Lighting</h3>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+<!-- =========================
+     REVIEWS
+========================= -->
 
-  <footer>
+<section class="section review-section">
 
-    <div class="container">
+<div class="container">
 
-      <div class="footer-grid">
+<div class="section-title">
 
-        <div>
+<div class="small">CUSTOMER REVIEWS</div>
 
-          <div class="brand">
-            Fashionixa <span>Klotho</span>
-          </div>
+<h2>What Our Customers Say</h2>
 
-          <p>
-            Custom apparel printing for your ideas,
-            business, team, event and more.
-          </p>
+<p>
+Customer reviews and photos can be connected to your real review system later.
+</p>
 
-        </div>
+</div>
 
 
-        <div>
+<div class="review-grid">
 
-          <h3>Quick Links</h3>
+<div class="review">
 
-          <ul class="footer-links">
+<div class="stars">★★★★★</div>
 
-            <li>
-              <a href="#home">Home</a>
-            </li>
+<p>
+“Add your customer review here. Real customer reviews will be displayed on the final website.”
+</p>
 
-            <li>
-              <a href="#services">Services</a>
-            </li>
+<div class="reviewer">
+Customer Name
+</div>
 
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
+</div>
 
-            <li>
-              <a href="#about">About</a>
-            </li>
 
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
+<div class="review">
 
-          </ul>
+<div class="stars">★★★★★</div>
 
-        </div>
+<p>
+“Add your customer review here. Customer installation photos can also be added.”
+</p>
 
+<div class="reviewer">
+Customer Name
+</div>
 
-        <div>
+</div>
 
-          <h3>Contact</h3>
 
-          <ul class="footer-links">
+<div class="review">
 
-            <li>
-              <a href="tel:2149237638">
-                214-923-7638
-              </a>
-            </li>
+<div class="stars">★★★★★</div>
 
-            <li>
-              <a href="mailto:info@fashionixaklotho.com">
-                info@fashionixaklotho.com
-              </a>
-            </li>
+<p>
+“Add your customer review here after receiving customer feedback.”
+</p>
 
-          </ul>
+<div class="reviewer">
+Customer Name
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
+</div>
 
-      <div class="copyright">
-        © <span id="year"></span> Fashionixa Klotho. All Rights Reserved.
-      </div>
+</section>
 
-    </div>
 
-  </footer>
+<!-- =========================
+     DEALS
+========================= -->
 
+<section class="section deals" id="deals">
 
-  <!-- MOBILE STICKY BAR -->
+<div class="container">
 
-  <div class="mobile-bar">
+<div class="deals-inner">
 
-    <a href="tel:2149237638">
-      📞 Call
-    </a>
+<div>
 
-    <a href="mailto:info@fashionixaklotho.com">
-      ✉️ Email
-    </a>
+<h2>DEALS & SPECIAL OFFERS</h2>
 
-    <a href="#quote">
-      Quote
-    </a>
+<p>
+Check back for special pricing, clearance products,
+bulk offers and limited-time lighting deals.
+</p>
 
-  </div>
+</div>
 
+<a href="#shop" class="btn btn-white">
+SHOP DEALS
+</a>
 
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+</div>
 
-  <script>
+</div>
 
-    // Mobile menu
+</section>
 
-    function toggleMenu() {
 
-      document
-        .getElementById("navLinks")
-        .classList
-        .toggle("show");
+<!-- =========================
+     BRANDS
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">BRANDS</div>
+
+<h2>Brands We Carry</h2>
+
+<p>
+Your actual brands and manufacturer logos can be added here.
+</p>
+
+</div>
+
+
+<div class="brand-grid">
+
+<div class="brand">BRAND 01</div>
+<div class="brand">BRAND 02</div>
+<div class="brand">BRAND 03</div>
+<div class="brand">BRAND 04</div>
+<div class="brand">BRAND 05</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     COMMERCIAL QUOTE
+========================= -->
+
+<section class="section quote-section" id="quote">
+
+<div class="container">
+
+<div class="quote-grid">
+
+<div class="quote-text">
+
+<h2>
+Need Lighting For A <span>Project?</span>
+</h2>
+
+<p>
+Send us your project requirements and our team can help with
+product selection, quantities and commercial pricing.
+</p>
+
+<ul class="quote-points">
+
+<li>Contractor & electrician pricing</li>
+
+<li>Bulk orders</li>
+
+<li>Commercial projects</li>
+
+<li>Product selection assistance</li>
+
+<li>Custom lighting requirements</li>
+
+<li>Project support</li>
+
+</ul>
+
+</div>
+
+
+<div class="form-box">
+
+<h3>Request a Commercial Quote</h3>
+
+<form onsubmit="submitQuote(event)">
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>First Name</label>
+
+<input type="text" required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Last Name</label>
+
+<input type="text">
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Business Name</label>
+
+<input type="text">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input type="email" required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Phone</label>
+
+<input type="tel">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Project Type</label>
+
+<select>
+
+<option>Commercial</option>
+<option>Warehouse</option>
+<option>Hotel / Apartment</option>
+<option>Gas Station</option>
+<option>Office</option>
+<option>Retail</option>
+<option>Residential</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Project Details</label>
+
+<textarea placeholder="Tell us what lighting you need..."></textarea>
+
+</div>
+
+
+<button class="btn btn-orange" type="submit">
+SEND QUOTE REQUEST
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<div class="small">CONTACT TEXAS LIGHT</div>
+
+<h2>Let's Talk Lighting</h2>
+
+<p>
+Call, text or email us. Your actual contact information can be added here.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="contact-icon">📞</div>
+
+<h3>Call Us</h3>
+
+<p>[YOUR PHONE NUMBER]</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">💬</div>
+
+<h3>Text Us</h3>
+
+<p>[YOUR TEXT NUMBER]</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">✉️</div>
+
+<h3>Email</h3>
+
+<p>[YOUR EMAIL ADDRESS]</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">📍</div>
+
+<h3>Service Area</h3>
+
+<p>United States — All 50 States</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+TEXAS <span>LIGHT</span>
+</div>
+
+<p>
+Professional LED lighting solutions for commercial,
+residential, outdoor and specialty applications.
+</p>
+
+<p style="margin-top:15px;">
+Serving customers across the United States.
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>SHOP</h3>
+
+<a href="#commercial">Commercial Lighting</a>
+<a href="#residential">Residential Lighting</a>
+<a href="#specialty">Specialty Lighting</a>
+<a href="#deals">Deals / Sale</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>HELP</h3>
+
+<a href="#quote">Request a Quote</a>
+<a href="#contact">Contact Us</a>
+<a href="#">Shipping Policy</a>
+<a href="#">Return & Refund Policy</a>
+<a href="#">Warranty</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h3>LEGAL</h3>
+
+<a href="#">Privacy Policy</a>
+<a href="#">Terms & Conditions</a>
+<a href="#">Cookie Policy</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© <span id="year"></span> TEXAS LIGHT. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================
+     CHAT
+========================= -->
+
+<button class="chat-button" onclick="toggleChat()">
+💬
+</button>
+
+
+<div class="chat-box" id="chatBox">
+
+<div class="chat-header">
+TEXAS LIGHT CUSTOMER SUPPORT
+</div>
+
+<div class="chat-body">
+
+<p style="font-size:14px;margin-bottom:10px;">
+Send us your message and our team will respond.
+</p>
+
+<textarea id="chatMessage"
+placeholder="Type your message..."></textarea>
+
+<button
+class="btn btn-orange"
+style="width:100%;margin-top:10px;"
+onclick="sendChat()">
+SEND MESSAGE
+</button>
+
+</div>
+
+</div>
+
+
+<!-- MOBILE BAR -->
+
+<div class="mobile-bar">
+
+<a href="#shop">
+<span>🛒</span>
+SHOP
+</a>
+
+<a href="#quote">
+<span>📋</span>
+QUOTE
+</a>
+
+<a href="#contact">
+<span>📞</span>
+CONTACT
+</a>
+
+</div>
+
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu(){
+
+    const menu = document.getElementById("navMenu");
+
+    menu.classList.toggle("show");
+
+}
+
+
+/* =========================
+   PRODUCT FILTER
+========================= */
+
+function filterProducts(category,button){
+
+    const products =
+        document.querySelectorAll(".product-card");
+
+    const buttons =
+        document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    products.forEach(product=>{
+
+        const productCategory =
+            product.getAttribute("data-category");
+
+        if(category === "all" ||
+           productCategory === category){
+
+            product.style.display = "";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   CART
+========================= */
+
+let cartCount = 0;
+
+function addToCart(productName){
+
+    cartCount++;
+
+    document.getElementById("cartCount").textContent =
+        cartCount;
+
+    alert(productName + " added to cart.");
+
+}
+
+
+function showCart(){
+
+    if(cartCount === 0){
+
+        alert("Your cart is currently empty.");
+
+    }else{
+
+        alert(
+            "You have " +
+            cartCount +
+            " item(s) in your cart.\n\n" +
+            "Full checkout will be connected when the store payment system is added."
+        );
 
     }
 
-
-    // Close mobile menu after clicking a link
-
-    document
-      .querySelectorAll(".nav-links a")
-      .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-          document
-            .getElementById("navLinks")
-            .classList
-            .remove("show");
-
-        });
-
-      });
+}
 
 
-    // FAQ
+/* =========================
+   QUOTE FORM
+========================= */
 
-    document
-      .querySelectorAll(".faq-question")
-      .forEach(function(button) {
+function submitQuote(event){
 
-        button.addEventListener("click", function() {
+    event.preventDefault();
 
-          const item = button.parentElement;
+    alert(
+        "Thank you! Your quote request has been received.\n\n" +
+        "The form will be connected to your real email/backend when the website is connected."
+    );
 
-          item.classList.toggle("active");
-
-        });
-
-      });
+}
 
 
-    // Current year
+/* =========================
+   CHAT
+========================= */
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+function toggleChat(){
 
-  </script>
+    const chat =
+        document.getElementById("chatBox");
+
+    if(chat.style.display === "block"){
+
+        chat.style.display = "none";
+
+    }else{
+
+        chat.style.display = "block";
+
+    }
+
+}
+
+
+function sendChat(){
+
+    const message =
+        document.getElementById("chatMessage").value;
+
+    if(!message.trim()){
+
+        alert("Please type a message.");
+
+        return;
+
+    }
+
+    alert(
+        "Thank you for your message!\n\n" +
+        "Live customer messaging will be connected when the website backend is added."
+    );
+
+    document.getElementById("chatMessage").value = "";
+
+}
+
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
 
 </body>
 </html>
