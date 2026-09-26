@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="TEXAS LIGHT - Professional LED lighting for commercial, residential, outdoor and specialty applications across the United States.">
+<meta name="description" content="LED KING - Professional LED lighting for commercial, residential, outdoor and specialty applications across the United States.">
 
-<title>TEXAS LIGHT | Professional LED Lighting</title>
+<title>LED KING | Professional LED Lighting</title>
 
 <style>
 :root{
@@ -954,10 +954,126 @@ footer p{
 }
 
 /* =========================
+   LED KING PRODUCT GALLERY
+========================= */
+
+.led-gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.led-product{
+    display:block;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.led-product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.led-product-image{
+    height:280px;
+    background:linear-gradient(135deg,#f7f7f7,#ececec);
+    position:relative;
+    overflow:hidden;
+}
+
+.led-product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.45s;
+}
+
+.led-product:hover .led-product-image img{
+    transform:scale(1.06);
+}
+
+.product-hover{
+    position:absolute;
+    left:15px;
+    right:15px;
+    bottom:15px;
+    background:var(--orange);
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    border-radius:7px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.5px;
+    opacity:0;
+    transform:translateY(10px);
+    transition:.25s;
+}
+
+.led-product:hover .product-hover{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.led-product-info{
+    padding:18px 20px 20px;
+}
+
+.led-product-info h3{
+    color:#111;
+    font-size:19px;
+    margin-bottom:4px;
+}
+
+.led-product-info span{
+    color:var(--orange);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
+}
+
+.feature-placeholder{
+    min-height:250px;
+    border:2px dashed #ddd;
+    border-radius:var(--radius);
+    background:#fafafa;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:35px;
+}
+
+.placeholder-icon{
+    font-size:48px;
+    color:var(--orange);
+    margin-bottom:12px;
+}
+
+.feature-placeholder h3{
+    font-size:25px;
+    color:#111;
+    margin-bottom:7px;
+}
+
+.feature-placeholder p{
+    color:var(--muted);
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
 @media(max-width:1100px){
+
+    .led-gallery{
+        grid-template-columns:repeat(3,1fr);
+    }
 
     .nav-menu{
         gap:13px;
@@ -975,6 +1091,10 @@ footer p{
 }
 
 @media(max-width:850px){
+
+    .led-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
 
     .navbar{
         height:68px;
@@ -1081,6 +1201,10 @@ footer p{
 
 @media(max-width:550px){
 
+    .led-gallery{
+        grid-template-columns:1fr;
+    }
+
     .section{
         padding:55px 0;
     }
@@ -1142,27 +1266,18 @@ footer p{
 
 <a href="#home" class="logo">
     <div class="logo-icon">💡</div>
-    TEXAS <span>LIGHT</span>
+    LED <span>KING</span>
 </a>
 
 <ul class="nav-menu" id="navMenu">
-    <li><a href="#home">HOME</a></li>
-    <li><a href="#shop">SHOP</a></li>
-    <li><a href="#commercial">COMMERCIAL</a></li>
-    <li><a href="#residential">RESIDENTIAL</a></li>
-    <li><a href="#specialty">SPECIALTY</a></li>
-    <li><a href="#projects">PROJECTS</a></li>
-    <li><a href="#deals">DEALS / SALE</a></li>
-    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#about">ABOUT US</a></li>
+    <li><a href="#products">PRODUCT</a></li>
+    <li><a href="#chandeliers">CHANDELIERS</a></li>
+    <li><a href="#ev-charger">EV CHARGER</a></li>
     <li><a href="#contact">CONTACT</a></li>
 </ul>
 
 <div class="nav-actions">
-    <button class="cart-btn" onclick="showCart()">
-        🛒 CART
-        <span class="cart-count" id="cartCount">0</span>
-    </button>
-
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </div>
 
@@ -1186,7 +1301,7 @@ PROFESSIONAL LED LIGHTING
 </div>
 
 <h1>
-TEXAS LIGHT —
+LED KING —
 <span>PROFESSIONAL LED LIGHTING FOR EVERY SPACE</span>
 </h1>
 
@@ -1196,7 +1311,7 @@ designed for contractors, businesses, designers and homeowners across the USA.
 </p>
 
 <div class="hero-buttons">
-    <a href="#shop" class="btn btn-orange">SHOP LIGHTING</a>
+    <a href="#shop" class="btn btn-orange">VIEW PRODUCTS</a>
     <a href="#quote" class="btn btn-white">GET A QUOTE</a>
 </div>
 
@@ -1208,66 +1323,20 @@ designed for contractors, businesses, designers and homeowners across the USA.
 
 
 <!-- =========================
-     SHOP BY CATEGORY
+     PRODUCT INTRO
 ========================= -->
 
 <section class="section" id="shop">
-
 <div class="container">
-
-<div class="section-title">
-    <div class="small">SHOP TEXAS LIGHT</div>
-    <h2>Lighting For Every Application</h2>
-    <p>
-        Explore professional LED lighting solutions for commercial,
-        residential and specialty applications.
-    </p>
+    <div class="section-title">
+        <div class="small">LED KING</div>
+        <h2>Lighting For Every Application</h2>
+        <p>
+            Professional LED lighting products for commercial, residential,
+            outdoor and specialty applications.
+        </p>
+    </div>
 </div>
-
-<div class="category-grid">
-
-<a href="#commercial" class="category-card">
-
-<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=80" alt="Commercial lighting">
-
-<div class="category-overlay">
-    <h3>Commercial & Outdoor</h3>
-    <p>High-performance lighting for businesses and outdoor spaces.</p>
-    <div class="category-link">SHOP COMMERCIAL →</div>
-</div>
-
-</a>
-
-
-<a href="#residential" class="category-card">
-
-<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80" alt="Residential lighting">
-
-<div class="category-overlay">
-    <h3>Indoor & Residential</h3>
-    <p>Modern lighting for homes, apartments, hotels and interiors.</p>
-    <div class="category-link">SHOP RESIDENTIAL →</div>
-</div>
-
-</a>
-
-
-<a href="#specialty" class="category-card">
-
-<img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=80" alt="Specialty lighting">
-
-<div class="category-overlay">
-    <h3>Specialty & Technology</h3>
-    <p>EV chargers, signage lighting, strips and specialty products.</p>
-    <div class="category-link">SHOP SPECIALTY →</div>
-</div>
-
-</a>
-
-</div>
-
-</div>
-
 </section>
 
 
@@ -1276,209 +1345,149 @@ designed for contractors, businesses, designers and homeowners across the USA.
 ========================= -->
 
 <section class="section" id="products">
-
 <div class="container">
 
-<div class="section-title">
+    <div class="section-title">
+        <div class="small">FEATURED PRODUCTS</div>
+        <h2>Popular LED Lighting</h2>
+        <p>
+            Explore LED KING lighting products for commercial, residential,
+            outdoor and specialty applications.
+        </p>
+    </div>
 
-<div class="small">FEATURED PRODUCTS</div>
+    <div class="led-gallery">
 
-<h2>Popular LED Lighting</h2>
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/wall-sconce.jpg" alt="Wall Sconce">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Wall Sconce</h3><span>LED KING</span></div>
+        </a>
 
-<p>
-Product specifications and pricing can be updated as your catalog is added.
-</p>
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/bollard-light.jpg" alt="Bollard Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Bollard Light</h3><span>LED KING</span></div>
+        </a>
 
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/post-top-light.jpg" alt="Post Top Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Post Top Light</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/hotel-fixture.jpg" alt="Hotel Fixture">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Hotel Fixture</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/vanity-lights.jpg" alt="Vanity Lights">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Vanity Lights</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/track-light.jpg" alt="Track Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Track Light</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/outdoor-wall-light.jpg" alt="Outdoor Wall Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Outdoor Wall Light</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/flood-light.jpg" alt="Flood Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Flood Light</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/street-light.jpg" alt="Street Light">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Street Light</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/exhaust-fan.jpg" alt="Exhaust Fan">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Exhaust Fan</h3><span>LED KING</span></div>
+        </a>
+
+        <a class="led-product" href="#contact">
+            <div class="led-product-image">
+                <img src="images/single-side-corn.jpg" alt="Single Side Corn">
+                <div class="product-hover">VIEW PRODUCT →</div>
+            </div>
+            <div class="led-product-info"><h3>Single Side Corn</h3><span>LED KING</span></div>
+        </a>
+
+    </div>
 </div>
+</section>
 
 
-<div class="product-controls">
+<!-- =========================
+     CHANDELIERS
+========================= -->
 
-<button class="filter-btn active" onclick="filterProducts('all',this)">
-ALL
-</button>
-
-<button class="filter-btn" onclick="filterProducts('commercial',this)">
-COMMERCIAL
-</button>
-
-<button class="filter-btn" onclick="filterProducts('residential',this)">
-RESIDENTIAL
-</button>
-
-<button class="filter-btn" onclick="filterProducts('specialty',this)">
-SPECIALTY
-</button>
-
+<section class="section" id="chandeliers">
+<div class="container">
+    <div class="section-title">
+        <div class="small">LED KING</div>
+        <h2>Chandeliers</h2>
+        <p>Decorative lighting solutions for homes, businesses and modern interiors.</p>
+    </div>
+    <div class="feature-placeholder">
+        <div class="placeholder-icon">✦</div>
+        <h3>Chandelier Collection</h3>
+        <p>Product photos and chandelier selections can be added here.</p>
+    </div>
 </div>
+</section>
 
 
-<div class="product-grid" id="productGrid">
+<!-- =========================
+     EV CHARGER
+========================= -->
 
-
-<!-- PRODUCT 1 -->
-
-<div class="product-card" data-category="commercial">
-
-<div class="product-image">
-
-<img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=800&q=80"
-alt="LED Flood Light">
-
+<section class="section solution-section" id="ev-charger">
+<div class="container">
+    <div class="section-title">
+        <div class="small">LED KING</div>
+        <h2>EV Chargers</h2>
+        <p>EV charging solutions for residential and commercial applications.</p>
+    </div>
+    <div class="feature-placeholder">
+        <div class="placeholder-icon">⚡</div>
+        <h3>EV Charger Collection</h3>
+        <p>EV charger products and installation information can be added here.</p>
+    </div>
 </div>
-
-<div class="product-info">
-
-<div class="product-category">Commercial</div>
-
-<div class="product-name">
-LED Flood Light
-</div>
-
-<div class="product-description">
-Professional outdoor LED flood lighting.
-</div>
-
-<div class="product-bottom">
-
-<div class="price">
-PRICE TBD
-</div>
-
-<button class="add-cart" onclick="addToCart('LED Flood Light')">
-ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 2 -->
-
-<div class="product-card" data-category="commercial">
-
-<div class="product-image">
-
-<img src="https://images.unsplash.com/photo-1558449033-1cfb4c4d8d3b?auto=format&fit=crop&w=800&q=80"
-alt="LED Shoebox Light">
-
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Commercial</div>
-
-<div class="product-name">
-LED Shoebox Light
-</div>
-
-<div class="product-description">
-Outdoor area and parking lot lighting.
-</div>
-
-<div class="product-bottom">
-
-<div class="price">
-PRICE TBD
-</div>
-
-<button class="add-cart" onclick="addToCart('LED Shoebox Light')">
-ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 3 -->
-
-<div class="product-card" data-category="residential">
-
-<div class="product-image">
-
-<img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=800&q=80"
-alt="LED Downlight">
-
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Residential</div>
-
-<div class="product-name">
-LED Downlight
-</div>
-
-<div class="product-description">
-Modern recessed LED lighting for indoor spaces.
-</div>
-
-<div class="product-bottom">
-
-<div class="price">
-PRICE TBD
-</div>
-
-<button class="add-cart" onclick="addToCart('LED Downlight')">
-ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product-card" data-category="specialty">
-
-<div class="product-image">
-
-<img src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?auto=format&fit=crop&w=800&q=80"
-alt="EV Charger">
-
-</div>
-
-<div class="product-info">
-
-<div class="product-category">Specialty</div>
-
-<div class="product-name">
-EV Charger
-</div>
-
-<div class="product-description">
-EV charging solutions for homes and businesses.
-</div>
-
-<div class="product-bottom">
-
-<div class="price">
-PRICE TBD
-</div>
-
-<button class="add-cart" onclick="addToCart('EV Charger')">
-ADD TO CART
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
@@ -1758,7 +1767,7 @@ and technology applications.
 
 
 <!-- =========================
-     WHY TEXAS LIGHT
+     WHY LED KING
 ========================= -->
 
 <section class="section why-section" id="about">
@@ -1767,7 +1776,7 @@ and technology applications.
 
 <div class="section-title">
 
-<div class="small">WHY TEXAS LIGHT</div>
+<div class="small">WHY LED KING</div>
 
 <h2 style="color:white;">
 Professional Lighting. Straightforward Service.
@@ -2196,7 +2205,7 @@ SEND QUOTE REQUEST
 
 <div class="section-title">
 
-<div class="small">CONTACT TEXAS LIGHT</div>
+<div class="small">CONTACT LED KING</div>
 
 <h2>Let's Talk Lighting</h2>
 
@@ -2272,11 +2281,11 @@ Call, text or email us. Your actual contact information can be added here.
 <div>
 
 <div class="footer-logo">
-TEXAS <span>LIGHT</span>
+LED <span>KING</span>
 </div>
 
 <p>
-Professional LED lighting solutions for commercial,
+Professional LED lighting products and solutions for commercial,
 residential, outdoor and specialty applications.
 </p>
 
@@ -2289,12 +2298,12 @@ Serving customers across the United States.
 
 <div class="footer-col">
 
-<h3>SHOP</h3>
+<h3>PRODUCTS</h3>
 
-<a href="#commercial">Commercial Lighting</a>
-<a href="#residential">Residential Lighting</a>
-<a href="#specialty">Specialty Lighting</a>
-<a href="#deals">Deals / Sale</a>
+<a href="#products">Featured Products</a>
+<a href="#chandeliers">Chandeliers</a>
+<a href="#ev-charger">EV Chargers</a>
+<a href="#contact">Request Information</a>
 
 </div>
 
@@ -2327,7 +2336,7 @@ Serving customers across the United States.
 
 <div class="footer-bottom">
 
-© <span id="year"></span> TEXAS LIGHT. All Rights Reserved.
+© <span id="year"></span> LED KING. All Rights Reserved.
 
 </div>
 
@@ -2348,7 +2357,7 @@ Serving customers across the United States.
 <div class="chat-box" id="chatBox">
 
 <div class="chat-header">
-TEXAS LIGHT CUSTOMER SUPPORT
+LED KING CUSTOMER SUPPORT
 </div>
 
 <div class="chat-body">
@@ -2373,27 +2382,11 @@ SEND MESSAGE
 
 
 <!-- MOBILE BAR -->
-
 <div class="mobile-bar">
-
-<a href="#shop">
-<span>🛒</span>
-SHOP
-</a>
-
-<a href="#quote">
-<span>📋</span>
-QUOTE
-</a>
-
-<a href="#contact">
-<span>📞</span>
-CONTACT
-</a>
-
+    <a href="#products"><span>💡</span>PRODUCTS</a>
+    <a href="#quote"><span>📋</span>QUOTE</a>
+    <a href="#contact"><span>📞</span>CONTACT</a>
 </div>
-
-
 <script>
 
 /* =========================
