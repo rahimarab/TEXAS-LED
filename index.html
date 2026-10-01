@@ -631,49 +631,6 @@ footer p{
     font-size:13px;
 }
 
-.chat-button{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    border:0;
-    background:var(--blue);
-    color:#fff;
-    font-size:25px;
-    cursor:pointer;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-    z-index:1200;
-}
-
-.chat-button:hover{
-    background:var(--blue-dark);
-}
-
-.chat-box{
-    display:none;
-    position:fixed;
-    right:22px;
-    bottom:90px;
-    width:330px;
-    background:#fff;
-    border-radius:15px;
-    box-shadow:0 15px 45px rgba(0,0,0,.2);
-    overflow:hidden;
-    z-index:1200;
-}
-
-.chat-header{
-    background:#111;
-    color:#fff;
-    padding:15px;
-    font-weight:800;
-}
-
-.chat-body{
-    padding:15px;
-}
 
 .chat-body textarea{
     width:100%;
@@ -798,19 +755,6 @@ footer p{
     footer{
         padding-bottom:80px;
     }
-
-    .chat-button{
-        bottom:78px;
-        right:16px;
-        width:52px;
-        height:52px;
-        font-size:22px;
-    }
-
-    .chat-box{
-        bottom:140px;
-        right:16px;
-    }
 }
 
 @media(max-width:550px){
@@ -883,7 +827,7 @@ footer p{
 </li>
 
 <li>
-    <a href="#products">PRODUCT</a>
+    <a href="products.html">PRODUCT</a>
 </li>
 
 <li>
@@ -973,7 +917,7 @@ outdoor and specialty applications.
 
 <div class="led-gallery">
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#wall-sconce">
 
 <div class="led-product-image">
 
@@ -1000,7 +944,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#bollard-light">
 
 <div class="led-product-image">
 
@@ -1027,7 +971,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#post-top-light">
 
 <div class="led-product-image">
 
@@ -1054,7 +998,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#hotel-fixture">
 
 <div class="led-product-image">
 
@@ -1081,7 +1025,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#vanity-lights">
 
 <div class="led-product-image">
 
@@ -1108,7 +1052,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#track-light">
 
 <div class="led-product-image">
 
@@ -1135,7 +1079,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#outdoor-wall-light">
 
 <div class="led-product-image">
 
@@ -1162,7 +1106,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#flood-light">
 
 <div class="led-product-image">
 
@@ -1189,7 +1133,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#street-light">
 
 <div class="led-product-image">
 
@@ -1216,7 +1160,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#exhaust-fan">
 
 <div class="led-product-image">
 
@@ -1243,7 +1187,7 @@ LED KING
 
 </a>
 
-<a class="led-product" href="#contact">
+<a class="led-product" href="products.html#corn-light">
 
 <div class="led-product-image">
 
@@ -1270,6 +1214,10 @@ LED KING
 
 </a>
 
+</div>
+
+<div style="text-align:center;margin-top:35px;">
+<a href="products.html" class="btn btn-blue">VIEW ALL PRODUCTS →</a>
 </div>
 
 </div>
@@ -1546,7 +1494,10 @@ Project support
 Request a Commercial Quote
 </h3>
 
-<form onsubmit="submitQuote(event)">
+<form action="https://formsubmit.co/ledkingfortworth@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New LED KING Quote Request">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://www.ledkingfworth.com/?quote=success#quote">
 
 <div class="form-row">
 
@@ -1556,7 +1507,7 @@ Request a Commercial Quote
 First Name
 </label>
 
-<input type="text" required>
+<input type="text" name="first_name" autocomplete="given-name" required>
 
 </div>
 
@@ -1566,7 +1517,7 @@ First Name
 Last Name
 </label>
 
-<input type="text">
+<input type="text" name="last_name" autocomplete="family-name">
 
 </div>
 
@@ -1578,7 +1529,7 @@ Last Name
 Business Name
 </label>
 
-<input type="text">
+<input type="text" name="business_name" autocomplete="organization">
 
 </div>
 
@@ -1588,7 +1539,7 @@ Business Name
 Email
 </label>
 
-<input type="email" required>
+<input type="email" name="email" autocomplete="email" required>
 
 </div>
 
@@ -1598,7 +1549,7 @@ Email
 Phone
 </label>
 
-<input type="tel">
+<input type="tel" name="phone" autocomplete="tel">
 
 </div>
 
@@ -1608,7 +1559,7 @@ Phone
 Project Type
 </label>
 
-<select>
+<select name="project_type">
 
 <option>
 Commercial
@@ -1653,6 +1604,7 @@ Project Details
 </label>
 
 <textarea
+name="project_details"
 placeholder="Tell us what lighting you need..."
 ></textarea>
 
@@ -1760,16 +1712,12 @@ Our Location
 </h3>
 
 <p>
-
-
-class="location-link"
+<a class="location-link"
 href="https://www.google.com/maps/search/?api=1&query=3701+Airport+Fwy%2C+Fort+Worth%2C+TX+76111"
 target="_blank"
-rel="noopener"
->
+rel="noopener">
 3701 Airport Fwy, Fort Worth, TX 76111
 </a>
-
 </p>
 
 </div>
@@ -1845,14 +1793,10 @@ CONTACT
 ledkingfortworth@gmail.com
 </a>
 
-
-href="https://www.google.com/maps/search/?api=1&query=3701+Airport+Fwy%2C+Fort+Worth%2C+TX+76111"
+<a href="https://www.google.com/maps/search/?api=1&query=3701+Airport+Fwy%2C+Fort+Worth%2C+TX+76111"
 target="_blank"
-rel="noopener"
->
-
+rel="noopener">
 Get Directions
-
 </a>
 
 </div>
@@ -1869,45 +1813,6 @@ Get Directions
 
 </footer>
 
-<button
-class="chat-button"
-onclick="toggleChat()"
->
-
-💬
-
-</button>
-
-<div class="chat-box" id="chatBox">
-
-<div class="chat-header">
-LED KING CUSTOMER SUPPORT
-</div>
-
-<div class="chat-body">
-
-<p style="font-size:14px;margin-bottom:10px;">
-Send us your message and our team will respond.
-</p>
-
-<textarea
-id="chatMessage"
-placeholder="Type your message..."
-></textarea>
-
-<button
-class="btn btn-blue"
-style="width:100%;margin-top:10px;"
-onclick="sendChat()"
->
-
-SEND MESSAGE
-
-</button>
-
-</div>
-
-</div>
 
 <div class="mobile-bar">
 
@@ -1951,57 +1856,7 @@ document.querySelectorAll(".nav-menu a").forEach(function(link){
 
 });
 
-function submitQuote(event){
 
-    event.preventDefault();
-
-    alert(
-        "Thank you! Your quote request has been received.\n\n" +
-        "Please also call or message LED KING at 682-200-3004."
-    );
-
-}
-
-function toggleChat(){
-
-    const chat =
-        document.getElementById("chatBox");
-
-    if(chat.style.display === "block"){
-
-        chat.style.display = "none";
-
-    }else{
-
-        chat.style.display = "block";
-
-    }
-
-}
-
-function sendChat(){
-
-    const message =
-        document.getElementById("chatMessage").value;
-
-    if(!message.trim()){
-
-        alert("Please type a message.");
-
-        return;
-
-    }
-
-    const phone = "18723029425";
-
-    const smsLink =
-        "sms:" + phone +
-        "?body=" +
-        encodeURIComponent(message);
-
-    window.location.href = smsLink;
-
-}
 
 document.getElementById("year").textContent =
     new Date().getFullYear();
