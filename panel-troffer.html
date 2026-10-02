@@ -1,1 +1,875 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="LED KING Panel Lights & Troffer lighting products for commercial, residential and specialty applications.">
+
+<title>LED KING | Panel Lights & Troffer</title>
+
+<style>
+
+:root{
+    --blue:#1261a0;
+    --blue-dark:#0b4778;
+    --blue-light:#eaf4fb;
+    --black:#111111;
+    --white:#ffffff;
+    --gray:#666666;
+    --light:#f5f7f9;
+    --border:#dddddd;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--black);
+    background:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #e5e5e5;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:78px;
+    padding:0 22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:900;
+    color:var(--blue);
+    text-decoration:none;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.4px;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.58)
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+
+    min-height:400px;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:70px 22px;
+    color:white;
+}
+
+.hero-kicker{
+    color:#58aee8;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    font-size:18px;
+    color:#eeeeee;
+}
+
+/* PRODUCTS */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 22px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    display:block;
+    color:var(--blue);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:var(--gray);
+    max-width:700px;
+    margin:auto;
+}
+
+/* PRODUCT GRID */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    transition:.2s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    border-color:var(--blue);
+}
+
+.product-image{
+    width:100%;
+    height:220px;
+    background:var(--light);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#999;
+    font-size:14px;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-info h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.product-info p{
+    color:var(--gray);
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    background:var(--blue);
+    color:white;
+    text-align:center;
+    padding:65px 22px;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#eef7ff;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:800;
+    margin:5px;
+}
+
+.btn-white{
+    background:white;
+    color:var(--blue);
+}
+
+.btn-white:hover{
+    background:#f2f2f2;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:28px 20px;
+    font-size:14px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        min-height:70px;
+    }
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        min-height:350px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:50px 16px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+LED KING
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html#about">ABOUT US</a>
+</li>
+
+<li>
+<a href="products.html">PRODUCT</a>
+</li>
+
+<li>
+<a href="index.html#specialty">SPECIALTY</a>
+</li>
+
+<li>
+<a href="index.html#quote">GET A QUOTE</a>
+</li>
+
+<li>
+<a href="index.html#contact">CONTACT</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-kicker">
+LED KING PRODUCTS
+</div>
+
+<h1>
+Panel Lights & Troffer
+</h1>
+
+<p>
+Explore LED KING Panel Lights & Troffer lighting solutions designed for commercial, residential, office and other indoor applications.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section">
+
+<div class="section-title">
+
+<span>OUR PRODUCTS</span>
+
+<h2>Panel Lights & Troffer</h2>
+
+<p>
+Browse our selection of Panel Lights & Troffer products. Product images and specifications can be added to each product card.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 01 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 01
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 01</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 02 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 02
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 02</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 03 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 03
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 03</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 04 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 04
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 04</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 05 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 05
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 05</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 06 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 06
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 06</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 07 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 07
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 07</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 08 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 08
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 08</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 09 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 09
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 09</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 10
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 10</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 11 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 11
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 11</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 12 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 12
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 12</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 13 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 13
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 13</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 14 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 14
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 14</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 15 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 15
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 15</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 16 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 16
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 16</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 17 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 17
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 17</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 18 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 18
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 18</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 19 -->
+
+<div class="product-card">
+
+<div class="product-image">
+Product Image 19
+</div>
+
+<div class="product-info">
+
+<h3>Panel Light & Troffer 19</h3>
+
+<p>
+Product details coming soon.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Need Help Choosing a Panel Light?
+</h2>
+
+<p>
+Contact LED KING for product information, commercial quantities, project assistance and lighting quotes.
+</p>
+
+<a href="index.html#quote" class="btn btn-white">
+GET A QUOTE
+</a>
+
+<a href="index.html#contact" class="btn btn-white">
+CONTACT US
+</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<strong>LED KING</strong> — Professional LED Lighting
+</p>
+
+<p>
+3701 Airport Fwy, Fort Worth, TX 76111
+</p>
+
+<p>
+© 2026 LED KING. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+
+</html>
+```
