@@ -1,1 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="LED KING LED Bulbs - Browse our selection of LED bulbs for commercial and residential lighting applications.">
+
+<title>LED KING | LED Bulbs</title>
+
+<style>
+
+:root{
+    --blue:#1261a0;
+    --blue-dark:#0b4778;
+    --blue-light:#eaf4fc;
+    --black:#111111;
+    --gray:#666666;
+    --light:#f6f8fa;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--white);
+    color:var(--black);
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e5e5e5;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:var(--blue);
+    text-decoration:none;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:linear-gradient(135deg, #f5faff, #eaf4fc);
+    padding:70px 25px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    color:var(--blue-dark);
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:#555;
+    font-size:18px;
+}
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb{
+    max-width:1200px;
+    margin:25px auto 0;
+    padding:0 25px;
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:var(--blue);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.breadcrumb span{
+    color:#777;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 25px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:var(--black);
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:25px;
+}
+
+.product-card{
+    background:#ffffff;
+    border:1px solid #e3e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,0.06);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 28px rgba(0,0,0,0.12);
+}
+
+.product-image{
+    width:100%;
+    height:230px;
+    background:#f3f5f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:15px;
+}
+
+.product-info{
+    padding:20px;
+    text-align:center;
+}
+
+.product-info h3{
+    font-size:18px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.quote-btn{
+    display:inline-block;
+    background:var(--blue);
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.quote-btn:hover{
+    background:var(--blue-dark);
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:var(--blue);
+    color:#ffffff;
+    text-align:center;
+    padding:65px 25px;
+    margin-top:70px;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    font-size:17px;
+}
+
+.cta-button{
+    display:inline-block;
+    background:#ffffff;
+    color:var(--blue);
+    padding:13px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.cta-button:hover{
+    background:#f1f1f1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111111;
+    color:#ffffff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:5px 0;
+    color:#cccccc;
+}
+
+footer a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#4da3df;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(3, 1fr);
+    }
+
+}
+
+@media(max-width:750px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        padding:50px 20px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:260px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            LED KING
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html#about">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    PRODUCT
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#specialty">
+                    SPECIALTY
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#quote">
+                    GET A QUOTE
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <h1>LED Bulbs</h1>
+
+    <p>
+        Explore LED KING's selection of LED bulbs designed for
+        residential, commercial and industrial lighting applications.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     BREADCRUMB
+========================= -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">Home</a>
+
+    <span> / </span>
+
+    <a href="products.html">Products</a>
+
+    <span> / LED Bulbs</span>
+
+</div>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products-section">
+
+    <div class="section-title">
+
+        <h2>LED Bulb Collection</h2>
+
+        <p>
+            Browse our LED bulb products and contact us for pricing,
+            availability and product specifications.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-1.jpg"
+                     alt="LED Bulb 1">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 1</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-2.jpg"
+                     alt="LED Bulb 2">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 2</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-3.jpg"
+                     alt="LED Bulb 3">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 3</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-4.jpg"
+                     alt="LED Bulb 4">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 4</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-5.jpg"
+                     alt="LED Bulb 5">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 5</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-6.jpg"
+                     alt="LED Bulb 6">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 6</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-7.jpg"
+                     alt="LED Bulb 7">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 7</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-8.jpg"
+                     alt="LED Bulb 8">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 8</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-9.jpg"
+                     alt="LED Bulb 9">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 9</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-10.jpg"
+                     alt="LED Bulb 10">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 10</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 11 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-11.jpg"
+                     alt="LED Bulb 11">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 11</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 12 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-12.jpg"
+                     alt="LED Bulb 12">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 12</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 13 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-13.jpg"
+                     alt="LED Bulb 13">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 13</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 14 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-14.jpg"
+                     alt="LED Bulb 14">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 14</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 15 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-15.jpg"
+                     alt="LED Bulb 15">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 15</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 16 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-16.jpg"
+                     alt="LED Bulb 16">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 16</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 17 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-17.jpg"
+                     alt="LED Bulb 17">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 17</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 18 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-18.jpg"
+                     alt="LED Bulb 18">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 18</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 19 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-19.jpg"
+                     alt="LED Bulb 19">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 19</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 20 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-20.jpg"
+                     alt="LED Bulb 20">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 20</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 21 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-21.jpg"
+                     alt="LED Bulb 21">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 21</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 22 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-22.jpg"
+                     alt="LED Bulb 22">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 22</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 23 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-23.jpg"
+                     alt="LED Bulb 23">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 23</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 24 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-24.jpg"
+                     alt="LED Bulb 24">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 24</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 25 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-25.jpg"
+                     alt="LED Bulb 25">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 25</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 26 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-26.jpg"
+                     alt="LED Bulb 26">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 26</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 27 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-27.jpg"
+                     alt="LED Bulb 27">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 27</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 28 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-28.jpg"
+                     alt="LED Bulb 28">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 28</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 29 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-29.jpg"
+                     alt="LED Bulb 29">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 29</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 30 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-30.jpg"
+                     alt="LED Bulb 30">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 30</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 31 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-31.jpg"
+                     alt="LED Bulb 31">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 31</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 32 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-32.jpg"
+                     alt="LED Bulb 32">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 32</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 33 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-33.jpg"
+                     alt="LED Bulb 33">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 33</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 34 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-34.jpg"
+                     alt="LED Bulb 34">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 34</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 35 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-35.jpg"
+                     alt="LED Bulb 35">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 35</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 36 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-36.jpg"
+                     alt="LED Bulb 36">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 36</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 37 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-37.jpg"
+                     alt="LED Bulb 37">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 37</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 38 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-38.jpg"
+                     alt="LED Bulb 38">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 38</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 39 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="images/led-bulbs/led-bulb-39.jpg"
+                     alt="LED Bulb 39">
+            </div>
+
+            <div class="product-info">
+                <h3>LED Bulb 39</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <h2>Need the Right LED Bulb?</h2>
+
+    <p>
+        Contact LED KING for pricing, availability and help
+        finding the right LED lighting solution for your project.
+    </p>
+
+    <a href="index.html#quote" class="cta-button">
+        Get a Free Quote
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        <strong>LED KING</strong>
+    </p>
+
+    <p>
+        3701 Airport Fwy, Fort Worth, TX 76111
+    </p>
+
+    <p>
+        Professional LED Lighting Solutions
+    </p>
+
+    <p>
+        © 2026 LED KING. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
