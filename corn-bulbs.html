@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="LED KING Corn Bulbs - Commercial and residential LED corn bulb lighting solutions.">
+
+<title>LED KING | Corn Bulbs</title>
+
+<style>
+
+:root{
+    --blue:#1261a0;
+    --blue-dark:#0b4778;
+    --black:#111111;
+    --gray:#666666;
+    --light:#f6f8fa;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:var(--black);
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e5e5e5;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:var(--blue);
+    text-decoration:none;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:600;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#f5faff,#eaf4fc);
+    padding:70px 25px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    color:var(--blue-dark);
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:#555;
+    font-size:18px;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb{
+    max-width:1200px;
+    margin:25px auto 0;
+    padding:0 25px;
+    font-size:14px;
+}
+
+.breadcrumb a{
+    color:var(--blue);
+    text-decoration:none;
+    font-weight:600;
+}
+
+.breadcrumb span{
+    color:#777;
+}
+
+/* PRODUCTS */
+
+.products-section{
+    max-width:1200px;
+    margin:50px auto;
+    padding:0 25px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.product-card{
+    background:#ffffff;
+    border:1px solid #e3e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,0.06);
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 28px rgba(0,0,0,0.12);
+}
+
+.product-image{
+    width:100%;
+    height:260px;
+    background:#f3f5f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:15px;
+}
+
+.product-info{
+    padding:20px;
+    text-align:center;
+}
+
+.product-info h3{
+    font-size:18px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.quote-btn{
+    display:inline-block;
+    background:var(--blue);
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:600;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.quote-btn:hover{
+    background:var(--blue-dark);
+}
+
+/* CTA */
+
+.cta{
+    background:var(--blue);
+    color:#ffffff;
+    text-align:center;
+    padding:65px 25px;
+    margin-top:70px;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    font-size:17px;
+}
+
+.cta-button{
+    display:inline-block;
+    background:#ffffff;
+    color:var(--blue);
+    padding:13px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.cta-button:hover{
+    background:#f1f1f1;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111111;
+    color:#ffffff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:5px 0;
+    color:#cccccc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        padding:50px 20px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:280px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            LED KING
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html#about">
+                    ABOUT US
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    PRODUCT
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#specialty">
+                    SPECIALTY
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#quote">
+                    GET A QUOTE
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#contact">
+                    CONTACT
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Corn Bulbs</h1>
+
+    <p>
+        Explore LED KING's selection of LED corn bulbs
+        for commercial, industrial and residential lighting applications.
+    </p>
+
+</section>
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    <a href="index.html">Home</a>
+
+    <span> / </span>
+
+    <a href="products.html">Products</a>
+
+    <span> / Corn Bulbs</span>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<section class="products-section">
+
+    <div class="section-title">
+
+        <h2>Corn Bulb Collection</h2>
+
+        <p>
+            Browse our corn bulb products and contact LED KING
+            for pricing, availability and product information.
+        </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+
+        <!-- CORN BULB 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-1.jpg"
+                    alt="LED Corn Bulb 1"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 1</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-2.jpg"
+                    alt="LED Corn Bulb 2"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 2</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-3.jpg"
+                    alt="LED Corn Bulb 3"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 3</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-4.jpg"
+                    alt="LED Corn Bulb 4"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 4</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-5.jpg"
+                    alt="LED Corn Bulb 5"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 5</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-6.jpg"
+                    alt="LED Corn Bulb 6"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 6</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 7 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-7.jpg"
+                    alt="LED Corn Bulb 7"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 7</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 8 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-8.jpg"
+                    alt="LED Corn Bulb 8"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 8</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CORN BULB 9 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <img
+                    src="images/corn-bulbs/corn-bulb-9.jpg"
+                    alt="LED Corn Bulb 9"
+                >
+
+            </div>
+
+            <div class="product-info">
+
+                <h3>Corn Bulb 9</h3>
+
+                <a href="index.html#quote" class="quote-btn">
+                    Get a Quote
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>Need the Right Corn Bulb?</h2>
+
+    <p>
+        Contact LED KING for pricing, availability and help
+        finding the right LED lighting solution for your project.
+    </p>
+
+    <a href="index.html#quote" class="cta-button">
+        Get a Free Quote
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        <strong>LED KING</strong>
+    </p>
+
+    <p>
+        3701 Airport Fwy, Fort Worth, TX 76111
+    </p>
+
+    <p>
+        Professional LED Lighting Solutions
+    </p>
+
+    <p>
+        © 2026 LED KING. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
