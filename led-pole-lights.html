@@ -1,1 +1,398 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Pole Lights | LED KING</title>
 
+    <style>
+        :root {
+            --blue: #1261a0;
+            --black: #111111;
+            --white: #ffffff;
+            --gray: #666666;
+            --light: #f5f7f9;
+            --border: #dddddd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--blue);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .hero {
+            min-height: 360px;
+            background:
+                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80")
+                center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .products-section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        }
+
+        .product-image {
+            height: 220px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 16px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .cta {
+            background: var(--blue);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--blue);
+        }
+
+        .btn-black {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">LED KING</a>
+
+        <ul class="nav-links">
+            <li><a href="index.html#about">ABOUT US</a></li>
+            <li><a href="products.html">PRODUCT</a></li>
+            <li><a href="index.html#specialty">SPECIALTY</a></li>
+            <li><a href="index.html#quote">GET A QUOTE</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>LED Pole Lights</h1>
+        <p>
+            Explore LED KING Pole Lights designed for parking lots,
+            streets, commercial properties, outdoor areas and roadway applications.
+        </p>
+    </div>
+</section>
+
+<section class="products-section">
+
+    <div class="section-title">
+        <h2>LED Pole Lights</h2>
+        <p>Browse our LED Pole Light options.</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="product-image">Product Image 01</div>
+            <div class="product-info">
+                <h3>LED Pole Light 01</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 02</div>
+            <div class="product-info">
+                <h3>LED Pole Light 02</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 03</div>
+            <div class="product-info">
+                <h3>LED Pole Light 03</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 04</div>
+            <div class="product-info">
+                <h3>LED Pole Light 04</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 05</div>
+            <div class="product-info">
+                <h3>LED Pole Light 05</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 06</div>
+            <div class="product-info">
+                <h3>LED Pole Light 06</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 07</div>
+            <div class="product-info">
+                <h3>LED Pole Light 07</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 08</div>
+            <div class="product-info">
+                <h3>LED Pole Light 08</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 09</div>
+            <div class="product-info">
+                <h3>LED Pole Light 09</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">Product Image 10</div>
+            <div class="product-info">
+                <h3>LED Pole Light 10</h3>
+                <p>Product details coming soon.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Need Help Choosing the Right Pole Light?</h2>
+
+    <p>
+        Contact LED KING for product information, commercial quantities,
+        project assistance and lighting quotes.
+    </p>
+
+    <div class="cta-buttons">
+        <a href="index.html#quote" class="btn btn-white">Get a Quote</a>
+        <a href="index.html#contact" class="btn btn-black">Contact Us</a>
+    </div>
+</section>
+
+<footer>
+    <p><strong>LED KING</strong></p>
+    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+    <p>© 2026 LED KING. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
