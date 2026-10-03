@@ -2,414 +2,825 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFO Highbay Lights | LED KING</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --blue: #1261a0;
-            --black: #111111;
-            --white: #ffffff;
-            --gray: #666666;
-            --light: #f5f7f9;
-            --border: #dddddd;
-        }
+<title>UFO High Bay Lights | LED KING</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="Shop UFO LED High Bay Lights from LED KING. 150W, 240W and 300W options with adjustable wattage, CCT, DLC listings and 5700K daylight options.">
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--black);
-            background: var(--white);
-            line-height: 1.6;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+    line-height: 1.6;
+}
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* TOP BAR */
+.top-bar {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 14px;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--blue);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+/* HEADER */
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 28px;
-        }
+.header-container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--black);
-            font-size: 14px;
-            font-weight: bold;
-        }
+.logo {
+    font-size: 30px;
+    font-weight: 900;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
 
-        .nav-links a:hover {
-            color: var(--blue);
-        }
+.logo span {
+    color: #1261a0;
+}
 
-        .hero {
-            position: relative;
-            min-height: 360px;
-            background:
-                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
 
-        .hero-content {
-            max-width: 850px;
-            color: var(--white);
-        }
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    font-size: 15px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+nav a:hover {
+    color: #1261a0;
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin: auto;
-        }
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
 
-        .products-section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0b4778, #1261a0);
+    color: white;
+    padding: 70px 25px;
+    text-align: center;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+.hero p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+    opacity: 0.95;
+}
 
-        .section-title p {
-            color: var(--gray);
-        }
+/* BREADCRUMB */
+.breadcrumb {
+    max-width: 1400px;
+    margin: 25px auto 0;
+    padding: 0 25px;
+    font-size: 14px;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
+.breadcrumb a {
+    color: #1261a0;
+    text-decoration: none;
+}
 
-        .product-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
+.breadcrumb span {
+    color: #777;
+}
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-        }
+/* PRODUCTS */
+.products-section {
+    max-width: 1400px;
+    margin: auto;
+    padding: 45px 25px 70px;
+}
 
-        .product-image {
-            height: 220px;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 16px;
-            text-align: center;
-            padding: 15px;
-        }
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .product-info {
-            padding: 20px;
-        }
+.section-heading h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
 
-        .product-info h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
+.section-heading p {
+    color: #666;
+    font-size: 16px;
+}
 
-        .product-info p {
-            color: var(--gray);
-            font-size: 14px;
-        }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
 
-        .cta {
-            background: var(--blue);
-            color: var(--white);
-            text-align: center;
-            padding: 60px 20px;
-        }
+/* PRODUCT CARD */
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
 
-        .cta h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
 
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
+.product-image {
+    background: #fff;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+}
 
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.product-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
-        .btn-white {
-            background: var(--white);
-            color: var(--blue);
-        }
+.product-number {
+    color: #1261a0;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
 
-        .btn-black {
-            background: var(--black);
-            color: var(--white);
-        }
+.product-content h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #111;
+}
 
-        footer {
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 20px;
-        }
+.product-description {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 22px;
+    flex: 1;
+}
 
-        footer p {
-            margin: 6px 0;
-            font-size: 14px;
-        }
+/* BUTTONS */
+.button-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
-        @media (max-width: 900px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.2s ease;
+}
 
-            .nav-links {
-                gap: 15px;
-            }
-        }
+.btn-primary {
+    background: #1261a0;
+    color: white;
+}
 
-        @media (max-width: 650px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
+.btn-primary:hover {
+    background: #0b4778;
+}
 
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+.btn-outline {
+    border: 2px solid #1261a0;
+    color: #1261a0;
+    background: white;
+}
 
-            .hero h1 {
-                font-size: 36px;
-            }
+.btn-outline:hover {
+    background: #1261a0;
+    color: white;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+/* INFO SECTION */
+.info-section {
+    background: #111;
+    color: white;
+    padding: 60px 25px;
+}
 
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.info-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.info-container h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.info-container p {
+    color: #ddd;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/* CTA */
+.cta-section {
+    background: #1261a0;
+    color: white;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.cta-section p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #1261a0;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.cta-button:hover {
+    background: #eee;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+footer p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #1261a0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header-container {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .products-section {
+        padding: 35px 15px 50px;
+    }
+
+    .product-image {
+        height: 270px;
+    }
+
+    .product-content {
+        padding: 20px;
+    }
+
+    .product-content h3 {
+        font-size: 18px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="index.html" class="logo">LED KING</a>
+<!-- TOP BAR -->
+<div class="top-bar">
+    Professional LED Lighting Products & Solutions
+</div>
 
-        <ul class="nav-links">
-            <li><a href="index.html#about">ABOUT US</a></li>
-            <li><a href="products.html">PRODUCT</a></li>
-            <li><a href="index.html#specialty">SPECIALTY</a></li>
-            <li><a href="index.html#quote">GET A QUOTE</a></li>
-            <li><a href="index.html#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            LED <span>KING</span>
+        </a>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#products">Products</a>
+            <a href="index.html#specialty">Specialty</a>
+            <a href="index.html#quote">Get a Quote</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>UFO Highbay Lights</h1>
-        <p>
-            Explore LED KING UFO Highbay Lights designed for
-            warehouses, industrial facilities, commercial buildings
-            and high-ceiling applications.
-        </p>
-    </div>
+    <h1>UFO High Bay Lights</h1>
+    <p>
+        High-performance UFO LED High Bay Lights for warehouses,
+        commercial buildings, industrial facilities, garages and other
+        high-ceiling applications.
+    </p>
 </section>
 
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span> / </span>
+    <span>UFO High Bay Lights</span>
+</div>
+
+<!-- PRODUCTS -->
 <section class="products-section">
 
-    <div class="section-title">
-        <h2>UFO Highbay Lights</h2>
-        <p>Browse our UFO Highbay lighting options.</p>
+    <div class="section-heading">
+        <h2>UFO High Bay Lights</h2>
+        <p>7 LED UFO High Bay lighting options from LED KING</p>
     </div>
 
     <div class="product-grid">
 
+        <!-- PRODUCT 1 -->
         <div class="product-card">
-            <div class="product-image">Product Image 01</div>
-            <div class="product-info">
-                <h3>UFO Highbay 01</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%201.png"
+                     alt="UFO LED Highbay Light 150W 5700K"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #1</div>
+
+                <h3>
+                    UFO led highbay light, 150w, 120-277VAC, wattage &amp; CCT adjustable,Black,Color Temperature 5700K
+                </h3>
+
+                <p class="product-description">
+                    150W UFO LED high bay light with 120-277VAC input,
+                    adjustable wattage and CCT, black finish and 5700K
+                    color temperature.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/ufo-led-highbay-light-150w-120-277vac-wattage-cct-adjustableblackcolor-temperature-5700k/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
+
+        <!-- PRODUCT 2 -->
         <div class="product-card">
-            <div class="product-image">Product Image 02</div>
-            <div class="product-info">
-                <h3>UFO Highbay 02</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%202.png"
+                     alt="DLC5.1 13nd UFO LED Highbay Light 150W"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #2</div>
+
+                <h3>
+                    DLC5.1 13nd UFO led highbay light, 150w, AC100-277V, China brand driver,Black color, 5700K, 90degree beam angle
+                </h3>
+
+                <p class="product-description">
+                    150W DLC5.1 UFO LED high bay light with AC100-277V
+                    input, China brand driver, black color, 5700K and
+                    90-degree beam angle.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/dlc5-1-13nd-ufo-led-highbay-light-150w-ac100-277v-china-brand-driverblack-color-5700k-90degree-beam-angle/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
+
+        <!-- PRODUCT 3 -->
         <div class="product-card">
-            <div class="product-image">Product Image 03</div>
-            <div class="product-info">
-                <h3>UFO Highbay 03</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%203.png"
+                     alt="DLC5.1 18nd UFO LED Highbay Light 150W"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #3</div>
+
+                <h3>
+                    DLC5.1 18nd UFO led highbay light, 150w, AC100-277V, China brand driver,Black color, 5700K, 90degree beam angle
+                </h3>
+
+                <p class="product-description">
+                    150W DLC5.1 UFO LED high bay light with AC100-277V
+                    input, China brand driver, black finish, 5700K and
+                    90-degree beam angle.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/dlc5-1-18nd-ufo-led-highbay-light-150w-ac100-277v-china-brand-driverblack-color-5700k-90degree-beam-angle/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
+
+        <!-- PRODUCT 4 -->
         <div class="product-card">
-            <div class="product-image">Product Image 04</div>
-            <div class="product-info">
-                <h3>UFO Highbay 04</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%204.png"
+                     alt="DLC5.1 13nd UFO LED Highbay Light 240W"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #4</div>
+
+                <h3>
+                    DLC5.1 13nd UFO led highbay light, 240w, AC100-277V, China brand driver,Black color, 5700K, 90degree beam angle
+                </h3>
+
+                <p class="product-description">
+                    240W DLC5.1 UFO LED high bay light with AC100-277V
+                    input, China brand driver, black color, 5700K and
+                    90-degree beam angle.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/dlc5-1-13nd-ufo-led-highbay-light-240w-ac100-277v-china-brand-driverblack-color-5700k-90degree-beam-angle/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
+
+        <!-- PRODUCT 5 -->
         <div class="product-card">
-            <div class="product-image">Product Image 05</div>
-            <div class="product-info">
-                <h3>UFO Highbay 05</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%205.png"
+                     alt="DLC5.1 18nd UFO LED Highbay Light 240W"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #5</div>
+
+                <h3>
+                    DLC5.1 18nd UFO led highbay light, 240w, AC100-277V, China brand driver,Black color, 5700K, 90degree beam angle
+                </h3>
+
+                <p class="product-description">
+                    240W DLC5.1 UFO LED high bay light with AC100-277V
+                    input, China brand driver, black color, 5700K and
+                    90-degree beam angle.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/dlc5-1-18nd-ufo-led-highbay-light-240w-ac100-277v-china-brand-driverblack-color-5700k-90degree-beam-angle/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
+
+        <!-- PRODUCT 6 -->
         <div class="product-card">
-            <div class="product-image">Product Image 06</div>
-            <div class="product-info">
-                <h3>UFO Highbay 06</h3>
-                <p>Product details coming soon.</p>
+
+            <div class="product-image">
+                <img src="UFO%206.png"
+                     alt="UFO LED Highbay Light 240W Adjustable"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">UFO High Bay Light #6</div>
+
+                <h3>
+                    UFO led highbay light, 240w, AC120-277V, wattage &amp; CCT adjustable, Black,Color Temperature 5700K
+                </h3>
+
+                <p class="product-description">
+                    240W UFO LED high bay light with AC120-277V input,
+                    adjustable wattage and CCT, black finish and 5700K
+                    color temperature.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/ufo-led-highbay-light-240w-ac120-277v-wattage-cct-adjustable-blackcolor-temperature-5700k/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
-        <div class="product-card">
-            <div class="product-image">Product Image 07</div>
-            <div class="product-info">
-                <h3>UFO Highbay 07</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
 
+        <!-- PRODUCT 7 -->
         <div class="product-card">
-            <div class="product-image">Product Image 08</div>
-            <div class="product-info">
-                <h3>UFO Highbay 08</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-image">Product Image 09</div>
-            <div class="product-info">
-                <h3>UFO Highbay 09</h3>
-                <p>Product details coming soon.</p>
+            <div class="product-image">
+                <img src="UFO%207.png"
+                     alt="DLC5.1 18nd UFO LED Highbay Light 300W"
+                     loading="lazy">
             </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-image">Product Image 10</div>
-            <div class="product-info">
-                <h3>UFO Highbay 10</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
+            <div class="product-content">
 
-        <div class="product-card">
-            <div class="product-image">Product Image 11</div>
-            <div class="product-info">
-                <h3>UFO Highbay 11</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
+                <div class="product-number">UFO High Bay Light #7</div>
 
-        <div class="product-card">
-            <div class="product-image">Product Image 12</div>
-            <div class="product-info">
-                <h3>UFO Highbay 12</h3>
-                <p>Product details coming soon.</p>
+                <h3>
+                    DLC5.1 18nd UFO led highbay light, 300w, AC100-277V, China brand driver,Black color, 5700K, 90degree beam angle
+                </h3>
+
+                <p class="product-description">
+                    300W DLC5.1 UFO LED high bay light with AC100-277V
+                    input, China brand driver, black color, 5700K and
+                    90-degree beam angle.
+                </p>
+
+                <div class="button-row">
+                    <a class="btn btn-primary"
+                       href="https://ledkingtx.com/product/dlc5-1-18nd-ufo-led-highbay-light-300w-ac100-277v-china-brand-driverblack-color-5700k-90degree-beam-angle/"
+                       target="_blank">
+                        VIEW PRODUCT
+                    </a>
+
+                    <a class="btn btn-outline" href="index.html#quote">
+                        GET A QUOTE
+                    </a>
+                </div>
+
             </div>
         </div>
 
     </div>
 </section>
 
-<section class="cta">
-    <h2>Need Help Choosing the Right Highbay?</h2>
+
+<!-- INFORMATION -->
+<section class="info-section">
+
+    <div class="info-container">
+
+        <h2>UFO LED High Bay Lighting</h2>
+
+        <p>
+            LED KING offers UFO High Bay lighting options for
+            warehouses, industrial facilities, commercial buildings,
+            garages and other high-ceiling applications.
+        </p>
+
+        <p>
+            Available options include 150W, 240W and 300W models,
+            5700K daylight options, adjustable wattage and CCT models,
+            and DLC5.1 listed products.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+
+    <h2>Need Help Choosing the Right UFO High Bay?</h2>
 
     <p>
-        Contact LED KING for product information, commercial quantities,
-        project assistance and lighting quotes.
+        Contact LED KING for product information, pricing and a quote.
     </p>
 
-    <div class="cta-buttons">
-        <a href="index.html#quote" class="btn btn-white">Get a Quote</a>
-        <a href="index.html#contact" class="btn btn-black">Contact Us</a>
-    </div>
+    <a href="index.html#quote" class="cta-button">
+        GET A QUOTE
+    </a>
+
 </section>
 
+
+<!-- FOOTER -->
 <footer>
-    <p><strong>LED KING</strong></p>
-    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#quote">Get a Quote</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
     <p>© 2026 LED KING. All Rights Reserved.</p>
+
+    <p>
+        Professional LED Lighting Products &amp; Solutions
+    </p>
+
 </footer>
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
