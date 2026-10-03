@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="LED KING - LED lighting products including indoor, outdoor, hotel lighting and LED accessories.">
+<meta name="description" content="LED KING - LED lighting products including canopy lights, UFO highbay lights, flood lights, LED pole lights and exhaust fans.">
 
 <title>LED KING | Products & Categories</title>
 
@@ -212,56 +212,74 @@ header{
 }
 
 /* =========================
-   CATEGORY GRID
+   IMAGE CATEGORY GRID
 ========================= */
 
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .category-card{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    min-height:75px;
-    padding:18px 20px;
-
+    display:block;
     background:white;
     border:1px solid var(--border);
-    border-radius:8px;
+    border-radius:10px;
+    overflow:hidden;
 
     text-decoration:none;
     color:var(--black);
 
-    font-weight:700;
-    font-size:15px;
-
     transition:
         transform .2s ease,
         box-shadow .2s ease,
-        border-color .2s ease,
-        color .2s ease;
+        border-color .2s ease;
 }
 
-.category-card::after{
-    content:"→";
-    color:var(--blue);
-    font-size:20px;
-    transition:.2s;
+.category-image{
+    width:100%;
+    height:240px;
+    background:#f5f7f9;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+}
+
+.category-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:transform .3s ease;
+}
+
+.category-name{
+    padding:18px 20px;
+    text-align:center;
+
+    font-weight:800;
+    font-size:18px;
+
+    background:white;
 }
 
 .category-card:hover{
-    transform:translateY(-3px);
+    transform:translateY(-5px);
     border-color:var(--blue);
-    color:var(--blue);
-    box-shadow:0 8px 22px rgba(0,0,0,.10);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-.category-card:hover::after{
-    transform:translateX(4px);
+.category-card:hover .category-image img{
+    transform:scale(1.04);
+}
+
+.category-card:hover .category-name{
+    color:var(--blue);
 }
 
 /* =========================
@@ -382,6 +400,10 @@ footer strong{
         font-size:22px;
     }
 
+    .category-image{
+        height:230px;
+    }
+
 }
 
 </style>
@@ -476,7 +498,7 @@ Choose a category below to explore our available LED lighting products.
 
 
 <!-- =========================
-     INDOOR LIGHTS
+     SELECTED PRODUCTS
 ========================= -->
 
 <div class="category-group">
@@ -485,241 +507,137 @@ Choose a category below to explore our available LED lighting products.
 
 <div class="number">01</div>
 
-<h3>Indoor Lights</h3>
+<h3>Featured Lighting Categories</h3>
 
 </div>
 
+
 <div class="category-grid">
 
+
+<!-- CANOPY LIGHTS -->
 
 <a class="category-card" href="canopy-lights.html">
+
+<div class="category-image">
+
+<img
+src="canopy.jpg"
+alt="Canopy Lights"
+loading="lazy"
+>
+
+</div>
+
+<div class="category-name">
 Canopy Lights
+</div>
+
 </a>
 
 
-<a class="category-card" href="led-bulbs.html">
-LED Bulbs
-</a>
-
-
-<a class="category-card" href="corn-bulbs.html">
-Corn Bulbs
-</a>
-
-
-<a class="category-card" href="panel-troffer.html">
-Panel Lights & Troffer
-</a>
-
-
-<a class="category-card" href="linear-strip.html">
-Linear Strip Fixture
-</a>
-
-
-<a class="category-card" href="led-tubes.html">
-LED Tubes
-</a>
-
-
-<a class="category-card" href="ceiling-lights.html">
-Ceiling Lights
-</a>
-
-
-<a class="category-card" href="fixtures.html">
-Fixtures
-</a>
-
-
-<a class="category-card" href="linear-highbay.html">
-Linear Highbay Fixture
-</a>
-
+<!-- UFO HIGHBAY -->
 
 <a class="category-card" href="ufo-highbay.html">
+
+<div class="category-image">
+
+<img
+src="ufo-highbay.jpg"
+alt="UFO Highbay Lights"
+loading="lazy"
+>
+
+</div>
+
+<div class="category-name">
 UFO Highbay Lights
+</div>
+
 </a>
 
 
-<a class="category-card" href="exhaust-fan.html">
-Exhaust Fan
-</a>
-
-
-<a class="category-card" href="single-side-corn-bulbs.html">
-Single Side Corn Bulbs
-</a>
-
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     OUTDOOR LIGHTS
-========================= -->
-
-<div class="category-group">
-
-<div class="category-group-title">
-
-<div class="number">02</div>
-
-<h3>Outdoor Lights</h3>
-
-</div>
-
-<div class="category-grid">
-
+<!-- FLOOD LIGHTS -->
 
 <a class="category-card" href="flood-lights.html">
+
+<div class="category-image">
+
+<img
+src="flood-light.jpg"
+alt="Flood Lights"
+loading="lazy"
+>
+
+</div>
+
+<div class="category-name">
 Flood Lights
+</div>
+
 </a>
 
+
+<!-- LED POLE LIGHTS -->
 
 <a class="category-card" href="led-pole-lights.html">
+
+<div class="category-image">
+
+<img
+src="pole-light.jpg"
+alt="LED Pole Lights"
+loading="lazy"
+>
+
+</div>
+
+<div class="category-name">
 LED Pole Lights
+</div>
+
 </a>
 
 
-<a class="category-card" href="wall-pack.html">
-Wall Pack
-</a>
+<!-- EXHAUST -->
 
+<a class="category-card" href="exhaust-fan.html">
 
-<a class="category-card" href="mini-wall-pack.html">
-Mini Wall Pack
-</a>
+<div class="category-image">
 
-
-<a class="category-card" href="up-down-lights.html">
-Up & Down Lights
-</a>
-
-
-<a class="category-card" href="security-lights.html">
-Security Lights
-</a>
-
-
-<a class="category-card" href="stadium-lights.html">
-Stadium Lights
-</a>
-
-
-<a class="category-card" href="grow-lights.html">
-Grow Lights
-</a>
-
-
-<a class="category-card" href="bollard.html">
-Bollard
-</a>
-
-
-<a class="category-card" href="wall-sconces.html">
-Wall Sconces
-</a>
-
-
-<a class="category-card" href="outdoor-wall-lights.html">
-Outdoor Wall Lights
-</a>
-
-
-<a class="category-card" href="post-top-lights.html">
-Post Top Lights
-</a>
-
-
-<a class="category-card" href="track-lights.html">
-Track Lights
-</a>
-
-
-<a class="category-card" href="tenons.html">
-Tenons
-</a>
-
+<img
+src="exhaust.jpg"
+alt="Exhaust"
+loading="lazy"
+>
 
 </div>
 
+<div class="category-name">
+Exhaust
 </div>
 
-
-<!-- =========================
-     HOTEL LIGHTS
-========================= -->
-
-<div class="category-group">
-
-<div class="category-group-title">
-
-<div class="number">03</div>
-
-<h3>Hotel Lights</h3>
-
-</div>
-
-<div class="category-grid">
-
-
-<a class="category-card" href="hotel-fixtures.html">
-Hotel Fixtures
 </a>
 
 
-<a class="category-card" href="vanity-lights.html">
-Vanity Lights
-</a>
+<!-- EXHAUST FAN -->
 
+<a class="category-card" href="exhaust-fan.html">
 
-<a class="category-card" href="hotel-ceiling-lights.html">
-Ceiling Lights
-</a>
+<div class="category-image">
 
+<img
+src="exhaust-fan.jpg"
+alt="Exhaust Fan"
+loading="lazy"
+>
 
 </div>
 
+<div class="category-name">
+Exhaust Fan
 </div>
 
-
-<!-- =========================
-     LED ACCESSORIES
-========================= -->
-
-<div class="category-group">
-
-<div class="category-group-title">
-
-<div class="number">04</div>
-
-<h3>LED Accessories</h3>
-
-</div>
-
-<div class="category-grid">
-
-
-<a class="category-card" href="accessories.html">
-Accessories
-</a>
-
-
-<a class="category-card" href="injection-module.html">
-Injection Module
-</a>
-
-
-<a class="category-card" href="power-supply-drivers.html">
-Power Supply / Drivers
-</a>
-
-
-<a class="category-card" href="strip-rope-lights.html">
-Strip / Rope Lights
 </a>
 
 
