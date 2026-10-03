@@ -2,395 +2,909 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LED Pole Lights | LED KING</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --blue: #1261a0;
-            --black: #111111;
-            --white: #ffffff;
-            --gray: #666666;
-            --light: #f5f7f9;
-            --border: #dddddd;
-        }
+<title>LED Pole Lights & Shoebox Lights | LED KING</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="LED KING Pole Lights, Shoebox Lights and Solar Street Lights. Commercial outdoor lighting for parking lots, streets, pathways and large outdoor areas.">
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--black);
-            background: var(--white);
-            line-height: 1.6;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f7fa;
+        color: #111;
+        line-height: 1.6;
+    }
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    header {
+        background: #ffffff;
+        border-bottom: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--blue);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+    .nav-container {
+        max-width: 1400px;
+        margin: auto;
+        padding: 18px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 28px;
-        }
+    .logo {
+        font-size: 30px;
+        font-weight: 900;
+        color: #1261a0;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--black);
-            font-size: 14px;
-            font-weight: bold;
-        }
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
 
-        .nav-links a:hover {
-            color: var(--blue);
-        }
+    nav a {
+        color: #111;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+    }
 
-        .hero {
-            min-height: 360px;
-            background:
-                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+    nav a:hover {
+        color: #1261a0;
+    }
 
-        .hero-content {
-            max-width: 850px;
-            color: var(--white);
+    .hero {
+        background: linear-gradient(135deg, #0b4778, #1261a0);
+        color: white;
+        text-align: center;
+        padding: 65px 20px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+
+    .hero p {
+        max-width: 850px;
+        margin: auto;
+        font-size: 18px;
+        opacity: 0.95;
+    }
+
+    .back-button {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 24px;
+        background: white;
+        color: #1261a0;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 700;
+    }
+
+    .back-button:hover {
+        background: #f0f0f0;
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 45px auto;
+        padding: 0 25px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 40px;
+    }
+
+    .intro h2 {
+        color: #0b4778;
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .intro p {
+        color: #555;
+        font-size: 17px;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        border: 1px solid #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.13);
+    }
+
+    .product-image {
+        height: 280px;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .product-content {
+        padding: 23px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .product-number {
+        color: #1261a0;
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        letter-spacing: 0.5px;
+    }
+
+    .product-content h3 {
+        font-size: 21px;
+        line-height: 1.35;
+        margin-bottom: 15px;
+        color: #111;
+    }
+
+    .specs {
+        list-style: none;
+        margin-bottom: 20px;
+        flex: 1;
+    }
+
+    .specs li {
+        padding: 7px 0;
+        border-bottom: 1px solid #eeeeee;
+        font-size: 14px;
+        color: #444;
+    }
+
+    .specs li strong {
+        color: #111;
+    }
+
+    .quote-button {
+        display: block;
+        text-align: center;
+        background: #1261a0;
+        color: white;
+        text-decoration: none;
+        padding: 13px 18px;
+        border-radius: 6px;
+        font-weight: 700;
+        transition: background 0.2s ease;
+    }
+
+    .quote-button:hover {
+        background: #0b4778;
+    }
+
+    .bottom-cta {
+        margin-top: 55px;
+        background: #111;
+        color: white;
+        text-align: center;
+        border-radius: 12px;
+        padding: 45px 25px;
+    }
+
+    .bottom-cta h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .bottom-cta p {
+        max-width: 750px;
+        margin: 0 auto 25px;
+        color: #ddd;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background: #1261a0;
+        color: white;
+        text-decoration: none;
+        padding: 14px 30px;
+        border-radius: 6px;
+        font-weight: 700;
+    }
+
+    .cta-button:hover {
+        background: #0b4778;
+    }
+
+    footer {
+        margin-top: 50px;
+        background: #0b4778;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    @media (max-width: 1000px) {
+        .products-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 36px;
         }
+    }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .products-section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-        }
-
-        .product-image {
-            height: 220px;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 16px;
-            text-align: center;
+    @media (max-width: 650px) {
+        .nav-container {
+            flex-direction: column;
             padding: 15px;
         }
 
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-info h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-
-        .product-info p {
-            color: var(--gray);
-            font-size: 14px;
-        }
-
-        .cta {
-            background: var(--blue);
-            color: var(--white);
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .cta h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
-
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-
-        .cta-buttons {
-            display: flex;
+        nav {
             justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+            gap: 14px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
+        .products-grid {
+            grid-template-columns: 1fr;
         }
 
-        .btn-white {
-            background: var(--white);
-            color: var(--blue);
+        .hero {
+            padding: 45px 18px;
         }
 
-        .btn-black {
-            background: var(--black);
-            color: var(--white);
+        .hero h1 {
+            font-size: 30px;
         }
 
-        footer {
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 20px;
+        .hero p {
+            font-size: 16px;
         }
 
-        footer p {
-            margin: 6px 0;
-            font-size: 14px;
+        .product-image {
+            height: 250px;
         }
-
-        @media (max-width: 900px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 650px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar">
+    <div class="nav-container">
+
         <a href="index.html" class="logo">LED KING</a>
 
-        <ul class="nav-links">
-            <li><a href="index.html#about">ABOUT US</a></li>
-            <li><a href="products.html">PRODUCT</a></li>
-            <li><a href="index.html#specialty">SPECIALTY</a></li>
-            <li><a href="index.html#quote">GET A QUOTE</a></li>
-            <li><a href="index.html#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#products">Products</a>
+            <a href="index.html#specialty">Specialty</a>
+            <a href="index.html#quote">Get a Quote</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </div>
 </header>
 
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>LED Pole Lights</h1>
-        <p>
-            Explore LED KING Pole Lights designed for parking lots,
-            streets, commercial properties, outdoor areas and roadway applications.
-        </p>
-    </div>
-</section>
 
-<section class="products-section">
-
-    <div class="section-title">
-        <h2>LED Pole Lights</h2>
-        <p>Browse our LED Pole Light options.</p>
-    </div>
-
-    <div class="product-grid">
-
-        <div class="product-card">
-            <div class="product-image">Product Image 01</div>
-            <div class="product-info">
-                <h3>LED Pole Light 01</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 02</div>
-            <div class="product-info">
-                <h3>LED Pole Light 02</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 03</div>
-            <div class="product-info">
-                <h3>LED Pole Light 03</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 04</div>
-            <div class="product-info">
-                <h3>LED Pole Light 04</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 05</div>
-            <div class="product-info">
-                <h3>LED Pole Light 05</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 06</div>
-            <div class="product-info">
-                <h3>LED Pole Light 06</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 07</div>
-            <div class="product-info">
-                <h3>LED Pole Light 07</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 08</div>
-            <div class="product-info">
-                <h3>LED Pole Light 08</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 09</div>
-            <div class="product-info">
-                <h3>LED Pole Light 09</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="product-image">Product Image 10</div>
-            <div class="product-info">
-                <h3>LED Pole Light 10</h3>
-                <p>Product details coming soon.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="cta">
-    <h2>Need Help Choosing the Right Pole Light?</h2>
+    <h1>LED Pole Lights</h1>
 
     <p>
-        Contact LED KING for product information, commercial quantities,
-        project assistance and lighting quotes.
+        Commercial LED Pole Lights, Shoebox Lights and Solar Street Lights
+        for parking lots, streets, outdoor areas and large commercial spaces.
     </p>
 
-    <div class="cta-buttons">
-        <a href="index.html#quote" class="btn btn-white">Get a Quote</a>
-        <a href="index.html#contact" class="btn btn-black">Contact Us</a>
-    </div>
+    <a href="index.html#products" class="back-button">
+        ← Back to Products
+    </a>
+
 </section>
 
+
+<main class="container">
+
+    <div class="intro">
+
+        <h2>LED Pole & Shoebox Lighting</h2>
+
+        <p>
+            Explore our selection of LED Pole Lights, Shoebox Lights,
+            Solar Street Lights and outdoor area lighting solutions.
+            Contact LED KING for product availability, specifications
+            and commercial lighting quotes.
+        </p>
+
+    </div>
+
+
+    <div class="products-grid">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P1.png"
+                     alt="Solar 30W LED Street Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 01</div>
+
+                <h3>Solar 30W LED Street Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 30W</li>
+                    <li><strong>Input Voltage:</strong> 18VDC</li>
+                    <li><strong>Type:</strong> Solar LED Street Light</li>
+                    <li><strong>Application:</strong> Streets & Outdoor Areas</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P2.png"
+                     alt="Solar 50W LED Street Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 02</div>
+
+                <h3>Solar 50W LED Street Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 50W</li>
+                    <li><strong>Input Voltage:</strong> 18VDC</li>
+                    <li><strong>Type:</strong> Solar LED Street Light</li>
+                    <li><strong>Application:</strong> Streets & Outdoor Areas</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P3.png"
+                     alt="12th Gen LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 03</div>
+
+                <h3>12th Gen LED Shoebox Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 100W / 150W / 240W / 300W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>Driver:</strong> Sosen</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P4.png"
+                     alt="SB16 150W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 04</div>
+
+                <h3>SB16 LED Shoebox Light - 150W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 150W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC277-480V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P5.png"
+                     alt="SB19 LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 05</div>
+
+                <h3>SB19 LED Shoebox Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 150W / 300W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC120-277V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P6.png"
+                     alt="New SG12C 150W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 06</div>
+
+                <h3>New SG12C LED Shoebox Light - 150W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 150W</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 7 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P7.png"
+                     alt="SB14B 150W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 07</div>
+
+                <h3>New Update SB14B LED Shoebox Light - 150W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 150W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 8 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P8.png"
+                     alt="New SG12C 300W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 08</div>
+
+                <h3>New SG12C LED Shoebox Light - 300W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 300W</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 9 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P9.png"
+                     alt="300W LED Parking Lot Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 09</div>
+
+                <h3>300W LED Parking Lot Shoebox Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 300W</li>
+                    <li><strong>Color Temperature:</strong> 5000K</li>
+                    <li><strong>Type:</strong> LED Parking Lot Light</li>
+                    <li><strong>Application:</strong> Pole / Street Lighting</li>
+                    <li><strong>Fixture Type:</strong> Shoebox Area Light</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 10 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P10.png"
+                     alt="SB14B 300W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 10</div>
+
+                <h3>SB14B LED Shoebox Light - 300W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 300W</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Light Color:</strong> Blue Light</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 11 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P11.png"
+                     alt="SB16 300W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 11</div>
+
+                <h3>SB16 LED Shoebox Light - 300W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 300W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC277-480V</li>
+                    <li><strong>Surge Protection:</strong> 10KV</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 12 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P12.png"
+                     alt="SG16 300W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 12</div>
+
+                <h3>SG16 LED Shoebox Light - 300W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 300W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC277-480V</li>
+                    <li><strong>Driver:</strong> China Brand</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Certification:</strong> UL / DLC Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 13 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P13.png"
+                     alt="LED KING 450W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 13</div>
+
+                <h3>LED KING LED Shoebox Light - 450W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 450W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>LED Chips:</strong> Seoul 3030</li>
+                    <li><strong>Driver:</strong> Non-Isolated</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Surge Protector:</strong> Included</li>
+                    <li><strong>Mount:</strong> AM Bracket</li>
+                    <li><strong>Certification:</strong> UL / DLC</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 14 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P14.png"
+                     alt="480W LED Shoebox Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 14</div>
+
+                <h3>LED Shoebox Light - 480W</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 480W</li>
+                    <li><strong>Color Temperature:</strong> 5700K</li>
+                    <li><strong>Input:</strong> AC100-277V</li>
+                    <li><strong>LED Chips:</strong> Lumileds 3030</li>
+                    <li><strong>Driver:</strong> Sosen</li>
+                    <li><strong>Color:</strong> Black</li>
+                    <li><strong>Mount:</strong> Slip Fitter</li>
+                    <li><strong>Certification:</strong> UL Listed</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+        <!-- PRODUCT 15 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="P15.png"
+                     alt="480W Outdoor Sports LED Flood Light"
+                     loading="lazy">
+            </div>
+
+            <div class="product-content">
+
+                <div class="product-number">Pole Light 15</div>
+
+                <h3>480W Outdoor Sports LED Flood Light</h3>
+
+                <ul class="specs">
+                    <li><strong>Wattage:</strong> 480W</li>
+                    <li><strong>Type:</strong> Outdoor Sports LED Flood Light</li>
+                    <li><strong>Power:</strong> Adjustable</li>
+                    <li><strong>Color Temperature:</strong> Color Tunable</li>
+                    <li><strong>Application:</strong> Sports & Outdoor Areas</li>
+                    <li><strong>Mounting:</strong> Outdoor Flood Light Mounting</li>
+                </ul>
+
+                <a href="index.html#quote" class="quote-button">
+                    Get a Quote
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <section class="bottom-cta">
+
+        <h2>Need LED Pole Lights?</h2>
+
+        <p>
+            Contact LED KING for commercial LED Pole Lights,
+            Shoebox Lights, Solar Street Lights and outdoor
+            area lighting solutions.
+        </p>
+
+        <a href="index.html#quote" class="cta-button">
+            Request a Quote
+        </a>
+
+    </section>
+
+</main>
+
+
 <footer>
+
     <p><strong>LED KING</strong></p>
-    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
-    <p>© 2026 LED KING. All Rights Reserved.</p>
+
+    <p>
+        Professional LED lighting products and solutions
+        in Fort Worth, Texas and across the United States.
+    </p>
+
+    <p>
+        © 2026 LED KING. All Rights Reserved.
+    </p>
+
 </footer>
 
 </body>
