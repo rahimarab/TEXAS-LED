@@ -1,406 +1,1087 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Security Lights | LED KING</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        :root {
-            --blue: #1261a0;
-            --black: #111111;
-            --white: #ffffff;
-            --gray: #666666;
-            --light: #f5f7f9;
-            --border: #dddddd;
-        }
+<meta name="description" content="LED KING Up & Down Lights and wall sconce lighting products for commercial, residential and outdoor applications.">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>LED KING | Up & Down Lights</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--black);
-            background: var(--white);
-            line-height: 1.6;
-        }
+<style>
 
-        header {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+:root{
+    --blue:#1261a0;
+    --blue-dark:#0b4778;
+    --blue-light:#eaf4fb;
+    --black:#111111;
+    --white:#ffffff;
+    --gray:#666666;
+    --light:#f5f7f9;
+    --border:#dddddd;
+}
 
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--blue);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 28px;
-        }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--black);
+    background:white;
+    line-height:1.6;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--black);
-            font-size: 14px;
-            font-weight: bold;
-        }
+/* HEADER */
 
-        .nav-links a:hover {
-            color: var(--blue);
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    border-bottom:1px solid #e5e5e5;
+    box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
 
-        .hero {
-            min-height: 360px;
-            background:
-                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:78px;
+    padding:0 22px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
 
-        .hero-content {
-            max-width: 850px;
-            color: var(--white);
-        }
+.logo{
+    font-size:30px;
+    font-weight:900;
+    color:var(--blue);
+    text-decoration:none;
+    letter-spacing:1px;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin: auto;
-        }
+.nav-links a{
+    text-decoration:none;
+    color:#111;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:.4px;
+}
 
-        .products-section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 70px 20px;
-        }
+.nav-links a:hover{
+    color:var(--blue);
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
+/* HERO */
 
-        .section-title h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+.hero{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.88),
+            rgba(0,0,0,.58)
+        ),
+        url("https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/UP%20AND%20DOWN%20LIGHT.png")
+        center/cover no-repeat;
 
-        .section-title p {
-            color: var(--gray);
-        }
+    min-height:420px;
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
+    display:flex;
+    align-items:center;
+}
 
-        .product-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:70px 22px;
+    color:white;
+}
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-        }
+.hero-kicker{
+    color:#58aee8;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
 
-        .product-image {
-            height: 220px;
-            background: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            font-size: 16px;
-            text-align: center;
-            padding: 15px;
-        }
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    max-width:850px;
+    margin-bottom:20px;
+}
 
-        .product-info {
-            padding: 20px;
-        }
+.hero p{
+    max-width:750px;
+    font-size:18px;
+    color:#eeeeee;
+}
 
-        .product-info h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
+/* PRODUCTS */
 
-        .product-info p {
-            color: var(--gray);
-            font-size: 14px;
-        }
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 22px;
+}
 
-        .cta {
-            background: var(--blue);
-            color: var(--white);
-            text-align: center;
-            padding: 60px 20px;
-        }
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
 
-        .cta h2 {
-            font-size: 32px;
-            margin-bottom: 12px;
-        }
+.section-title span{
+    display:block;
+    color:var(--blue);
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
 
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
+.section-title h2{
+    font-size:38px;
+    margin-bottom:12px;
+}
 
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.section-title p{
+    color:var(--gray);
+    max-width:750px;
+    margin:auto;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* PRODUCT GRID */
 
-        .btn-white {
-            background: var(--white);
-            color: var(--blue);
-        }
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
 
-        .btn-black {
-            background: var(--black);
-            color: var(--white);
-        }
+.product-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    transition:.2s;
+}
 
-        footer {
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 30px 20px;
-        }
+.product-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+    border-color:var(--blue);
+}
 
-        footer p {
-            margin: 6px 0;
-            font-size: 14px;
-        }
+.product-image{
+    width:100%;
+    height:230px;
+    background:var(--light);
 
-        @media (max-width: 900px) {
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-            .nav-links {
-                gap: 15px;
-            }
-        }
+    overflow:hidden;
+}
 
-        @media (max-width: 650px) {
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
 
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+.image-placeholder{
+    color:#999;
+    font-size:14px;
+}
 
-            .hero h1 {
-                font-size: 36px;
-            }
+.product-info{
+    padding:22px;
+}
 
-            .hero p {
-                font-size: 16px;
-            }
+.product-info h3{
+    font-size:19px;
+    line-height:1.35;
+    margin-bottom:12px;
+}
 
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.product-info p{
+    color:var(--gray);
+    font-size:14px;
+    margin-bottom:14px;
+}
+
+.specs{
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.specs li{
+    color:#444;
+    font-size:14px;
+    padding:5px 0;
+    border-bottom:1px solid #eeeeee;
+}
+
+.specs li strong{
+    color:#111;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:800;
+    font-size:13px;
+    margin:4px 4px 0 0;
+}
+
+.btn-blue{
+    background:var(--blue);
+    color:white;
+}
+
+.btn-blue:hover{
+    background:var(--blue-dark);
+}
+
+/* CTA */
+
+.cta{
+    background:var(--blue);
+    color:white;
+    text-align:center;
+    padding:65px 22px;
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#eef7ff;
+}
+
+.btn-white{
+    background:white;
+    color:var(--blue);
+}
+
+.btn-white:hover{
+    background:#f2f2f2;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:28px 20px;
+    font-size:14px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        min-height:70px;
+    }
+
+    .nav-links{
+        gap:14px;
+    }
+
+    .nav-links a{
+        font-size:12px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        min-height:350px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:50px 16px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <a href="index.html" class="logo">LED KING</a>
 
-        <ul class="nav-links">
-            <li><a href="index.html#about">ABOUT US</a></li>
-            <li><a href="products.html">PRODUCT</a></li>
-            <li><a href="index.html#specialty">SPECIALTY</a></li>
-            <li><a href="index.html#quote">GET A QUOTE</a></li>
-            <li><a href="index.html#contact">CONTACT</a></li>
-        </ul>
-    </nav>
+<!-- HEADER -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+LED KING
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="index.html#about">ABOUT US</a>
+</li>
+
+<li>
+<a href="products.html">PRODUCT</a>
+</li>
+
+<li>
+<a href="index.html#specialty">SPECIALTY</a>
+</li>
+
+<li>
+<a href="index.html#quote">GET A QUOTE</a>
+</li>
+
+<li>
+<a href="index.html#contact">CONTACT</a>
+</li>
+
+</ul>
+
+</nav>
+
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero">
-    <div class="hero-content">
-        <h1>Security Lights</h1>
 
-        <p>
-            Reliable LED security lighting solutions designed to provide
-            bright illumination for commercial, residential and outdoor areas.
-        </p>
-    </div>
+<div class="hero-content">
+
+<div class="hero-kicker">
+LED KING PRODUCTS
+</div>
+
+<h1>
+Up & Down Lights
+</h1>
+
+<p>
+Explore LED KING Up & Down Lights and wall sconces designed to provide attractive architectural illumination for residential, commercial and outdoor applications.
+</p>
+
+</div>
+
 </section>
 
-<section class="products-section">
 
-    <div class="section-title">
-        <h2>Security Light Collection</h2>
+<!-- PRODUCTS -->
 
-        <p>
-            Explore our selection of LED security lighting solutions.
-        </p>
-    </div>
+<section class="section">
 
-    <div class="product-grid">
+<div class="section-title">
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 1</div>
-            <div class="product-info">
-                <h3>Security Light 1</h3>
-                <p>Bright and reliable outdoor security lighting.</p>
-            </div>
-        </div>
+<span>OUR PRODUCTS</span>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 2</div>
-            <div class="product-info">
-                <h3>Security Light 2</h3>
-                <p>Efficient LED lighting for exterior areas.</p>
-            </div>
-        </div>
+<h2>Up & Down Lights</h2>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 3</div>
-            <div class="product-info">
-                <h3>Security Light 3</h3>
-                <p>Durable illumination for commercial properties.</p>
-            </div>
-        </div>
+<p>
+Browse our selection of Up & Down Lights, wall sconces and specialty architectural lighting products.
+</p>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 4</div>
-            <div class="product-info">
-                <h3>Security Light 4</h3>
-                <p>Energy-efficient LED security lighting.</p>
-            </div>
-        </div>
+</div>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 5</div>
-            <div class="product-info">
-                <h3>Security Light 5</h3>
-                <p>Outdoor lighting for buildings and properties.</p>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 6</div>
-            <div class="product-info">
-                <h3>Security Light 6</h3>
-                <p>Reliable LED illumination for security applications.</p>
-            </div>
-        </div>
+<div class="product-grid">
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 7</div>
-            <div class="product-info">
-                <h3>Security Light 7</h3>
-                <p>High-quality outdoor LED lighting solution.</p>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 8</div>
-            <div class="product-info">
-                <h3>Security Light 8</h3>
-                <p>Modern LED security fixture for exterior spaces.</p>
-            </div>
-        </div>
+<!-- PRODUCT 01 -->
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 9</div>
-            <div class="product-info">
-                <h3>Security Light 9</h3>
-                <p>Powerful lighting for commercial and residential use.</p>
-            </div>
-        </div>
+<div class="product-card">
 
-        <div class="product-card">
-            <div class="product-image">Security Light Product 10</div>
-            <div class="product-info">
-                <h3>Security Light 10</h3>
-                <p>Dependable LED lighting for outdoor security.</p>
-            </div>
-        </div>
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
 
-    </div>
+<div class="product-info">
+
+<h3>LumaGlow Pro 360 LED Wall Light</h3>
+
+<p>
+Modern LED wall lighting solution for architectural and outdoor applications.
+</p>
+
+<a href="https://ledkingtx.com/product/lumaglow-pro-360-led-wall-light/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 02 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×50W Up/Down Wall Sconce — Warm White</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 50W</li>
+<li><strong>Color:</strong> Warm White 3000K</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>Location:</strong> Wet Location</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/150w-up-down-only-wall-sconcewarm-white-3000kd160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 03 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×50W Up/Down Wall Sconce — Blue & Green</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 50W</li>
+<li><strong>Color:</strong> Blue & Green</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>Location:</strong> Wet Location</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/150w-up-down-only-wall-sconceblue-colord160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 04 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>30W LED Up to Down Light — Regular Type</h3>
+
+<ul class="specs">
+
+<li><strong>CCT:</strong> 3000K / 4000K / 5000K</li>
+<li><strong>Wattage:</strong> 30W / 20W / 10W</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/30w-led-up-to-down-light-regular-type-cct3000k-4000k-5000k-wattage30w-20w-10w/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 05 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>LED Barn Light</h3>
+
+<ul class="specs">
+
+<li><strong>Colors:</strong> Brown / White / Red / Blue</li>
+<li><strong>CCT:</strong> 3000K / 4000K / 5000K</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/led-barn-light-brown-white-red-blue-30k40k50k/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 06 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>14" 30W LED Up to Down Light — RGB</h3>
+
+<ul class="specs">
+
+<li><strong>Size:</strong> 14"</li>
+<li><strong>Wattage:</strong> 30W</li>
+<li><strong>CCT:</strong> 3000K / 4000K / 5000K</li>
+<li><strong>Voltage:</strong> AC120–277V</li>
+<li><strong>Type:</strong> RGB with Remote</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/14-30w-led-up-to-down-light-rgb-type-with-remote-cct3000k-4000k-5000k-wattage30w-voltage-ac120-277v/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 07 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>30W LED Up to Down Light — Special Type</h3>
+
+<ul class="specs">
+
+<li><strong>CCT:</strong> 3000K / 4000K / 5000K</li>
+<li><strong>Wattage:</strong> 30W / 20W / 10W</li>
+<li><strong>Feature:</strong> Photocell</li>
+<li><strong>Voltage:</strong> AC120–277V</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/30w-led-up-to-down-light-special-type-cct3000k-4000k-5000k-wattage30w-20w-10w-with-photocell-voltage-ac120-277v/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 08 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×24W Up/Down Wall Sconce — Green</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 24W</li>
+<li><strong>Color:</strong> Green</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/124w-up-down-only-wall-sconcegreen-colord160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 09 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×24W Up/Down Wall Sconce — White 6500K</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 24W</li>
+<li><strong>Color:</strong> White 6500K</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/124w-up-down-only-wall-sconcewhite-6500kd160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×24W Up/Down Wall Sconce — Warm White</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 24W</li>
+<li><strong>Color:</strong> Warm White 3000K</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/124w-up-down-only-wall-sconcewarm-white-3000kd160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 11 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×24W Up/Down Wall Sconce — RGB</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 24W</li>
+<li><strong>Color:</strong> RGB</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/124w-up-down-only-wall-sconcergb-d160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 12 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>1×24W Up/Down Wall Sconce — Blue</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 24W</li>
+<li><strong>Color:</strong> Blue</li>
+<li><strong>Size:</strong> D160 × H200mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/124w-up-down-only-wall-sconceblue-colord160h200mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 13 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×24W Up & Down Wall Sconce — Red</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×24W</li>
+<li><strong>Color:</strong> Red</li>
+<li><strong>Size:</strong> D160 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/224w-updown-wall-sconcered-colord160h300mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 14 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×24W Up & Down Wall Sconce — Blue</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×24W</li>
+<li><strong>Color:</strong> Blue</li>
+<li><strong>Size:</strong> D160 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/224w-updown-wall-sconceblue-colord160h300mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 15 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×24W Up & Down Wall Sconce — Warm White / White</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×24W</li>
+<li><strong>Color:</strong> Warm White 3000K / White 6500K</li>
+<li><strong>Size:</strong> D160 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/224w-updown-wall-sconcewarm-white-3000kd160h300mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 16 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×18W Up & Down Wall Sconce — Warm White / White</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×18W</li>
+<li><strong>Color:</strong> Warm White 3000K / White 6500K</li>
+<li><strong>Size:</strong> D145 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/218w-updown-wall-sconcewarm-white-3000kd145h300mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 17 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×18W Up & Down Wall Sconce — Blue</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×18W</li>
+<li><strong>Color:</strong> Blue</li>
+<li><strong>Size:</strong> D145 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 4 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/218w-updown-wall-sconceblue-colord145h300mmwet-location-ip654pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 18 -->
+
+<div class="product-card">
+
+<div class="product-image">
+<div class="image-placeholder">Product Image Coming Soon</div>
+</div>
+
+<div class="product-info">
+
+<h3>2×12W Up & Down Wall Sconce</h3>
+
+<ul class="specs">
+
+<li><strong>Wattage:</strong> 2×12W</li>
+<li><strong>Color:</strong> Warm White 3000K / 6500K</li>
+<li><strong>Size:</strong> D108 × H300mm</li>
+<li><strong>IP Rating:</strong> IP65</li>
+<li><strong>Carton:</strong> 6 pcs per carton</li>
+
+</ul>
+
+<a href="https://ledkingtx.com/product/212w-updown-wall-sconce6500kd108h300mmwet-location-ip656pcs-per-carton/"
+class="btn btn-blue"
+target="_blank">
+VIEW PRODUCT
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
 </section>
+
+
+<!-- CTA -->
 
 <section class="cta">
 
-    <h2>Need Security Lighting?</h2>
+<h2>
+Need Help Choosing an Up & Down Light?
+</h2>
 
-    <p>
-        Contact LED KING for product information, pricing,
-        availability and lighting solutions.
-    </p>
+<p>
+Contact LED KING for product information, commercial quantities, project assistance and lighting quotes.
+</p>
 
-    <div class="cta-buttons">
-        <a href="index.html#quote" class="btn btn-white">Get a Quote</a>
-        <a href="index.html#contact" class="btn btn-black">Contact Us</a>
-    </div>
+<a href="index.html#quote" class="btn btn-white">
+GET A QUOTE
+</a>
+
+<a href="index.html#contact" class="btn btn-white">
+CONTACT US
+</a>
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <p><strong>LED KING</strong></p>
-    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
-    <p>© 2026 LED KING. All Rights Reserved.</p>
+
+<p>
+<strong>LED KING</strong> — Professional LED Lighting
+</p>
+
+<p>
+3701 Airport Fwy, Fort Worth, TX 76111
+</p>
+
+<p>
+© 2026 LED KING. All Rights Reserved.
+</p>
+
 </footer>
 
+
 </body>
+
 </html>
-```
