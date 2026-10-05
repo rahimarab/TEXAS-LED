@@ -5,59 +5,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="LED KING - LED lighting products including canopy lights, UFO highbay lights, flood lights, LED pole lights and exhaust fans.">
+<meta name="description" content="LED KING - Professional LED lighting products including indoor, outdoor, commercial and specialty lighting.">
 
-<title>LED KING | Products & Categories</title>
+<title>Products | LED KING</title>
 
 <style>
-
 :root{
     --blue:#1261a0;
     --blue-dark:#0b4778;
-    --blue-light:#eaf4fb;
-    --black:#111111;
     --white:#ffffff;
+    --black:#111111;
     --gray:#666666;
-    --light:#f5f7f9;
-    --border:#dddddd;
+    --light:#f5f7fa;
+    --border:#e2e6ea;
 }
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background:var(--light);
     color:var(--black);
-    background:#ffffff;
     line-height:1.6;
 }
 
-/* =========================
-   HEADER
-========================= */
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
+/* HEADER */
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#ffffff;
-    border-bottom:1px solid #e5e5e5;
-    box-shadow:0 2px 10px rgba(0,0,0,.06);
+    background:var(--white);
+    border-bottom:1px solid var(--border);
 }
 
 .navbar{
-    max-width:1200px;
+    max-width:1400px;
     margin:auto;
-    min-height:78px;
-    padding:0 22px;
-
+    padding:18px 30px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -68,184 +61,118 @@ header{
     font-size:30px;
     font-weight:900;
     color:var(--blue);
-    text-decoration:none;
     letter-spacing:1px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:30px;
-    list-style:none;
+    gap:28px;
 }
 
 .nav-links a{
-    text-decoration:none;
-    color:#111;
     font-size:14px;
     font-weight:700;
-    letter-spacing:.4px;
-    transition:.2s;
+    color:var(--black);
+    transition:0.3s;
 }
 
 .nav-links a:hover{
     color:var(--blue);
 }
 
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.88),
-            rgba(0,0,0,.58)
-        ),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
-
-    min-height:420px;
-
+    min-height:380px;
     display:flex;
     align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70)),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80")
+        center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:1200px;
-    width:100%;
-    margin:auto;
-    padding:70px 22px;
-    color:white;
+    max-width:900px;
 }
 
 .hero-kicker{
-    color:#58aee8;
-    font-size:14px;
+    color:#5aa9e6;
+    font-size:16px;
     font-weight:800;
     letter-spacing:2px;
     margin-bottom:12px;
+    text-transform:uppercase;
 }
 
 .hero h1{
+    color:var(--white);
     font-size:52px;
     line-height:1.1;
-    max-width:850px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .hero p{
-    max-width:750px;
-    font-size:18px;
     color:#eeeeee;
-}
-
-/* =========================
-   PAGE INTRO
-========================= */
-
-.section{
-    max-width:1200px;
+    font-size:18px;
+    max-width:750px;
     margin:auto;
-    padding:70px 22px;
 }
 
-.section-title{
+/* CATEGORIES */
+.categories-section{
+    max-width:1400px;
+    margin:auto;
+    padding:70px 30px;
+}
+
+.section-heading{
     text-align:center;
     margin-bottom:45px;
 }
 
-.section-title span{
-    display:block;
-    color:var(--blue);
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-.section-title h2{
+.section-heading h2{
     font-size:38px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
-.section-title p{
+.section-heading p{
     color:var(--gray);
-    max-width:700px;
-    margin:auto;
+    font-size:16px;
 }
-
-/* =========================
-   CATEGORY GROUP
-========================= */
-
-.category-group{
-    margin-bottom:55px;
-}
-
-.category-group-title{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-bottom:25px;
-    padding-bottom:12px;
-    border-bottom:2px solid var(--blue);
-}
-
-.category-group-title h3{
-    font-size:25px;
-}
-
-.category-group-title .number{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:var(--blue);
-    color:white;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-weight:800;
-}
-
-/* =========================
-   IMAGE CATEGORY GRID
-========================= */
 
 .category-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
 }
 
 .category-card{
-    display:block;
-    background:white;
+    background:var(--white);
     border:1px solid var(--border);
-    border-radius:10px;
+    border-radius:14px;
     overflow:hidden;
+    transition:0.3s ease;
+    display:flex;
+    flex-direction:column;
+}
 
-    text-decoration:none;
-    color:var(--black);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
+.category-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--blue);
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
 }
 
 .category-image{
     width:100%;
-    height:240px;
-    background:#f5f7f9;
-
+    height:220px;
+    background:#eef1f4;
     display:flex;
     align-items:center;
     justify-content:center;
-
     overflow:hidden;
 }
 
@@ -253,44 +180,49 @@ header{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
-
-    transition:transform .3s ease;
 }
 
-.category-name{
-    padding:18px 20px;
+.category-info{
+    padding:22px;
     text-align:center;
-
-    font-weight:800;
-    font-size:18px;
-
-    background:white;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
-.category-card:hover{
-    transform:translateY(-5px);
-    border-color:var(--blue);
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+.category-info h3{
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-.category-card:hover .category-image img{
-    transform:scale(1.04);
+.category-info p{
+    color:var(--gray);
+    font-size:14px;
+    margin-bottom:18px;
 }
 
-.category-card:hover .category-name{
-    color:var(--blue);
+.category-btn{
+    margin-top:auto;
+    display:inline-block;
+    background:var(--blue);
+    color:var(--white);
+    padding:11px 18px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:700;
+    transition:0.3s;
 }
 
-/* =========================
-   CTA
-========================= */
+.category-btn:hover{
+    background:var(--blue-dark);
+}
 
+/* CTA */
 .cta{
     background:var(--blue);
-    color:white;
+    color:var(--white);
     text-align:center;
-    padding:65px 22px;
+    padding:65px 25px;
 }
 
 .cta h2{
@@ -301,94 +233,95 @@ header{
 .cta p{
     max-width:700px;
     margin:0 auto 25px;
-    color:#eef7ff;
+    color:#eaf4fc;
 }
 
-.btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:800;
-    margin:5px;
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.btn-white{
-    background:white;
+.cta-btn{
+    background:var(--white);
     color:var(--blue);
+    padding:13px 25px;
+    border-radius:7px;
+    font-weight:700;
 }
 
-.btn-white:hover{
-    background:#f2f2f2;
+.cta-btn:hover{
+    background:#eeeeee;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer{
-    background:#111;
-    color:#aaa;
+    background:#111111;
+    color:var(--white);
+    padding:45px 25px;
     text-align:center;
-    padding:28px 20px;
+}
+
+footer .footer-logo{
+    font-size:28px;
+    font-weight:900;
+    color:#ffffff;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#bbbbbb;
     font-size:14px;
+    margin:4px 0;
 }
 
-footer strong{
-    color:white;
+/* MOBILE */
+@media(max-width:1100px){
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:800px){
+    .navbar{
+        flex-direction:column;
+        padding:15px 20px;
+    }
 
-@media(max-width:900px){
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
 
     .category-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
-    .hero h1{
-        font-size:42px;
-    }
-
 }
 
-@media(max-width:650px){
-
-    .navbar{
-        min-height:70px;
-    }
-
-    .nav-links{
-        gap:14px;
-    }
-
-    .nav-links a{
-        font-size:12px;
-    }
-
-    .logo{
-        font-size:24px;
-    }
-
+@media(max-width:550px){
     .hero{
-        min-height:350px;
+        min-height:320px;
     }
 
     .hero h1{
-        font-size:34px;
+        font-size:32px;
     }
 
     .hero p{
         font-size:16px;
     }
 
-    .section{
-        padding:50px 16px;
+    .categories-section{
+        padding:50px 18px;
     }
 
-    .section-title h2{
+    .section-heading h2{
         font-size:30px;
     }
 
@@ -396,303 +329,496 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .category-group-title h3{
-        font-size:22px;
-    }
-
     .category-image{
-        height:230px;
+        height:240px;
     }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
+<!-- HEADER -->
 <header>
+    <div class="navbar">
 
-<nav class="navbar">
+        <a href="index.html" class="logo">LED KING</a>
 
-<a href="index.html" class="logo">
-LED KING
-</a>
+        <nav class="nav-links">
+            <a href="index.html#about">ABOUT US</a>
+            <a href="products.html">PRODUCT</a>
+            <a href="index.html#specialty">SPECIALTY</a>
+            <a href="index.html#quote">GET A QUOTE</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
 
-<ul class="nav-links">
-
-<li>
-<a href="index.html#about">ABOUT US</a>
-</li>
-
-<li>
-<a href="products.html">PRODUCT</a>
-</li>
-
-<li>
-<a href="index.html#specialty">SPECIALTY</a>
-</li>
-
-<li>
-<a href="index.html#quote">GET A QUOTE</a>
-</li>
-
-<li>
-<a href="index.html#contact">CONTACT</a>
-</li>
-
-</ul>
-
-</nav>
-
+    </div>
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
+<!-- HERO -->
 <section class="hero">
+    <div class="hero-content">
+        <div class="hero-kicker">LED KING PRODUCTS</div>
 
-<div class="hero-content">
+        <h1>Professional LED Lighting Solutions</h1>
 
-<div class="hero-kicker">
-LED KING PRODUCTS
-</div>
-
-<h1>
-LED Lighting Products & Categories
-</h1>
-
-<p>
-Explore LED KING's wide selection of indoor, outdoor, hotel lighting and LED accessories for commercial, residential and specialty applications.
-</p>
-
-</div>
-
+        <p>
+            Explore our wide range of LED lighting products for commercial,
+            residential, industrial and outdoor applications.
+        </p>
+    </div>
 </section>
 
 
-<!-- =========================
-     PRODUCTS
-========================= -->
-
-<section class="section">
-
-<div class="section-title">
-
-<span>OUR PRODUCTS</span>
-
-<h2>Lighting Categories</h2>
-
-<p>
-Choose a category below to explore our available LED lighting products.
-</p>
-
-</div>
-
-
-<!-- =========================
-     SELECTED PRODUCTS
-========================= -->
-
-<div class="category-group">
-
-<div class="category-group-title">
-
-<div class="number">01</div>
-
-<h3>Featured Lighting Categories</h3>
-
-</div>
-
-
-<div class="category-grid">
-
-
-<!-- CANOPY LIGHTS -->
-
-<a class="category-card" href="canopy-lights.html">
-
-<div class="category-image">
-
-<img
-src="canopy.jpg"
-alt="Canopy Lights"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-Canopy Lights
-</div>
-
-</a>
-
-
-<!-- UFO HIGHBAY -->
-
-<a class="category-card" href="ufo-highbay.html">
-
-<div class="category-image">
-
-<img
-src="ufo-highbay.jpg"
-alt="UFO Highbay Lights"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-UFO Highbay Lights
-</div>
-
-</a>
-
-
-<!-- FLOOD LIGHTS -->
-
-<a class="category-card" href="flood-lights.html">
-
-<div class="category-image">
-
-<img
-src="flood-light.jpg"
-alt="Flood Lights"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-Flood Lights
-</div>
-
-</a>
-
-
-<!-- LED POLE LIGHTS -->
-
-<a class="category-card" href="led-pole-lights.html">
-
-<div class="category-image">
-
-<img
-src="pole-light.jpg"
-alt="LED Pole Lights"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-LED Pole Lights
-</div>
-
-</a>
-
-
-<!-- EXHAUST -->
-
-<a class="category-card" href="exhaust-fan.html">
-
-<div class="category-image">
-
-<img
-src="exhaust.jpg"
-alt="Exhaust"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-Exhaust
-</div>
-
-</a>
-
-
-<!-- EXHAUST FAN -->
-
-<a class="category-card" href="exhaust-fan.html">
-
-<div class="category-image">
-
-<img
-src="exhaust-fan.jpg"
-alt="Exhaust Fan"
-loading="lazy"
->
-
-</div>
-
-<div class="category-name">
-Exhaust Fan
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
+<!-- CATEGORIES -->
+<section class="categories-section">
+
+    <div class="section-heading">
+        <h2>Lighting Categories</h2>
+        <p>Choose a category to explore our LED lighting products.</p>
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <!-- 1 -->
+        <a href="canopy-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="canopy.jpg" alt="Canopy Lights">
+            </div>
+            <div class="category-info">
+                <h3>Canopy Lights</h3>
+                <p>LED canopy lighting solutions for commercial and outdoor spaces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 2 -->
+        <a href="ufo-highbay.html" class="category-card">
+            <div class="category-image">
+                <img src="ufo-highbay.jpg" alt="UFO Highbay Lights">
+            </div>
+            <div class="category-info">
+                <h3>UFO Highbay Lights</h3>
+                <p>High-performance LED highbay lighting for large spaces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 3 -->
+        <a href="flood-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="flood-light.jpg" alt="Flood Lights">
+            </div>
+            <div class="category-info">
+                <h3>Flood Lights</h3>
+                <p>Powerful LED flood lighting for outdoor applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 4 -->
+        <a href="led-pole-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="pole-light.jpg" alt="LED Pole Lights">
+            </div>
+            <div class="category-info">
+                <h3>LED Pole Lights</h3>
+                <p>Commercial and outdoor pole lighting solutions.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 5 -->
+        <a href="exhaust-fan.html" class="category-card">
+            <div class="category-image">
+                <img src="exhaust-fan.jpg" alt="Exhaust Fan">
+            </div>
+            <div class="category-info">
+                <h3>Exhaust Fan</h3>
+                <p>Reliable ventilation solutions for different applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 6 -->
+        <a href="led-bulbs.html" class="category-card">
+            <div class="category-image">
+                <img src="led-bulbs.jpg" alt="LED Bulbs">
+            </div>
+            <div class="category-info">
+                <h3>LED Bulbs</h3>
+                <p>Energy-efficient LED bulbs for residential and commercial lighting.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 7 -->
+        <a href="corn-bulbs.html" class="category-card">
+            <div class="category-image">
+                <img src="corn-bulbs.jpg" alt="Corn Bulbs">
+            </div>
+            <div class="category-info">
+                <h3>Corn Bulbs</h3>
+                <p>High-output LED corn bulbs for a variety of fixtures.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 8 -->
+        <a href="linear-strip.html" class="category-card">
+            <div class="category-image">
+                <img src="linear-strip.jpg" alt="Linear Strip Fixture">
+            </div>
+            <div class="category-info">
+                <h3>Linear Strip Fixture</h3>
+                <p>Versatile linear strip fixtures for commercial spaces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 9 -->
+        <a href="led-tubes.html" class="category-card">
+            <div class="category-image">
+                <img src="led-tubes.jpg" alt="LED Tubes">
+            </div>
+            <div class="category-info">
+                <h3>LED Tubes</h3>
+                <p>Efficient LED tube lighting for replacement and new installations.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 10 -->
+        <a href="ceiling-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="ceiling-lights.jpg" alt="Ceiling Lights">
+            </div>
+            <div class="category-info">
+                <h3>Ceiling Lights</h3>
+                <p>Modern LED ceiling lighting for indoor applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 11 -->
+        <a href="fixture.html" class="category-card">
+            <div class="category-image">
+                <img src="fixture.jpg" alt="Fixtures">
+            </div>
+            <div class="category-info">
+                <h3>Fixture</h3>
+                <p>LED fixtures designed for a wide range of lighting needs.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 12 -->
+        <a href="linear-highbay.html" class="category-card">
+            <div class="category-image">
+                <img src="linear-highbay.jpg" alt="Linear Highbay Fixture">
+            </div>
+            <div class="category-info">
+                <h3>Linear Highbay Fixture</h3>
+                <p>Commercial linear highbay lighting for large indoor spaces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 13 -->
+        <a href="single-side-corn-bulbs.html" class="category-card">
+            <div class="category-image">
+                <img src="single-side-corn-bulbs.jpg" alt="Single Side Corn Bulbs">
+            </div>
+            <div class="category-info">
+                <h3>Single Side Corn Bulbs</h3>
+                <p>Single-sided LED corn bulbs for retrofit applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 14 -->
+        <a href="wall-pack.html" class="category-card">
+            <div class="category-image">
+                <img src="wall-pack.jpg" alt="Wall Pack">
+            </div>
+            <div class="category-info">
+                <h3>Wall Pack</h3>
+                <p>Outdoor LED wall pack lighting for buildings and properties.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 15 -->
+        <a href="mini-wall-pack.html" class="category-card">
+            <div class="category-image">
+                <img src="mini-wall-pack.jpg" alt="Mini Wall Pack">
+            </div>
+            <div class="category-info">
+                <h3>Mini Wall Pack</h3>
+                <p>Compact LED wall pack solutions for exterior lighting.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 16 -->
+        <a href="up-and-down-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="up-and-down-light.jpg" alt="Up and Down Lights">
+            </div>
+            <div class="category-info">
+                <h3>Up &amp; Down Lights</h3>
+                <p>Stylish up and down lighting for exterior wall applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 17 -->
+        <a href="security-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="security-lights.jpg" alt="Security Lights">
+            </div>
+            <div class="category-info">
+                <h3>Security Lights</h3>
+                <p>Bright outdoor lighting for security and property protection.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 18 -->
+        <a href="stadium-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="stadium-lights.jpg" alt="Stadium Lights">
+            </div>
+            <div class="category-info">
+                <h3>Stadium Lights</h3>
+                <p>High-output LED lighting for sports and large-area applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 19 -->
+        <a href="grow-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="grow-lights.jpg" alt="Grow Lights">
+            </div>
+            <div class="category-info">
+                <h3>Grow Lights</h3>
+                <p>LED grow lighting solutions for indoor growing environments.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 20 -->
+        <a href="hotel-fixtures.html" class="category-card">
+            <div class="category-image">
+                <img src="hotel-fixtures.jpg" alt="Hotel Fixtures">
+            </div>
+            <div class="category-info">
+                <h3>Hotel Fixtures</h3>
+                <p>Specialized lighting fixtures for hospitality environments.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 21 -->
+        <a href="bollard.html" class="category-card">
+            <div class="category-image">
+                <img src="bollard.jpg" alt="Bollard Lights">
+            </div>
+            <div class="category-info">
+                <h3>Bollard</h3>
+                <p>Outdoor LED bollard lighting for pathways and landscapes.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 22 -->
+        <a href="wall-sconces.html" class="category-card">
+            <div class="category-image">
+                <img src="wall-sconce.jpg" alt="Wall Sconces">
+            </div>
+            <div class="category-info">
+                <h3>Wall Sconces</h3>
+                <p>Decorative and functional LED wall sconces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 23 -->
+        <a href="outdoor-wall-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="outdoor-wall-light.jpg" alt="Outdoor Wall Lights">
+            </div>
+            <div class="category-info">
+                <h3>Outdoor Wall Lights</h3>
+                <p>Durable LED wall lighting for exterior applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 24 -->
+        <a href="vanity-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="vanity-light.jpg" alt="Vanity Lights">
+            </div>
+            <div class="category-info">
+                <h3>Vanity Lights</h3>
+                <p>Modern LED vanity lighting for bathrooms and interiors.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 25 -->
+        <a href="post-top-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="post-top-light.jpg" alt="Post Top Lights">
+            </div>
+            <div class="category-info">
+                <h3>Post Top Lights</h3>
+                <p>Classic and modern LED post top lighting solutions.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 26 -->
+        <a href="track-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="track-light.jpg" alt="Track Lights">
+            </div>
+            <div class="category-info">
+                <h3>Track Lights</h3>
+                <p>Flexible LED track lighting for commercial and retail spaces.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 27 -->
+        <a href="accessories.html" class="category-card">
+            <div class="category-image">
+                <img src="accessories.jpg" alt="Lighting Accessories">
+            </div>
+            <div class="category-info">
+                <h3>Accessories</h3>
+                <p>Lighting accessories and components for LED installations.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 28 -->
+        <a href="injection-module.html" class="category-card">
+            <div class="category-image">
+                <img src="injection-module.jpg" alt="Injection Module">
+            </div>
+            <div class="category-info">
+                <h3>Injection Module</h3>
+                <p>LED modules and components for specialty lighting applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 29 -->
+        <a href="power-supply-drivers.html" class="category-card">
+            <div class="category-image">
+                <img src="power-supply-drivers.jpg" alt="Power Supply and Drivers">
+            </div>
+            <div class="category-info">
+                <h3>Power Supply / Drivers</h3>
+                <p>LED drivers and power supplies for reliable lighting systems.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 30 -->
+        <a href="tenons-scaled.html" class="category-card">
+            <div class="category-image">
+                <img src="tenons-scaled.jpg" alt="Tenons Scaled">
+            </div>
+            <div class="category-info">
+                <h3>Tenons Scaled</h3>
+                <p>Lighting tenons and mounting components for pole installations.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+
+        <!-- 31 -->
+        <a href="strip-rope-lights.html" class="category-card">
+            <div class="category-image">
+                <img src="strip-rope-lights.jpg" alt="Strip and Rope Lights">
+            </div>
+            <div class="category-info">
+                <h3>Strip / Rope Lights</h3>
+                <p>Flexible LED strip and rope lighting for decorative applications.</p>
+                <span class="category-btn">VIEW CATEGORY</span>
+            </div>
+        </a>
+
+    </div>
 </section>
 
 
-<!-- =========================
-     CTA
-========================= -->
-
+<!-- CTA -->
 <section class="cta">
 
-<h2>Need Help Choosing the Right Light?</h2>
+    <h2>Need Help Choosing the Right Lighting?</h2>
 
-<p>
-Contact LED KING for product information, project assistance, commercial quantities and lighting quotes.
-</p>
+    <p>
+        Contact LED KING for professional LED lighting solutions,
+        product information and project assistance.
+    </p>
 
-
-<a href="index.html#quote" class="btn btn-white">
-GET A QUOTE
-</a>
-
-
-<a href="index.html#contact" class="btn btn-white">
-CONTACT US
-</a>
+    <div class="cta-buttons">
+        <a href="index.html#quote" class="cta-btn">GET A QUOTE</a>
+        <a href="index.html#contact" class="cta-btn">CONTACT US</a>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
 
-<p>
-<strong>LED KING</strong> — Professional LED Lighting
-</p>
+    <div class="footer-logo">LED KING</div>
 
-<p>
-3701 Airport Fwy, Fort Worth, TX 76111
-</p>
+    <p>Professional LED Lighting Products &amp; Solutions</p>
 
-<p>
-© 2026 LED KING. All Rights Reserved.
-</p>
+    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+
+    <p>&copy; 2026 LED KING. All Rights Reserved.</p>
 
 </footer>
-
 
 </body>
 </html>
