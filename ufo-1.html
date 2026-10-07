@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="UFO LED Highbay Light 150W - Wattage & CCT Adjustable, 120-277VAC, Black, 3000K-5700K.">
+
+<title>UFO LED Highbay Light 150W | LED KING</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#111;
+    line-height:1.6;
+}
+
+/* TOP BAR */
+.top-bar{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:9px 15px;
+    font-size:14px;
+}
+
+/* HEADER */
+header{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    max-width:1450px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 25px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:900;
+    color:#087cff;
+    text-decoration:none;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111;
+    font-weight:700;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#087cff;
+}
+
+/* CART */
+.cart-box{
+    position:relative;
+    margin-left:10px;
+}
+
+.cart-btn{
+    border:none;
+    background:#087cff;
+    color:#fff;
+    padding:11px 17px;
+    border-radius:7px;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.cart-count{
+    position:absolute;
+    top:-9px;
+    right:-9px;
+    background:#ff3b30;
+    color:#fff;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    font-size:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#061a2f,#087cff);
+    color:#fff;
+    padding:65px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* PRODUCT */
+.product-section{
+    max-width:1250px;
+    margin:55px auto;
+    padding:0 20px;
+}
+
+.product-container{
+    background:#fff;
+    border-radius:15px;
+    padding:35px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+/* IMAGE */
+.image-area{
+    text-align:center;
+}
+
+.main-image{
+    width:100%;
+    max-width:570px;
+    height:520px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:12px;
+    border:1px solid #e2e2e2;
+    padding:20px;
+}
+
+.thumbnail-area{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:18px;
+}
+
+.thumbnail{
+    width:85px;
+    height:75px;
+    object-fit:contain;
+    border:2px solid #087cff;
+    border-radius:8px;
+    padding:5px;
+}
+
+/* PRODUCT INFO */
+.product-info h2{
+    font-size:31px;
+    line-height:1.25;
+    margin-bottom:15px;
+}
+
+.price{
+    color:#087cff;
+    font-size:34px;
+    font-weight:900;
+    margin:18px 0;
+}
+
+.short-description{
+    font-size:16px;
+    color:#444;
+    margin-bottom:22px;
+}
+
+/* QUANTITY */
+.purchase-box{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding:22px 0;
+    margin:20px 0;
+}
+
+.quantity-label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+}
+
+.quantity-control{
+    display:flex;
+    align-items:center;
+    width:150px;
+    height:48px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    overflow:hidden;
+    margin-bottom:18px;
+}
+
+.quantity-control button{
+    width:45px;
+    height:100%;
+    border:none;
+    background:#f0f0f0;
+    font-size:22px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.quantity-control button:hover{
+    background:#ddd;
+}
+
+.quantity-control input{
+    width:60px;
+    height:100%;
+    border:none;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    outline:none;
+}
+
+/* ADD TO CART */
+.add-cart{
+    width:100%;
+    max-width:350px;
+    background:#087cff;
+    color:#fff;
+    border:none;
+    padding:15px 25px;
+    border-radius:7px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.add-cart:hover{
+    background:#005dcc;
+    transform:translateY(-1px);
+}
+
+/* CART MESSAGE */
+.cart-message{
+    margin-top:15px;
+    font-weight:bold;
+    color:#138a36;
+    display:none;
+}
+
+/* DETAILS */
+.details-section{
+    max-width:1250px;
+    margin:0 auto 55px;
+    padding:0 20px;
+}
+
+.details-box{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.details-box h2{
+    color:#087cff;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.details-box p{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.details-box ul{
+    padding-left:25px;
+}
+
+.details-box li{
+    margin-bottom:10px;
+}
+
+/* SPECIFICATIONS */
+.spec-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+
+.spec-table td{
+    border:1px solid #ddd;
+    padding:13px 15px;
+}
+
+.spec-table td:first-child{
+    width:35%;
+    font-weight:bold;
+    background:#f4f7fa;
+}
+
+/* QUOTE */
+.quote-section{
+    text-align:center;
+    margin:45px 0;
+}
+
+.quote-btn{
+    display:inline-block;
+    background:#111;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.quote-btn:hover{
+    background:#087cff;
+}
+
+/* BACK BUTTON */
+.back-section{
+    text-align:center;
+    margin:35px 0 60px;
+}
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#087cff;
+    font-weight:bold;
+    border:2px solid #087cff;
+    padding:11px 24px;
+    border-radius:7px;
+}
+
+.back-btn:hover{
+    background:#087cff;
+    color:#fff;
+}
+
+/* FOOTER */
+footer{
+    background:#050505;
+    color:#fff;
+    padding:45px 20px;
+}
+
+.footer-inner{
+    max-width:1250px;
+    margin:auto;
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:900;
+    color:#087cff;
+    margin-bottom:12px;
+}
+
+footer p{
+    margin:6px 0;
+    color:#ddd;
+}
+
+.footer-copy{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid #333;
+    font-size:14px;
+    color:#aaa;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+    .header-inner{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .product-container{
+        grid-template-columns:1fr;
+        gap:30px;
+        padding:22px;
+    }
+
+    .main-image{
+        height:400px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .product-info h2{
+        font-size:26px;
+    }
+}
+
+@media(max-width:600px){
+
+    .logo{
+        font-size:25px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero{
+        padding:45px 15px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .main-image{
+        height:320px;
+        padding:10px;
+    }
+
+    .details-box{
+        padding:22px;
+    }
+
+    .spec-table td{
+        padding:10px;
+        font-size:14px;
+    }
+
+    .spec-table td:first-child{
+        width:40%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    Professional LED Lighting Products & Solutions | Fort Worth, Texas
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">LED KING</a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="specialty.html">Specialty</a>
+            <a href="get-quote.html">Get a Quote</a>
+            <a href="contact.html">Contact</a>
+
+            <div class="cart-box">
+                <button class="cart-btn" onclick="showCart()">🛒</button>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>UFO LED Highbay Light, 150W</h1>
+    <p>Wattage & CCT Adjustable | 120–277VAC | Black | 3000K–5700K</p>
+</section>
+
+<!-- PRODUCT -->
+<section class="product-section">
+
+    <div class="product-container">
+
+        <!-- IMAGE -->
+        <div class="image-area">
+
+            <img
+                src="https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/UFO%201.png"
+                alt="UFO LED Highbay Light 150W"
+                class="main-image"
+                id="mainImage"
+            >
+
+            <div class="thumbnail-area">
+                <img
+                    src="https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/UFO%201.png"
+                    alt="UFO LED Highbay Light"
+                    class="thumbnail"
+                >
+            </div>
+
+        </div>
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="product-info">
+
+            <h2>
+                UFO LED Highbay Light, 150W, 120-277VAC,
+                Wattage & CCT Adjustable, Black, 5700K
+            </h2>
+
+            <div class="price">$100.00</div>
+
+            <p class="short-description">
+                High-performance 150W UFO LED Highbay Light with
+                adjustable wattage and CCT. Designed for warehouses,
+                factories, gymnasiums and other large spaces.
+            </p>
+
+            <!-- PURCHASE -->
+            <div class="purchase-box">
+
+                <span class="quantity-label">Quantity</span>
+
+                <div class="quantity-control">
+                    <button onclick="decreaseQuantity()">−</button>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        value="1"
+                        min="1"
+                        onchange="validateQuantity()"
+                    >
+
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+
+                <button class="add-cart" onclick="addToCart()">
+                    🛒 Add to Cart
+                </button>
+
+                <div class="cart-message" id="cartMessage">
+                    Product added to cart!
+                </div>
+
+            </div>
+
+            <table class="spec-table">
+
+                <tr>
+                    <td>SKU</td>
+                    <td>2565</td>
+                </tr>
+
+                <tr>
+                    <td>Wattage</td>
+                    <td>150W</td>
+                </tr>
+
+                <tr>
+                    <td>Input Voltage</td>
+                    <td>120–277VAC</td>
+                </tr>
+
+                <tr>
+                    <td>Wattage Adjustable</td>
+                    <td>Yes</td>
+                </tr>
+
+                <tr>
+                    <td>CCT Adjustable</td>
+                    <td>3000K–5700K</td>
+                </tr>
+
+                <tr>
+                    <td>Default Color Temperature</td>
+                    <td>5700K</td>
+                </tr>
+
+                <tr>
+                    <td>Color</td>
+                    <td>Black</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DESCRIPTION -->
+<section class="details-section">
+
+    <div class="details-box">
+
+        <h2>Description</h2>
+
+        <p>
+            Elevate your industrial or commercial space with our
+            <strong>UFO LED Highbay Light</strong>. This high-performance
+            150W light delivers powerful illumination and is perfect
+            for large areas such as warehouses, factories, and gymnasiums.
+        </p>
+
+        <h2>Key Features</h2>
+
+        <ul>
+            <li>
+                <strong>Wattage & CCT Adjustable:</strong>
+                Customize brightness and color temperature
+                from 3000K to 5700K to suit your specific needs.
+            </li>
+
+            <li>
+                <strong>Input Voltage:</strong>
+                Works seamlessly with a wide voltage range of
+                120–277VAC.
+            </li>
+
+            <li>
+                <strong>Black Design:</strong>
+                Sleek, modern black finish that blends well
+                with commercial and industrial environments.
+            </li>
+
+            <li>
+                <strong>Color Temperature:</strong>
+                Bright 5700K daylight color provides clear,
+                vibrant lighting and enhanced visibility.
+            </li>
+
+            <li>
+                <strong>Energy Efficient:</strong>
+                Designed for efficient operation and
+                long-lasting performance.
+            </li>
+        </ul>
+
+        <h2 style="margin-top:30px;">Applications</h2>
+
+        <ul>
+            <li>Warehouses</li>
+            <li>Factories</li>
+            <li>Gymnasiums</li>
+            <li>Industrial Facilities</li>
+            <li>Commercial Buildings</li>
+            <li>Large High-Ceiling Spaces</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+
+    <a href="get-quote.html" class="quote-btn">
+        Request a Quote
+    </a>
+
+</div>
+
+<!-- BACK -->
+<div class="back-section">
+
+    <a href="ufo-highbay.html" class="back-btn">
+        ← Back to UFO High Bay Lights
+    </a>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">LED KING</div>
+
+        <p>Professional LED Lighting Products & Solutions</p>
+
+        <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+
+        <p>Monday–Friday: 8:00 AM – 6:30 PM</p>
+
+        <p>Saturday: 8:00 AM – 5:00 PM</p>
+
+        <div class="footer-copy">
+            © 2026 LED KING. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+/* PRODUCT */
+const product = {
+    name: "UFO LED Highbay Light, 150W",
+    price: 100,
+    sku: "2565"
+};
+
+/* CART */
+let cart = JSON.parse(localStorage.getItem("ledKingCart")) || [];
+
+updateCartCount();
+
+/* QUANTITY */
+function increaseQuantity(){
+
+    const input = document.getElementById("quantity");
+
+    input.value = parseInt(input.value) + 1;
+
+}
+
+function decreaseQuantity(){
+
+    const input = document.getElementById("quantity");
+
+    let quantity = parseInt(input.value);
+
+    if(quantity > 1){
+        quantity--;
+    }
+
+    input.value = quantity;
+
+}
+
+function validateQuantity(){
+
+    const input = document.getElementById("quantity");
+
+    if(input.value < 1 || input.value === ""){
+        input.value = 1;
+    }
+
+}
+
+/* ADD TO CART */
+function addToCart(){
+
+    const quantity =
+        parseInt(document.getElementById("quantity").value);
+
+    const existingProduct = cart.find(
+        item => item.sku === product.sku
+    );
+
+    if(existingProduct){
+
+        existingProduct.quantity += quantity;
+
+    }else{
+
+        cart.push({
+            name: product.name,
+            price: product.price,
+            sku: product.sku,
+            quantity: quantity
+        });
+
+    }
+
+    localStorage.setItem(
+        "ledKingCart",
+        JSON.stringify(cart)
+    );
+
+    updateCartCount();
+
+    const message =
+        document.getElementById("cartMessage");
+
+    message.style.display = "block";
+
+    setTimeout(function(){
+
+        message.style.display = "none";
+
+    },2500);
+
+}
+
+/* UPDATE CART NUMBER */
+function updateCartCount(){
+
+    let total = 0;
+
+    cart.forEach(function(item){
+
+        total += item.quantity;
+
+    });
+
+    document.getElementById("cartCount").textContent = total;
+
+}
+
+/* CART */
+function showCart(){
+
+    if(cart.length === 0){
+
+        alert("Your cart is empty.");
+
+        return;
+
+    }
+
+    let message = "YOUR LED KING CART\n\n";
+
+    let total = 0;
+
+    cart.forEach(function(item){
+
+        const itemTotal =
+            item.price * item.quantity;
+
+        total += itemTotal;
+
+        message +=
+            item.name +
+            "\nQuantity: " +
+            item.quantity +
+            "\nPrice: $" +
+            item.price.toFixed(2) +
+            " each\nSubtotal: $" +
+            itemTotal.toFixed(2) +
+            "\n\n";
+
+    });
+
+    message +=
+        "TOTAL: $" +
+        total.toFixed(2);
+
+    alert(message);
+
+}
+
+</script>
+
+</body>
+</html>
