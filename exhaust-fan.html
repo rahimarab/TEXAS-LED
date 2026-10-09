@@ -1,912 +1,739 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Exhaust Fan | LED KING</title>
-
-<meta name="description" content="LED KING Exhaust Fans for residential and commercial ventilation applications.">
+<meta name="description" content="Shop LED KING exhaust fans with integrated LED lighting for residential and commercial ventilation.">
+<title>Exhaust Fans | LED KING</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#17202a;
-    line-height:1.6;
-}
-
-:root{
-    --blue:#087cff;
-    --blue-dark:#005dcc;
-    --navy:#061321;
-    --dark:#050c14;
-    --white:#fff;
-    --gray:#f5f7fa;
-    --border:#dfe5ec;
-    --text:#17202a;
-    --muted:#6d7782;
-}
-
-/* TOP BAR */
-
-.top-bar{
-    background:#050b13;
-    color:#fff;
-    font-size:13px;
-    padding:8px 20px;
-}
-
-.top-bar-inner{
-    max-width:1450px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.top-left{
-    font-weight:600;
-}
-
-.top-right{
-    display:flex;
-    gap:20px;
-}
-
-.top-right a{
-    color:#fff;
-    text-decoration:none;
-}
-
-/* HEADER */
-
-header{
-    background:#fff;
-    border-bottom:1px solid var(--border);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1450px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:#061321;
-}
-
-.logo-mark{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#061321;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:16px;
-}
-
-.logo-text{
-    font-size:24px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#061321;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:.5px;
-}
-
-.nav-links a:hover{
-    color:var(--blue);
-}
-
-.nav-icon{
-    font-size:18px;
-}
-
-/* HERO */
-
-.hero{
-    min-height:410px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:
-        linear-gradient(
-            rgba(6,19,33,.78),
-            rgba(6,19,33,.78)
-        ),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90")
-        center/cover;
-    border-bottom:5px solid var(--blue);
-}
-
-.hero-content{
-    max-width:900px;
-    color:#fff;
-}
-
-.hero-kicker{
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    color:#5da9ff;
-    margin-bottom:12px;
-}
-
-.hero h1{
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:18px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:780px;
-    margin:auto;
-    color:#e8edf3;
-}
-
-/* PRODUCTS */
-
-.products-section{
-    max-width:1450px;
-    margin:auto;
-    padding:75px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-small{
-    color:var(--blue);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin-bottom:12px;
-    color:var(--navy);
-}
-
-.section-title p{
-    max-width:750px;
-    margin:auto;
-    color:var(--muted);
-}
-
-/* PRODUCT GRID */
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:28px;
-}
-
-.product-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:12px;
-    overflow:hidden;
-    display:grid;
-    grid-template-columns:270px 1fr;
-    min-height:330px;
-    transition:.3s ease;
-}
-
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(0,0,0,.10);
-}
-
-/* PRODUCT IMAGE */
-
-.product-image{
-    background:#f5f7fa;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    min-height:330px;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    max-height:290px;
-    object-fit:contain;
-    display:block;
-}
-
-/* PRODUCT INFO */
-
-.product-info{
-    padding:28px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.product-number{
-    color:var(--blue);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    margin-bottom:8px;
-}
-
-.product-info h3{
-    font-size:21px;
-    line-height:1.35;
-    margin-bottom:12px;
-    color:var(--navy);
-}
-
-.product-info p{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:16px;
+:root {
+  --blue: #1261a0;
+  --blue-dark: #0b4778;
+  --orange: #f28c28;
+  --navy: #061321;
+  --dark: #050c14;
+  --white: #fff;
+  --gray: #f5f7fa;
+  --border: #dfe5ec;
+  --text: #17202a;
+  --muted: #6d7782;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--gray);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.top-bar {
+  background: var(--dark);
+  color: white;
+  padding: 8px 20px;
+  font-size: 13px;
+}
+.top-bar-inner {
+  max-width: 1450px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.top-bar a { color: white; text-decoration: none; }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+.navbar {
+  max-width: 1450px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--navy);
+}
+.logo-mark {
+  background: var(--navy);
+  color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
+.logo-text { font-size: 24px; font-weight: 900; letter-spacing: 1px; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+.nav-links a:hover { color: var(--blue); }
+.cart-nav {
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 12px;
+  background: var(--blue);
+  color: white;
+  font-weight: 800;
+}
+
+.hero {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 55px 20px;
+  color: white;
+  background:
+    linear-gradient(rgba(6,19,33,.82), rgba(6,19,33,.82)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  border-bottom: 5px solid var(--orange);
+}
+.hero-content { max-width: 850px; }
+.kicker {
+  color: #ffb35f;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.hero h1 { font-size: clamp(35px, 5vw, 54px); line-height: 1.15; margin-bottom: 16px; }
+.hero p { color: #e4eaf0; font-size: 17px; }
+
+.section {
+  max-width: 1450px;
+  margin: auto;
+  padding: 65px 20px;
+}
+.section-title { text-align: center; margin-bottom: 35px; }
+.section-title .kicker { color: var(--blue); }
+.section-title h2 { font-size: 35px; color: var(--navy); margin-bottom: 8px; }
+.section-title p { color: var(--muted); max-width: 720px; margin: auto; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+.product-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.09);
+}
+.product-image {
+  height: 300px;
+  padding: 20px;
+  background: white;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-info { padding: 25px; display: flex; flex-direction: column; flex: 1; }
+.product-number {
+  color: var(--blue);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.product-info h3 { color: var(--navy); font-size: 21px; line-height: 1.35; margin-bottom: 10px; }
+.product-info p { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+.spec-list { list-style: none; margin-bottom: 18px; }
+.spec-list li { color: #4d5965; font-size: 13px; margin: 5px 0; }
+.spec-list li::before { content: "✓"; color: var(--blue); font-weight: 900; margin-right: 8px; }
+.price { color: var(--navy); font-size: 25px; font-weight: 900; margin: auto 0 14px; }
+.price small { color: var(--muted); font-size: 12px; font-weight: 400; }
+
+.product-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 11px 15px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+.btn-blue { background: var(--blue); color: white; }
+.btn-blue:hover { background: var(--blue-dark); }
+.btn-outline { background: white; color: var(--blue); border: 1px solid var(--blue); }
+.btn-outline:hover { background: #eef6ff; }
+.btn-orange { background: var(--orange); color: #111; }
+.btn-orange:hover { background: #ffad50; }
+
+.info-section {
+  background: white;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 55px 20px;
+  text-align: center;
+}
+.info-section h2 { color: var(--navy); font-size: 30px; margin-bottom: 10px; }
+.info-section p { max-width: 760px; margin: auto; color: var(--muted); }
+
+.cta {
+  text-align: center;
+  background: var(--dark);
+  color: white;
+  padding: 55px 20px;
+}
+.cta h2 { font-size: 32px; margin-bottom: 10px; }
+.cta p { max-width: 700px; margin: 0 auto 22px; color: #cbd4dd; }
+.cta .btn { margin: 4px; padding: 13px 20px; }
+
+footer { background: #050b13; color: white; text-align: center; padding: 28px 20px; }
+footer p { font-size: 13px; margin: 5px; }
+footer a { color: white; }
+
+/* PRODUCT DETAILS MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0,0,0,.68);
+  padding: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open { display: flex; }
+.modal-panel {
+  background: white;
+  border-radius: 12px;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-close {
+  position: sticky;
+  top: 10px;
+  float: right;
+  margin: 10px 10px 0 0;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-size: 22px;
+}
+.modal-content { padding: 25px; clear: both; }
+.modal-content h2 { color: var(--navy); line-height: 1.3; margin-bottom: 10px; }
+.modal-image {
+  width: 100%;
+  height: 270px;
+  object-fit: contain;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.modal-content p { color: var(--muted); margin-bottom: 15px; }
+.modal-content h3 { margin: 16px 0 8px; }
+.modal-content ul { padding-left: 20px; margin-bottom: 18px; }
+
+.quantity-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 15px 0; }
+.quantity-row label { font-size: 13px; font-weight: 800; }
+.quantity-input { width: 85px; padding: 10px; border: 1px solid var(--border); border-radius: 6px; }
+.modal-price { font-size: 26px; font-weight: 900; color: var(--navy); }
+
+/* CART DRAWER */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 110;
+  background: rgba(0,0,0,.5);
+  display: none;
+}
+.cart-overlay.open { display: block; }
+.cart-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(430px, 100%);
+  z-index: 111;
+  background: white;
+  padding: 22px;
+  transform: translateX(105%);
+  transition: transform .25s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -8px 0 25px rgba(0,0,0,.15);
+}
+.cart-drawer.open { transform: translateX(0); }
+.cart-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid var(--border); }
+.cart-head h2 { color: var(--navy); }
+.cart-close { border: 0; background: transparent; font-size: 27px; }
+.cart-items { overflow-y: auto; flex: 1; padding: 12px 0; }
+.cart-item { border-bottom: 1px solid var(--border); padding: 13px 0; }
+.cart-item h4 { color: var(--navy); margin-bottom: 5px; }
+.cart-item p { font-size: 13px; color: var(--muted); }
+.cart-item-controls { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+.cart-item-controls button { padding: 3px 10px; border: 1px solid var(--border); background: white; border-radius: 4px; }
+.remove-item { color: #b42318; margin-left: auto; }
+.cart-bottom { border-top: 1px solid var(--border); padding-top: 15px; }
+.subtotal { display: flex; justify-content: space-between; font-size: 18px; font-weight: 900; margin-bottom: 12px; }
+.cart-note { font-size: 12px; color: var(--muted); margin: 10px 0; }
+.cart-bottom .btn { width: 100%; margin-top: 8px; }
+
+@media(max-width:950px) {
+  .product-grid { grid-template-columns: 1fr; }
+  .navbar { flex-wrap: wrap; justify-content: center; }
+  .nav-links { justify-content: center; }
+}
+@media(max-width:600px) {
+  .top-bar-inner { justify-content: center; text-align: center; }
+  .navbar { padding: 12px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 11px; }
+  .logo-text { font-size: 21px; }
+  .hero { min-height: 300px; }
+  .section { padding: 45px 14px; }
+  .section-title h2 { font-size: 29px; }
+  .product-image { height: 250px; }
+  .product-info { padding: 20px; }
+  .product-actions .btn { flex: 1 1 auto; }
+  .modal { padding: 8px; }
+  .modal-content { padding: 16px; }
+  .modal-image { height: 210px; }
 }
-
-/* SPECS */
-
-.spec-list{
-    list-style:none;
-    margin-bottom:20px;
-}
-
-.spec-list li{
-    font-size:13px;
-    color:#4d5965;
-    margin-bottom:7px;
-}
-
-.spec-list li::before{
-    content:"✓";
-    color:var(--blue);
-    font-weight:bold;
-    margin-right:8px;
-}
-
-/* BUTTONS */
-
-.product-buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:11px 17px;
-    border-radius:6px;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.3px;
-    transition:.2s;
-}
-
-.btn-blue{
-    background:var(--blue);
-    color:#fff;
-}
-
-.btn-blue:hover{
-    background:var(--blue-dark);
-}
-
-.btn-outline{
-    border:1px solid var(--blue);
-    color:var(--blue);
-    background:#fff;
-}
-
-.btn-outline:hover{
-    background:var(--blue);
-    color:#fff;
-}
-
-/* INFO SECTION */
-
-.info-section{
-    background:#fff;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    padding:65px 20px;
-    text-align:center;
-}
-
-.info-section h2{
-    color:var(--navy);
-    font-size:32px;
-    margin-bottom:12px;
-}
-
-.info-section p{
-    max-width:760px;
-    margin:auto;
-    color:var(--muted);
-}
-
-/* CTA */
-
-.cta{
-    background:var(--dark);
-    color:#fff;
-    text-align:center;
-    padding:65px 20px;
-}
-
-.cta h2{
-    font-size:34px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    max-width:720px;
-    margin:0 auto 25px;
-    color:#cbd4dd;
-}
-
-.cta-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.cta .btn{
-    padding:13px 25px;
-}
-
-.cta .btn-white{
-    background:#fff;
-    color:#061321;
-}
-
-.cta .btn-white:hover{
-    background:#e9eef3;
-}
-
-.cta .btn-dark{
-    border:1px solid #fff;
-    color:#fff;
-}
-
-.cta .btn-dark:hover{
-    background:#fff;
-    color:#061321;
-}
-
-/* FOOTER */
-
-footer{
-    background:#050b13;
-    color:#fff;
-    text-align:center;
-    padding:32px 20px;
-}
-
-footer p{
-    margin:5px 0;
-    font-size:13px;
-}
-
-footer strong{
-    font-size:20px;
-    letter-spacing:1px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-card{
-        grid-template-columns:300px 1fr;
-    }
-
-}
-
-@media(max-width:750px){
-
-    .top-bar{
-        display:none;
-    }
-
-    .navbar{
-        flex-direction:column;
-        padding:14px 15px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    .hero{
-        min-height:350px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .product-card{
-        grid-template-columns:1fr;
-    }
-
-    .product-image{
-        min-height:280px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .logo-text{
-        font-size:21px;
-    }
-
-    .nav-links{
-        gap:10px;
-    }
-
-    .nav-links a{
-        font-size:11px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .product-info{
-        padding:22px;
-    }
-
-    .product-info h3{
-        font-size:19px;
-    }
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-
 <div class="top-bar">
-    <div class="top-bar-inner">
-
-        <div class="top-left">
-            Professional LED Lighting Products & Solutions
-        </div>
-
-        <div class="top-right">
-            <a href="tel:682-200-3004">682-200-3004</a>
-            <a href="mailto:ledkingfortworth@gmail.com">
-                ledkingfortworth@gmail.com
-            </a>
-        </div>
-
+  <div class="top-bar-inner">
+    <div>Professional LED Lighting Products &amp; Solutions</div>
+    <div>
+      <a href="tel:6822003004">682-200-3004</a>
+      &nbsp; | &nbsp;
+      <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a>
     </div>
+  </div>
 </div>
 
-
-<!-- HEADER -->
-
 <header>
-
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-
-            <div class="logo-mark">
-                LK
-            </div>
-
-            <div class="logo-text">
-                LED KING
-            </div>
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html#about">ABOUT US</a>
-            </li>
-
-            <li>
-                <a href="products.html">PRODUCTS</a>
-            </li>
-
-            <li>
-                <a href="index.html#specialty">SPECIALTY</a>
-            </li>
-
-            <li>
-                <a href="index.html#quote">GET A QUOTE</a>
-            </li>
-
-            <li>
-                <a href="index.html#contact">CONTACT</a>
-            </li>
-
-            <li>
-                <a href="products.html" class="nav-icon">⌕</a>
-            </li>
-
-            <li>
-                <a href="index.html#quote" class="nav-icon">▣</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">LK</div>
+      <div class="logo-text">LED KING</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">ABOUT US</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="index.html#specialty">SPECIALTY</a></li>
+      <li><a href="index.html#quote">GET A QUOTE</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+    <button class="cart-nav" type="button" onclick="openCart()">
+      🛒 CART (<span id="cartCount">0</span>)
+    </button>
+  </nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
-
-    <div class="hero-content">
-
-        <div class="hero-kicker">
-            LED KING PRODUCTS
-        </div>
-
-        <h1>
-            Exhaust Fan
-        </h1>
-
-        <p>
-            Explore LED KING Exhaust Fan products designed for
-            residential, commercial and ventilation applications.
-        </p>
-
-    </div>
-
+  <div class="hero-content">
+    <div class="kicker">LED KING PRODUCTS</div>
+    <h1>Exhaust Fans</h1>
+    <p>Explore exhaust fans with integrated LED lighting for residential and commercial ventilation applications.</p>
+  </div>
 </section>
 
-
-<!-- PRODUCTS -->
-
-<section class="products-section">
-
-    <div class="section-title">
-
-        <div class="section-small">
-            EXHAUST FAN
-        </div>
-
-        <h2>
-            Our Exhaust Fans
-        </h2>
-
-        <p>
-            Browse our available Exhaust Fan products and find
-            the right option for your application.
-        </p>
-
-    </div>
-
-
-    <div class="product-grid">
-
-
-        <!-- EXHAUST FAN 01 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="EXHAUST%201.png"
-                    alt="Ceiling Exhaust Fan With Light 302mm x 302mm"
-                >
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    EXHAUST FAN 01
-                </div>
-
-                <h3>
-                    CEILING EXHAUST FAN WITH LIGHT 302mm x 302mm
-                    110V & 60 HZ 30W - 15W (LED LIGHT)
-                    200m3/h 5000K
-                </h3>
-
-                <p>
-                    Ceiling exhaust fan with integrated LED light
-                    designed for ventilation and lighting applications.
-                </p>
-
-
-                <ul class="spec-list">
-
-                    <li>
-                        302mm x 302mm
-                    </li>
-
-                    <li>
-                        110V
-                    </li>
-
-                    <li>
-                        60 Hz
-                    </li>
-
-                    <li>
-                        30W
-                    </li>
-
-                    <li>
-                        15W LED Light
-                    </li>
-
-                    <li>
-                        200m3/h Airflow
-                    </li>
-
-                    <li>
-                        5000K
-                    </li>
-
-                </ul>
-
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/ceiling-exhaust-fan-with-light-302mm-x-302mm-110v-60-hz-30w-15w-led-light-200m3-h-5000k/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a
-                        href="index.html#quote"
-                        class="btn btn-outline"
-                    >
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- EXHAUST FAN 02 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="EXHAUST%202.png"
-                    alt="Modern Exhaust Fan With LED Light"
-                >
-
-            </div>
-
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    EXHAUST FAN 02
-                </div>
-
-                <h3>
-                    Modern Exhaust Fan With LED Light
-                </h3>
-
-                <p>
-                    Modern exhaust fan with integrated LED light,
-                    designed for practical ventilation and lighting.
-                </p>
-
-
-                <ul class="spec-list">
-
-                    <li>
-                        Modern Exhaust Fan Design
-                    </li>
-
-                    <li>
-                        Integrated LED Light
-                    </li>
-
-                    <li>
-                        Ventilation & Lighting
-                    </li>
-
-                    <li>
-                        Residential Applications
-                    </li>
-
-                    <li>
-                        Commercial Applications
-                    </li>
-
-                </ul>
-
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/modern-exhaust-fan-with-led-light/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a
-                        href="index.html#quote"
-                        class="btn btn-outline"
-                    >
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
+<main>
+<section class="section">
+  <div class="section-title">
+    <div class="kicker">EXHAUST FAN COLLECTION</div>
+    <h2>Our Exhaust Fans</h2>
+    <p>Explore the available models, review their listed specifications, and add products to your cart.</p>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
 </section>
-
-
-<!-- INFO -->
 
 <section class="info-section">
-
-    <h2>
-        Need the Right Exhaust Fan?
-    </h2>
-
-    <p>
-        LED KING offers Exhaust Fan solutions with ventilation
-        and integrated lighting options for residential and
-        commercial applications. Contact us for product
-        information, quantities and project assistance.
-    </p>
-
+  <h2>Need Help Choosing an Exhaust Fan?</h2>
+  <p>Contact LED KING for product information, quantity pricing, and help choosing an exhaust fan for your project.</p>
 </section>
-
-
-<!-- CTA -->
 
 <section class="cta">
-
-    <h2>
-        Ready to Upgrade Your Ventilation?
-    </h2>
-
-    <p>
-        Contact LED KING for product information,
-        commercial quantities, project assistance
-        and lighting quotes.
-    </p>
-
-
-    <div class="cta-buttons">
-
-        <a
-            href="index.html#quote"
-            class="btn btn-white"
-        >
-            GET A QUOTE →
-        </a>
-
-        <a
-            href="index.html#contact"
-            class="btn btn-dark"
-        >
-            CONTACT US →
-        </a>
-
-    </div>
-
+  <h2>Ready to Discuss Your Project?</h2>
+  <p>Contact LED KING for product questions, commercial quantities, and project assistance.</p>
+  <a href="index.html#quote" class="btn btn-orange">REQUEST A QUOTE →</a>
+  <a href="tel:6822003004" class="btn btn-blue">CALL 682-200-3004</a>
 </section>
-
-
-<!-- FOOTER -->
+</main>
 
 <footer>
-
-    <p>
-        <strong>LED KING</strong>
-    </p>
-
-    <p>
-        3701 Airport Fwy, Fort Worth, TX 76111
-    </p>
-
-    <p>
-        © 2026 LED KING. All Rights Reserved.
-    </p>
-
+  <p><strong style="font-size:21px;letter-spacing:1px">LED KING</strong></p>
+  <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+  <p><a href="tel:6822003004">682-200-3004</a> ·
+     <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
+  <p>© 2026 LED KING. All Rights Reserved.</p>
 </footer>
 
+<!-- PRODUCT DETAILS -->
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-panel">
+    <button class="modal-close" type="button" aria-label="Close product details" onclick="closeProduct()">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h2>🛒 Your Cart</h2>
+    <button class="cart-close" type="button" aria-label="Close cart" onclick="closeCart()">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-bottom">
+    <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <p class="cart-note">Online payment is not enabled yet. Send your cart details to LED KING to discuss availability, delivery, and payment.</p>
+    <button class="btn btn-blue" type="button" onclick="sendCartRequest()">REQUEST ORDER BY EMAIL</button>
+    <button class="btn btn-outline" type="button" onclick="closeCart()">CONTINUE SHOPPING</button>
+  </div>
+</aside>
+
+<script>
+const IMAGE_BASE = "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/";
+
+function imageUrl(filename) {
+  return IMAGE_BASE + filename.split(" ").map(encodeURIComponent).join("%20");
+}
+
+/*
+  Product prices are set to $100 as requested.
+  Product 02 specifications are limited to the information supplied so far.
+*/
+const products = [
+  {
+    id: "exhaust-01",
+    number: "EXHAUST FAN 01",
+    name: "Ceiling Exhaust Fan With LED Light",
+    image: "EXHAUST 1.png",
+    price: 100,
+    short: "Ceiling exhaust fan with integrated LED lighting for ventilation and illumination.",
+    specs: [
+      "Size: 302mm × 302mm",
+      "Voltage: 110V",
+      "Frequency: 60 Hz",
+      "Fan power: 30W",
+      "LED light power: 15W",
+      "Airflow: 200 m³/h",
+      "Light color temperature: 5000K"
+    ],
+    description: "A ceiling exhaust fan with integrated LED lighting. Designed to combine room ventilation and illumination in one unit.",
+    details: "Confirm installation requirements and product availability with LED KING before ordering."
+  },
+  {
+    id: "exhaust-02",
+    number: "EXHAUST FAN 02",
+    name: "Modern Exhaust Fan With LED Light",
+    image: "EXHAUST 2.png",
+    price: 100,
+    short: "Modern exhaust fan with integrated LED lighting for ventilation and lighting applications.",
+    specs: [
+      "Modern exhaust fan design",
+      "Integrated LED light",
+      "Ventilation and lighting in one unit",
+      "Residential applications",
+      "Commercial applications"
+    ],
+    description: "A modern exhaust fan with integrated LED lighting. Please contact LED KING to confirm detailed technical specifications for this model.",
+    details: "Voltage, dimensions, airflow, wattage, and other model-specific specifications have not been provided yet."
+  }
+];
+
+let cart = [];
+let activeProductId = null;
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function renderProducts() {
+  const grid = document.getElementById("productGrid");
+
+  grid.innerHTML = products.map(product => `
+    <article class="product-card">
+      <div class="product-image">
+        <img
+          src="${imageUrl(product.image)}"
+          alt="${escapeHTML(product.name)}"
+          loading="lazy"
+          onerror="this.onerror=null;this.alt='Image unavailable: ${escapeHTML(product.image)}';this.style.opacity='.25';"
+        >
+      </div>
+      <div class="product-info">
+        <div class="product-number">${escapeHTML(product.number)}</div>
+        <h3>${escapeHTML(product.name)}</h3>
+        <p>${escapeHTML(product.short)}</p>
+        <ul class="spec-list">
+          ${product.specs.slice(0, 5).map(spec => `<li>${escapeHTML(spec)}</li>`).join("")}
+        </ul>
+        <div class="price">$${product.price.toFixed(2)} <small>/ unit</small></div>
+        <div class="product-actions">
+          <button class="btn btn-blue" type="button" onclick="viewProduct('${product.id}')">VIEW PRODUCT →</button>
+          <button class="btn btn-outline" type="button" onclick="quickAdd('${product.id}')">🛒 ADD TO CART</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
+
+function viewProduct(id) {
+  const product = products.find(item => item.id === id);
+  if (!product) return;
+
+  activeProductId = id;
+  document.getElementById("modalContent").innerHTML = `
+    <img class="modal-image"
+      src="${imageUrl(product.image)}"
+      alt="${escapeHTML(product.name)}"
+      onerror="this.onerror=null;this.alt='Product image unavailable';"
+    >
+    <div class="product-number">${escapeHTML(product.number)}</div>
+    <h2 id="modalTitle">${escapeHTML(product.name)}</h2>
+    <div class="modal-price">$${product.price.toFixed(2)} <small style="font-size:13px;font-weight:400">/ unit</small></div>
+    <p>${escapeHTML(product.description)}</p>
+    <h3>Product Specifications</h3>
+    <ul>${product.specs.map(spec => `<li>${escapeHTML(spec)}</li>`).join("")}</ul>
+    <p>${escapeHTML(product.details)}</p>
+    <div class="quantity-row">
+      <label for="modalQuantity">Quantity:</label>
+      <input class="quantity-input" id="modalQuantity" type="number" min="1" step="1" value="1">
+    </div>
+    <button class="btn btn-blue" type="button" onclick="addFromModal()">🛒 ADD TO CART</button>
+    <button class="btn btn-outline" type="button" onclick="closeProduct()">CONTINUE SHOPPING</button>
+  `;
+
+  document.getElementById("productModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProduct() {
+  document.getElementById("productModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function validQuantity(value) {
+  const quantity = Number(value);
+  if (!Number.isSafeInteger(quantity) || quantity < 1 || quantity > 9999) {
+    alert("Please enter a quantity between 1 and 9999.");
+    return null;
+  }
+  return quantity;
+}
+
+function addToCart(id, quantity) {
+  const product = products.find(item => item.id === id);
+  if (!product) return;
+
+  const existing = cart.find(item => item.id === id);
+  if (existing) {
+    if (existing.quantity + quantity > 9999) {
+      alert("Maximum quantity per product is 9999.");
+      return;
+    }
+    existing.quantity += quantity;
+  } else {
+    cart.push({ id, quantity });
+  }
+
+  renderCart();
+}
+
+function addFromModal() {
+  if (!activeProductId) return;
+  const input = document.getElementById("modalQuantity");
+  const quantity = validQuantity(input.value);
+  if (quantity === null) return;
+
+  addToCart(activeProductId, quantity);
+  closeProduct();
+  openCart();
+}
+
+function quickAdd(id) {
+  addToCart(id, 1);
+  openCart();
+}
+
+function renderCart() {
+  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+  const subtotal = cart.reduce((sum, item) => {
+    const product = products.find(product => product.id === item.id);
+    return sum + (product ? product.price * item.quantity : 0);
+  }, 0);
+
+  document.getElementById("cartCount").textContent = count;
+  document.getElementById("cartSubtotal").textContent = "$" + subtotal.toFixed(2);
+
+  const container = document.getElementById("cartItems");
+
+  if (!cart.length) {
+    container.innerHTML = "<p style='color:#6d7782;padding:20px 0'>Your cart is empty. Add a product to get started.</p>";
+    return;
+  }
+
+  container.innerHTML = cart.map(item => {
+    const product = products.find(product => product.id === item.id);
+    if (!product) return "";
+
+    return `
+      <div class="cart-item">
+        <h4>${escapeHTML(product.name)}</h4>
+        <p>$${product.price.toFixed(2)} each</p>
+        <div class="cart-item-controls">
+          <button type="button" aria-label="Decrease quantity" onclick="changeQuantity('${product.id}', -1)">−</button>
+          <span>${item.quantity}</span>
+          <button type="button" aria-label="Increase quantity" onclick="changeQuantity('${product.id}', 1)">+</button>
+          <strong>$${(product.price * item.quantity).toFixed(2)}</strong>
+          <button class="remove-item" type="button" onclick="removeItem('${product.id}')">Remove</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function changeQuantity(id, change) {
+  const item = cart.find(item => item.id === id);
+  if (!item) return;
+
+  item.quantity += change;
+  if (item.quantity <= 0) {
+    cart = cart.filter(item => item.id !== id);
+  }
+  if (item.quantity > 9999) {
+    item.quantity = 9999;
+    alert("Maximum quantity per product is 9999.");
+  }
+  renderCart();
+}
+
+function removeItem(id) {
+  cart = cart.filter(item => item.id !== id);
+  renderCart();
+}
+
+function openCart() {
+  document.getElementById("cartOverlay").classList.add("open");
+  document.getElementById("cartDrawer").classList.add("open");
+}
+
+function closeCart() {
+  document.getElementById("cartOverlay").classList.remove("open");
+  document.getElementById("cartDrawer").classList.remove("open");
+}
+
+function sendCartRequest() {
+  if (!cart.length) {
+    alert("Your cart is empty. Please add a product first.");
+    return;
+  }
+
+  const lines = cart.map(item => {
+    const product = products.find(product => product.id === item.id);
+    return `${product.name} | Quantity: ${item.quantity} | Unit price: $${product.price.toFixed(2)} | Line total: $${(product.price * item.quantity).toFixed(2)}`;
+  });
+
+  const subtotal = cart.reduce((sum, item) => {
+    const product = products.find(product => product.id === item.id);
+    return sum + product.price * item.quantity;
+  }, 0);
+
+  const message = [
+    "Hello LED KING,",
+    "",
+    "I would like to request an order quote for these exhaust fan products:",
+    "",
+    ...lines,
+    "",
+    `Estimated product subtotal: $${subtotal.toFixed(2)}`,
+    "",
+    "Please confirm availability, shipping or delivery costs, taxes, and payment instructions.",
+    "",
+    "Customer name:",
+    "Phone number:",
+    "Delivery location:"
+  ].join("\n");
+
+  const url = "mailto:ledkingfortworth@gmail.com"
+    + "?subject=" + encodeURIComponent("LED KING Exhaust Fan Order Request")
+    + "&body=" + encodeURIComponent(message);
+
+  window.location.href = url;
+}
+
+document.getElementById("productModal").addEventListener("click", event => {
+  if (event.target.id === "productModal") closeProduct();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeProduct();
+    closeCart();
+  }
+});
+
+renderProducts();
+renderCart();
+</script>
 
 </body>
 </html>
-```
