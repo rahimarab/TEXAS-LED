@@ -1,2373 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="LED KING Canopy Lights - Commercial LED parking garage and canopy lighting solutions.">
-
+<meta name="description" content="Shop LED KING canopy lights for parking garages, gas stations, commercial properties, and outdoor covered areas.">
 <title>Canopy Lights | LED KING</title>
-
-
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#17202a;
-    background:#f5f7fa;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-
-/* =====================================================
-   COLORS
-===================================================== */
-
-:root{
-
-    --blue:#087cff;
-    --blue-dark:#005dcc;
-
-    --navy:#061321;
-    --dark:#050c14;
-
-    --white:#ffffff;
-
-    --gray:#f5f7fa;
-    --border:#dfe5ec;
-
-    --text:#17202a;
-    --muted:#6d7782;
-
-}
-
-
-/* =====================================================
-   TOP BAR
-===================================================== */
-
-.top-bar{
-
-    background:#050b13;
-
-    color:white;
-
-    min-height:34px;
-
-    display:flex;
-
-    align-items:center;
-
-}
-
-
-.top-bar-inner{
-
-    width:100%;
-
-    max-width:1450px;
-
-    margin:auto;
-
-    padding:0 30px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    font-size:12px;
-
-    font-weight:700;
-
-}
-
-
-.top-left,
-.top-right{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:28px;
-
-}
-
-
-.top-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
-
-    white-space:nowrap;
-
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-header{
-
-    background:white;
-
-    border-bottom:1px solid #e1e6eb;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:1000;
-
-}
-
-
-.navbar{
-
-    max-width:1450px;
-
-    min-height:82px;
-
-    margin:auto;
-
-    padding:0 30px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-
-/* LOGO */
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    font-size:27px;
-
-    font-weight:900;
-
-    letter-spacing:-1px;
-
-    color:#111;
-
-}
-
-
-.logo span{
-
-    color:var(--blue);
-
-}
-
-
-.logo-mark{
-
-    width:48px;
-
-    height:48px;
-
-    border:3px solid var(--blue);
-
-    border-radius:50%;
-
-    color:var(--blue);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:22px;
-
-    font-weight:900;
-
-}
-
-
-/* NAVIGATION */
-
-.nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:28px;
-
-    list-style:none;
-
-}
-
-
-.nav-links a{
-
-    font-size:13px;
-
-    font-weight:800;
-
-    color:#20262d;
-
-    transition:.2s;
-
-}
-
-
-.nav-links a:hover{
-
-    color:var(--blue);
-
-}
-
-
-.nav-actions{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-}
-
-
-.nav-action{
-
-    font-size:21px;
-
-    cursor:pointer;
-
-    transition:.2s;
-
-}
-
-
-.nav-action:hover{
-
-    color:var(--blue);
-
-}
-
-
-.menu-button{
-
-    display:none;
-
-    border:0;
-
-    background:none;
-
-    font-size:27px;
-
-    cursor:pointer;
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero{
-
-    min-height:410px;
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    overflow:hidden;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.92),
-            rgba(0,0,0,.66),
-            rgba(0,0,0,.25)
-        ),
-
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90")
-        center/cover no-repeat;
-
-}
-
-
-.hero:after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:0;
-
-    height:5px;
-
-    background:var(--blue);
-
-}
-
-
-.hero-content{
-
-    width:100%;
-
-    max-width:1450px;
-
-    margin:auto;
-
-    padding:70px 30px;
-
-    color:white;
-
-}
-
-
-.hero-kicker{
-
-    color:#64adff;
-
-    font-size:13px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    margin-bottom:12px;
-
-}
-
-
-.hero-kicker:before{
-
-    content:"";
-
-    display:inline-block;
-
-    width:35px;
-
-    height:3px;
-
-    background:var(--blue);
-
-    margin-right:10px;
-
-    vertical-align:middle;
-
-}
-
-
-.hero h1{
-
-    font-size:56px;
-
-    line-height:1.05;
-
-    font-weight:900;
-
-    margin-bottom:18px;
-
-}
-
-
-.hero p{
-
-    max-width:750px;
-
-    font-size:17px;
-
-    color:#eeeeee;
-
-    line-height:1.7;
-
-}
-
-
-/* =====================================================
-   PAGE SECTION
-===================================================== */
-
-.section{
-
-    padding:70px 0;
-
-}
-
-
-.container{
-
-    max-width:1450px;
-
-    margin:auto;
-
-    padding:0 30px;
-
-}
-
-
-/* =====================================================
-   SECTION TITLE
-===================================================== */
-
-.section-heading{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:end;
-
-    gap:30px;
-
-    margin-bottom:35px;
-
-}
-
-
-.section-title small{
-
-    color:var(--blue);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-}
-
-
-.section-title h2{
-
-    font-size:38px;
-
-    color:#111;
-
-    line-height:1.15;
-
-    margin:5px 0 8px;
-
-}
-
-
-.section-title p{
-
-    color:var(--muted);
-
-    max-width:700px;
-
-    font-size:15px;
-
-}
-
-
-/* =====================================================
-   PRODUCT GRID
-===================================================== */
-
-.product-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:22px;
-
-}
-
-
-/* =====================================================
-   PRODUCT CARD
-===================================================== */
-
-.product-card{
-
-    background:white;
-
-    border:1px solid var(--border);
-
-    border-radius:12px;
-
-    overflow:hidden;
-
-    display:grid;
-
-    grid-template-columns:270px 1fr;
-
-    min-height:280px;
-
-    transition:.3s;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.04);
-
-}
-
-
-.product-card:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:0 16px 35px rgba(0,0,0,.12);
-
-    border-color:#c7dcf3;
-
-}
-
-
-/* IMAGE */
-
-.product-image{
-
-    background:#f4f6f8;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:18px;
-
-    overflow:hidden;
-
-}
-
-
-.product-image img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    transition:.4s;
-
-}
-
-
-.product-card:hover .product-image img{
-
-    transform:scale(1.05);
-
-}
-
-
-/* INFO */
-
-.product-info{
-
-    padding:28px 25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-}
-
-
-.product-number{
-
-    color:var(--blue);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    letter-spacing:1.5px;
-
-    margin-bottom:8px;
-
-}
-
-
-.product-info h3{
-
-    color:#111;
-
-    font-size:20px;
-
-    line-height:1.25;
-
-    margin-bottom:13px;
-
-}
-
-
-.product-info p{
-
-    color:#66717c;
-
-    font-size:13px;
-
-    line-height:1.7;
-
-    margin-bottom:20px;
-
-}
-
-
-.spec-list{
-
-    list-style:none;
-
-    margin-bottom:20px;
-
-}
-
-
-.spec-list li{
-
-    font-size:12px;
-
-    color:#4e5964;
-
-    padding:3px 0;
-
-}
-
-
-.spec-list li:before{
-
-    content:"✓";
-
-    color:var(--blue);
-
-    font-weight:bold;
-
-    margin-right:7px;
-
-}
-
-
-/* PRODUCT BUTTON */
-
-.product-buttons{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:9px;
-
-}
-
-
-.product-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:10px 15px;
-
-    border-radius:6px;
-
-    font-size:11px;
-
-    font-weight:900;
-
-    transition:.2s;
-
-}
-
-
-.product-btn-blue{
-
-    background:var(--blue);
-
-    color:white;
-
-}
-
-
-.product-btn-blue:hover{
-
-    background:var(--blue-dark);
-
-}
-
-
-.product-btn-outline{
-
-    border:1px solid #d6dde4;
-
-    color:#333;
-
-    background:white;
-
-}
-
-
-.product-btn-outline:hover{
-
-    border-color:var(--blue);
-
-    color:var(--blue);
-
-}
-
-
-/* =====================================================
-   INFORMATION SECTION
-===================================================== */
-
-.info-section{
-
-    background:white;
-
-    padding:65px 20px;
-
-    border-top:1px solid #e3e8ed;
-
-    border-bottom:1px solid #e3e8ed;
-
-}
-
-
-.info-container{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-
-.info-container h2{
-
-    font-size:32px;
-
-    color:#111;
-
-    margin-bottom:12px;
-
-}
-
-
-.info-container p{
-
-    color:var(--muted);
-
-    font-size:15px;
-
-    line-height:1.8;
-
-}
-
-
-/* =====================================================
-   CTA
-===================================================== */
-
-.cta{
-
-    background:#061321;
-
-    color:white;
-
-    text-align:center;
-
-    padding:65px 20px;
-
-}
-
-
-.cta h2{
-
-    font-size:36px;
-
-    margin-bottom:10px;
-
-}
-
-
-.cta p{
-
-    color:#b9c2cc;
-
-    max-width:700px;
-
-    margin:0 auto 25px;
-
-}
-
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:13px 22px;
-
-    border-radius:7px;
-
-    font-size:13px;
-
-    font-weight:900;
-
-    margin:5px;
-
-    transition:.2s;
-
-}
-
-
-.btn-blue{
-
-    background:var(--blue);
-
-    color:white;
-
-}
-
-
-.btn-blue:hover{
-
-    background:var(--blue-dark);
-
-}
-
-
-.btn-white{
-
-    background:white;
-
-    color:#111;
-
-}
-
-
-.btn-white:hover{
-
-    background:#eaf4ff;
-
-    color:var(--blue);
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    background:#040a11;
-
-    color:white;
-
-    padding:35px 20px;
-
-    text-align:center;
-
-}
-
-
-footer p{
-
-    color:#9aa5b1;
-
-    font-size:13px;
-
-    margin:5px 0;
-
-}
-
-
-footer strong{
-
-    color:white;
-
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:1000px){
-
-    .nav-links{
-
-        gap:16px;
-
-    }
-
-
-    .product-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .product-card{
-
-        grid-template-columns:300px 1fr;
-
-    }
-
-
-    .hero h1{
-
-        font-size:46px;
-
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE NAVIGATION
-===================================================== */
-
-@media(max-width:750px){
-
-    .top-bar{
-
-        display:none;
-
-    }
-
-
-    .navbar{
-
-        min-height:70px;
-
-        padding:0 18px;
-
-    }
-
-
-    .nav-links{
-
-        display:none;
-
-        position:absolute;
-
-        top:70px;
-
-        left:0;
-
-        right:0;
-
-        background:white;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:0;
-
-        padding:10px 20px 20px;
-
-        border-bottom:1px solid #ddd;
-
-        box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    }
-
-
-    .nav-links.show{
-
-        display:flex;
-
-    }
-
-
-    .nav-links li{
-
-        width:100%;
-
-    }
-
-
-    .nav-links a{
-
-        display:block;
-
-        padding:13px 0;
-
-    }
-
-
-    .menu-button{
-
-        display:block;
-
-    }
-
-
-    .nav-action{
-
-        display:none;
-
-    }
-
-
-    .hero{
-
-        min-height:380px;
-
-    }
-
-
-    .hero-content{
-
-        padding:60px 20px;
-
-    }
-
-
-    .hero h1{
-
-        font-size:39px;
-
-    }
-
-
-    .hero p{
-
-        font-size:15px;
-
-    }
-
-
-    .section{
-
-        padding:55px 0;
-
-    }
-
-
-    .container{
-
-        padding:0 18px;
-
-    }
-
-
-    .section-heading{
-
-        display:block;
-
-    }
-
-
-    .section-title h2{
-
-        font-size:31px;
-
-    }
-
-
-    .product-card{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .product-image{
-
-        height:260px;
-
-    }
-
-
-    .product-info{
-
-        padding:24px 20px;
-
-    }
-
-
-    .cta h2{
-
-        font-size:30px;
-
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media(max-width:480px){
-
-    .logo{
-
-        font-size:21px;
-
-    }
-
-
-    .logo-mark{
-
-        width:40px;
-
-        height:40px;
-
-        font-size:18px;
-
-    }
-
-
-    .hero h1{
-
-        font-size:34px;
-
-    }
-
-
-    .product-image{
-
-        height:230px;
-
-    }
-
-
-    .product-info h3{
-
-        font-size:18px;
-
-    }
-
-}
-
+:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.header-inner{max-width:1240px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:25px;letter-spacing:1px;color:#111;text-decoration:none}
+.logo span{color:var(--orange)}
+.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:14px;font-weight:700}
+.nav a:hover{color:var(--blue)}
+.cart-button{border:0;border-radius:9px;background:var(--blue);color:white;padding:10px 14px;cursor:pointer;font-weight:700;white-space:nowrap}
+.cart-count{display:inline-flex;min-width:22px;height:22px;border-radius:20px;background:var(--orange);align-items:center;justify-content:center;margin-left:5px;font-size:12px}
+.hero{background:linear-gradient(120deg,#082d4c,#1261a0);color:white;padding:56px 22px}
+.hero-inner{max-width:1240px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#ffd1a5;font-weight:800;font-size:12px}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:720px;color:#e7f2fb;margin:0;font-size:17px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-tags span{border:1px solid #ffffff55;border-radius:24px;padding:7px 12px;font-size:13px}
+.page-wrap{max-width:1240px;margin:0 auto;padding:34px 22px 60px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:25px}
+.toolbar p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #0b47780b;transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0b47781a}
+.product-image{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:16px;border-bottom:1px solid #edf1f5}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.image-fallback{font-weight:800;color:#64748b;text-align:center;display:none}
+.product-info{padding:18px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.product-info h3{font-size:18px;line-height:1.35;margin:0 0 9px}
+.short-specs{font-size:13px;color:#526173;margin:0 0 14px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 14px}
+.price{font-size:24px;font-weight:900;color:var(--blue-dark)}
+.unit{font-size:12px;color:var(--muted)}
+.actions{display:flex;gap:9px}
+.btn{border:0;border-radius:8px;padding:11px 13px;cursor:pointer;font-weight:800;transition:background .15s}
+.btn-primary{background:var(--blue);color:white;flex:1}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-outline{background:#fff;color:var(--blue);border:1px solid #b8cde0;flex:1}
+.btn-outline:hover{background:#eef6fc}
+.footer{background:#101c28;color:#e5edf5;padding:30px 22px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer p{margin:4px 0;color:#b9c6d3;font-size:14px}
+.overlay{position:fixed;inset:0;background:#071522b8;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.overlay.open{display:flex}
+.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;box-shadow:0 24px 70px #0004;position:relative}
+.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.modal-head strong{font-size:16px}
+.close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#edf2f7;cursor:pointer;font-size:23px;line-height:1}
+.modal-content{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:28px;padding:24px}
+.modal-photo{background:#f8fafc;border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-photo img{width:100%;max-height:380px;object-fit:contain}
+.modal h2{font-size:26px;line-height:1.25;margin:3px 0 8px}
+.modal-price{font-size:29px;font-weight:900;color:var(--blue-dark);margin:10px 0}
+.spec-list{padding-left:19px;margin:12px 0;color:#46576a;font-size:14px}
+.spec-list li{margin:5px 0}
+.description{font-size:14px;color:#46576a}
+.qty-row{display:flex;align-items:center;gap:12px;margin:18px 0}
+.qty-control{display:inline-flex;align-items:center;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden}
+.qty-control button{border:0;background:#f1f5f9;width:36px;height:40px;cursor:pointer;font-size:20px}
+.qty-control input{width:48px;height:40px;border:0;text-align:center;outline:none}
+.modal-add{width:100%;padding:13px;background:var(--orange);color:#1f2937;border:0;border-radius:9px;font-weight:900;cursor:pointer}
+.modal-add:hover{background:#ff9a3d}
+.notice{font-size:12px;color:var(--muted);margin-top:10px}
+.cart-drawer{position:fixed;inset:0;z-index:60;display:none}
+.cart-drawer.open{display:block}
+.drawer-shade{position:absolute;inset:0;background:#0715229c}
+.drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:white;box-shadow:-10px 0 40px #0002;display:flex;flex-direction:column}
+.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h2{margin:0}
+.drawer-items{padding:16px 20px;overflow:auto;flex:1}
+.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-item strong{display:block;font-size:14px}
+.cart-item small{color:var(--muted)}
+.cart-item-right{text-align:right;white-space:nowrap}
+.remove-item{border:0;background:transparent;color:#b42318;cursor:pointer;font-size:12px;padding:5px 0}
+.drawer-bottom{padding:20px;border-top:1px solid var(--line)}
+.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px}
+.checkout-later{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:12px;color:#64748b;font-size:13px}
+.empty-cart{text-align:center;color:var(--muted);padding:45px 10px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#102b40;color:white;padding:12px 18px;border-radius:10px;box-shadow:0 8px 24px #0003;z-index:100;display:none;font-size:14px}
+.toast.show{display:block}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
+@media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
 </style>
-
 </head>
-
-
 <body>
 
-
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
-
-<div class="top-bar">
-
-<div class="top-bar-inner">
-
-    <div class="top-left">
-
-        <div class="top-item">
-            🚚 Fast & Reliable Shipping
-        </div>
-
-        <div class="top-item">
-            ✓ Quality LED Products
-        </div>
-
-    </div>
-
-
-    <div class="top-right">
-
-        <div class="top-item">
-            📞 682-200-3004
-        </div>
-
-        <div class="top-item">
-            ✉ ledkingfortworth@gmail.com
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header>
-
-<nav class="navbar">
-
-
-<a href="index.html" class="logo">
-
-    <div class="logo-mark">
-        LK
-    </div>
-
-    LED <span>KING</span>
-
-</a>
-
-
-<ul class="nav-links" id="navLinks">
-
-    <li>
-        <a href="index.html#about">
-            ABOUT US
-        </a>
-    </li>
-
-    <li>
-        <a href="products.html">
-            PRODUCTS
-        </a>
-    </li>
-
-    <li>
-        <a href="index.html#specialty">
-            SPECIALTY
-        </a>
-    </li>
-
-    <li>
-        <a href="index.html#quote">
-            GET A QUOTE
-        </a>
-    </li>
-
-    <li>
-        <a href="index.html#contact">
-            CONTACT
-        </a>
-    </li>
-
-</ul>
-
-
-<div class="nav-actions">
-
-    <a
-        href="products.html"
-        class="nav-action">
-        🔍
-    </a>
-
-    <a
-        href="index.html#quote"
-        class="nav-action">
-        📋
-    </a>
-
-    <button
-        class="menu-button"
-        onclick="toggleMenu()">
-        ☰
-    </button>
-
-</div>
-
-
-</nav>
-
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#products">Canopy Lights</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" type="button" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
 </header>
 
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="hero">
-
-<div class="hero-content">
-
-    <div class="hero-kicker">
-        LED KING PRODUCTS
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial Lighting</div>
+    <h1>Professional LED Canopy Lights</h1>
+    <p>Energy-efficient canopy lighting for parking garages, gas stations, covered walkways, and commercial spaces. Explore product specifications and add items to your cart.</p>
+    <div class="hero-tags">
+      <span>UL / DLC-listed models</span>
+      <span>Commercial applications</span>
+      <span>Product price: $100 each</span>
     </div>
-
-    <h1>
-        Canopy Lights
-    </h1>
-
-    <p>
-        Explore LED KING's selection of commercial LED
-        canopy and parking garage lighting solutions
-        designed for professional lighting applications.
-    </p>
-
-</div>
-
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     CANOPY PRODUCTS
-===================================================== -->
-
-<section class="section">
-
-<div class="container">
-
-
-<div class="section-heading">
-
-    <div class="section-title">
-
-        <small>
-            CANOPY LIGHTING
-        </small>
-
-        <h2>
-            Our Canopy Lights
-        </h2>
-
-        <p>
-            Choose from different canopy light designs,
-            wattages and configurations for commercial
-            and outdoor lighting applications.
-        </p>
-
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div>
+      <h2>Canopy Lights</h2>
+      <p>Choose a product to view full details and specifications.</p>
     </div>
-
-</div>
-
-
-
-<div class="product-grid">
-
-
-<!-- =====================================================
-     CANOPY 1
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%201.png"
-            alt="LED Parking Garage Light 55W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 01
-        </div>
-
-        <h3>
-            LED Parking Garage Light 55W
-        </h3>
-
-        <p>
-            55W commercial LED parking garage and canopy
-            lighting solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                5700K
-            </li>
-
-            <li>
-                Epistar 2835 Chips
-            </li>
-
-            <li>
-                China Brand Driver
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/led-parking-garage-light-55w5700kepistar-2835-chipschina-brand-driverac100-277vul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 2
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%202.png"
-            alt="5nd Round LED Parking Garage Light 55W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 02
-        </div>
-
-        <h3>
-            5nd Round LED Parking Garage Light 55W
-        </h3>
-
-        <p>
-            Round commercial LED parking garage and
-            canopy lighting solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                55W
-            </li>
-
-            <li>
-                5700K
-            </li>
-
-            <li>
-                Lumileds 2835 Chips
-            </li>
-
-            <li>
-                China Brand Driver
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/5nd-round-led-parking-garage-light-55w5700klumileds-2835-chipschina-brand-driverac100-277vul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 3
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%203.png"
-            alt="75W LED Canopy Light">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 03
-        </div>
-
-        <h3>
-            75W LED Canopy Light
-        </h3>
-
-        <p>
-            Commercial LED canopy light designed for
-            professional outdoor lighting applications.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                75W
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                Sosen Driver
-            </li>
-
-            <li>
-                5700K
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/75w-led-canopy-light-ac100-277v-sosen-driver-5700k-ul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 4
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%204.png"
-            alt="LED Parking Garage Light 75W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 04
-        </div>
-
-        <h3>
-            LED Parking Garage Light 75W
-        </h3>
-
-        <p>
-            75W rated power LED parking garage and
-            canopy lighting solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                75W Rated Power
-            </li>
-
-            <li>
-                30 = 3000K
-            </li>
-
-            <li>
-                40 = 4000K
-            </li>
-
-            <li>
-                50 = 5000K
-            </li>
-
-            <li>
-                LED Canopy Light
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/led-parking-garage-light-75w-rating-power-led-canopy-light-303000k-404000k-505000k/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 5
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%205.png"
-            alt="DLC5.1 7nd LED Parking Garage Light 75W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 05
-        </div>
-
-        <h3>
-            DLC5.1 7nd LED Parking Garage Light 75W
-        </h3>
-
-        <p>
-            DLC5.1 commercial LED parking garage and
-            canopy lighting solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                75W
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                China Brand Driver
-            </li>
-
-            <li>
-                White Color
-            </li>
-
-            <li>
-                3000K / 4000K / 5000W
-            </li>
-
-            <li>
-                75W / 60W / 40W
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/dlc5-1-7nd-led-parking-garage-light-75w-ac100-277v-china-brand-driverwhite-color-3000k-4000k-5000w-75w-60w-40w/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 6
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%206.png"
-            alt="New DLC5.1 Integrated LED Canopy Light 95W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 06
-        </div>
-
-        <h3>
-            New DLC5.1 Integrated LED Canopy Light 95W
-        </h3>
-
-        <p>
-            Integrated commercial LED canopy lighting
-            solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                95W
-            </li>
-
-            <li>
-                Lumileds 2835
-            </li>
-
-            <li>
-                Non-Isolated Driver
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/new-dlc5-1-intergrated-led-canopy-light-95wlumildes-2835non-islosted-driverac100-277vul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 7
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%207.png"
-            alt="150W LED Canopy Light">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 07
-        </div>
-
-        <h3>
-            150W LED Canopy Light
-        </h3>
-
-        <p>
-            High-output LED canopy lighting with
-            daylight color temperature.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                150W
-            </li>
-
-            <li>
-                5700K Daylight
-            </li>
-
-            <li>
-                Beaded Lens
-            </li>
-
-            <li>
-                2835 LED Chips
-            </li>
-
-            <li>
-                Non-Isolated Driver
-            </li>
-
-            <li>
-                UL & DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/150w-led-canopy-light-5700k-daylight-beaded-lens-2835-led-chips-non-isolated-driver-ul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 8
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%208.png"
-            alt="New DLC5.1 Integrated LED Canopy Light 150W">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 08
-        </div>
-
-        <h3>
-            New DLC5.1 Integrated LED Canopy Light 150W
-        </h3>
-
-        <p>
-            Integrated high-output commercial LED
-            canopy lighting solution.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                150W
-            </li>
-
-            <li>
-                Lumileds 2835
-            </li>
-
-            <li>
-                Non-Isolated Driver
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/new-dlc5-1-intergrated-led-canopy-light-150wlumildes-2835non-isolated-driverac100-277vul-dlc-listed/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 9
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%209.png"
-            alt="New 180W Big Size LED Canopy Light">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 09
-        </div>
-
-        <h3>
-            New 180W Big Size LED Canopy Light
-        </h3>
-
-        <p>
-            Big-size high-output LED canopy light for
-            commercial lighting applications.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                180W
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                Sosen Driver
-            </li>
-
-            <li>
-                5700K
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/new-180w-big-size-180w-led-canopy-light-ac100-277v-sosen-driver-5700k-ul-dlc-listed-2/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CANOPY 10
-===================================================== -->
-
-<div class="product-card">
-
-    <div class="product-image">
-
-        <img
-            src="Canopy%2010.png"
-            alt="New Big Size 240W LED Canopy Light">
-
-    </div>
-
-
-    <div class="product-info">
-
-        <div class="product-number">
-            CANOPY LIGHT 10
-        </div>
-
-        <h3>
-            New Big Size 240W LED Canopy Light
-        </h3>
-
-        <p>
-            Big-size high-output LED canopy light for
-            commercial lighting applications.
-        </p>
-
-
-        <ul class="spec-list">
-
-            <li>
-                240W
-            </li>
-
-            <li>
-                AC100-277V
-            </li>
-
-            <li>
-                Sosen Driver
-            </li>
-
-            <li>
-                5700K
-            </li>
-
-            <li>
-                UL DLC Listed
-            </li>
-
-        </ul>
-
-
-        <div class="product-buttons">
-
-            <a
-                href="https://ledkingtx.com/product/new-big-size-240w-led-canopy-light-ac100-277v-sosen-driver-5700k-ul-dlc-listed-2/"
-                target="_blank"
-                rel="noopener"
-                class="product-btn product-btn-blue">
-
-                VIEW PRODUCT →
-
-            </a>
-
-            <a
-                href="index.html#quote"
-                class="product-btn product-btn-outline">
-
-                GET A QUOTE
-
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-</div>
-
-</div>
-
+    <p><strong>10 products</strong> · Each listed at $100.00</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</main>
+
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+    <h2 style="margin-top:0">About LED KING</h2>
+    <p style="color:#526173;margin-bottom:0">LED KING provides professional LED lighting products and solutions for commercial and industrial applications. Contact us for product questions, bulk orders, or project quotes.</p>
+  </div>
 </section>
 
-
-
-<!-- =====================================================
-     INFORMATION
-===================================================== -->
-
-<section class="info-section">
-
-<div class="info-container">
-
-    <h2>
-        Need the Right Canopy Light?
-    </h2>
-
-    <p>
-        LED KING offers different canopy lighting options
-        for commercial and outdoor applications. Contact us
-        for product details, sizes, quantities and project
-        assistance.
-    </p>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-    <h2>
-        Ready to Upgrade Your Lighting?
-    </h2>
-
-    <p>
-        Contact LED KING for canopy light pricing,
-        product information and commercial quantities.
-    </p>
-
-
-    <a
-        href="index.html#quote"
-        class="btn btn-blue">
-
-        GET A QUOTE →
-
-    </a>
-
-
-    <a
-        href="index.html#contact"
-        class="btn btn-white">
-
-        CONTACT US →
-
-    </a>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <p>
-        <strong>LED KING</strong>
-        — Professional LED Lighting
-    </p>
-
-    <p>
-        3701 Airport Fwy, Fort Worth, TX 76111
-    </p>
-
-    <p>
-        © 2026 LED KING. All Rights Reserved.
-    </p>
-
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div>
+      <strong style="font-size:20px">LED KING</strong>
+      <p>Professional LED lighting products and solutions.</p>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <p>Phone: 682-200-3004</p>
+      <p>Email: ledkingfortworth@gmail.com</p>
+      <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+    </div>
+  </div>
 </footer>
 
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head">
+      <strong>Product details</strong>
+      <button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button>
+    </div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
 
+<div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head">
+      <h2>Your Cart</h2>
+      <button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom">
+      <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="checkout-later">Online payment and checkout will be connected later. For now, your cart works on this page and shows your selected products and subtotal.</div>
+    </div>
+  </aside>
+</div>
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
+const products = [
+  {
+    id:1,
+    name:"LED Parking Garage Light 55W",
+    price:100,
+    sku:"1462",
+    image:"Canopy%201.png",
+    specs:["55W power","5700K color temperature","Epistar 2835 LED chips (as supplied)","AC 100–277V","UL / DLC listed"],
+    description:"Designed for parking garage and covered commercial applications. Your supplied details list efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start, no flickering or humming, easy installation, uniform light, and a 5-year warranty. Additional supplied driver and chip-brand details are retained as provided."
+  },
+  {
+    id:2,
+    name:"5th Round LED Parking Garage Light 55W",
+    price:100,
+    sku:"2021",
+    image:"Canopy%202.png",
+    specs:["55W power","5700K color temperature","Lumileds 2835 LED chips","China-brand driver (as supplied)","AC 100–277V","UL / DLC listed"],
+    description:"A round LED parking garage fixture designed for efficient, consistent illumination. Supplied additional details include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Driver and chip information is displayed as supplied."
+  },
+  {
+    id:3,
+    name:"75W LED Canopy Light",
+    price:100,
+    sku:"932",
+    image:"Canopy%203.png",
+    specs:["75W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
+    description:"A 75W LED canopy light for outdoor canopy and commercial applications. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white illumination, and UL / DLC listings. Its broad voltage range supports use with compatible electrical systems."
+  },
+  {
+    id:4,
+    name:"LED Parking Garage Light 75W",
+    price:100,
+    sku:"2597",
+    image:"Canopy%204.png",
+    specs:["75W rated power","3000K (warm white)","4000K (neutral white)","5000K (cool white)"],
+    description:"A 75W LED parking garage light with selectable color temperatures. Choose 3000K for warm white, 4000K for neutral white, or 5000K for cool white. Intended for well-lit, energy-efficient commercial and industrial spaces."
+  },
+  {
+    id:5,
+    name:"DLC5.1 LED Parking Garage Light",
+    price:100,
+    sku:"2483",
+    image:"Canopy%205.png",
+    specs:["Wattage options: 40W / 60W / 75W","AC 100–277V","China-brand driver","White fixture","Color temperatures: 3000K / 4000K / 5000K"],
+    description:"A DLC5.1 parking garage canopy fixture with wattage and color temperature options. Your supplied product details list 40W, 60W, and 75W options; AC 100–277V; a China-brand driver; a white fixture; and 3000K, 4000K, and 5000K color temperature choices."
+  },
+  {
+    id:6,
+    name:"New DLC5.1 Integrated LED Canopy Light 95W",
+    price:100,
+    sku:"1928",
+    image:"Canopy%206.png",
+    specs:["95W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],
+    description:"An integrated LED canopy light designed for gas stations, parking garages, and covered walkways. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."
+  },
+  {
+    id:7,
+    name:"150W LED Canopy Light",
+    price:100,
+    sku:"",
+    image:"Canopy%207.png",
+    specs:["150W power","5700K daylight","Beaded lens","2835 LED chips","Non-isolated driver","UL / DLC listed"],
+    description:"A 150W LED canopy light with 5700K daylight output, a beaded lens, 2835 LED chips, and a non-isolated driver. Listed certifications are UL and DLC. Designed for canopy and other commercial outdoor covered areas."
+  },
+  {
+    id:8,
+    name:"New DLC5.1 Integrated LED Canopy Light 150W",
+    price:100,
+    sku:"675",
+    image:"Canopy%208.png",
+    specs:["150W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],
+    description:"A high-powered integrated LED canopy fixture for gas stations, parking garages, and other commercial areas. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."
+  },
+  {
+    id:9,
+    name:"New 180W Big Size LED Canopy Light",
+    price:100,
+    sku:"1929",
+    image:"Canopy%209.png",
+    specs:["180W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
+    description:"A high-output 180W LED canopy light suitable for larger outdoor canopy spaces. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."
+  },
+  {
+    id:10,
+    name:"New Big Size 240W LED Canopy Light",
+    price:100,
+    sku:"1186",
+    image:"Canopy%2010.png",
+    specs:["240W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
+    description:"A high-output 240W LED canopy light for large spaces requiring ample illumination. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."
+  }
+];
 
-function toggleMenu(){
+let activeProduct = null;
+let cart = {};
+let toastTimer;
 
-    const menu =
-        document.getElementById("navLinks");
-
-    menu.classList.toggle("show");
-
+function imageUrl(file) {
+  return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/" + file;
 }
 
+function money(value) {
+  return "$" + Number(value).toFixed(2);
+}
 
-document
-.querySelectorAll(".nav-links a")
-.forEach(function(link){
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"']/g, c => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  }[c]));
+}
 
-    link.addEventListener("click",function(){
+function renderProducts() {
+  const grid = document.getElementById("productGrid");
 
-        document
-        .getElementById("navLinks")
-        .classList.remove("show");
+  grid.innerHTML = products.map(p => `
+    <article class="product-card">
+      <div class="product-image">
+        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="image-fallback">
+          LED KING<br>${escapeHtml(p.name)}<br>
+          <small>Product image unavailable</small>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="sku">${p.sku ? "SKU: " + escapeHtml(p.sku) : "Canopy Lights"}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
+        <div class="price-row">
+          <span class="price">${money(p.price)}</span>
+          <span class="unit">per item</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
+          <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
 
-    });
+function openProduct(id) {
+  activeProduct = products.find(p => p.id === id);
+  if (!activeProduct) return;
 
+  const p = activeProduct;
+
+  document.getElementById("modalContent").innerHTML = `
+    <div class="modal-photo">
+      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}"
+        onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
+    </div>
+    <div>
+      <div class="sku">${p.sku ? "SKU: " + escapeHtml(p.sku) + " · " : ""}Canopy Lights</div>
+      <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
+      <div class="modal-price">${money(p.price)}</div>
+      <p class="description">${escapeHtml(p.description)}</p>
+      <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
+      <ul class="spec-list">
+        ${p.specs.map(s => "<li>" + escapeHtml(s) + "</li>").join("")}
+      </ul>
+      <div class="qty-row">
+        <strong>Quantity</strong>
+        <div class="qty-control">
+          <button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button>
+          <input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity">
+          <button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+      <button class="modal-add" onclick="addFromModal()">
+        🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span>
+      </button>
+      <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
+    </div>
+  `;
+
+  document.getElementById("productOverlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProduct() {
+  document.getElementById("productOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function overlayClick(e) {
+  if (e.target.id === "productOverlay") closeProduct();
+}
+
+function changeModalQty(delta) {
+  const input = document.getElementById("modalQty");
+  input.value = Math.max(1, (parseInt(input.value, 10) || 1) + delta);
+  document.getElementById("modalLinePrice").textContent =
+    money(activeProduct.price * (parseInt(input.value, 10) || 1));
+}
+
+function addFromModal() {
+  const qty = Math.max(1, parseInt(document.getElementById("modalQty").value, 10) || 1);
+  addToCart(activeProduct.id, qty);
+  closeProduct();
+  openCart();
+}
+
+function quickAdd(id) {
+  addToCart(id, 1);
+  showToast("Added to cart");
+}
+
+function addToCart(id, qty) {
+  cart[id] = (cart[id] || 0) + qty;
+  renderCart();
+  updateCartCount();
+}
+
+function updateCartCount() {
+  document.getElementById("cartCount").textContent =
+    Object.values(cart).reduce((a, b) => a + b, 0);
+}
+
+function renderCart() {
+  const holder = document.getElementById("cartItems");
+  const ids = Object.keys(cart).filter(id => cart[id] > 0);
+
+  if (!ids.length) {
+    holder.innerHTML = `
+      <div class="empty-cart">
+        <div style="font-size:36px">🛒</div>
+        <strong>Your cart is empty</strong>
+        <p>Add a canopy light to get started.</p>
+      </div>`;
+  } else {
+    holder.innerHTML = ids.map(id => {
+      const p = products.find(x => x.id === Number(id));
+      const q = cart[id];
+
+      return `
+        <div class="cart-item">
+          <div>
+            <strong>${escapeHtml(p.name)}</strong>
+            <small>${p.sku ? "SKU: " + escapeHtml(p.sku) + " · " : ""}Qty: ${q} × ${money(p.price)}</small>
+            <div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div>
+          </div>
+          <div class="cart-item-right">
+            <strong>${money(q * p.price)}</strong>
+            <div class="qty-control" style="margin-top:7px">
+              <button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease quantity">−</button>
+              <input type="number" min="1" value="${q}" aria-label="Quantity"
+                onchange="setCartQty(${p.id},this.value)" style="width:40px">
+              <button onclick="changeCartQty(${p.id},1)" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  const subtotal = ids.reduce(
+    (sum, id) => sum + cart[id] * products.find(p => p.id === Number(id)).price,
+    0
+  );
+
+  document.getElementById("cartSubtotal").textContent = money(subtotal);
+}
+
+function changeCartQty(id, delta) {
+  cart[id] = Math.max(0, (cart[id] || 0) + delta);
+  if (cart[id] === 0) delete cart[id];
+  renderCart();
+  updateCartCount();
+}
+
+function setCartQty(id, value) {
+  const q = parseInt(value, 10);
+  if (!Number.isFinite(q) || q < 1) {
+    delete cart[id];
+  } else {
+    cart[id] = q;
+  }
+  renderCart();
+  updateCartCount();
+}
+
+function removeFromCart(id) {
+  delete cart[id];
+  renderCart();
+  updateCartCount();
+}
+
+function openCart() {
+  renderCart();
+  document.getElementById("cartDrawer").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeCart() {
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function showToast(message) {
+  const t = document.getElementById("toast");
+  t.textContent = message;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    closeProduct();
+    closeCart();
+  }
 });
 
+renderProducts();
+renderCart();
+updateCartCount();
 </script>
-
-
 </body>
-
 </html>
