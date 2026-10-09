@@ -1,1826 +1,810 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="LED KING professional LED flood lights for commercial and outdoor lighting.">
 <title>Flood Lights | LED KING</title>
 
-<meta name="description" content="LED KING Flood Lights for outdoor, commercial, industrial and general lighting applications.">
-
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fa;
-    color:#17202a;
-    line-height:1.6;
-}
-
-:root{
-    --blue:#087cff;
-    --blue-dark:#005dcc;
-    --navy:#061321;
-    --dark:#050c14;
-    --white:#fff;
-    --gray:#f5f7fa;
-    --border:#dfe5ec;
-    --text:#17202a;
-    --muted:#6d7782;
-}
-
-/* TOP BAR */
-
-.top-bar{
-    background:#050b13;
-    color:#fff;
-    font-size:13px;
-    padding:8px 20px;
-}
-
-.top-bar-inner{
-    max-width:1450px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.top-left{
-    font-weight:600;
-}
-
-.top-right{
-    display:flex;
-    gap:20px;
-}
-
-.top-right a{
-    color:#fff;
-    text-decoration:none;
-}
-
-/* HEADER */
-
-header{
-    background:#fff;
-    border-bottom:1px solid var(--border);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1450px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:#061321;
-}
-
-.logo-mark{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#061321;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-    font-size:16px;
-}
-
-.logo-text{
-    font-size:24px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#061321;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:.5px;
-}
-
-.nav-links a:hover{
-    color:var(--blue);
-}
-
-.nav-icon{
-    font-size:18px;
-}
-
-/* HERO */
-
-.hero{
-    min-height:410px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:50px 20px;
-    background:
-        linear-gradient(
-            rgba(6,19,33,.78),
-            rgba(6,19,33,.78)
-        ),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90")
-        center/cover;
-    border-bottom:5px solid var(--blue);
-}
-
-.hero-content{
-    max-width:900px;
-    color:#fff;
-}
-
-.hero-kicker{
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:2px;
-    color:#5da9ff;
-    margin-bottom:12px;
-}
-
-.hero h1{
-    font-size:52px;
-    line-height:1.1;
-    margin-bottom:18px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:780px;
-    margin:auto;
-    color:#e8edf3;
-}
-
-/* PRODUCTS */
-
-.products-section{
-    max-width:1450px;
-    margin:auto;
-    padding:75px 20px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-small{
-    color:var(--blue);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:8px;
-}
-
-.section-title h2{
-    font-size:38px;
-    margin-bottom:12px;
-    color:var(--navy);
-}
-
-.section-title p{
-    max-width:750px;
-    margin:auto;
-    color:var(--muted);
-}
-
-/* PRODUCT GRID */
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:28px;
-}
-
-.product-card{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:12px;
-    overflow:hidden;
-    display:grid;
-    grid-template-columns:270px 1fr;
-    min-height:330px;
-    transition:.3s ease;
-}
-
-.product-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 12px 30px rgba(0,0,0,.10);
-}
-
-/* PRODUCT IMAGE */
-
-.product-image{
-    background:#f5f7fa;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    min-height:330px;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    max-height:290px;
-    object-fit:contain;
-    display:block;
-}
-
-.image-coming{
-    color:#6d7782;
-    font-size:14px;
-    font-weight:700;
-    text-align:center;
-}
-
-/* PRODUCT INFO */
-
-.product-info{
-    padding:28px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-
-.product-number{
-    color:var(--blue);
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    margin-bottom:8px;
-}
-
-.product-info h3{
-    font-size:20px;
-    line-height:1.35;
-    margin-bottom:12px;
-    color:var(--navy);
-}
-
-.product-info p{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:16px;
-}
-
-/* SPECS */
-
-.spec-list{
-    list-style:none;
-    margin-bottom:20px;
-}
-
-.spec-list li{
-    font-size:13px;
-    color:#4d5965;
-    margin-bottom:7px;
-}
-
-.spec-list li::before{
-    content:"✓";
-    color:var(--blue);
-    font-weight:bold;
-    margin-right:8px;
-}
-
-/* BUTTONS */
-
-.product-buttons{
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:11px 17px;
-    border-radius:6px;
-    text-decoration:none;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:.3px;
-    transition:.2s;
-}
-
-.btn-blue{
-    background:var(--blue);
-    color:#fff;
-}
-
-.btn-blue:hover{
-    background:var(--blue-dark);
-}
-
-.btn-outline{
-    border:1px solid var(--blue);
-    color:var(--blue);
-    background:#fff;
-}
-
-.btn-outline:hover{
-    background:var(--blue);
-    color:#fff;
-}
-
-/* INFO SECTION */
-
-.info-section{
-    background:#fff;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    padding:65px 20px;
-    text-align:center;
-}
-
-.info-section h2{
-    color:var(--navy);
-    font-size:32px;
-    margin-bottom:12px;
-}
-
-.info-section p{
-    max-width:760px;
-    margin:auto;
-    color:var(--muted);
-}
-
-/* CTA */
-
-.cta{
-    background:var(--dark);
-    color:#fff;
-    text-align:center;
-    padding:65px 20px;
-}
-
-.cta h2{
-    font-size:34px;
-    margin-bottom:12px;
-}
-
-.cta p{
-    max-width:720px;
-    margin:0 auto 25px;
-    color:#cbd4dd;
-}
-
-.cta-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.cta .btn{
-    padding:13px 25px;
-}
-
-.cta .btn-white{
-    background:#fff;
-    color:#061321;
+:root {
+  --blue: #1261a0;
+  --dark-blue: #0b4778;
+  --orange: #f58220;
+  --ink: #17212b;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --bg: #f5f8fb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.header-inner {
+  max-width: 1240px;
+  margin: auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #111;
+  text-decoration: none;
+}
+.logo span { color: var(--orange); }
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.nav a:hover { color: var(--blue); }
+.cart-button {
+  border: 0;
+  border-radius: 9px;
+  background: var(--blue);
+  color: white;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+.cart-count {
+  display: inline-flex;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 20px;
+  background: var(--orange);
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.hero {
+  background: linear-gradient(120deg, #082d4c, #1261a0);
+  color: white;
+  padding: 56px 22px;
+}
+.hero-inner { max-width: 1240px; margin: auto; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffd1a5;
+  font-weight: 800;
+  font-size: 12px;
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.12;
+  margin: 10px 0 14px;
+}
+.hero p {
+  max-width: 720px;
+  color: #e7f2fb;
+  margin: 0;
+  font-size: 17px;
+}
+.hero-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+.hero-tags span {
+  border: 1px solid #ffffff55;
+  border-radius: 24px;
+  padding: 7px 12px;
+  font-size: 13px;
+}
+.page-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 34px 22px 60px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.toolbar h2 { margin: 0; font-size: 25px; }
+.toolbar p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.product-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px #0b47780b;
+  transition: transform .18s, box-shadow .18s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px #0b47781a;
+}
+.product-image {
+  height: 230px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-bottom: 1px solid #edf1f5;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.image-fallback {
+  font-weight: 800;
+  color: var(--muted);
+  text-align: center;
+}
+.product-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.sku {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.product-info h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 9px;
+}
+.short-specs {
+  font-size: 13px;
+  color: #526173;
+  margin: 0 0 14px;
+  flex: 1;
+}
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 4px 0 14px;
+}
+.price {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.unit { font-size: 12px; color: var(--muted); }
+.actions { display: flex; gap: 9px; }
+.btn {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 13px;
+  font-weight: 800;
+}
+.btn-primary { background: var(--blue); color: white; flex: 1; }
+.btn-primary:hover { background: var(--dark-blue); }
+.btn-outline {
+  background: white;
+  color: var(--blue);
+  border: 1px solid #b8cde0;
+  flex: 1;
+}
+.btn-outline:hover { background: #eef6fc; }
+.footer {
+  background: #101c28;
+  color: #e5edf5;
+  padding: 30px 22px;
+}
+.footer-inner {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer p { margin: 4px 0; color: #b9c6d3; font-size: 14px; }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #071522b8;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.overlay.open { display: flex; }
+.modal {
+  width: min(960px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 24px 70px #0004;
+}
+.modal-head {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.close-btn {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #edf2f7;
+  font-size: 23px;
+}
+.modal-content {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: 28px;
+  padding: 24px;
+}
+.modal-photo {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal-photo img { width: 100%; max-height: 380px; object-fit: contain; }
+.modal h2 { font-size: 26px; line-height: 1.25; margin: 3px 0 8px; }
+.modal-price { font-size: 29px; font-weight: 900; color: var(--dark-blue); margin: 10px 0; }
+.spec-list { padding-left: 19px; margin: 12px 0; color: #46576a; font-size: 14px; }
+.spec-list li { margin: 5px 0; }
+.description { font-size: 14px; color: #46576a; }
+.qty-row { display: flex; align-items: center; gap: 12px; margin: 18px 0; }
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.qty-control button {
+  border: 0;
+  background: #f1f5f9;
+  width: 36px;
+  height: 40px;
+  font-size: 20px;
+}
+.qty-control input {
+  width: 48px;
+  height: 40px;
+  border: 0;
+  text-align: center;
+}
+.modal-add {
+  width: 100%;
+  padding: 13px;
+  background: var(--orange);
+  color: #1f2937;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 900;
+}
+.notice { font-size: 12px; color: var(--muted); margin-top: 10px; }
+.cart-drawer { position: fixed; inset: 0; z-index: 60; display: none; }
+.cart-drawer.open { display: block; }
+.drawer-shade { position: absolute; inset: 0; background: #0715229c; }
+.drawer-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: min(450px, 100%);
+  background: white;
+  box-shadow: -10px 0 40px #0002;
+  display: flex;
+  flex-direction: column;
+}
+.drawer-head {
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drawer-head h2 { margin: 0; }
+.drawer-items { padding: 16px 20px; overflow: auto; flex: 1; }
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cart-item strong { display: block; font-size: 14px; }
+.cart-item small { color: var(--muted); }
+.cart-item-right { text-align: right; white-space: nowrap; }
+.remove-item {
+  border: 0;
+  background: transparent;
+  color: #b42318;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.drawer-bottom { padding: 20px; border-top: 1px solid var(--line); }
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.checkout-later {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  color: #64748b;
+  font-size: 13px;
+}
+.empty-cart { text-align: center; color: var(--muted); padding: 45px 10px; }
+.toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #102b40;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  z-index: 100;
+  display: none;
+}
+.toast.show { display: block; }
+
+@media(max-width:900px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .modal-content { grid-template-columns: 1fr; }
+  .modal-photo { min-height: 230px; }
+}
+@media(max-width:620px) {
+  .header-inner { align-items: flex-start; flex-wrap: wrap; }
+  .nav { order: 3; width: 100%; gap: 12px; }
+  .hero { padding: 40px 20px; }
+  .page-wrap { padding: 26px 14px 45px; }
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .product-image { height: 240px; }
+  .modal-content { padding: 16px; gap: 18px; }
+  .modal h2 { font-size: 22px; }
+  .modal-photo { min-height: 210px; }
+  .actions { flex-direction: column; }
 }
-
-.cta .btn-white:hover{
-    background:#e9eef3;
-}
-
-.cta .btn-dark{
-    border:1px solid #fff;
-    color:#fff;
-}
-
-.cta .btn-dark:hover{
-    background:#fff;
-    color:#061321;
-}
-
-/* FOOTER */
-
-footer{
-    background:#050b13;
-    color:#fff;
-    text-align:center;
-    padding:32px 20px;
-}
-
-footer p{
-    margin:5px 0;
-    font-size:13px;
-}
-
-footer strong{
-    font-size:20px;
-    letter-spacing:1px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1000px){
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-card{
-        grid-template-columns:300px 1fr;
-    }
-
-}
-
-@media(max-width:750px){
-
-    .top-bar{
-        display:none;
-    }
-
-    .navbar{
-        flex-direction:column;
-        padding:14px 15px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    .hero{
-        min-height:350px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .product-card{
-        grid-template-columns:1fr;
-    }
-
-    .product-image{
-        min-height:280px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .logo-text{
-        font-size:21px;
-    }
-
-    .nav-links{
-        gap:10px;
-    }
-
-    .nav-links a{
-        font-size:11px;
-    }
-
-    .hero h1{
-        font-size:34px;
-    }
-
-    .section-title h2{
-        font-size:30px;
-    }
-
-    .product-info{
-        padding:22px;
-    }
-
-    .product-info h3{
-        font-size:18px;
-    }
-
-}
-
 </style>
 </head>
 
 <body>
-
-<!-- TOP BAR -->
-
-<div class="top-bar">
-    <div class="top-bar-inner">
-
-        <div class="top-left">
-            Professional LED Lighting Products & Solutions
-        </div>
-
-        <div class="top-right">
-            <a href="tel:682-200-3004">682-200-3004</a>
-
-            <a href="mailto:ledkingfortworth@gmail.com">
-                ledkingfortworth@gmail.com
-            </a>
-        </div>
-
-    </div>
-</div>
-
-
-<!-- HEADER -->
-
-<header>
-
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-
-            <div class="logo-mark">
-                LK
-            </div>
-
-            <div class="logo-text">
-                LED KING
-            </div>
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html#about">ABOUT US</a>
-            </li>
-
-            <li>
-                <a href="products.html">PRODUCTS</a>
-            </li>
-
-            <li>
-                <a href="index.html#specialty">SPECIALTY</a>
-            </li>
-
-            <li>
-                <a href="index.html#quote">GET A QUOTE</a>
-            </li>
-
-            <li>
-                <a href="index.html#contact">CONTACT</a>
-            </li>
-
-            <li>
-                <a href="products.html" class="nav-icon">⌕</a>
-            </li>
-
-            <li>
-                <a href="index.html#quote" class="nav-icon">▣</a>
-            </li>
-
-        </ul>
-
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">LED <span>KING</span></a>
+    <nav class="nav">
+      <a href="#products">Flood Lights</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-
+    <button class="cart-button" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
-
-    <div class="hero-content">
-
-        <div class="hero-kicker">
-            LED KING PRODUCTS
-        </div>
-
-        <h1>
-            Flood Lights
-        </h1>
-
-        <p>
-            Explore LED KING Flood Lights designed for
-            outdoor, commercial, industrial and general
-            lighting applications.
-        </p>
-
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial Lighting</div>
+    <h1>Professional LED Flood Lights</h1>
+    <p>LED flood lights for outdoor, commercial, and industrial applications. Explore specifications, select quantities, and add products to your cart.</p>
+    <div class="hero-tags">
+      <span>Multiple wattage options</span>
+      <span>Commercial applications</span>
+      <span>Cart available · Payment later</span>
     </div>
-
+  </div>
 </section>
 
-
-<!-- PRODUCTS -->
-
-<section class="products-section">
-
-    <div class="section-title">
-
-        <div class="section-small">
-            FLOOD LIGHTING
-        </div>
-
-        <h2>
-            Our Flood Lights
-        </h2>
-
-        <p>
-            Browse our available Flood Light products and
-            find the right lighting solution for your application.
-        </p>
-
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div>
+      <h2>Flood Lights</h2>
+      <p>Choose a product to view its full description and specifications.</p>
     </div>
-
-
-    <div class="product-grid">
-
-
-        <!-- FLOOD LIGHT 01 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%201.png"
-                    alt="10W COB LED Outdoor Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 01
-                </div>
-
-                <h3>
-                    10W COB LED Outdoor Flood Light | IP67 | Adjustable Beam
-                </h3>
-
-                <p>
-                    Compact outdoor LED flood light designed for
-                    exterior lighting applications.
-                </p>
-
-                <ul class="spec-list">
-                    <li>10W</li>
-                    <li>COB LED</li>
-                    <li>Outdoor Flood Light</li>
-                    <li>IP67</li>
-                    <li>Adjustable Beam</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/10w-cob-led-outdoor-flood-light-ip67-adjustable-beam/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 02 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%202.png"
-                    alt="Small LED Flood Light 15W"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 02
-                </div>
-
-                <h3>
-                    Small Led Flood light 15W, 5700K, AC100-277V China brand driver, Knuckle bracket, Black color
-                </h3>
-
-                <p>
-                    Small LED flood light with knuckle bracket
-                    for outdoor lighting applications.
-                </p>
-
-                <ul class="spec-list">
-                    <li>15W</li>
-                    <li>5700K</li>
-                    <li>AC100-277V</li>
-                    <li>China Brand Driver</li>
-                    <li>Knuckle Bracket</li>
-                    <li>Black Color</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/small-led-flood-light-15w5700kac100-277vchina-brand-driverknuckle-bracket-black-color/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 03 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%203.png"
-                    alt="25W LED Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 03
-                </div>
-
-                <h3>
-                    25W Rating Power LED Flood Light input voltage 120-277VAC UL cUL DLC certificate
-                </h3>
-
-                <p>
-                    LED flood light designed for reliable outdoor
-                    and commercial lighting applications.
-                </p>
-
-                <ul class="spec-list">
-                    <li>25W Rated Power</li>
-                    <li>120-277VAC</li>
-                    <li>UL Certificate</li>
-                    <li>cUL Certificate</li>
-                    <li>DLC Certificate</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/25w-rating-power-led-flood-light-input-voltage-120-277vac-ul-cul-dlc-certificate/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 04 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%204.png"
-                    alt="DLC5.1 LED Flood Light 30W"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 04
-                </div>
-
-                <h3>
-                    DLC5.1 Led Flood light 30W, 5700K, AC100-277V, Lumileds chips, China brand driver, Knuckle bracket, Black color
-                </h3>
-
-                <p>
-                    DLC5.1 LED flood light with Lumileds chips
-                    and knuckle bracket.
-                </p>
-
-                <ul class="spec-list">
-                    <li>30W</li>
-                    <li>5700K</li>
-                    <li>AC100-277V</li>
-                    <li>Lumileds Chips</li>
-                    <li>China Brand Driver</li>
-                    <li>Knuckle Bracket</li>
-                    <li>Black Color</li>
-                    <li>DLC5.1</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/dlc5-1-led-flood-light-30w5700kac100-277vlumileds-chipschina-brand-driverkunckle-bracketblack-color/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 05 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%205.png"
-                    alt="DLC5.1 LED Flood Light 30W FM Bracket"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 05
-                </div>
-
-                <h3>
-                    DLC5.1 Led Flood light 30W, 5700K, AC100-277V, Lumileds chips, China brand driver, FM bracket, Black color
-                </h3>
-
-                <p>
-                    DLC5.1 flood light featuring Lumileds chips
-                    and FM bracket.
-                </p>
-
-                <ul class="spec-list">
-                    <li>30W</li>
-                    <li>5700K</li>
-                    <li>AC100-277V</li>
-                    <li>Lumileds Chips</li>
-                    <li>China Brand Driver</li>
-                    <li>FM Bracket</li>
-                    <li>Black Color</li>
-                    <li>DLC5.1</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/dlc5-1-led-flood-light-30w5700kac100-277vlumileds-chipschina-brand-driverfm-bracketblack-color-3/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 06 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%206.png"
-                    alt="DLC5.1 LED Flood Light 50W"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 06
-                </div>
-
-                <h3>
-                    DLC5.1 Led Flood light 50W, 5700K, AC100-277V, Lumileds chips, China brand driver, FM bracket, Black color
-                </h3>
-
-                <p>
-                    50W DLC5.1 LED flood light with Lumileds
-                    chips and FM bracket.
-                </p>
-
-                <ul class="spec-list">
-                    <li>50W</li>
-                    <li>5700K</li>
-                    <li>AC100-277V</li>
-                    <li>Lumileds Chips</li>
-                    <li>China Brand Driver</li>
-                    <li>FM Bracket</li>
-                    <li>Black Color</li>
-                    <li>DLC5.1</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/dlc5-1-led-flood-light-50w5700kac100-277vlumileds-chipschina-brand-driverfm-bracketblack-color-2/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 07 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%207.png"
-                    alt="LED Flood Light 50W Seoul 3030"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 07
-                </div>
-
-                <h3>
-                    Led flood light 50W, 5700K, Black color, Seoul 3030 chips, Knuckle bracket, China brand driver, AC100-277V, UL listed
-                </h3>
-
-                <p>
-                    50W LED flood light with Seoul 3030 chips
-                    and knuckle bracket.
-                </p>
-
-                <ul class="spec-list">
-                    <li>50W</li>
-                    <li>5700K</li>
-                    <li>Black Color</li>
-                    <li>Seoul 3030 Chips</li>
-                    <li>Knuckle Bracket</li>
-                    <li>China Brand Driver</li>
-                    <li>AC100-277V</li>
-                    <li>UL Listed</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/led-flood-light-50w5700kblack-colorseoul-3030-chipskunckle-bracketchina-brand-driverac100-277vul-listed/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 08 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%208.png"
-                    alt="LED Flood Light 80W Adjustable CCT"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 08
-                </div>
-
-                <h3>
-                    Led Flood light 80W CCT:3000K/4000K/5000K Wattage:80W/60W/40W AC100-277V, China brand driver
-                </h3>
-
-                <p>
-                    Adjustable CCT and wattage LED flood light
-                    for flexible outdoor applications.
-                </p>
-
-                <ul class="spec-list">
-                    <li>80W / 60W / 40W</li>
-                    <li>3000K / 4000K / 5000K</li>
-                    <li>AC100-277V</li>
-                    <li>China Brand Driver</li>
-                    <li>Wattage Adjustable</li>
-                    <li>CCT Adjustable</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/led-flood-light-80w-cct3000k-4000k-5000k-wattage80w-60w-40w-ac100-277vchina-brand-driver/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 09 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%209.png"
-                    alt="LED Flood Light 80W Adjustable CCT"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 09
-                </div>
-
-                <h3>
-                    Led Flood light 80W CCT:3000K/4000K/5000K Wattage:80W/60W/40W AC100-277V, China brand driver
-                </h3>
-
-                <p>
-                    Flexible 80W flood light with adjustable
-                    color temperature and wattage.
-                </p>
-
-                <ul class="spec-list">
-                    <li>80W / 60W / 40W</li>
-                    <li>3000K / 4000K / 5000K</li>
-                    <li>AC100-277V</li>
-                    <li>China Brand Driver</li>
-                    <li>Wattage Adjustable</li>
-                    <li>CCT Adjustable</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/led-flood-light-80w-cct3000k-4000k-5000k-wattage80w-60w-40w-ac100-277vchina-brand-driver-2/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 10 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2010.png"
-                    alt="LED Flood Light 90W Seoul Chips"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 10
-                </div>
-
-                <h3>
-                    Led Flood light 90W, 5700K, AC120-277V, Seoul chips, China brand driver, FM bracket, Black color UL listed
-                </h3>
-
-                <p>
-                    90W LED flood light with Seoul chips,
-                    FM bracket and UL listing.
-                </p>
-
-                <ul class="spec-list">
-                    <li>90W</li>
-                    <li>5700K</li>
-                    <li>AC120-277V</li>
-                    <li>Seoul Chips</li>
-                    <li>China Brand Driver</li>
-                    <li>FM Bracket</li>
-                    <li>Black Color</li>
-                    <li>UL Listed</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/led-flood-light-90w5700kac120-277vseoul-chipschina-brand-driverfm-bracketblack-color-ul-listed/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 11 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2011.png"
-                    alt="ASTRA FL06 90W LED Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 11
-                </div>
-
-                <h3>
-                    ASTRA FL06 90W Seoul 3030 LED Flood Light (H8 Beam, 5000K, IP65, UL DLC Certified)
-                </h3>
-
-                <p>
-                    ASTRA FL06 LED flood light with Seoul 3030
-                    chips and H8 beam.
-                </p>
-
-                <ul class="spec-list">
-                    <li>90W</li>
-                    <li>Seoul 3030</li>
-                    <li>H8 Beam</li>
-                    <li>5000K</li>
-                    <li>IP65</li>
-                    <li>UL Certified</li>
-                    <li>DLC Certified</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/astra-fl06-90w-seoul-3030-led-flood-light-h8-beam-5000k-ip65-ul-dlc-certified/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 12 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2012.png"
-                    alt="90W LED Flood Light 5700K"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 12
-                </div>
-
-                <h3>
-                    90W LED Flood Light, 5700K Daylight, AC120-277V, Seoul Chips, China Brand Driver, FM Bracket, Black Finish, UL Listed
-                </h3>
-
-                <p>
-                    90W daylight LED flood light with Seoul chips
-                    and FM bracket.
-                </p>
-
-                <ul class="spec-list">
-                    <li>90W</li>
-                    <li>5700K Daylight</li>
-                    <li>AC120-277V</li>
-                    <li>Seoul Chips</li>
-                    <li>China Brand Driver</li>
-                    <li>FM Bracket</li>
-                    <li>Black Finish</li>
-                    <li>UL Listed</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/90w-led-flood-light-5700k-daylight-ac120-277v-seoul-chips-china-brand-driver-fm-bracket-black-finish-ul-listed/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 13 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2013.png"
-                    alt="100W LED Slim Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 13
-                </div>
-
-                <h3>
-                    100W LED SLIM FLOOD LIGHT | 5700K | UL & DLC RATED | 3450-3750 LM | 5 YEARS WARRANTY | 277V – 480V UPGRADE
-                </h3>
-
-                <p>
-                    Slim LED flood light with high-output lighting
-                    and extended voltage upgrade option.
-                </p>
-
-                <ul class="spec-list">
-                    <li>100W</li>
-                    <li>5700K</li>
-                    <li>UL & DLC Rated</li>
-                    <li>3450-3750 LM</li>
-                    <li>5 Years Warranty</li>
-                    <li>277V – 480V Upgrade</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/100w-led-slim-flood-light-5700k-ul-dlc-rated-3450-3750-lm-5-years-warranty-277v-480v-upgrade/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 14 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2014.png"
-                    alt="150W LED Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 14
-                </div>
-
-                <h3>
-                    Led Flood 150W Light UL cUL certificate
-                </h3>
-
-                <p>
-                    150W LED flood light for outdoor and
-                    commercial lighting applications.
-                </p>
-
-                <ul class="spec-list">
-                    <li>150W</li>
-                    <li>LED Flood Light</li>
-                    <li>UL Certificate</li>
-                    <li>cUL Certificate</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/led-flood-150w-light-ul-cul-certificate/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 15 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="FLOOD%20LIGHT%2015.png"
-                    alt="DLC5.1 New Type 150W LED Flood Light"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 15
-                </div>
-
-                <h3>
-                    DLC5.1 New type 150W LED flood light, black color, FM bracket, Bridgelux 3030 chips, 5700K, Non-isolated driver with surge protector AC120-277V
-                </h3>
-
-                <p>
-                    DLC5.1 150W flood light with Bridgelux 3030
-                    chips and surge protection.
-                </p>
-
-                <ul class="spec-list">
-                    <li>150W</li>
-                    <li>Black Color</li>
-                    <li>FM Bracket</li>
-                    <li>Bridgelux 3030 Chips</li>
-                    <li>5700K</li>
-                    <li>Non-Isolated Driver</li>
-                    <li>Surge Protector</li>
-                    <li>AC120-277V</li>
-                    <li>DLC5.1</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/dlc5-1-new-type-150w-led-flood-light-black-color-fm-bracket-bridgelux-3030-chips-5700k-non-isolated-driver-with-surge-protector-ac120-277v/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 16 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <div class="image-coming">
-                    FLOOD LIGHT 16<br>
-                    IMAGE COMING SOON
-                </div>
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 16
-                </div>
-
-                <h3>
-                    DLC5.1 New type 200W LED flood light, black color, FM bracket, Bridgelux 3030 chips, 5700K, Non-isolated driver with surge protector AC120-277V
-                </h3>
-
-                <p>
-                    DLC5.1 200W flood light with Bridgelux 3030
-                    chips and surge protection.
-                </p>
-
-                <ul class="spec-list">
-                    <li>200W</li>
-                    <li>Black Color</li>
-                    <li>FM Bracket</li>
-                    <li>Bridgelux 3030 Chips</li>
-                    <li>5700K</li>
-                    <li>Non-Isolated Driver</li>
-                    <li>Surge Protector</li>
-                    <li>AC120-277V</li>
-                    <li>DLC5.1</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/dlc5-1-new-type-200w-led-flood-light-black-color-fm-bracket-bridgelux-3030-chips-5700k-non-isolated-driver-with-surge-protector-ac120-277v/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 17 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <div class="image-coming">
-                    FLOOD LIGHT 17<br>
-                    IMAGE COMING SOON
-                </div>
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 17
-                </div>
-
-                <h3>
-                    300W LED flood light, black color, FM bracket, Bridgelux 3030 chips, 5700K, Non-isolated driver with surge protector AC120-277V
-                </h3>
-
-                <p>
-                    300W LED flood light with Bridgelux 3030
-                    chips and surge protection.
-                </p>
-
-                <ul class="spec-list">
-                    <li>300W</li>
-                    <li>Black Color</li>
-                    <li>FM Bracket</li>
-                    <li>Bridgelux 3030 Chips</li>
-                    <li>5700K</li>
-                    <li>Non-Isolated Driver</li>
-                    <li>Surge Protector</li>
-                    <li>AC120-277V</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/300w-led-flood-light-black-color-fm-bracket-bridgelux-3030-chips-5700k-non-isolated-driver-with-surge-protector-ac120-277v/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FLOOD LIGHT 18 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-                <div class="image-coming">
-                    FLOOD LIGHT 18<br>
-                    IMAGE COMING SOON
-                </div>
-            </div>
-
-            <div class="product-info">
-
-                <div class="product-number">
-                    FLOOD LIGHT 18
-                </div>
-
-                <h3>
-                    FLD01 LED Flood Light 300W AC100-277V FM Mount Bridgelux LED Chips Black 5700K CUL UL DLC
-                </h3>
-
-                <p>
-                    FLD01 300W LED flood light with Bridgelux
-                    LED chips and FM mount.
-                </p>
-
-                <ul class="spec-list">
-                    <li>300W</li>
-                    <li>AC100-277V</li>
-                    <li>FM Mount</li>
-                    <li>Bridgelux LED Chips</li>
-                    <li>Black Color</li>
-                    <li>5700K</li>
-                    <li>cUL</li>
-                    <li>UL</li>
-                    <li>DLC</li>
-                </ul>
-
-                <div class="product-buttons">
-
-                    <a
-                        href="https://ledkingtx.com/product/fld01-led-flood-light-300w-ac100-277v-fm-mount-bridgelux-led-chips-black-5700k-cul-ul-dlc/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-blue"
-                    >
-                        VIEW PRODUCT →
-                    </a>
-
-                    <a href="index.html#quote" class="btn btn-outline">
-                        GET A QUOTE
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
+    <p><strong>18 products</strong> · Display price: $100.00 each</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</main>
+
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+    <h2 style="margin-top:0">About LED KING</h2>
+    <p style="color:#526173;margin-bottom:0">LED KING provides professional LED lighting products and solutions for commercial and industrial applications. Contact us for product questions, bulk orders, or project quotes.</p>
+  </div>
 </section>
 
-
-<!-- INFO -->
-
-<section class="info-section">
-
-    <h2>
-        Need the Right Flood Light?
-    </h2>
-
-    <p>
-        LED KING offers a variety of LED Flood Lights for
-        outdoor, commercial and industrial applications.
-        Contact us for product information, quantities,
-        project assistance and lighting quotes.
-    </p>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>
-        Ready to Upgrade Your Outdoor Lighting?
-    </h2>
-
-    <p>
-        Contact LED KING for product information,
-        commercial quantities, project assistance
-        and lighting quotes.
-    </p>
-
-    <div class="cta-buttons">
-
-        <a
-            href="index.html#quote"
-            class="btn btn-white"
-        >
-            GET A QUOTE →
-        </a>
-
-        <a
-            href="index.html#contact"
-            class="btn btn-dark"
-        >
-            CONTACT US →
-        </a>
-
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div>
+      <strong style="font-size:20px">LED KING</strong>
+      <p>Professional LED lighting products and solutions.</p>
     </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <p>
-        <strong>LED KING</strong>
-    </p>
-
-    <p>
-        3701 Airport Fwy, Fort Worth, TX 76111
-    </p>
-
-    <p>
-        © 2026 LED KING. All Rights Reserved.
-    </p>
-
+    <div>
+      <strong>Contact</strong>
+      <p>Phone: 682-200-3004</p>
+      <p>Email: ledkingfortworth@gmail.com</p>
+      <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+    </div>
+  </div>
 </footer>
 
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head">
+      <strong>Product details</strong>
+      <button class="close-btn" onclick="closeProduct()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
 
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head">
+      <h2>Your Cart</h2>
+      <button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom">
+      <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="checkout-later">Online payment will be connected later. For now, you can review products, quantities, and subtotal here.</div>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const products = [
+  {
+    id:1, name:"10W COB LED Outdoor Flood Light", price:100,
+    image:"FLOOD%20LIGHT%201.png",
+    specs:["10W","COB LED","DC 12V","IP67","100° beam angle","180° horizontal aiming","CRI >90","100 lm/W","3000K / 4500K / 6000K","Die-cast aluminum","Non-dimmable"],
+    description:"This compact 10W COB LED outdoor flood light is designed for focused exterior illumination. It features an IP67-rated housing, a 100-degree beam angle, and adjustable aiming. Available color temperatures are 3000K, 4500K, and 6000K. The die-cast aluminum body is finished in black."
+  },
+  {
+    id:2, name:"Small LED Flood Light 15W, 5700K", price:100,
+    image:"FLOOD%20LIGHT%202.png",
+    specs:["15W","5700K","AC 100–277V","China-brand driver","Knuckle bracket","Black color"],
+    description:"This 15W LED flood light provides cool-white 5700K illumination and operates on AC 100–277V. It features a black finish, a China-brand driver, and a knuckle mounting bracket for aiming the fixture toward the desired area."
+  },
+  {
+    id:3, name:"25W Rated Power LED Flood Light", price:100,
+    image:"FLOOD%20LIGHT%203.png",
+    specs:["25W rated power","120–277VAC","UL","cUL","DLC"],
+    description:"This 25W rated-power LED flood light is designed for dependable outdoor and commercial illumination. The fixture is specified for 120–277VAC and lists UL, cUL, and DLC certifications. Confirm installation and mounting requirements before purchase."
+  },
+  {
+    id:4, name:"DLC 5.1 LED Flood Light 30W — Knuckle Bracket", price:100,
+    image:"FLOOD%20LIGHT%204.png",
+    specs:["30W","5700K","AC 100–277V","Lumileds chips","China-brand driver","Knuckle bracket","Black","IP65","cULus / DLC","50,000 hours","5-year warranty"],
+    description:"This DLC 5.1 30W LED flood light features Lumileds LED chips, 5700K cool-white light, and a black finish. It operates on AC 100–277V and uses a China-brand driver with a knuckle bracket. Supplied specifications list IP65 protection, cULus and DLC approvals, a 50,000-hour rated life, and a 5-year manufacturer warranty."
+  },
+  {
+    id:5, name:"DLC 5.1 LED Flood Light 30W — FM Bracket", price:100,
+    image:"FLOOD%20LIGHT%205.png",
+    specs:["30W","5700K","AC 100–277V","Lumileds chips","China-brand driver","FM bracket","Black","IP65","cULus / DLC","50,000 hours","5-year warranty"],
+    description:"This DLC 5.1 30W LED flood light combines Lumileds LED chips with a 5700K cool-white output. It operates on AC 100–277V and includes a China-brand driver, black housing, and FM mounting bracket. Supplied specifications list IP65 protection, cULus and DLC approvals, a 50,000-hour rated life, and a 5-year manufacturer warranty."
+  },
+  {
+    id:6, name:"DLC 5.1 LED Flood Light 50W — FM Bracket", price:100,
+    image:"FLOOD%20LIGHT%206.png",
+    specs:["50W","5700K","AC 100–277V","Lumileds chips","China-brand driver","FM bracket","Black","IP65","cULus / DLC","50,000 hours","5-year warranty"],
+    description:"This 50W DLC 5.1 LED flood light is designed for outdoor and commercial lighting. It provides 5700K cool-white illumination and operates on AC 100–277V. Features include Lumileds LED chips, a China-brand driver, a black finish, and an FM bracket. Supplied specifications list IP65 protection, cULus and DLC approvals, a 50,000-hour rated life, and a 5-year manufacturer warranty."
+  },
+  {
+    id:7, name:"LED Flood Light 50W — Seoul 3030 Chips", price:100,
+    image:"FLOOD%20LIGHT%207.png",
+    specs:["50W","5700K","Seoul 3030 chips","Knuckle bracket","China-brand driver","Black","AC 100–277V","UL listed"],
+    description:"This 50W LED flood light uses Seoul 3030 LED chips to provide 5700K cool-white illumination. It has a black finish, a knuckle bracket, and a China-brand driver, and is specified for AC 100–277V. The supplied product title identifies it as UL listed."
+  },
+  {
+    id:8, name:"LED Flood Light 40W / 60W / 80W — Knuckle Bracket", price:100,
+    image:"FLOOD%20LIGHT%208.png",
+    specs:["40W / 60W / 80W","3000K / 4000K / 5000K","AC 100–277V","China-brand driver","Knuckle bracket","Wattage and CCT adjustable","DLC 5.1"],
+    description:"This adjustable LED flood light supports selectable wattages of 40W, 60W, and 80W and color temperatures of 3000K, 4000K, and 5000K. It operates on AC 100–277V and includes a China-brand driver and knuckle bracket. The adjustable output and color temperature allow the fixture to be configured for different outdoor lighting needs."
+  },
+  {
+    id:9, name:"LED Flood Light 40W / 60W / 80W — FM Bracket", price:100,
+    image:"FLOOD%20LIGHT%209.png",
+    specs:["40W / 60W / 80W","3000K / 4000K / 5000K","AC 100–277V","China-brand driver","FM bracket","Wattage and CCT adjustable","DLC 5.1"],
+    description:"This LED flood light offers selectable 40W, 60W, and 80W output with 3000K, 4000K, or 5000K color temperature options. It operates on AC 100–277V and includes a China-brand driver and FM mounting bracket for outdoor and commercial lighting applications."
+  },
+  {
+    id:10, name:"LED Flood Light 90W — Seoul Chips", price:100,
+    image:"FLOOD%20LIGHT%2010.png",
+    specs:["90W","5700K","AC 120–277V","Seoul chips","China-brand driver","FM bracket","Black","UL listed"],
+    description:"This 90W LED flood light features Seoul LED chips and a 5700K cool-white color temperature. It operates on AC 120–277V and includes a China-brand driver, black finish, and FM bracket. The supplied product specifications identify the fixture as UL listed."
+  },
+  {
+    id:11, name:"ASTRA FL06 90W Seoul 3030 LED Flood Light", price:100,
+    image:"FLOOD%20LIGHT%2011.png",
+    specs:["90W","Seoul 3030 chips","H8 beam (7H6V)","5000K","IP65-rated driver","120–277VAC","UL / cUL / DLC","Optional surge protection and photocontrol"],
+    description:"The ASTRA FL06 90W LED flood light uses Seoul 3030 LED chips and an H8 beam pattern (7H6V) for broad area coverage. It provides 5000K light and is specified with an IP65-rated driver and 120–277VAC input. Optional surge protection and photocontrol are listed in the supplied specifications. Suggested applications include sports courts, industrial areas, and public spaces."
+  },
+  {
+    id:12, name:"LED Flood Light 90W — 5700K Daylight", price:100,
+    image:"FLOOD%20LIGHT%2012.png",
+    specs:["90W","5700K","AC 120–277V","Seoul chips","China-brand driver","FM bracket","Black","UL listed"],
+    description:"This 90W LED flood light delivers 5700K daylight illumination and operates on AC 120–277V. It features Seoul LED chips, a China-brand driver, a black finish, and an FM mounting bracket. The supplied specifications identify it as UL listed and suitable for outdoor area lighting."
+  },
+  {
+    id:13, name:"100W LED Slim Flood Light — UL & DLC Rated", price:100,
+    image:"FLOOD%20LIGHT%2013.png",
+    specs:["100W","5700K","UL and DLC rated","3,450–3,750 lumens as supplied","5-year warranty as supplied","Voltage upgrade option as supplied"],
+    description:"This 100W slim LED flood light is described as UL- and DLC-rated for outdoor lighting applications. The supplied product title lists 3,450–3,750 lumens and a 5-year warranty, with a voltage upgrade option from 100–277V to 277–480V. Confirm the exact voltage configuration and lumen rating for the model being ordered."
+  },
+  {
+    id:14, name:"150W LED Flood Light — UL / cUL Certified", price:100,
+    image:"FLOOD%20LIGHT%2014.png",
+    specs:["150W","LED flood light","UL certificate","cUL certificate"],
+    description:"This 150W LED flood light is listed with UL and cUL certifications. It is intended for outdoor residential and commercial lighting, including driveways, parking areas, and building facades. Refer to the product label for the complete electrical and installation specifications."
+  },
+  {
+    id:15, name:"DLC 5.1 New Type 150W LED Flood Light", price:100,
+    image:"FLOOD%20LIGHT%2015.png",
+    specs:["150W","Black","FM bracket","Bridgelux 3030 chips","5700K","Non-isolated driver","Surge protector","AC 120–277V","DLC 5.1"],
+    description:"This DLC 5.1 150W LED flood light features Bridgelux 3030 LED chips and 5700K cool-white light. It operates on AC 120–277V and includes a black housing, FM bracket, and non-isolated driver with surge protection. It is designed for outdoor and commercial lighting applications."
+  },
+  {
+    id:16, name:"DLC 5.1 New Type 200W LED Flood Light — SKU 2207", price:100,
+    image:"",
+    specs:["SKU 2207","200W","Black","FM bracket","Bridgelux 3030 chips","5700K","Non-isolated driver with surge protector","AC 120–277V","DLC 5.1"],
+    description:"The DLC 5.1 200W LED flood light provides bright 5700K cool-white illumination for commercial and outdoor lighting. It features Bridgelux 3030 LED chips, a black housing, an FM mounting bracket, and a non-isolated driver with surge protection. It operates on AC 120–277V."
+  },
+  {
+    id:17, name:"DLC 5.1 New Type 300W LED Flood Light — SKU 2208", price:100,
+    image:"",
+    specs:["SKU 2208","300W","Black","FM bracket","Bridgelux 3030 chips","5700K","Non-isolated driver with surge protector","AC 120–277V","DLC 5.1"],
+    description:"This 300W LED flood light is built around Bridgelux 3030 LED chips and provides 5700K cool-white illumination. It features a black finish, an FM mounting bracket, and a non-isolated driver with surge protection. The fixture operates on AC 120–277V."
+  },
+  {
+    id:18, name:"FLD01 LED Flood Light 300W — SKU 2126", price:100,
+    image:"",
+    specs:["SKU 2126","300W","AC 100–277V","FM mount","Bridgelux LED chips","Black","5700K","cUL / UL / DLC"],
+    description:"The FLD01 300W LED flood light uses Bridgelux LED chips to provide bright 5700K cool-white illumination. It operates on AC 100–277V and features a black finish with an FM mounting bracket. The supplied specifications list cUL, UL, and DLC certifications. Recommended applications include parking areas, building exteriors, sports facilities, construction sites, and other outdoor locations."
+  }
+];
+
+let activeProduct = null;
+let cart = {};
+
+function imageUrl(file) {
+  return file ? "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/" + file : "";
+}
+function money(value) {
+  return "$" + Number(value).toFixed(2);
+}
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  }[c]));
+}
+
+function renderProducts() {
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML = products.map(p => `
+    <article class="product-card">
+      <div class="product-image">
+        ${p.image ? `<img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">` : ""}
+        <div class="image-fallback" style="${p.image ? "display:none" : "display:block"}">
+          LED KING<br>${escapeHtml(p.name)}<br><small>Product image not provided</small>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="sku">${p.specs.some(s => s.startsWith("SKU ")) ? escapeHtml(p.specs.find(s => s.startsWith("SKU "))) : "Flood Lights"}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
+        <div class="price-row">
+          <span class="price">${money(p.price)}</span>
+          <span class="unit">per item</span>
+        </div>
+        <div class="actions">
+          <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
+          <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
+
+function openProduct(id) {
+  activeProduct = products.find(p => p.id === id);
+  if (!activeProduct) return;
+  const p = activeProduct;
+
+  document.getElementById("modalContent").innerHTML = `
+    <div class="modal-photo">
+      ${p.image ? `<img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>Product image unavailable</div>')">` : `<div class="image-fallback" style="display:block">LED KING<br>${escapeHtml(p.name)}<br><small>Product image not provided</small></div>`}
+    </div>
+    <div>
+      <div class="sku">${escapeHtml(p.specs.find(s => s.startsWith("SKU ")) || "Flood Lights")}</div>
+      <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
+      <div class="modal-price">${money(p.price)}</div>
+      <p class="description">${escapeHtml(p.description)}</p>
+      <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
+      <ul class="spec-list">${p.specs.map(s => `<li>${escapeHtml(s)}</li>`).join("")}</ul>
+      <div class="qty-row">
+        <strong>Quantity</strong>
+        <div class="qty-control">
+          <button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button>
+          <input id="modalQty" type="number" min="1" step="1" value="1" oninput="updateModalPrice()" aria-label="Quantity">
+          <button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
+      <div class="notice">Online payment is not enabled yet. Your cart will show selected products and subtotal.</div>
+    </div>
+  `;
+  document.getElementById("productOverlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeProduct() {
+  document.getElementById("productOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+}
+function overlayClick(e) {
+  if (e.target.id === "productOverlay") closeProduct();
+}
+function changeModalQty(delta) {
+  const input = document.getElementById("modalQty");
+  input.value = Math.max(1, (parseInt(input.value, 10) || 1) + delta);
+  updateModalPrice();
+}
+function updateModalPrice() {
+  if (!activeProduct) return;
+  const input = document.getElementById("modalQty");
+  const qty = Math.max(1, parseInt(input.value, 10) || 1);
+  document.getElementById("modalLinePrice").textContent = money(activeProduct.price * qty);
+}
+function addFromModal() {
+  if (!activeProduct) return;
+  const qty = Math.max(1, parseInt(document.getElementById("modalQty").value, 10) || 1);
+  addToCart(activeProduct.id, qty);
+  closeProduct();
+  openCart();
+}
+function quickAdd(id) {
+  addToCart(id, 1);
+  showToast("Added to cart");
+}
+function addToCart(id, qty) {
+  cart[id] = (cart[id] || 0) + qty;
+  renderCart();
+  updateCartCount();
+}
+function updateCartCount() {
+  document.getElementById("cartCount").textContent =
+    Object.values(cart).reduce((a, b) => a + b, 0);
+}
+function renderCart() {
+  const holder = document.getElementById("cartItems");
+  const ids = Object.keys(cart).filter(id => cart[id] > 0);
+
+  if (!ids.length) {
+    holder.innerHTML = `<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a flood light to get started.</p></div>`;
+  } else {
+    holder.innerHTML = ids.map(id => {
+      const p = products.find(x => x.id === Number(id));
+      const q = cart[id];
+      return `
+        <div class="cart-item">
+          <div>
+            <strong>${escapeHtml(p.name)}</strong>
+            <small>Qty: ${q} × ${money(p.price)}</small>
+            <div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div>
+          </div>
+          <div class="cart-item-right">
+            <strong>${money(q * p.price)}</strong>
+            <div class="qty-control" style="margin-top:7px">
+              <button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease quantity">−</button>
+              <input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px">
+              <button onclick="changeCartQty(${p.id},1)" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+        </div>`;
+    }).join("");
+  }
+
+  const subtotal = ids.reduce((sum, id) => sum + cart[id] * products.find(p => p.id === Number(id)).price, 0);
+  document.getElementById("cartSubtotal").textContent = money(subtotal);
+}
+function changeCartQty(id, delta) {
+  cart[id] = Math.max(0, (cart[id] || 0) + delta);
+  if (cart[id] === 0) delete cart[id];
+  renderCart();
+  updateCartCount();
+}
+function setCartQty(id, value) {
+  const q = parseInt(value, 10);
+  if (!Number.isFinite(q) || q < 1) delete cart[id];
+  else cart[id] = q;
+  renderCart();
+  updateCartCount();
+}
+function removeFromCart(id) {
+  delete cart[id];
+  renderCart();
+  updateCartCount();
+}
+function openCart() {
+  renderCart();
+  document.getElementById("cartDrawer").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeCart() {
+  document.getElementById("cartDrawer").classList.remove("open");
+  document.body.style.overflow = "";
+}
+function showToast(message) {
+  const t = document.getElementById("toast");
+  t.textContent = message;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2200);
+}
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    closeProduct();
+    closeCart();
+  }
+});
+
+renderProducts();
+renderCart();
+updateCartCount();
+</script>
 </body>
 </html>
-```
