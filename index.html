@@ -8,16 +8,18 @@
 
 <style>
 /* =========================================================
-   LED KING - BLACK + CHAMPAGNE GOLD + WHITE THEME
-   Existing variable names are retained so the site structure stays unchanged
+   LED KING - BLACK + TEAL + LIME THEME
+   --orange    = vibrant orange, used on dark backgrounds and buttons
+   --electric-blue = bold blue, used for links and text on white backgrounds
+   (existing variable names are retained so the site structure stays unchanged)
    ========================================================= */
 
 :root{
-    --blue:#D6AD60;          /* champagne gold accent */
-    --blue-dark:#B88D42;     /* deeper gold hover */
-    --blue-light:#F8F0DF;    /* warm champagne tint */
-    --gold-text:#D6AD60;     /* champagne gold text */
-    --gold-text-hover:#F0D9A4;
+    --blue:#00B8A9;          /* vibrant teal */
+    --blue-dark:#009688;     /* deeper teal hover */
+    --blue-light:#E6FBF8;    /* light teal tint */
+    --gold-text:#008F83;     /* deep teal for text on white */
+    --gold-text-hover:#006B63;
 
     --navy:#050505;
     --dark:#090909;
@@ -396,102 +398,150 @@ footer p{color:#9da8b5;font-size:13px;}
 }
 
 
-/* PREMIUM BLACK + CHAMPAGNE GOLD FINISH */
-:root{
-    --blue:#D6AD60;
-    --blue-dark:#B88D42;
-    --blue-light:#F8F0DF;
-    --gold-text:#D6AD60;
-    --gold-text-hover:#F0D9A4;
-    --navy:#050505;
-    --dark:#111111;
-    --black:#000000;
-    --text:#F5F5F5;
-    --muted:#C3C3C3;
-    --border:#39352D;
-    --shadow:0 12px 35px rgba(0,0,0,.28);
-    --shadow-hover:0 18px 45px rgba(0,0,0,.42);
-}
-body{background:#050505;color:#F5F5F5;}
-header{background:#080808;border-bottom:1px solid #39352D;}
-.top-bar{background:#000;color:#F7F4ED;}
+/* BLACK-BACKGROUND FINISH: black is the main canvas; teal and lime stay vivid */
+body{background:#050505;color:#f5f7fa;}
+header{background:#050505;border-bottom:1px solid #202727;}
 .logo,.nav-icon,.menu-btn{color:#fff;}
-.logo-symbol{border-color:#D6AD60;color:#D6AD60;}
-.logo-symbol:after{background:#D6AD60;}
-.logo span,.footer-logo span{color:#D6AD60;}
-.nav-menu a{color:#F5F5F5;}
-.nav-menu a:hover,.nav-menu a.active{color:#D6AD60;}
-.nav-menu a.active:after{background:#D6AD60;}
-.nav-icon:hover{color:#D6AD60;}
-.cart-number{background:#D6AD60;color:#090909;}
-.hero:after{background:#D6AD60;}
-.hero-kicker,.hero h1 span{color:#E4C47D;}
-.hero-kicker:before{background:#D6AD60;}
-.btn-blue{background:#D6AD60;color:#090909;box-shadow:0 8px 24px rgba(214,173,96,.24);}
-.btn-blue:hover{background:#F0D9A4;color:#050505;}
-.btn-outline{border-color:#D6AD60;color:#fff;}
-.btn-outline:hover{background:#D6AD60;color:#080808;}
-.feature-strip{background:#191919;border-bottom:1px solid #38332A;color:#fff;}
-.feature{border-right-color:#39352D;}
-.feature-icon{color:#D6AD60;}
-.feature p{color:#C9C5BD;}
+.nav-menu a{color:#f3f5f7;}
+.nav-menu a:hover,.nav-menu a.active{color:#C7F000;}
+.feature-strip{background:#080a0a;border-bottom:1px solid #202727;color:#fff;}
+.feature{border-right-color:#242a2a;}
+.feature-icon{color:#00B8A9;}
+.feature p{color:#b7c0c8;}
 #products,.contact-section,.specialty-section,.quote-section{
     background:#050505 !important;
-    color:#F5F5F5;
+    color:#f5f7fa;
 }
 .products-title h2,.section-heading-center h2,.quote-text h2{color:#fff;}
-.products-title p,.section-heading-center p,.quote-text p{color:#D0D0D0;}
-.products-title .small,.section-heading-center .small{color:#E4C47D;}
-.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#D6AD60;}
+.products-title p,.section-heading-center p,.quote-text p{color:#c1c8cf;}
+.products-title .small,.section-heading-center .small{color:#00B8A9;}
 .product-card,.specialty-item,.contact-card{
-    background:#1B1B1B;
+    background:#101313;
     color:#fff;
-    border-color:#39352D;
-    box-shadow:0 8px 24px rgba(0,0,0,.34);
+    border-color:#263333;
+    box-shadow:0 8px 24px rgba(0,0,0,.28);
 }
-.product-card:hover,.specialty-item:hover,.contact-card:hover{border-color:#D6AD60;box-shadow:0 14px 32px rgba(214,173,96,.12);}
 .product-info h3,.specialty-item h3,.contact-card h3{color:#fff;}
-.product-info p,.contact-card p{color:#C8C8C8;}
-.shop-link,.contact-card a{color:#E4C47D;}
-.shop-link:hover,.contact-card a:hover{color:#F0D9A4;}
-.product-image{background:#F4F2ED;}
-.more-card{background:#29231A;border-color:#D6AD60;}
-.more-card:hover{background:#3A3020;border-color:#F0D9A4;}
-.more-card h3{color:#fff;}
-.more-card p{color:#D6D0C4;}
-.promo-label{background:#D6AD60;color:#090909;}
-.promo-box strong span{color:#E4C47D;}
-.why-section{background:linear-gradient(120deg,#050505 0%,#171717 75%,#29231A 100%);color:#fff;}
-.why-section:before{background:rgba(214,173,96,.13);}
-.why-section .section-heading-center .small{color:#E4C47D;}
-.why-card{background:#202020;border-color:#40392C;}
-.why-card p{color:#D0D0D0;}
-.why-number{color:#E4C47D;}
-.quote-text h2 span{color:#E4C47D;}
-.quote-points li{color:#E7E7E7;}
-.quote-points li:before{color:#D6AD60;}
-.form-box{background:#1B1B1B;border-color:#40392C;color:#fff;box-shadow:0 12px 32px rgba(0,0,0,.32);}
+.product-info p,.contact-card p{color:#bdc5cb;}
+.shop-link,.contact-card a{color:#C7F000;}
+.shop-link:hover,.contact-card a:hover{color:#00B8A9;}
+.product-image{background:#f1f3f3;}
+.more-card{background:#092e2b;border-color:#00B8A9;}
+.more-card:hover{background:#06423d;}
+.quote-text h2 span{color:#C7F000;}
+.quote-points li{color:#e6eaed;}
+.quote-points li:before{color:#C7F000;}
+.form-box{background:#101313;border-color:#293434;color:#fff;}
 .form-box h3,.form-group label{color:#fff;}
-.form-group input,.form-group select,.form-group textarea{background:#101010;color:#fff;border-color:#4A4438;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#D6AD60;box-shadow:0 0 0 3px rgba(214,173,96,.18);}
-.form-group input::placeholder,.form-group textarea::placeholder{color:#B7B7B7;}
-.form-group select option{background:#101010;color:#fff;}
-footer{background:#000;border-top:1px solid #39352D;}
-.footer-col h3{color:#D6AD60;}
-.footer-col a:hover{color:#F0D9A4;}
-.footer-bottom{border-top-color:#39352D;color:#9D9D9D;}
-.mobile-bar{background:#080808;border-top:2px solid #D6AD60;}
-.mobile-bar a{color:#fff;border-right-color:#39352D;}
-/* Remove all blueprint grids, square patterns, and decorative side washes. */
-body,.hero,#products,.contact-section,.specialty-section,.quote-section{
-    background-image:none;
-}
+.form-group input,.form-group select,.form-group textarea{background:#080b0b;color:#fff;border-color:#354141;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#aab3b8;}
+.form-group select option{background:#080b0b;color:#fff;}
+.contact-card:hover,.specialty-item:hover,.product-card:hover{border-color:#00B8A9;}
+.why-section{background:#000;color:#fff;}
+.why-section:before{background:rgba(0,184,169,.14);}
+.why-card{background:#0c1111;border-color:#263333;}
+.why-card p{color:#c0c8ce;}
+footer{background:#000;border-top:1px solid #172222;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#C7F000;}
+/* Remove the former blueprint-square pattern and colored side washes */
 #products,.contact-section,.specialty-section,.quote-section{
+    background-image:none !important;
     background-color:#050505 !important;
 }
-.hero{background-color:#050505;}
 @media(max-width:900px){
-    .nav-menu{background:#171717;border:1px solid #39352D;}
+    .nav-menu{background:#050505;border:1px solid #273333;}
+}
+
+
+
+/* =========================================================
+   LED KING - PALE SAGE GREEN THEME
+   Soft sage backgrounds, crisp white cards, deep forest green,
+   and restrained warm-gold accents. No patterned background.
+   ========================================================= */
+:root{
+  --blue:#176B50;
+  --blue-dark:#10523D;
+  --blue-light:#E1EEE5;
+  --gold-text:#176B50;
+  --gold-text-hover:#0F513B;
+  --navy:#244C3A;
+  --dark:#183629;
+  --black:#10271D;
+  --white:#FFFFFF;
+  --gray:#E8EEE9;
+  --gray2:#F2F5F1;
+  --text:#202B24;
+  --muted:#647268;
+  --border:#D3DED5;
+  --shadow:0 12px 35px rgba(28,59,42,.09);
+  --shadow-hover:0 18px 45px rgba(28,59,42,.15);
+}
+html,body{background:#E8EEE9;color:#202B24;}
+body{background:#E8EEE9;}
+.top-bar{background:#244C3A;color:#fff;}
+header{background:#F8FAF7;border-bottom-color:#D3DED5;}
+.logo{color:#20352A;}
+.logo-symbol{border-color:#176B50;color:#176B50;}
+.logo-symbol:after{background:#D5B66A;}
+.logo span,.footer-logo span{color:#D5B66A;}
+.nav-menu a:hover,.nav-menu a.active,.nav-icon:hover{color:#176B50;}
+.nav-menu a.active:after{background:#D5B66A;}
+.nav-icon{color:#244C3A;}
+.cart-number{background:#176B50;color:#fff;}
+.menu-btn{color:#244C3A;}
+.hero{background:linear-gradient(90deg,rgba(20,48,34,.92) 0%,rgba(31,77,54,.82) 38%,rgba(42,91,63,.52) 68%,rgba(42,91,63,.12) 100%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat;}
+.hero:after{background:#D5B66A;}
+.hero-kicker,.hero h1 span{color:#D8C28A;}
+.hero-kicker:before{background:#D5B66A;}
+.btn-blue{background:#176B50;color:#fff;box-shadow:0 8px 22px rgba(23,107,80,.24);}
+.btn-blue:hover{background:#10523D;color:#fff;}
+.btn-outline{border-color:rgba(255,255,255,.85);}
+.btn-outline:hover{background:#fff;color:#244C3A;}
+.feature-strip{background:#F8FAF7;border-bottom-color:#D3DED5;}
+.feature{border-right-color:#D3DED5;}
+.feature-icon{color:#176B50;}
+.section{background:#E8EEE9;}
+.products-title .small,.section-heading-center .small{color:#176B50;}
+.products-title h2,.section-heading-center h2{color:#20352A;}
+.promo-box{background:linear-gradient(90deg,rgba(26,66,46,.92),rgba(49,102,70,.58)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover;color:#fff;}
+.promo-label{background:#D5B66A;color:#20352A;}
+.promo-box strong span{color:#E4D3A6;}
+.product-card,.specialty-item,.contact-card{background:#FFFFFF;border-color:#D3DED5;}
+.product-card:hover{border-color:#176B50;}
+.product-image{background:#F4F7F3;}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#20352A;}
+.shop-link,.contact-card a{color:#176B50;}
+.shop-link:hover{color:#10523D;}
+.more-card{background:#244C3A;border-color:#244C3A;}
+.more-card:hover{border-color:#176B50;background:#176B50;}
+.specialty-section,.quote-section{background:#DDE7DE;}
+.why-section{background:linear-gradient(120deg,#244C3A 0%,#1C3E2D 72%,#315B42 100%);color:#fff;}
+.why-section:before{background:rgba(213,182,106,.14);}
+.why-section .section-heading-center .small{color:#DCC58D;}
+.why-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.19);}
+.why-number{color:#DCC58D;}
+.quote-text h2{color:#20352A;}
+.quote-text h2 span,.quote-points li:before{color:#176B50;}
+.quote-text p{color:#526157;}
+.form-box{background:#FFFFFF;border-color:#D3DED5;}
+.form-box h3{color:#20352A;}
+.form-group input,.form-group select,.form-group textarea{border-color:#D3DED5;color:#202B24;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#176B50;box-shadow:0 0 0 3px rgba(23,107,80,.15);}
+.contact-section{background:#F8FAF7;}
+footer{background:#183629;color:#fff;}
+.footer-col h3{color:#DCC58D;}
+.footer-bottom{border-top-color:rgba(255,255,255,.18);}
+.mobile-bar{background:#244C3A;border-top-color:#D5B66A;}
+.mobile-bar a{color:#fff;}
+.mobile-bar a span{color:#DCC58D;}
+/* Ensure backgrounds remain clean and free of decorative square patterns. */
+body,main,.section,.specialty-section,.quote-section,.contact-section{background-image:none;}
+@media(max-width:768px){
+  header{background:#F8FAF7;}
+  .nav-menu{background:#F8FAF7;border-top:1px solid #D3DED5;}
+  .nav-menu a{color:#20352A;}
+  .nav-menu a:hover,.nav-menu a.active{color:#176B50;}
 }
 
 </style>
