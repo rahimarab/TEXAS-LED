@@ -702,6 +702,13 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 .hero-slider{position:relative;min-height:570px;overflow:hidden;background:#26382e;color:#fff}
 .hero-slide{position:absolute;inset:0;display:flex;align-items:center;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;visibility:hidden;transition:opacity .75s ease;pointer-events:none}
 .hero-slide.is-active{position:relative;min-height:570px;opacity:1;visibility:visible;pointer-events:auto}
+/* Image-only slides: show the uploaded banner artwork in full, without duplicate HTML text */
+.image-only-slider{background:#f5f5f2;color:#111;min-height:0;height:clamp(300px,36vw,570px)}
+.image-only-slider .hero-slide{align-items:stretch;background-size:contain;background-position:center;background-color:#f5f5f2}
+.image-only-slider .hero-slide.is-active{min-height:0;height:100%}
+.image-only-slider .slider-arrow{background:rgba(0,0,0,.42)}
+.image-only-slider .slider-dots{bottom:12px}
+@media(max-width:650px){.image-only-slider,.image-only-slider .hero-slide.is-active{height:clamp(220px,58vw,360px);min-height:0}.image-only-slider .slider-arrow{width:32px;height:32px;font-size:23px}.image-only-slider .slider-dots{bottom:8px}}
 .hero-content{max-width:2400px;width:100%;margin:0 auto;padding:78px clamp(22px,3.4vw,78px);color:#fff;position:relative;z-index:2}
 .hero-text{max-width:790px}
 .hero-kicker{color:#ffd400!important;font-size:13px;font-weight:900;letter-spacing:2px;margin-bottom:17px}
@@ -847,35 +854,22 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   </div>
 </section>
 
-<!-- ROTATING HERO IMAGE SLIDER -->
-<section class="hero-slider" id="home" aria-label="LED KING featured lighting">
-  <div class="hero-slide is-active" style="background-image:linear-gradient(90deg,rgba(24,45,34,.93) 0%,rgba(24,45,34,.77) 43%,rgba(24,45,34,.25) 100%),url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90');" aria-hidden="false">
-    <div class="hero-content"><div class="hero-text">
-      <div class="hero-kicker">COMMERCIAL • RESIDENTIAL • INDUSTRIAL</div>
-      <h1>BRIGHTER SPACES.<span>BIGGER SAVINGS.</span></h1>
-      <p>LED KING provides commercial, residential, outdoor and specialty LED lighting solutions for contractors, businesses, designers and homeowners across the USA.</p>
-      <div class="hero-buttons"><a href="products.html" class="btn btn-blue">SHOP ALL PRODUCTS →</a><a href="#products" class="btn btn-outline">EXPLORE LIGHTING CATEGORIES</a><a href="#quote" class="btn btn-yellow">REQUEST QUOTE</a></div>
-    </div></div>
-  </div>
-  <div class="hero-slide" style="background-image:linear-gradient(90deg,rgba(24,45,34,.93) 0%,rgba(24,45,34,.77) 43%,rgba(24,45,34,.22) 100%),url('https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=2200&q=90');" aria-hidden="true">
-    <div class="hero-content"><div class="hero-text">
-      <div class="hero-kicker">LIGHTING FOR EVERY SPACE</div>
-      <h1>MODERN LIGHTING.<span>SMARTER CHOICES.</span></h1>
-      <p>Explore indoor and outdoor LED lighting designed for homes, commercial buildings, pathways, workplaces and more.</p>
-      <div class="hero-buttons"><a href="products.html" class="btn btn-blue">SHOP ALL PRODUCTS →</a><a href="#products" class="btn btn-outline">EXPLORE LIGHTING CATEGORIES</a><a href="#quote" class="btn btn-yellow">REQUEST QUOTE</a></div>
-    </div></div>
-  </div>
-  <div class="hero-slide" style="background-image:linear-gradient(90deg,rgba(24,45,34,.94) 0%,rgba(24,45,34,.78) 43%,rgba(24,45,34,.25) 100%),url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=90');" aria-hidden="true">
-    <div class="hero-content"><div class="hero-text">
-      <div class="hero-kicker">BULK & PROJECT PRICING</div>
-      <h1>LIGHTING YOUR PROJECT.<span>POWERING YOUR VISION.</span></h1>
-      <p>Need lighting for a business, property, renovation or large project? Talk with LED KING about product options and bulk order pricing.</p>
-      <div class="hero-buttons"><a href="products.html" class="btn btn-blue">SHOP ALL PRODUCTS →</a><a href="#products" class="btn btn-outline">EXPLORE LIGHTING CATEGORIES</a><a href="#quote" class="btn btn-yellow">REQUEST QUOTE</a></div>
-    </div></div>
-  </div>
+<!-- ROTATING HERO IMAGE SLIDER: artwork contains its own text, so no extra overlay text is added -->
+<section class="hero-slider image-only-slider" id="home" aria-label="LED KING lighting showcase">
+  <div class="hero-slide is-active" style="background-image:url('Professional%20LED%20Lighting%20Showcase.png');" aria-hidden="false"></div>
+  <div class="hero-slide" style="background-image:url('s4.png');" aria-hidden="true"></div>
+  <div class="hero-slide" style="background-image:url('s1.jpeg');" aria-hidden="true"></div>
+  <div class="hero-slide" style="background-image:url('s2.png');" aria-hidden="true"></div>
+  <div class="hero-slide" style="background-image:url('s3.jpeg');" aria-hidden="true"></div>
   <button class="slider-arrow slider-prev" type="button" aria-label="Previous slide">‹</button>
   <button class="slider-arrow slider-next" type="button" aria-label="Next slide">›</button>
-  <div class="slider-dots" role="group" aria-label="Choose hero slide"><button class="slider-dot is-active" type="button" aria-label="Show slide 1" aria-pressed="true"></button><button class="slider-dot" type="button" aria-label="Show slide 2" aria-pressed="false"></button><button class="slider-dot" type="button" aria-label="Show slide 3" aria-pressed="false"></button></div>
+  <div class="slider-dots" role="group" aria-label="Choose showcase image">
+    <button class="slider-dot is-active" type="button" aria-label="Show slide 1" aria-pressed="true"></button>
+    <button class="slider-dot" type="button" aria-label="Show slide 2" aria-pressed="false"></button>
+    <button class="slider-dot" type="button" aria-label="Show slide 3" aria-pressed="false"></button>
+    <button class="slider-dot" type="button" aria-label="Show slide 4" aria-pressed="false"></button>
+    <button class="slider-dot" type="button" aria-label="Show slide 5" aria-pressed="false"></button>
+  </div>
 </section>
 
 <!-- MOVING BENEFITS TICKER: transparent background, bold black text -->
