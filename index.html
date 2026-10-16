@@ -455,94 +455,197 @@ footer{background:#000;border-top:1px solid #172222;}
 
 
 /* =========================================================
-   LED KING - PALE SAGE GREEN THEME
-   Soft sage backgrounds, crisp white cards, deep forest green,
-   and restrained warm-gold accents. No patterned background.
+   LED KING PREMIUM LIGHT GRAY THEME
+   Palette: light gray, white, navy, bright blue, champagne gold
+   Background patterns intentionally removed.
    ========================================================= */
 :root{
-  --blue:#176B50;
-  --blue-dark:#10523D;
-  --blue-light:#E1EEE5;
-  --gold-text:#176B50;
-  --gold-text-hover:#0F513B;
-  --navy:#244C3A;
-  --dark:#183629;
-  --black:#10271D;
-  --white:#FFFFFF;
-  --gray:#E8EEE9;
-  --gray2:#F2F5F1;
-  --text:#202B24;
-  --muted:#647268;
-  --border:#D3DED5;
-  --shadow:0 12px 35px rgba(28,59,42,.09);
-  --shadow-hover:0 18px 45px rgba(28,59,42,.15);
+    --blue:#1677FF;
+    --blue-dark:#105FCB;
+    --blue-light:#EAF2FF;
+    --gold-text:#A87922;
+    --gold-text-hover:#805719;
+    --navy:#173B65;
+    --dark:#102B49;
+    --black:#101820;
+    --white:#FFFFFF;
+    --gray:#F2F5F8;
+    --gray2:#E8EDF3;
+    --text:#202833;
+    --muted:#647184;
+    --border:#D9E0E8;
+    --shadow:0 12px 35px rgba(23,59,101,.09);
+    --shadow-hover:0 18px 45px rgba(23,59,101,.16);
 }
-html,body{background:#E8EEE9;color:#202B24;}
-body{background:#E8EEE9;}
-.top-bar{background:#244C3A;color:#fff;}
-header{background:#F8FAF7;border-bottom-color:#D3DED5;}
-.logo{color:#20352A;}
-.logo-symbol{border-color:#176B50;color:#176B50;}
-.logo-symbol:after{background:#D5B66A;}
-.logo span,.footer-logo span{color:#D5B66A;}
-.nav-menu a:hover,.nav-menu a.active,.nav-icon:hover{color:#176B50;}
-.nav-menu a.active:after{background:#D5B66A;}
-.nav-icon{color:#244C3A;}
-.cart-number{background:#176B50;color:#fff;}
-.menu-btn{color:#244C3A;}
-.hero{background:linear-gradient(90deg,rgba(20,48,34,.92) 0%,rgba(31,77,54,.82) 38%,rgba(42,91,63,.52) 68%,rgba(42,91,63,.12) 100%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat;}
-.hero:after{background:#D5B66A;}
-.hero-kicker,.hero h1 span{color:#D8C28A;}
-.hero-kicker:before{background:#D5B66A;}
-.btn-blue{background:#176B50;color:#fff;box-shadow:0 8px 22px rgba(23,107,80,.24);}
-.btn-blue:hover{background:#10523D;color:#fff;}
-.btn-outline{border-color:rgba(255,255,255,.85);}
-.btn-outline:hover{background:#fff;color:#244C3A;}
-.feature-strip{background:#F8FAF7;border-bottom-color:#D3DED5;}
-.feature{border-right-color:#D3DED5;}
-.feature-icon{color:#176B50;}
-.section{background:#E8EEE9;}
-.products-title .small,.section-heading-center .small{color:#176B50;}
-.products-title h2,.section-heading-center h2{color:#20352A;}
-.promo-box{background:linear-gradient(90deg,rgba(26,66,46,.92),rgba(49,102,70,.58)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover;color:#fff;}
-.promo-label{background:#D5B66A;color:#20352A;}
-.promo-box strong span{color:#E4D3A6;}
-.product-card,.specialty-item,.contact-card{background:#FFFFFF;border-color:#D3DED5;}
-.product-card:hover{border-color:#176B50;}
-.product-image{background:#F4F7F3;}
-.product-info h3,.specialty-item h3,.contact-card h3{color:#20352A;}
-.shop-link,.contact-card a{color:#176B50;}
-.shop-link:hover{color:#10523D;}
-.more-card{background:#244C3A;border-color:#244C3A;}
-.more-card:hover{border-color:#176B50;background:#176B50;}
-.specialty-section,.quote-section{background:#DDE7DE;}
-.why-section{background:linear-gradient(120deg,#244C3A 0%,#1C3E2D 72%,#315B42 100%);color:#fff;}
-.why-section:before{background:rgba(213,182,106,.14);}
-.why-section .section-heading-center .small{color:#DCC58D;}
-.why-card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.19);}
-.why-number{color:#DCC58D;}
-.quote-text h2{color:#20352A;}
-.quote-text h2 span,.quote-points li:before{color:#176B50;}
-.quote-text p{color:#526157;}
-.form-box{background:#FFFFFF;border-color:#D3DED5;}
-.form-box h3{color:#20352A;}
-.form-group input,.form-group select,.form-group textarea{border-color:#D3DED5;color:#202B24;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#176B50;box-shadow:0 0 0 3px rgba(23,107,80,.15);}
-.contact-section{background:#F8FAF7;}
-footer{background:#183629;color:#fff;}
-.footer-col h3{color:#DCC58D;}
-.footer-bottom{border-top-color:rgba(255,255,255,.18);}
-.mobile-bar{background:#244C3A;border-top-color:#D5B66A;}
-.mobile-bar a{color:#fff;}
-.mobile-bar a span{color:#DCC58D;}
-/* Ensure backgrounds remain clean and free of decorative square patterns. */
-body,main,.section,.specialty-section,.quote-section,.contact-section{background-image:none;}
-@media(max-width:768px){
-  header{background:#F8FAF7;}
-  .nav-menu{background:#F8FAF7;border-top:1px solid #D3DED5;}
-  .nav-menu a{color:#20352A;}
-  .nav-menu a:hover,.nav-menu a.active{color:#176B50;}
+body{background:#F2F5F8 !important;color:#202833 !important;}
+.top-bar{background:#173B65 !important;color:#fff;}
+header{background:#fff !important;border-bottom:1px solid #D9E0E8 !important;box-shadow:0 4px 18px rgba(23,59,101,.05);}
+.logo,.nav-icon,.menu-btn{color:#173B65 !important;}
+.logo-symbol{border-color:#1677FF;color:#A87922;}
+.logo-symbol:after{background:#D6A84F;}
+.logo span,.footer-logo span{color:#A87922 !important;}
+.nav-menu a{color:#26384D !important;}
+.nav-menu a:hover,.nav-menu a.active{color:#1677FF !important;}
+.nav-menu a.active:after{background:#D6A84F !important;}
+.nav-icon:hover{color:#1677FF !important;}
+.cart-number{background:#1677FF !important;color:#fff;}
+.hero{background:
+    linear-gradient(90deg,rgba(15,39,67,.94) 0%,rgba(23,59,101,.84) 42%,rgba(23,59,101,.46) 72%,rgba(23,59,101,.14) 100%),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat !important;}
+.hero:after{background:#D6A84F !important;}
+.hero-kicker,.hero h1 span{color:#F0CC7A !important;}
+.hero-kicker:before{background:#D6A84F !important;}
+.btn-blue{background:#1677FF !important;color:#fff !important;box-shadow:0 8px 22px rgba(22,119,255,.24) !important;}
+.btn-blue:hover{background:#105FCB !important;}
+.btn-outline{border-color:rgba(255,255,255,.85);color:#fff;}
+.feature-strip{background:#fff !important;border-bottom:1px solid #D9E0E8 !important;color:#202833 !important;}
+.feature{border-right-color:#D9E0E8 !important;}
+.feature-icon{color:#173B65 !important;}
+.feature h3{color:#202833;}
+.feature p{color:#647184 !important;}
+#products,.contact-section,.specialty-section,.quote-section{
+    background-color:#F2F5F8 !important;
+    background-image:none !important;
+    color:#202833 !important;
 }
+.products-title h2,.section-heading-center h2,.quote-text h2{color:#202833 !important;}
+.products-title p,.section-heading-center p,.quote-text p{color:#647184 !important;}
+.products-title .small,.section-heading-center .small{color:#A87922 !important;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#D6A84F !important;}
+.product-card,.specialty-item,.contact-card{
+    background:#fff !important;color:#202833 !important;border-color:#D9E0E8 !important;
+    box-shadow:0 7px 24px rgba(23,59,101,.07) !important;
+}
+.product-card:hover,.specialty-item:hover,.contact-card:hover{border-color:#1677FF !important;box-shadow:0 14px 30px rgba(23,59,101,.13) !important;}
+.product-image{background:#FFFFFF !important;}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#202833 !important;}
+.product-info p,.contact-card p{color:#647184 !important;}
+.shop-link,.contact-card a{color:#A87922 !important;}
+.shop-link:hover,.contact-card a:hover{color:#1677FF !important;}
+.promo-box{background:linear-gradient(100deg,rgba(23,59,101,.96),rgba(23,59,101,.72)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover !important;}
+.promo-label{background:#D6A84F !important;color:#173B65 !important;}
+.promo-box strong span{color:#F0CC7A !important;}
+.more-card{background:#173B65 !important;border-color:#173B65 !important;}
+.more-card:hover{background:#105FCB !important;border-color:#D6A84F !important;}
+.more-card h3{color:#fff !important;}
+.more-card p{color:#DCE6F2 !important;}
+.why-section{background:linear-gradient(120deg,#173B65 0%,#102B49 72%,#0B2139 100%) !important;color:#fff !important;}
+.why-section:before{background:rgba(214,173,96,.17) !important;}
+.why-section .section-heading-center .small{color:#F0CC7A !important;}
+.why-section .section-heading-center h2{color:#fff !important;}
+.why-section .section-heading-center p{color:#DCE6F2 !important;}
+.why-card{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.18) !important;}
+.why-number{color:#F0CC7A !important;}
+.why-card h3{color:#fff !important;}
+.why-card p{color:#DCE6F2 !important;}
+.quote-text h2 span{color:#A87922 !important;}
+.quote-points li{color:#344256 !important;}
+.quote-points li:before{color:#A87922 !important;}
+.form-box{background:#fff !important;border-color:#D9E0E8 !important;color:#202833 !important;box-shadow:0 12px 35px rgba(23,59,101,.09) !important;}
+.form-box h3,.form-group label{color:#202833 !important;}
+.form-group input,.form-group select,.form-group textarea{background:#fff !important;color:#202833 !important;border-color:#CCD6E2 !important;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#1677FF !important;box-shadow:0 0 0 3px rgba(22,119,255,.14) !important;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#7B8797 !important;}
+.form-group select option{background:#fff;color:#202833;}
+.contact-card{background:#fff !important;}
+footer{background:#173B65 !important;border-top:4px solid #D6A84F !important;color:#fff !important;}
+.footer-col h3{color:#F0CC7A !important;}
+footer p,.footer-col a{color:#DCE6F2 !important;}
+.footer-col a:hover{color:#fff !important;}
+.footer-bottom{border-top-color:rgba(255,255,255,.18) !important;color:#B8C9DD !important;}
+.mobile-bar{background:#173B65 !important;border-top:2px solid #D6A84F !important;}
+.mobile-bar a{color:#fff !important;border-right-color:rgba(255,255,255,.18) !important;}
+@media(max-width:900px){
+    .nav-menu{background:#fff !important;border:1px solid #D9E0E8 !important;box-shadow:0 10px 25px rgba(23,59,101,.12) !important;}
+    .nav-menu a{color:#26384D !important;}
+}
+/* Safety override: no grid, squares, or patterned background anywhere. */
+#products,.contact-section,.specialty-section,.quote-section{background-image:none !important;}
+
+
+
+/* =========================================================
+   LED KING WARM IVORY THEME
+   Palette: warm ivory, white, forest green, muted champagne gold.
+   Decorative square/grid background patterns are disabled.
+   ========================================================= */
+:root{
+    --blue:#34483D;
+    --blue-dark:#26382E;
+    --blue-light:#E8EEE8;
+    --gold-text:#A98745;
+    --gold-text-hover:#80652F;
+    --navy:#34483D;
+    --dark:#26382E;
+    --black:#20352A;
+    --white:#FFFFFF;
+    --gray:#F4F0E8;
+    --gray2:#E9E2D6;
+    --text:#26332B;
+    --muted:#647268;
+    --border:#DED6C8;
+    --shadow:0 12px 35px rgba(52,72,61,.08);
+    --shadow-hover:0 18px 45px rgba(52,72,61,.15);
+}
+html,body{background:#F4F0E8 !important;color:#26332B !important;}
+body{background-image:none !important;}
+.top-bar{background:#26382E !important;color:#fff !important;}
+header{background:#FFFFFF !important;border-bottom:1px solid #DED6C8 !important;box-shadow:0 4px 18px rgba(52,72,61,.06) !important;}
+.logo,.nav-icon,.menu-btn{color:#34483D !important;}
+.logo-symbol{border-color:#176B50 !important;color:#A98745 !important;}
+.logo-symbol:after{background:#C5A66A !important;}
+.logo span,.footer-logo span{color:#A98745 !important;}
+.nav-menu a{color:#34483D !important;}
+.nav-menu a:hover,.nav-menu a.active{color:#176B50 !important;}
+.nav-menu a.active:after{background:#C5A66A !important;}
+.nav-icon:hover{color:#176B50 !important;}
+.cart-number{background:#176B50 !important;color:#fff !important;}
+.hero{background:linear-gradient(90deg,rgba(30,52,40,.94) 0%,rgba(52,72,61,.82) 45%,rgba(52,72,61,.42) 76%,rgba(52,72,61,.12) 100%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat !important;}
+.hero:after{background:#C5A66A !important;}
+.hero-kicker,.hero h1 span{color:#E5D1A3 !important;}
+.hero-kicker:before{background:#C5A66A !important;}
+.btn-blue{background:#176B50 !important;color:#fff !important;box-shadow:0 8px 22px rgba(23,107,80,.22) !important;}
+.btn-blue:hover{background:#124F3C !important;}
+.btn-outline{border-color:rgba(255,255,255,.85) !important;color:#fff !important;}
+.feature-strip{background:#FFFFFF !important;border-bottom:1px solid #DED6C8 !important;color:#26332B !important;}
+.feature{border-right-color:#DED6C8 !important;}
+.feature-icon{color:#176B50 !important;}
+.feature h3{color:#26332B !important;}
+.feature p{color:#647268 !important;}
+#products,.contact-section,.specialty-section,.quote-section{background-color:#F4F0E8 !important;background-image:none !important;color:#26332B !important;}
+.section-heading-center h2,.products-title h2,.quote-text h2{color:#26332B !important;}
+.products-title p,.section-heading-center p,.quote-text p{color:#647268 !important;}
+.products-title .small,.section-heading-center .small{color:#176B50 !important;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#C5A66A !important;}
+.product-card,.specialty-item,.contact-card{background:#FFFFFF !important;color:#26332B !important;border-color:#DED6C8 !important;box-shadow:0 7px 24px rgba(52,72,61,.07) !important;}
+.product-card:hover,.specialty-item:hover,.contact-card:hover{border-color:#176B50 !important;box-shadow:0 14px 30px rgba(52,72,61,.13) !important;}
+.product-image{background:#FFFFFF !important;}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#26332B !important;}
+.product-info p,.contact-card p{color:#647268 !important;}
+.shop-link,.contact-card a{color:#80652F !important;}
+.shop-link:hover,.contact-card a:hover{color:#176B50 !important;}
+.promo-box{background:linear-gradient(100deg,rgba(38,56,46,.96),rgba(52,72,61,.78)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover !important;}
+.promo-label{background:#C5A66A !important;color:#26382E !important;}
+.promo-box strong span{color:#E5D1A3 !important;}
+.more-card{background:#34483D !important;border-color:#34483D !important;}
+.more-card:hover{background:#26382E !important;border-color:#C5A66A !important;}
+.more-card h3{color:#FFFFFF !important;}
+.why-section{background:linear-gradient(120deg,#26382E 0%,#34483D 72%,#486653 100%) !important;color:#fff !important;}
+.why-section:before{background:rgba(197,166,106,.16) !important;}
+.why-section .section-heading-center .small{color:#E5D1A3 !important;}
+.why-card{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.18) !important;}
+.why-card p{color:#E8EEE8 !important;}
+.form-box{background:#FFFFFF !important;border-color:#DED6C8 !important;color:#26332B !important;}
+.form-box h3,.form-group label{color:#26332B !important;}
+.form-group input,.form-group select,.form-group textarea{background:#FFFEFB !important;color:#26332B !important;border-color:#D7D0C2 !important;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#176B50 !important;box-shadow:0 0 0 3px rgba(23,107,80,.13) !important;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#7B857D !important;}
+footer{background:#26382E !important;color:#fff !important;border-top:3px solid #C5A66A !important;}
+.footer-col h3{color:#E5D1A3 !important;}
+.footer-col a{color:#F4F0E8 !important;}
+.footer-col a:hover{color:#E5D1A3 !important;}
+.mobile-bar{background:#26382E !important;border-top:2px solid #C5A66A !important;}
+@media(max-width:900px){.nav-menu{background:#FFFFFF !important;border:1px solid #DED6C8 !important;}}
 
 </style>
 </head>
