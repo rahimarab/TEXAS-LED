@@ -748,6 +748,63 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 @media(max-width:650px){.announcement-strip{font-size:10px;letter-spacing:.15px;padding:9px 8px;line-height:1.45}.announcement-strip span{padding:0 3px}.navbar{height:68px;padding:0 15px;gap:8px}.logo{font-size:23px!important}.nav-actions{gap:9px}.cart-symbol{font-size:20px}.cart-number{left:13px;top:-3px}.header-quote{min-height:38px;padding:0 10px;font-size:10px}.menu-btn{font-size:25px}.search-section{padding:13px 14px 10px}.product-search{min-height:50px;gap:8px;padding-left:12px}.product-search input{font-size:12px}.product-search button{padding:0 12px;font-size:10px}.search-symbol{font-size:24px}.search-hint{font-size:10px}.hero-slider,.hero-slide.is-active{min-height:590px}.hero-content{padding:60px 25px 75px}.hero h1{font-size:36px;letter-spacing:-.6px}.hero p{font-size:14px;line-height:1.65}.hero-buttons{flex-direction:column;align-items:stretch;gap:9px}.hero-buttons .btn,.hero-buttons .btn-yellow{width:100%;min-height:44px}.slider-arrow{width:34px;height:34px;font-size:24px}.slider-prev{left:8px}.slider-next{right:8px}.slider-dots{bottom:17px}#products .products-title h2{font-size:30px}#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}#products .product-image{width:clamp(112px,35vw,155px);height:clamp(112px,35vw,155px);margin-bottom:12px}#products .product-info h3{font-size:14px}#products .product-info p{font-size:11px}#products .more-card{grid-column:span 2;min-height:125px}.mobile-bar{display:none!important}}
 @media(prefers-reduced-motion:reduce){.hero-slide{transition:none}.slider-arrow,.btn-yellow,#products .product-image{transition:none}}
 
+
+/* FINAL REQUESTED UPDATE: moving benefits ticker + larger 3-across square categories */
+.benefits-marquee{width:100%;overflow:hidden;background:transparent!important;color:#000!important;padding:13px 0 16px;white-space:nowrap;position:relative}
+.benefits-marquee-track{display:flex;width:max-content;animation:ledking-benefits-scroll 27s linear infinite;will-change:transform}
+.benefits-marquee-group{display:flex;flex:0 0 auto;align-items:center;gap:25px;padding-right:25px;color:#000;font-size:16px;font-weight:900;letter-spacing:.15px}
+.benefits-marquee-group span{font-weight:900;color:#000}
+.benefits-marquee:hover .benefits-marquee-track{animation-play-state:paused}
+@keyframes ledking-benefits-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#products .product-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;align-items:start;gap:34px 20px}
+#products .product-card:not(.more-card){grid-column:span 2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;min-height:0;overflow:visible;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;text-align:center;padding:0 8px;transform:none!important}
+#products .product-card:not(.more-card):nth-child(10){grid-column:2 / span 2}
+#products .product-card:not(.more-card):nth-child(11){grid-column:4 / span 2}
+#products .product-image{width:clamp(220px,21vw,300px)!important;height:clamp(220px,21vw,300px)!important;aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 17px;padding:14px;background:#fff!important;border:1px solid #ded6c8;border-radius:10px!important;overflow:hidden;box-shadow:0 8px 24px rgba(38,56,46,.10);transition:transform .25s,box-shadow .25s}
+#products .product-card:not(.more-card):hover .product-image{transform:translateY(-4px);box-shadow:0 14px 29px rgba(38,56,46,.16);border-color:#176b50}
+#products .product-image img{width:100%;height:100%;object-fit:contain;border-radius:6px}
+#products .product-info{width:100%;min-width:0;padding:0 3px;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:flex-start;overflow-wrap:anywhere}
+#products .product-info h3{font-size:16px;line-height:1.35;color:#26332b;margin:0 0 6px}
+#products .product-info p{font-size:12px;line-height:1.5;color:#647268;margin:0 0 8px}
+#products .shop-link{font-size:11px;color:#80652f;font-weight:900}
+.view-all-products-wrap{display:flex;justify-content:center;align-items:center;width:100%;margin:42px auto 0;text-align:center}
+.view-all-products-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 30px;border-radius:7px;background:#176b50;color:#fff!important;font-size:13px;font-weight:900;letter-spacing:.6px;box-shadow:0 8px 22px rgba(23,107,80,.18);transition:background .2s,transform .2s}
+.view-all-products-btn:hover{background:#124f3c;transform:translateY(-2px)}
+@media(max-width:1100px){#products .product-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:30px 14px}#products .product-image{width:clamp(180px,22vw,245px)!important;height:clamp(180px,22vw,245px)!important}}
+@media(max-width:650px){.benefits-marquee{padding:11px 0 13px}.benefits-marquee-group{font-size:14px;gap:15px;padding-right:15px}.benefits-marquee-track{animation-duration:23s}#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:27px 12px}#products .product-card:not(.more-card){grid-column:auto;padding:0 3px}#products .product-card:not(.more-card):nth-child(10),#products .product-card:not(.more-card):nth-child(11){grid-column:auto}#products .product-image{width:clamp(145px,43vw,190px)!important;height:clamp(145px,43vw,190px)!important;padding:10px;margin-bottom:12px}#products .product-info h3{font-size:14px}#products .product-info p{font-size:11px}.view-all-products-wrap{margin-top:30px}.view-all-products-btn{min-height:48px;padding:0 22px;font-size:12px}}
+/* FINAL ALIGNMENT: center the last two category cards as a balanced pair */
+#products .product-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;justify-items:stretch}
+#products .product-grid > .product-card:not(.more-card):nth-child(10){grid-column:2 / span 2!important;justify-self:stretch}
+#products .product-grid > .product-card:not(.more-card):nth-child(11){grid-column:4 / span 2!important;justify-self:stretch}
+@media(max-width:650px){#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#products .product-grid > .product-card:not(.more-card):nth-child(10),#products .product-grid > .product-card:not(.more-card):nth-child(11){grid-column:auto!important}}
+
+@media(prefers-reduced-motion:reduce){.benefits-marquee-track{animation:none}}
+
+
+/* Final alignment adjustment: keep every category tile left-aligned in the grid */
+@media(min-width:651px){
+  #products .product-grid > .product-card:not(.more-card):nth-child(10),
+  #products .product-grid > .product-card:not(.more-card):nth-child(11){
+    grid-column:span 2 !important;
+    justify-self:stretch !important;
+  }
+}
+
+/* CONTACT MAP + STORE HOURS UPDATE */
+.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;align-items:stretch;}
+.map-card{grid-column:span 2;text-align:left;}
+.hours-card{text-align:left;}
+.map-frame{width:100%;height:260px;overflow:hidden;border-radius:10px;margin:14px 0 10px;border:1px solid #DED6C8;}
+.map-frame iframe{display:block;width:100%;height:100%;border:0;}
+.map-directions{text-align:center;margin-top:8px;}
+.store-hours{display:flex;flex-direction:column;gap:0;margin-top:14px;}
+.store-hours div{display:flex;flex-direction:column;gap:4px;padding:13px 0;border-bottom:1px solid #DED6C8;}
+.store-hours div:last-child{border-bottom:0;}
+.store-hours span{font-size:13px;color:#647268;}
+.store-hours strong{font-size:15px;color:#26332B;}
+@media(max-width:900px){.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}.map-card{grid-column:span 2;}}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr !important;}.map-card{grid-column:span 1;}.map-frame{height:230px;}}
+
 </style>
 </head>
 
@@ -821,32 +878,11 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   <div class="slider-dots" role="group" aria-label="Choose hero slide"><button class="slider-dot is-active" type="button" aria-label="Show slide 1" aria-pressed="true"></button><button class="slider-dot" type="button" aria-label="Show slide 2" aria-pressed="false"></button><button class="slider-dot" type="button" aria-label="Show slide 3" aria-pressed="false"></button></div>
 </section>
 
-<!-- FEATURE STRIP -->
-<section class="feature-strip">
-<div class="feature-inner">
-
-    <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <div><h3>Fast & Reliable Shipping</h3><p>Across the USA</p></div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🛡️</div>
-        <div><h3>Top Quality Products</h3><p>Trusted LED Lighting</p></div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🏷️</div>
-        <div><h3>Best Prices</h3><p>Wholesale & Retail</p></div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🎧</div>
-        <div><h3>Expert Support</h3><p>Before & After Purchase</p></div>
-    </div>
-
-</div>
-</section>
+<!-- MOVING BENEFITS TICKER: transparent background, bold black text -->
+<div class="benefits-marquee" aria-label="LED KING benefits"><div class="benefits-marquee-track">
+  <div class="benefits-marquee-group">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
+  <div class="benefits-marquee-group" aria-hidden="true">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
+</div></div>
 
 <!-- PRODUCTS -->
 <section class="section" id="products">
@@ -983,17 +1019,9 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+</div>
 
-        <!-- VIEW ALL (12th card keeps the grid even) -->
-        <a class="product-card more-card" href="products.html">
-            <div class="more-inner">
-                <h3>View All Products</h3>
-                <p>Browse the full LED KING catalog.</p>
-                <span class="btn btn-blue">VIEW ALL →</span>
-            </div>
-        </a>
-
-    </div>
+<div class="view-all-products-wrap"><a class="view-all-products-btn" href="products.html">VIEW ALL PRODUCTS <span aria-hidden="true">→</span></a></div>
 
 </div>
 </section>
@@ -1189,14 +1217,29 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
             <p><a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
         </div>
 
-        <div class="contact-card">
+        <div class="contact-card map-card">
             <div class="contact-icon">📍</div>
-            <h3>Our Location</h3>
-            <p>
-                <a href="https://www.google.com/maps/search/?api=1&query=3701+Airport+Fwy%2C+Fort+Worth%2C+TX+76111" target="_blank" rel="noopener">
-                    3701 Airport Fwy, Fort Worth, TX 76111
-                </a>
-            </p>
+            <h3>Find Our Store</h3>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps?q=3701+Airport+Fwy,+Fort+Worth,+TX+76111&z=15&output=embed"
+                    title="Google Map showing LED KING store location"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="map-directions"><a href="https://maps.app.goo.gl/cSBHaHkVf13EuM1P8" target="_blank" rel="noopener">Open in Google Maps ↗</a></p>
+        </div>
+
+        <div class="contact-card hours-card">
+            <div class="contact-icon">🕒</div>
+            <h3>Store Hours</h3>
+            <div class="store-hours">
+                <div><span>Monday – Friday</span><strong>8:00 AM – 6:30 PM</strong></div>
+                <div><span>Saturday</span><strong>8:00 AM – 5:00 PM</strong></div>
+                <div><span>Sunday</span><strong>Closed</strong></div>
+            </div>
         </div>
 
     </div>
@@ -1218,7 +1261,7 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
                 residential, outdoor and specialty
                 applications.
             </p>
-            <p style="margin-top:15px;">3701 Airport Fwy, Fort Worth, TX 76111</p>
+
         </div>
 
         <div class="footer-col">
@@ -1234,7 +1277,7 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
             <a href="tel:+16822003004">682-200-3004</a>
             <a href="sms:+18723029425">872-302-9425</a>
             <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=3701+Airport+Fwy%2C+Fort+Worth%2C+TX+76111" target="_blank" rel="noopener">Get Directions</a>
+            <a href="https://maps.app.goo.gl/cSBHaHkVf13EuM1P8" target="_blank" rel="noopener">Open Google Maps</a>
         </div>
 
     </div>
