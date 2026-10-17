@@ -1029,6 +1029,69 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   #products .product-grid > .product-card.category-card .product-info p{font-size:11px}
 }
 
+
+
+/* FINAL POPULAR LED LIGHTING IMAGE FIX
+   Scope is limited to category images inside the existing #products section.
+   Image files are intentionally preserved; CSS does not attempt to erase any
+   white background that may be part of the original image itself. */
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(120px, 13vw, 190px) !important;
+  height: clamp(120px, 13vw, 190px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding: 14% !important;
+  margin: 0 auto 16px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 1px solid rgba(222, 214, 200, .65) !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  flex: 0 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  transform: none;
+}
+#products .product-grid > .product-card.category-card:hover .product-image {
+  background: transparent !important;
+  box-shadow: 0 8px 20px rgba(38, 56, 46, .08) !important;
+}
+#products .product-grid > .product-card.category-card:hover .product-image img {
+  transform: none !important;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(145px, 18vw, 190px) !important;
+    height: clamp(145px, 18vw, 190px) !important;
+  }
+}
+@media (max-width: 767px) {
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(120px, 38vw, 170px) !important;
+    height: clamp(120px, 38vw, 170px) !important;
+    padding: 13% !important;
+    margin-bottom: 11px !important;
+  }
+}
+
 </style>
 </head>
 
