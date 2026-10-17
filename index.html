@@ -919,6 +919,116 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   #products .product-grid > .more-card{grid-column:span 2 !important;}
 }
 
+
+/* POPULAR LED LIGHTING: corrected responsive category grid */
+#products .product-grid{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:start;
+  justify-items:stretch;
+  gap:20px;
+  width:100%;
+  margin:0!important;
+  padding:0!important;
+}
+#products .product-grid > .product-card.category-card{
+  grid-column:auto!important;
+  display:flex!important;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-width:0;
+  min-height:0;
+  width:100%;
+  padding:0!important;
+  margin:0!important;
+  box-sizing:border-box;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  text-align:center;
+  transform:none!important;
+}
+#products .product-grid > .product-card.category-card .product-image{
+  width:clamp(120px,13vw,190px)!important;
+  height:clamp(120px,13vw,190px)!important;
+  aspect-ratio:1/1;
+  flex:0 0 auto;
+  margin:0 auto 16px;
+  padding:12px!important;
+  border-radius:50%!important;
+  overflow:hidden;
+  background:#fff!important;
+  border:1px solid #ded6c8!important;
+  box-shadow:0 8px 24px rgba(38,56,46,.10);
+  transition:transform .25s,box-shadow .25s;
+}
+#products .product-grid > .product-card.category-card .product-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:50%;
+}
+#products .product-grid > .product-card.category-card:hover .product-image{
+  transform:translateY(-4px);
+  box-shadow:0 14px 29px rgba(38,56,46,.16);
+  border-color:#176b50!important;
+}
+#products .product-grid > .product-card.category-card .product-info{
+  width:100%;
+  min-width:0;
+  padding:0 3px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+#products .product-grid > .product-card.category-card .product-info h3{
+  font-size:16px;
+  line-height:1.35;
+  min-height:2.7em;
+  color:#26332b;
+  margin:0 0 5px;
+}
+#products .product-grid > .product-card.category-card .product-info p{
+  font-size:12px;
+  line-height:1.45;
+  min-height:2.9em;
+  color:#647268;
+  margin:0 0 8px;
+}
+#products .product-grid > .product-card.category-card .shop-link{
+  color:#80652f;
+  font-size:11px;
+  font-weight:900;
+}
+@media(min-width:1200px){
+  #products .product-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:20px!important}
+}
+@media(min-width:768px) and (max-width:1199px){
+  #products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px!important}
+  #products .product-grid > .product-card.category-card .product-image{
+    width:clamp(145px,18vw,205px)!important;
+    height:clamp(145px,18vw,205px)!important;
+  }
+}
+@media(max-width:767px){
+  #products .container{padding-inline:15px!important}
+  #products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
+  #products .product-grid > .product-card.category-card{padding:0!important}
+  #products .product-grid > .product-card.category-card .product-image{
+    width:clamp(120px,38vw,175px)!important;
+    height:clamp(120px,38vw,175px)!important;
+    padding:9px!important;
+    margin-bottom:11px!important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3{font-size:14px}
+  #products .product-grid > .product-card.category-card .product-info p{font-size:11px}
+}
+
 </style>
 </head>
 
@@ -1011,296 +1121,316 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 
     <div class="product-grid">
 
-        <!-- WALL SCONCE -->
-        <a class="product-card" href="products.html#wall-sconce" data-search="wall sconce wall sconces wall light fixture indoor outdoor lighting">
-            <div class="product-image"><img src="Wall%20Scone.jpg" alt="Wall Sconce"></div>
-            <div class="product-info">
-                <h3>Wall Sconce</h3>
-                <p>Stylish. Durable. Energy Efficient.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- BOLLARD -->
-        <a class="product-card" href="products.html#bollard-light" data-search="bollard bollard light pathway outdoor landscape lighting">
-            <div class="product-image"><img src="BOLLARD%20LIGHT.png" alt="Bollard Light"></div>
-            <div class="product-info">
-                <h3>Bollard Light</h3>
-                <p>Safe Pathways. Beautiful Spaces.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- POST TOP -->
-        <a class="product-card" href="products.html#post-top-light" data-search="post top light pole area outdoor parking lighting">
-            <div class="product-image"><img src="POST%20TOP%20LIGHT.png" alt="Post Top Light"></div>
-            <div class="product-info">
-                <h3>Post Top Light</h3>
-                <p>Enhance Your Outdoor Areas.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- HOTEL FIXTURE -->
-        <a class="product-card" href="products.html#hotel-fixture" data-search="hotel fixture hotel lighting hospitality indoor">
-            <div class="product-image"><img src="HOTEL%20FIXTURE.png" alt="Hotel Fixture"></div>
-            <div class="product-info">
-                <h3>Hotel Fixture</h3>
-                <p>Comfortable Lighting. Better Stays.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- VANITY -->
-        <a class="product-card" href="products.html#vanity-lights" data-search="vanity lights bathroom mirror indoor lighting">
-            <div class="product-image"><img src="VANITY%20LIGHT.png" alt="Vanity Lights"></div>
-            <div class="product-info">
-                <h3>Vanity Lights</h3>
-                <p>Modern Looks. Perfect Ambiance.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- TRACK -->
-        <a class="product-card" href="products.html#track-light" data-search="track light track lights indoor commercial lighting">
-            <div class="product-image"><img src="TRACK%20LIGHT.png" alt="Track Light"></div>
-            <div class="product-info">
-                <h3>Track Light</h3>
-                <p>Flexible. Focused. Functional.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- OUTDOOR WALL -->
-        <a class="product-card" href="products.html#outdoor-wall-light" data-search="outdoor wall light wall pack exterior outdoor lighting">
-            <div class="product-image"><img src="OUTDOOR%20WALL%20LIGHT.png" alt="Outdoor Wall Light"></div>
-            <div class="product-info">
-                <h3>Outdoor Wall Light</h3>
-                <p>Durable Outdoor Illumination.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- FLOOD -->
-        <a class="product-card" href="products.html#flood-light" data-search="flood light floodlights outdoor security area lighting">
-            <div class="product-image"><img src="FLOOD%20LIGHT.png" alt="Flood Light"></div>
-            <div class="product-info">
-                <h3>Flood Light</h3>
-                <p>Powerful Outdoor Lighting.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- STREET -->
-        <a class="product-card" href="products.html#street-light" data-search="street light roadway pole area parking outdoor lighting">
-            <div class="product-image"><img src="STREET%20LIGHT.png" alt="Street Light"></div>
-            <div class="product-info">
-                <h3>Street Light</h3>
-                <p>Efficient Area & Road Lighting.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- EXHAUST -->
-        <a class="product-card" href="products.html#exhaust-fan" data-search="exhaust fan ventilation">
-            <div class="product-image"><img src="EXHAUST%20FAN.png" alt="Exhaust Fan"></div>
-            <div class="product-info">
-                <h3>Exhaust Fan</h3>
-                <p>Reliable Ventilation Solutions.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
-        <!-- CORN -->
-        <a class="product-card" href="products.html#corn-light" data-search="corn light corn bulb led bulb retrofit lighting">
-            <div class="product-image"><img src="CORN%20LIGHT.png" alt="Corn Light"></div>
-            <div class="product-info">
-                <h3>Corn Light</h3>
-                <p>High Output LED Replacement.</p>
-                <span class="shop-link">SHOP NOW →</span>
-            </div>
-        </a>
-
         <!-- CANOPY LIGHTS -->
-        <a class="product-card" href="products.html#canopy-lights" data-search="canopy light parking garage canopy gas station outdoor commercial lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#canopy-lights" data-search="canopy light parking garage gas station outdoor commercial lighting">
+            <div class="product-image"><img src="Canopy%201.png" alt="Canopy Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Canopy Lights</h3>
                 <p>Explore our canopy lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- LED BULBS -->
-        <a class="product-card" href="products.html#led-bulbs" data-search="led bulbs replacement lamps residential commercial">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#led-bulbs" data-search="led bulbs replacement lamps residential commercial">
+            <div class="product-image"><img src="132.jpg" alt="LED Bulbs" loading="lazy"></div>
             <div class="product-info">
                 <h3>LED Bulbs</h3>
                 <p>Explore our led bulbs selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- PANEL & TROFFER LIGHTS -->
-        <a class="product-card" href="products.html#panel-troffer" data-search="led panel troffer office ceiling grid lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- CORN BULBS -->
+        <a class="product-card category-card" href="products.html#corn-bulbs" data-search="corn bulbs led retrofit lamps">
+            <div class="product-image"><img src="130.jpg" alt="Corn Bulbs" loading="lazy"></div>
             <div class="product-info">
-                <h3>Panel & Troffer Lights</h3>
-                <p>Explore our panel troffer selection.</p>
+                <h3>Corn Bulbs</h3>
+                <p>Explore our corn bulbs selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- LINEAR STRIP FIXTURES -->
-        <a class="product-card" href="products.html#linear-strip-fixture" data-search="linear strip fixtures shop garage commercial lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- PANEL LIGHTS & TROFFER -->
+        <a class="product-card category-card" href="products.html#panel-troffer" data-search="led panel troffer office ceiling grid lighting">
+            <div class="product-image"><img src="133.jpg" alt="Panel Lights & Troffer" loading="lazy"></div>
             <div class="product-info">
-                <h3>Linear Strip Fixtures</h3>
+                <h3>Panel Lights & Troffer</h3>
+                <p>Explore our panel lights & troffer selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LINEAR STRIP FIXTURE -->
+        <a class="product-card category-card" href="products.html#linear-strip-fixture" data-search="linear strip fixtures shop garage commercial lighting">
+            <div class="product-image"><img src="138.jpg" alt="Linear Strip Fixture" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Linear Strip Fixture</h3>
                 <p>Explore our linear strip fixture selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- LED TUBES -->
-        <a class="product-card" href="products.html#led-tubes" data-search="led tube lights t8 replacement lamps">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#led-tubes" data-search="led tube lights t8 replacement lamps">
+            <div class="product-image"><img src="135.jpg" alt="LED Tubes" loading="lazy"></div>
             <div class="product-info">
                 <h3>LED Tubes</h3>
                 <p>Explore our led tubes selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- CEILING LIGHTS -->
-        <a class="product-card" href="products.html#ceiling-lights" data-search="ceiling light fixtures indoor lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#ceiling-lights" data-search="ceiling light fixtures indoor lighting">
+            <div class="product-image"><img src="136.jpg" alt="Ceiling Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Ceiling Lights</h3>
                 <p>Explore our ceiling lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- FIXTURES -->
-        <a class="product-card" href="products.html#fixtures" data-search="led lighting fixtures indoor outdoor">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- FIXTURE -->
+        <a class="product-card category-card" href="products.html#fixtures" data-search="led lighting fixtures indoor outdoor">
+            <div class="product-image"><img src="131.jpg" alt="Fixture" loading="lazy"></div>
             <div class="product-info">
-                <h3>Fixtures</h3>
-                <p>Explore our fixtures selection.</p>
+                <h3>Fixture</h3>
+                <p>Explore our fixture selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- LINEAR HIGH BAY -->
-        <a class="product-card" href="products.html#linear-highbay" data-search="linear high bay warehouse industrial lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- LINEAR HIGH BAY FIXTURE -->
+        <a class="product-card category-card" href="products.html#linear-highbay" data-search="linear high bay warehouse industrial lighting">
+            <div class="product-image"><img src="134.jpg" alt="Linear High Bay Fixture" loading="lazy"></div>
             <div class="product-info">
-                <h3>Linear High Bay</h3>
-                <p>Explore our linear highbay selection.</p>
+                <h3>Linear High Bay Fixture</h3>
+                <p>Explore our linear high bay fixture selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- UFO HIGH BAY -->
-        <a class="product-card" href="products.html#ufo-highbay" data-search="ufo high bay warehouse shop industrial lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- UFO HIGH BAY LIGHTS -->
+        <a class="product-card category-card" href="products.html#ufo-highbay" data-search="ufo high bay warehouse shop industrial lighting">
+            <div class="product-image"><img src="139.jpg" alt="UFO High Bay Lights" loading="lazy"></div>
             <div class="product-info">
-                <h3>UFO High Bay</h3>
-                <p>Explore our ufo highbay selection.</p>
+                <h3>UFO High Bay Lights</h3>
+                <p>Explore our ufo high bay lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- SINGLE-SIDE CORN BULBS -->
-        <a class="product-card" href="products.html#single-side-corn-bulbs" data-search="single side corn bulb retrofit lamp">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- FLOOD LIGHTS -->
+        <a class="product-card category-card" href="products.html#flood-light" data-search="flood lights outdoor security area lighting">
+            <div class="product-image"><img src="127.jpg" alt="Flood Lights" loading="lazy"></div>
             <div class="product-info">
-                <h3>Single-Side Corn Bulbs</h3>
+                <h3>Flood Lights</h3>
+                <p>Explore our flood lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LED POLE LIGHTS -->
+        <a class="product-card category-card" href="products.html#pole-lights" data-search="led pole shoebox street parking area lighting">
+            <div class="product-image"><img src="128.jpg" alt="LED Pole Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>LED Pole Lights</h3>
+                <p>Explore our led pole lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- SINGLE SIDE CORN BULBS -->
+        <a class="product-card category-card" href="products.html#single-side-corn-bulbs" data-search="single side corn bulb retrofit lamp">
+            <div class="product-image"><img src="140.jpg" alt="Single Side Corn Bulbs" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Single Side Corn Bulbs</h3>
                 <p>Explore our single side corn bulbs selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- WALL PACK LIGHTS -->
-        <a class="product-card" href="products.html#wall-pack" data-search="wall pack exterior building security lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- WALL PACK -->
+        <a class="product-card category-card" href="products.html#wall-pack" data-search="wall pack exterior building security lighting">
+            <div class="product-image"><img src="141.jpg" alt="Wall Pack" loading="lazy"></div>
             <div class="product-info">
-                <h3>Wall Pack Lights</h3>
+                <h3>Wall Pack</h3>
                 <p>Explore our wall pack selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- MINI WALL PACKS -->
-        <a class="product-card" href="products.html#mini-wall-pack" data-search="mini wall pack compact outdoor building lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- MINI WALL PACK -->
+        <a class="product-card category-card" href="products.html#mini-wall-pack" data-search="mini wall pack compact outdoor building lighting">
+            <div class="product-image"><img src="142.jpg" alt="Mini Wall Pack" loading="lazy"></div>
             <div class="product-info">
-                <h3>Mini Wall Packs</h3>
+                <h3>Mini Wall Pack</h3>
                 <p>Explore our mini wall pack selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- UP & DOWN LIGHTS -->
-        <a class="product-card" href="products.html#up-down-lights" data-search="up and down wall lights architectural exterior">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#up-down-lights" data-search="up and down wall lights architectural exterior">
+            <div class="product-image"><img src="120.jpg" alt="Up & Down Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Up & Down Lights</h3>
-                <p>Explore our up down lights selection.</p>
+                <p>Explore our up & down lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- SECURITY LIGHTS -->
-        <a class="product-card" href="products.html#security-lights" data-search="security lights outdoor motion area lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#security-lights" data-search="security lights outdoor motion area lighting">
+            <div class="product-image"><img src="144.jpg" alt="Security Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Security Lights</h3>
                 <p>Explore our security lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- STADIUM LIGHTS -->
-        <a class="product-card" href="products.html#stadium-lights" data-search="stadium sports field high mast flood lighting">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#stadium-lights" data-search="stadium sports field high mast flood lighting">
+            <div class="product-image"><img src="145.jpg" alt="Stadium Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Stadium Lights</h3>
                 <p>Explore our stadium lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
         <!-- GROW LIGHTS -->
-        <a class="product-card" href="products.html#grow-lights" data-search="led grow lights horticulture indoor plants">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#grow-lights" data-search="led grow lights horticulture indoor plants">
+            <div class="product-image"><img src="146.jpg" alt="Grow Lights" loading="lazy"></div>
             <div class="product-info">
                 <h3>Grow Lights</h3>
                 <p>Explore our grow lights selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
+        <!-- HOTEL FIXTURES -->
+        <a class="product-card category-card" href="products.html#hotel-fixtures" data-search="hotel fixture hospitality indoor lighting">
+            <div class="product-image"><img src="123.jpg" alt="Hotel Fixtures" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Hotel Fixtures</h3>
+                <p>Explore our hotel fixtures selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- BOLLARD LIGHTS -->
+        <a class="product-card category-card" href="products.html#bollard-light" data-search="bollard lights pathway outdoor landscape lighting">
+            <div class="product-image"><img src="121.jpg" alt="Bollard Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Bollard Lights</h3>
+                <p>Explore our bollard lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- WALL SCONCES -->
+        <a class="product-card category-card" href="products.html#wall-sconce" data-search="wall sconces wall light fixture indoor outdoor lighting">
+            <div class="product-image"><img src="143.jpg" alt="Wall Sconces" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Wall Sconces</h3>
+                <p>Explore our wall sconces selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- OUTDOOR WALL LIGHTS -->
+        <a class="product-card category-card" href="products.html#outdoor-wall-light" data-search="outdoor wall light exterior outdoor lighting">
+            <div class="product-image"><img src="126.jpg" alt="Outdoor Wall Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Outdoor Wall Lights</h3>
+                <p>Explore our outdoor wall lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- VANITY LIGHTS -->
+        <a class="product-card category-card" href="products.html#vanity-lights" data-search="vanity lights bathroom mirror indoor lighting">
+            <div class="product-image"><img src="124.jpg" alt="Vanity Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Vanity Lights</h3>
+                <p>Explore our vanity lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- POST TOP LIGHTS -->
+        <a class="product-card category-card" href="products.html#post-top-light" data-search="post top light pole area outdoor parking lighting">
+            <div class="product-image"><img src="122.jpg" alt="Post Top Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Post Top Lights</h3>
+                <p>Explore our post top lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- TRACK LIGHTS -->
+        <a class="product-card category-card" href="products.html#track-light" data-search="track lights indoor commercial lighting">
+            <div class="product-image"><img src="125.jpg" alt="Track Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Track Lights</h3>
+                <p>Explore our track lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
         <!-- ACCESSORIES -->
-        <a class="product-card" href="products.html#accessories" data-search="lighting accessories mounting hardware">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+        <a class="product-card category-card" href="products.html#accessories" data-search="lighting accessories mounting hardware">
+            <div class="product-image"><img src="147.jpg" alt="Accessories" loading="lazy"></div>
             <div class="product-info">
                 <h3>Accessories</h3>
                 <p>Explore our accessories selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- INJECTION MODULES -->
-        <a class="product-card" href="products.html#injection-module" data-search="injection modules led signage modules">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- INJECTION MODULE -->
+        <a class="product-card category-card" href="products.html#injection-module" data-search="injection modules led signage modules">
+            <div class="product-image"><img src="148.jpg" alt="Injection Module" loading="lazy"></div>
             <div class="product-info">
-                <h3>Injection Modules</h3>
+                <h3>Injection Module</h3>
                 <p>Explore our injection module selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- POWER SUPPLIES & DRIVERS -->
-        <a class="product-card" href="products.html#power-supply-drivers" data-search="power supplies led drivers transformers">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- POWER SUPPLY / DRIVERS -->
+        <a class="product-card category-card" href="products.html#power-supply-drivers" data-search="power supplies led drivers transformers">
+            <div class="product-image"><img src="149.jpg" alt="Power Supply / Drivers" loading="lazy"></div>
             <div class="product-info">
-                <h3>Power Supplies & Drivers</h3>
-                <p>Explore our power supply drivers selection.</p>
+                <h3>Power Supply / Drivers</h3>
+                <p>Explore our power supply / drivers selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
-        <!-- TENONS & MOUNTING ACCESSORIES -->
-        <a class="product-card" href="products.html#tenons" data-search="tenons pole mounts brackets mounting accessories">
-            <div class="product-image category-placeholder" aria-hidden="true"><div class="category-placeholder-icon">✦</div><span>LED KING</span></div>
+
+        <!-- TENONS -->
+        <a class="product-card category-card" href="products.html#tenons" data-search="tenons pole mounts brackets mounting accessories">
+            <div class="product-image"><img src="150.jpg" alt="Tenons" loading="lazy"></div>
             <div class="product-info">
-                <h3>Tenons & Mounting Accessories</h3>
+                <h3>Tenons</h3>
                 <p>Explore our tenons selection.</p>
                 <span class="shop-link">SHOP NOW →</span>
             </div>
         </a>
+
+        <!-- STRIP / ROPE LIGHTS -->
+        <a class="product-card category-card" href="products.html#strip-rope-lights" data-search="led strip rope lights specialty lighting">
+            <div class="product-image"><img src="29_Specialty_Lights.jpg" alt="Strip / Rope Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Strip / Rope Lights</h3>
+                <p>Explore our strip / rope lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
 </div>
 
 <div class="view-all-products-wrap"><a class="view-all-products-btn" href="products.html">VIEW ALL PRODUCTS <span aria-hidden="true">→</span></a></div>
