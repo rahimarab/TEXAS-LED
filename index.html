@@ -1479,24 +1479,6 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   </div>
 </section>
 
-<!-- ROTATING HERO IMAGE SLIDER: artwork contains its own text, so no extra overlay text is added -->
-<section class="hero-slider image-only-slider" id="home" aria-label="LED KING lighting showcase">
-  <div class="hero-slide is-active" style="background-image:url('Professional%20LED%20Lighting%20Showcase.png');" aria-hidden="false"></div>
-  <div class="hero-slide" style="background-image:url('s4.png');" aria-hidden="true"></div>
-  <div class="hero-slide" style="background-image:url('s1.jpeg');" aria-hidden="true"></div>
-  <div class="hero-slide" style="background-image:url('s2.png');" aria-hidden="true"></div>
-  <div class="hero-slide" style="background-image:url('s3.jpeg');" aria-hidden="true"></div>
-  <button class="slider-arrow slider-prev" type="button" aria-label="Previous slide">‹</button>
-  <button class="slider-arrow slider-next" type="button" aria-label="Next slide">›</button>
-  <div class="slider-dots" role="group" aria-label="Choose showcase image">
-    <button class="slider-dot is-active" type="button" aria-label="Show slide 1" aria-pressed="true"></button>
-    <button class="slider-dot" type="button" aria-label="Show slide 2" aria-pressed="false"></button>
-    <button class="slider-dot" type="button" aria-label="Show slide 3" aria-pressed="false"></button>
-    <button class="slider-dot" type="button" aria-label="Show slide 4" aria-pressed="false"></button>
-    <button class="slider-dot" type="button" aria-label="Show slide 5" aria-pressed="false"></button>
-  </div>
-</section>
-
 <!-- MOVING BENEFITS TICKER: transparent background, bold black text -->
 <div class="benefits-marquee" aria-label="LED KING benefits"><div class="benefits-marquee-track">
   <div class="benefits-marquee-group">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
@@ -2134,36 +2116,6 @@ document.querySelectorAll(".nav-menu a").forEach(function(link){
     });
 });
 
-/* HERO IMAGE SLIDER */
-(function(){
-  var slides = Array.from(document.querySelectorAll(".hero-slide"));
-  var dots = Array.from(document.querySelectorAll(".slider-dot"));
-  if (!slides.length) return;
-  var current = 0;
-  var timer;
-  function showSlide(index){
-    current = (index + slides.length) % slides.length;
-    slides.forEach(function(slide, i){
-      var active = i === current;
-      slide.classList.toggle("is-active", active);
-      slide.setAttribute("aria-hidden", String(!active));
-    });
-    dots.forEach(function(dot, i){
-      var active = i === current;
-      dot.classList.toggle("is-active", active);
-      dot.setAttribute("aria-pressed", String(active));
-    });
-  }
-  function restart(){ clearInterval(timer); timer = setInterval(function(){ showSlide(current + 1); }, 6000); }
-  document.querySelector(".slider-prev")?.addEventListener("click", function(){ showSlide(current - 1); restart(); });
-  document.querySelector(".slider-next")?.addEventListener("click", function(){ showSlide(current + 1); restart(); });
-  dots.forEach(function(dot, i){ dot.addEventListener("click", function(){ showSlide(i); restart(); }); });
-  var slider = document.querySelector(".hero-slider");
-  slider?.addEventListener("mouseenter", function(){ clearInterval(timer); });
-  slider?.addEventListener("mouseleave", restart);
-  showSlide(0); restart();
-})();
-
 /* SEARCH FEATURED CATEGORIES BY NAME OR TYPE. If a search term is not in the
    homepage highlights, the customer is directed to the complete product catalog. */
 (function(){
@@ -2208,6 +2160,62 @@ document.querySelectorAll(".nav-menu a").forEach(function(link){
 document.getElementById("year").textContent = new Date().getFullYear();
 
 </script>
+
+
+
+<style id="led-king-smaller-square-category-images">
+/* Smaller, consistent square images for the Popular LED Lighting categories */
+#products .product-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 18px 14px !important;
+}
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(120px, 10vw, 155px) !important;
+  height: clamp(120px, 10vw, 155px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  padding: 5px !important;
+  margin: 0 auto 9px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+#products .product-grid > .product-card.category-card .product-info h3 {
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  min-height: 2.5em !important;
+}
+#products .product-grid > .product-card.category-card .product-info p {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  min-height: 2.5em !important;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 18px 12px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(115px, 14vw, 145px) !important;
+    height: clamp(115px, 14vw, 145px) !important;
+  }
+}
+@media (max-width: 767px) {
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 18px 10px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(100px, 34vw, 130px) !important;
+    height: clamp(100px, 34vw, 130px) !important;
+    padding: 4px !important;
+    margin-bottom: 8px !important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3 { font-size: 12px !important; }
+  #products .product-grid > .product-card.category-card .product-info p { font-size: 10px !important; }
+}
+</style>
 
 </body>
 </html>
