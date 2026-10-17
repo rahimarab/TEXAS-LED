@@ -6,7 +6,7 @@
 <meta name="description" content="Shop LED KING canopy lights for parking garages, gas stations, commercial properties, and outdoor covered areas.">
 <title>Canopy Lights | LED KING</title>
 <style>
-:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb}
+:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb;--white:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
@@ -61,7 +61,7 @@ a{color:inherit}
 .modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
 .modal-head strong{font-size:16px}
 .close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#edf2f7;cursor:pointer;font-size:23px;line-height:1}
-.modal-content{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:28px;padding:24px}
+.modal-content{display:grid;grid-template-columns: minmax(0, .95fr) minmax(0,1.05fr);gap:28px;padding:24px}
 .modal-photo{background:#f8fafc;border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal-photo img{width:100%;max-height:380px;object-fit:contain}
 .modal h2{font-size:26px;line-height:1.25;margin:3px 0 8px}
@@ -96,10 +96,43 @@ a{color:inherit}
 .toast.show{display:block}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
 @media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
+
+/* LED KING homepage theme: black + teal + lime */
+.site-header{background:#111;border-bottom:1px solid #252b29}
+.logo{color:#fff}
+.logo span{color:var(--teal)}
+.nav a{color:#f4f7f5}
+.nav a:hover{color:var(--teal)}
+.cart-button{background:var(--teal);color:#07110f}
+.cart-button:hover{background:#00a99b}
+.cart-count{background:var(--lime);color:#111}
+.hero{background:linear-gradient(120deg,#101413 0%,#171f1d 68%,#063d38 100%);border-bottom:4px solid var(--teal)}
+.eyebrow{color:var(--lime)}
+.hero-tags span{border-color:#00B8A977;background:#00B8A910}
+.product-card{border-color:#DDE5E1;box-shadow:0 5px 18px rgba(17,24,23,.07)}
+.product-card:hover{box-shadow:0 12px 28px rgba(0,184,169,.16);border-color:#00B8A966}
+.product-image{background:#fff;border-bottom:1px solid #e7ece9}
+.price{color:#008F83}
+.btn-primary{background:var(--teal);color:#081311}
+.btn-primary:hover{background:#009688;color:#fff}
+.btn-outline{color:#008F83;border-color:#00B8A9}
+.btn-outline:hover{background:#e8fbf8}
+.modal-price{color:#008F83}
+.modal-add{background:var(--lime);color:#101411}
+.modal-add:hover{background:#c8f15b}
+.footer{background:#111;color:#f1f5f3;border-top:3px solid var(--teal)}
+.footer p{color:#b9c6c1}
+.modal-head{background:#111;color:#fff;border-bottom-color:#303735}
+.close-btn{background:#e9f3ef;color:#111}
+.qty-control{border-color:#cbd8d2}
+.qty-control button{background:#edf4f1;color:#111}
+.checkout-later{background:#f4f8f6;border-color:#dbe5df}
+.toast{background:#111;border:1px solid var(--teal)}
+@media(max-width:620px){.nav a{color:#f4f7f5}}
+
 </style>
 </head>
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
@@ -108,7 +141,7 @@ a{color:inherit}
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="cart-button" type="button" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+    <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
   </div>
 </header>
 
@@ -117,20 +150,13 @@ a{color:inherit}
     <div class="eyebrow">LED KING · Commercial Lighting</div>
     <h1>Professional LED Canopy Lights</h1>
     <p>Energy-efficient canopy lighting for parking garages, gas stations, covered walkways, and commercial spaces. Explore product specifications and add items to your cart.</p>
-    <div class="hero-tags">
-      <span>UL / DLC-listed models</span>
-      <span>Commercial applications</span>
-      <span>Product price: $100 each</span>
-    </div>
+    <div class="hero-tags"><span>UL / DLC-listed models</span><span>Commercial applications</span><span>Product price: $100 each</span></div>
   </div>
 </section>
 
 <main class="page-wrap" id="products">
   <div class="toolbar">
-    <div>
-      <h2>Canopy Lights</h2>
-      <p>Choose a product to view full details and specifications.</p>
-    </div>
+    <div><h2>Canopy Lights</h2><p>Choose a product to view full details and specifications.</p></div>
     <p><strong>10 products</strong> · Each listed at $100.00</p>
   </div>
   <div class="grid" id="productGrid"></div>
@@ -145,25 +171,14 @@ a{color:inherit}
 
 <footer class="footer" id="contact">
   <div class="footer-inner">
-    <div>
-      <strong style="font-size:20px">LED KING</strong>
-      <p>Professional LED lighting products and solutions.</p>
-    </div>
-    <div>
-      <strong>Contact</strong>
-      <p>Phone: 682-200-3004</p>
-      <p>Email: ledkingfortworth@gmail.com</p>
-      <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
-    </div>
+    <div><strong style="font-size:20px">LED KING</strong><p>Professional LED lighting products and solutions.</p></div>
+    <div><strong>Contact</strong><p>Phone: 682-200-3004</p><p>Email: ledkingfortworth@gmail.com</p><p>3701 Airport Fwy, Fort Worth, TX 76111</p></div>
   </div>
 </footer>
 
 <div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="overlayClick(event)">
   <div class="modal">
-    <div class="modal-head">
-      <strong>Product details</strong>
-      <button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button>
-    </div>
+    <div class="modal-head"><strong>Product details</strong><button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button></div>
     <div class="modal-content" id="modalContent"></div>
   </div>
 </div>
@@ -171,10 +186,7 @@ a{color:inherit}
 <div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
   <div class="drawer-shade" onclick="closeCart()"></div>
   <aside class="drawer-panel">
-    <div class="drawer-head">
-      <h2>Your Cart</h2>
-      <button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button>
-    </div>
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button></div>
     <div class="drawer-items" id="cartItems"></div>
     <div class="drawer-bottom">
       <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
@@ -182,330 +194,106 @@ a{color:inherit}
     </div>
   </aside>
 </div>
-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const products = [
-  {
-    id:1,
-    name:"LED Parking Garage Light 55W",
-    price:100,
-    sku:"1462",
-    image:"Canopy%201.png",
-    specs:["55W power","5700K color temperature","Epistar 2835 LED chips (as supplied)","AC 100–277V","UL / DLC listed"],
-    description:"Designed for parking garage and covered commercial applications. Your supplied details list efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start, no flickering or humming, easy installation, uniform light, and a 5-year warranty. Additional supplied driver and chip-brand details are retained as provided."
-  },
-  {
-    id:2,
-    name:"5th Round LED Parking Garage Light 55W",
-    price:100,
-    sku:"2021",
-    image:"Canopy%202.png",
-    specs:["55W power","5700K color temperature","Lumileds 2835 LED chips","China-brand driver (as supplied)","AC 100–277V","UL / DLC listed"],
-    description:"A round LED parking garage fixture designed for efficient, consistent illumination. Supplied additional details include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Driver and chip information is displayed as supplied."
-  },
-  {
-    id:3,
-    name:"75W LED Canopy Light",
-    price:100,
-    sku:"932",
-    image:"Canopy%203.png",
-    specs:["75W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
-    description:"A 75W LED canopy light for outdoor canopy and commercial applications. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white illumination, and UL / DLC listings. Its broad voltage range supports use with compatible electrical systems."
-  },
-  {
-    id:4,
-    name:"LED Parking Garage Light 75W",
-    price:100,
-    sku:"2597",
-    image:"Canopy%204.png",
-    specs:["75W rated power","3000K (warm white)","4000K (neutral white)","5000K (cool white)"],
-    description:"A 75W LED parking garage light with selectable color temperatures. Choose 3000K for warm white, 4000K for neutral white, or 5000K for cool white. Intended for well-lit, energy-efficient commercial and industrial spaces."
-  },
-  {
-    id:5,
-    name:"DLC5.1 LED Parking Garage Light",
-    price:100,
-    sku:"2483",
-    image:"Canopy%205.png",
-    specs:["Wattage options: 40W / 60W / 75W","AC 100–277V","China-brand driver","White fixture","Color temperatures: 3000K / 4000K / 5000K"],
-    description:"A DLC5.1 parking garage canopy fixture with wattage and color temperature options. Your supplied product details list 40W, 60W, and 75W options; AC 100–277V; a China-brand driver; a white fixture; and 3000K, 4000K, and 5000K color temperature choices."
-  },
-  {
-    id:6,
-    name:"New DLC5.1 Integrated LED Canopy Light 95W",
-    price:100,
-    sku:"1928",
-    image:"Canopy%206.png",
-    specs:["95W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],
-    description:"An integrated LED canopy light designed for gas stations, parking garages, and covered walkways. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."
-  },
-  {
-    id:7,
-    name:"150W LED Canopy Light",
-    price:100,
-    sku:"",
-    image:"Canopy%207.png",
-    specs:["150W power","5700K daylight","Beaded lens","2835 LED chips","Non-isolated driver","UL / DLC listed"],
-    description:"A 150W LED canopy light with 5700K daylight output, a beaded lens, 2835 LED chips, and a non-isolated driver. Listed certifications are UL and DLC. Designed for canopy and other commercial outdoor covered areas."
-  },
-  {
-    id:8,
-    name:"New DLC5.1 Integrated LED Canopy Light 150W",
-    price:100,
-    sku:"675",
-    image:"Canopy%208.png",
-    specs:["150W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],
-    description:"A high-powered integrated LED canopy fixture for gas stations, parking garages, and other commercial areas. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."
-  },
-  {
-    id:9,
-    name:"New 180W Big Size LED Canopy Light",
-    price:100,
-    sku:"1929",
-    image:"Canopy%209.png",
-    specs:["180W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
-    description:"A high-output 180W LED canopy light suitable for larger outdoor canopy spaces. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."
-  },
-  {
-    id:10,
-    name:"New Big Size 240W LED Canopy Light",
-    price:100,
-    sku:"1186",
-    image:"Canopy%2010.png",
-    specs:["240W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],
-    description:"A high-output 240W LED canopy light for large spaces requiring ample illumination. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."
-  }
+  {id:1,name:"LED Parking Garage Light 55W",price:100,sku:"1462",image:"Canopy%201.png",specs:["55W power","5700K color temperature","Epistar 2835 LED chips (as supplied)","AC 100–277V","UL / DLC listed"],description:"Designed for parking garage and covered commercial applications. Your supplied details list efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start, no flickering or humming, easy installation, uniform light, and a 5-year warranty. Additional supplied driver and chip-brand details are retained as provided."},
+  {id:2,name:"5th Round LED Parking Garage Light 55W",price:100,sku:"2021",image:"Canopy%202.png",specs:["55W power","5700K color temperature","Lumileds 2835 LED chips","China-brand driver (as supplied)","AC 100–277V","UL / DLC listed"],description:"A round LED parking garage fixture designed for efficient, consistent illumination. Supplied additional details include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Driver and chip information is displayed as supplied."},
+  {id:3,name:"75W LED Canopy Light",price:100,sku:"932",image:"Canopy%203.png",specs:["75W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A 75W LED canopy light for outdoor canopy and commercial applications. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white illumination, and UL / DLC listings. Its broad voltage range supports use with compatible electrical systems."},
+  {id:4,name:"LED Parking Garage Light 75W",price:100,sku:"2597",image:"Canopy%204.png",specs:["75W rated power","3000K (warm white)","4000K (neutral white)","5000K (cool white)"],description:"A 75W LED parking garage light with selectable color temperatures. Choose 3000K for warm white, 4000K for neutral white, or 5000K for cool white. Intended for well-lit, energy-efficient commercial and industrial spaces."},
+  {id:5,name:"DLC5.1 LED Parking Garage Light",price:100,sku:"2483",image:"Canopy%205.png",specs:["Wattage options: 40W / 60W / 75W","AC 100–277V","China-brand driver","White fixture","Color temperatures: 3000K / 4000K / 5000K"],description:"A DLC5.1 parking garage canopy fixture with wattage and color temperature options. Your supplied product details list 40W, 60W, and 75W options; AC 100–277V; a China-brand driver; a white fixture; and 3000K, 4000K, and 5000K color temperature choices."},
+  {id:6,name:"New DLC5.1 Integrated LED Canopy Light 95W",price:100,sku:"1928",image:"Canopy%206.png",specs:["95W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],description:"An integrated LED canopy light designed for gas stations, parking garages, and covered walkways. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."},
+  {id:7,name:"150W LED Canopy Light",price:100,sku:"",image:"Canopy%207.png",specs:["150W power","5700K daylight","Beaded lens","2835 LED chips","Non-isolated driver","UL / DLC listed"],description:"A 150W LED canopy light with 5700K daylight output, a beaded lens, 2835 LED chips, and a non-isolated driver. Listed certifications are UL and DLC. Designed for canopy and other commercial outdoor covered areas."},
+  {id:8,name:"New DLC5.1 Integrated LED Canopy Light 150W",price:100,sku:"675",image:"Canopy%208.png",specs:["150W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],description:"A high-powered integrated LED canopy fixture for gas stations, parking garages, and other commercial areas. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."},
+  {id:9,name:"New 180W Big Size LED Canopy Light",price:100,sku:"1929",image:"Canopy%209.png",specs:["180W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A high-output 180W LED canopy light suitable for larger outdoor canopy spaces. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."},
+  {id:10,name:"New Big Size 240W LED Canopy Light",price:100,sku:"1186",image:"Canopy%2010.png",specs:["240W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A high-output 240W LED canopy light for large spaces requiring ample illumination. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."}
 ];
 
 let activeProduct = null;
 let cart = {};
 let toastTimer;
 
-function imageUrl(file) {
-  return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/" + file;
-}
-
-function money(value) {
-  return "$" + Number(value).toFixed(2);
-}
-
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, c => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#39;"
-  }[c]));
-}
-
-function renderProducts() {
-  const grid = document.getElementById("productGrid");
-
-  grid.innerHTML = products.map(p => `
+function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+file;}
+function money(value){return "$"+Number(value).toFixed(2);}
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+  grid.innerHTML=products.map(p=>`
     <article class="product-card">
       <div class="product-image">
-        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <div class="image-fallback">
-          LED KING<br>${escapeHtml(p.name)}<br>
-          <small>Product image unavailable</small>
-        </div>
+        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>
       </div>
       <div class="product-info">
-        <div class="sku">${p.sku ? "SKU: " + escapeHtml(p.sku) : "Canopy Lights"}</div>
+        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Canopy Lights"}</div>
         <h3>${escapeHtml(p.name)}</h3>
         <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
-        <div class="price-row">
-          <span class="price">${money(p.price)}</span>
-          <span class="unit">per item</span>
-        </div>
+        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">per item</span></div>
         <div class="actions">
           <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
           <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
         </div>
       </div>
-    </article>
-  `).join("");
+    </article>`).join("");
 }
-
-function openProduct(id) {
-  activeProduct = products.find(p => p.id === id);
-  if (!activeProduct) return;
-
-  const p = activeProduct;
-
-  document.getElementById("modalContent").innerHTML = `
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function openProduct(id){
+  activeProduct=products.find(p=>p.id===id);
+  if(!activeProduct)return;
+  const p=activeProduct;
+  document.getElementById("modalContent").innerHTML=`
     <div class="modal-photo">
-      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}"
-        onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
+      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
     </div>
     <div>
-      <div class="sku">${p.sku ? "SKU: " + escapeHtml(p.sku) + " · " : ""}Canopy Lights</div>
+      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Canopy Lights</div>
       <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
       <div class="modal-price">${money(p.price)}</div>
       <p class="description">${escapeHtml(p.description)}</p>
       <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
-      <ul class="spec-list">
-        ${p.specs.map(s => "<li>" + escapeHtml(s) + "</li>").join("")}
-      </ul>
-      <div class="qty-row">
-        <strong>Quantity</strong>
-        <div class="qty-control">
-          <button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button>
-          <input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity">
-          <button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button>
-        </div>
-      </div>
-      <button class="modal-add" onclick="addFromModal()">
-        🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span>
-      </button>
+      <ul class="spec-list">${p.specs.map(s=>"<li>"+escapeHtml(s)+"</li>").join("")}</ul>
+      <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
       <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
-    </div>
-  `;
-
+    </div>`;
   document.getElementById("productOverlay").classList.add("open");
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow="hidden";
 }
-
-function closeProduct() {
-  document.getElementById("productOverlay").classList.remove("open");
-  document.body.style.overflow = "";
+function closeProduct(){document.getElementById("productOverlay").classList.remove("open");document.body.style.overflow="";}
+function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
+function changeModalQty(delta){
+  const input=document.getElementById("modalQty");
+  input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);
+  document.getElementById("modalLinePrice").textContent=money(activeProduct.price*(parseInt(input.value,10)||1));
 }
-
-function overlayClick(e) {
-  if (e.target.id === "productOverlay") closeProduct();
+function addFromModal(){
+  const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);
+  addToCart(activeProduct.id,qty);closeProduct();openCart();
 }
-
-function changeModalQty(delta) {
-  const input = document.getElementById("modalQty");
-  input.value = Math.max(1, (parseInt(input.value, 10) || 1) + delta);
-  document.getElementById("modalLinePrice").textContent =
-    money(activeProduct.price * (parseInt(input.value, 10) || 1));
-}
-
-function addFromModal() {
-  const qty = Math.max(1, parseInt(document.getElementById("modalQty").value, 10) || 1);
-  addToCart(activeProduct.id, qty);
-  closeProduct();
-  openCart();
-}
-
-function quickAdd(id) {
-  addToCart(id, 1);
-  showToast("Added to cart");
-}
-
-function addToCart(id, qty) {
-  cart[id] = (cart[id] || 0) + qty;
-  renderCart();
-  updateCartCount();
-}
-
-function updateCartCount() {
-  document.getElementById("cartCount").textContent =
-    Object.values(cart).reduce((a, b) => a + b, 0);
-}
-
-function renderCart() {
-  const holder = document.getElementById("cartItems");
-  const ids = Object.keys(cart).filter(id => cart[id] > 0);
-
-  if (!ids.length) {
-    holder.innerHTML = `
-      <div class="empty-cart">
-        <div style="font-size:36px">🛒</div>
-        <strong>Your cart is empty</strong>
-        <p>Add a canopy light to get started.</p>
-      </div>`;
-  } else {
-    holder.innerHTML = ids.map(id => {
-      const p = products.find(x => x.id === Number(id));
-      const q = cart[id];
-
-      return `
-        <div class="cart-item">
-          <div>
-            <strong>${escapeHtml(p.name)}</strong>
-            <small>${p.sku ? "SKU: " + escapeHtml(p.sku) + " · " : ""}Qty: ${q} × ${money(p.price)}</small>
-            <div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div>
-          </div>
-          <div class="cart-item-right">
-            <strong>${money(q * p.price)}</strong>
-            <div class="qty-control" style="margin-top:7px">
-              <button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease quantity">−</button>
-              <input type="number" min="1" value="${q}" aria-label="Quantity"
-                onchange="setCartQty(${p.id},this.value)" style="width:40px">
-              <button onclick="changeCartQty(${p.id},1)" aria-label="Increase quantity">+</button>
-            </div>
-          </div>
-        </div>`;
+function quickAdd(id){addToCart(id,1);showToast("Added to cart");}
+function addToCart(id,qty){cart[id]=(cart[id]||0)+qty;renderCart();updateCartCount();}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function renderCart(){
+  const holder=document.getElementById("cartItems");
+  const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a canopy light to get started.</p></div>';}
+  else{
+    holder.innerHTML=ids.map(id=>{
+      const p=products.find(x=>x.id===Number(id));const q=cart[id];
+      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
     }).join("");
   }
-
-  const subtotal = ids.reduce(
-    (sum, id) => sum + cart[id] * products.find(p => p.id === Number(id)).price,
-    0
-  );
-
-  document.getElementById("cartSubtotal").textContent = money(subtotal);
+  const subtotal=ids.reduce((sum,id)=>sum+cart[id]*products.find(p=>p.id===Number(id)).price,0);
+  document.getElementById("cartSubtotal").textContent=money(subtotal);
 }
-
-function changeCartQty(id, delta) {
-  cart[id] = Math.max(0, (cart[id] || 0) + delta);
-  if (cart[id] === 0) delete cart[id];
-  renderCart();
-  updateCartCount();
-}
-
-function setCartQty(id, value) {
-  const q = parseInt(value, 10);
-  if (!Number.isFinite(q) || q < 1) {
-    delete cart[id];
-  } else {
-    cart[id] = q;
-  }
-  renderCart();
-  updateCartCount();
-}
-
-function removeFromCart(id) {
-  delete cart[id];
-  renderCart();
-  updateCartCount();
-}
-
-function openCart() {
-  renderCart();
-  document.getElementById("cartDrawer").classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function closeCart() {
-  document.getElementById("cartDrawer").classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function showToast(message) {
-  const t = document.getElementById("toast");
-  t.textContent = message;
-  t.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
-}
-
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") {
-    closeProduct();
-    closeCart();
-  }
-});
-
-renderProducts();
-renderCart();
-updateCartCount();
+function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
+function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1){delete cart[id]}else{cart[id]=q}renderCart();updateCartCount();}
+function removeFromCart(id){delete cart[id];renderCart();updateCartCount();}
+function openCart(){renderCart();document.getElementById("cartDrawer").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.body.style.overflow="";}
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart();}});
+renderProducts();renderCart();updateCartCount();
 </script>
 </body>
 </html>
