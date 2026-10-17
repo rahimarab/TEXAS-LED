@@ -1032,22 +1032,47 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 
 
 /* FINAL POPULAR LED LIGHTING IMAGE FIX
-   Scope is limited to category images inside the existing #products section.
-   Image files are intentionally preserved; CSS does not attempt to erase any
-   white background that may be part of the original image itself. */
+   Enlarge each existing image inside a uniform circle. Keep original source
+   files untouched: CSS cannot safely remove a white background baked into an image.
+*/
+#products .product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px 20px !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#products .product-grid > .product-card.category-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  grid-column: auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  text-align: center !important;
+}
 #products .product-grid > .product-card.category-card .product-image {
-  width: clamp(120px, 13vw, 190px) !important;
-  height: clamp(120px, 13vw, 190px) !important;
+  width: clamp(190px, 20vw, 230px) !important;
+  height: clamp(190px, 20vw, 230px) !important;
   min-width: 0 !important;
   min-height: 0 !important;
+  max-width: 100% !important;
   aspect-ratio: 1 / 1 !important;
   flex: 0 0 auto !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   box-sizing: border-box !important;
-  padding: 14% !important;
-  margin: 0 auto 16px !important;
+  padding: 0 !important;
+  margin: 0 auto 14px !important;
   border-radius: 50% !important;
   overflow: hidden !important;
   background: transparent !important;
@@ -1064,32 +1089,55 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
   flex: 0 0 auto !important;
   object-fit: contain !important;
   object-position: center center !important;
-  border-radius: 0 !important;
+  border-radius: 50% !important;
   margin: 0 !important;
   padding: 0 !important;
   background: transparent !important;
-  transform: none;
+  transform: none !important;
 }
 #products .product-grid > .product-card.category-card:hover .product-image {
   background: transparent !important;
   box-shadow: 0 8px 20px rgba(38, 56, 46, .08) !important;
+  transform: translateY(-3px) !important;
 }
 #products .product-grid > .product-card.category-card:hover .product-image img {
   transform: none !important;
 }
+#products .product-grid > .product-card.category-card .product-info {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 3px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  overflow-wrap: anywhere !important;
+}
+#products .product-grid > .product-card.category-card .product-info h3 {
+  width: 100%;
+  min-height: 2.7em;
+}
+#products .product-grid > .product-card.category-card .product-info p {
+  width: 100%;
+  min-height: 2.9em;
+}
 @media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 22px 16px !important; }
   #products .product-grid > .product-card.category-card .product-image {
-    width: clamp(145px, 18vw, 190px) !important;
-    height: clamp(145px, 18vw, 190px) !important;
+    width: clamp(175px, 21vw, 220px) !important;
+    height: clamp(175px, 21vw, 220px) !important;
   }
 }
 @media (max-width: 767px) {
+  #products .container { padding-inline: 15px !important; }
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 24px 12px !important; }
   #products .product-grid > .product-card.category-card .product-image {
-    width: clamp(120px, 38vw, 170px) !important;
-    height: clamp(120px, 38vw, 170px) !important;
-    padding: 13% !important;
+    width: clamp(145px, 43vw, 180px) !important;
+    height: clamp(145px, 43vw, 180px) !important;
     margin-bottom: 11px !important;
   }
+  #products .product-grid > .product-card.category-card .product-info h3 { font-size: 14px !important; }
+  #products .product-grid > .product-card.category-card .product-info p { font-size: 11px !important; }
 }
 
 </style>
