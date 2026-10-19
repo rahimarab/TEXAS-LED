@@ -3,696 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="LED KING Corn Bulbs - Commercial and residential LED corn bulb lighting solutions.">
-
-<title>LED KING | Corn Bulbs</title>
-
+<meta name="description" content="Shop LED KING corn bulbs and commercial LED corn lights.">
+<title>Corn Bulbs | LED KING Lighting Solutions</title>
 <style>
-
 :root{
-    --blue:#1261a0;
-    --blue-dark:#0b4778;
-    --black:#111111;
-    --gray:#666666;
-    --light:#f6f8fa;
-    --white:#ffffff;
+  --bg:#080b0b;--panel:#111818;--panel2:#172120;--teal:#00b8a9;
+  --teal-dark:#008f83;--lime:#c7f36b;--white:#f7fbfa;--muted:#aab9b6;
+  --line:#293735;--shadow:0 12px 32px rgba(0,0,0,.28);
 }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:inherit}
+header{background:#050707;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{max-width:1500px;margin:auto;padding:14px 4%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:900;letter-spacing:1px;font-size:1.45rem;text-decoration:none}
+.brand span{color:var(--teal)}
+.navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.navlinks a{text-decoration:none;color:#e7f0ee;font-size:.92rem}
+.navlinks a:hover{color:var(--lime)}
+.cart-button,.primary,.secondary{border:0;border-radius:8px;padding:11px 16px;font-weight:800;cursor:pointer}
+.cart-button,.primary{background:var(--teal);color:#04110f}
+.secondary{background:transparent;border:1px solid var(--teal);color:var(--white)}
+.hero{padding:58px 4% 42px;background:radial-gradient(ellipse at 80% 20%,rgba(0,184,169,.15),transparent 45%),linear-gradient(120deg,#080b0b,#101918)}
+.hero-inner{max-width:1500px;margin:auto}
+.eyebrow{color:var(--lime);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.78rem}
+h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.06;margin:10px 0 14px}
+.hero p{max-width:760px;color:var(--muted);font-size:1.05rem;margin:0}
+.toolbar{max-width:1500px;margin:24px auto 0;padding:0 4%;display:flex;gap:12px;flex-wrap:wrap}
+.toolbar input,.toolbar select{background:#101817;color:var(--white);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:1rem}
+.toolbar input{flex:1;min-width:220px}
+.toolbar select{min-width:180px}
+.count{max-width:1500px;margin:14px auto 18px;padding:0 4%;color:var(--muted);font-size:.9rem}
+.grid{max-width:1500px;margin:0 auto;padding:0 4% 54px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s,border-color .2s;box-shadow:var(--shadow)}
+.card:hover{transform:translateY(-4px);border-color:var(--teal)}
+.image-wrap{height:260px;background:#f7f8f6;display:flex;align-items:center;justify-content:center;padding:14px;position:relative}
+.image-wrap img{width:100%;height:100%;object-fit:contain;display:block}
+.image-fallback{display:none;color:#55615e;text-align:center;font-weight:700;font-size:.9rem}
+.tag{position:absolute;left:12px;top:12px;background:var(--lime);color:#15200c;padding:5px 9px;border-radius:5px;font-size:.72rem;font-weight:900}
+.card-body{padding:17px;display:flex;flex-direction:column;flex:1}
+.sku{color:var(--teal);font-size:.8rem;font-weight:800;margin-bottom:6px}
+.card h2{font-size:1.08rem;line-height:1.35;margin:0 0 10px}
+.specs{color:var(--muted);font-size:.88rem;margin:0 0 14px;flex:1}
+.price{font-size:1.35rem;font-weight:900;color:var(--lime);margin:0 0 14px}
+.price small{font-size:.75rem;color:var(--muted);font-weight:500}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.actions button{flex:1;min-width:100px}
+footer{border-top:1px solid var(--line);padding:28px 4%;text-align:center;color:var(--muted);background:#050707}
+footer strong{color:var(--white)}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:50;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{width:min(850px,100%);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--teal);border-radius:16px;padding:22px;position:relative}
+.close{position:absolute;right:14px;top:12px;background:transparent;border:0;color:var(--white);font-size:1.8rem;cursor:pointer}
+.modal-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding-top:16px}
+.modal-image{background:#f7f8f6;border-radius:10px;min-height:250px;display:flex;align-items:center;justify-content:center;padding:12px}
+.modal-image img{max-width:100%;max-height:350px;object-fit:contain}
+.modal h2{margin-top:0}
+.modal ul{padding-left:20px;color:var(--muted)}
+.cart-panel{display:none;position:fixed;right:0;top:0;height:100vh;width:min(420px,100%);background:#0d1413;border-left:1px solid var(--teal);z-index:60;padding:22px;overflow:auto;box-shadow:var(--shadow)}
+.cart-panel.open{display:block}
+.cart-head{display:flex;justify-content:space-between;align-items:center}
+.cart-head h2{margin:0}
+.cart-item{border-bottom:1px solid var(--line);padding:14px 0}
+.cart-item strong{display:block}
+.qty{display:flex;gap:8px;align-items:center;margin-top:8px}
+.qty button{background:var(--panel2);color:var(--white);border:1px solid var(--line);border-radius:5px;padding:4px 10px;cursor:pointer}
+.cart-total{font-size:1.2rem;font-weight:900;color:var(--lime);margin:20px 0}
+.notice{color:var(--muted);font-size:.82rem;margin-top:12px}
+.empty{color:var(--muted);padding:20px 0}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.image-wrap{height:230px}}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.image-wrap{height:190px}.card-body{padding:12px}.nav{align-items:flex-start}.navlinks{gap:10px}.navlinks a{font-size:.82rem}.modal-content{grid-template-columns:1fr}}
+@media(max-width:460px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.image-wrap{height:150px;padding:8px}.card h2{font-size:.96rem}.specs{font-size:.8rem}.actions{flex-direction:column}.actions button{width:100%}.brand{font-size:1.15rem}}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Updated to match the LED KING canopy page color theme */
+:root{
+  --bg:#f5f8fb;
+  --panel:#ffffff;
+  --panel2:#edf4f1;
+  --teal:#00b8a9;
+  --teal-dark:#008f83;
+  --lime:#c7f36b;
+  --white:#17212b;
+  --muted:#64748b;
+  --line:#e2e8f0;
+  --shadow:0 5px 18px rgba(17,24,23,.07);
 }
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:var(--black);
-    line-height:1.6;
-}
-
-/* HEADER */
-
-header{
-    background:#ffffff;
-    border-bottom:1px solid #e5e5e5;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:18px 25px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.logo{
-    font-size:28px;
-    font-weight:800;
-    color:var(--blue);
-    text-decoration:none;
-    letter-spacing:1px;
-}
-
-.nav-links{
-    display:flex;
-    gap:28px;
-    list-style:none;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:#222;
-    font-weight:600;
-    font-size:14px;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:var(--blue);
-}
-
-/* HERO */
-
-.hero{
-    background:linear-gradient(135deg,#f5faff,#eaf4fc);
-    padding:70px 25px;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:48px;
-    color:var(--blue-dark);
-    margin-bottom:15px;
-}
-
-.hero p{
-    max-width:750px;
-    margin:auto;
-    color:#555;
-    font-size:18px;
-}
-
-/* BREADCRUMB */
-
-.breadcrumb{
-    max-width:1200px;
-    margin:25px auto 0;
-    padding:0 25px;
-    font-size:14px;
-}
-
-.breadcrumb a{
-    color:var(--blue);
-    text-decoration:none;
-    font-weight:600;
-}
-
-.breadcrumb span{
-    color:#777;
-}
-
-/* PRODUCTS */
-
-.products-section{
-    max-width:1200px;
-    margin:50px auto;
-    padding:0 25px;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title h2{
-    font-size:32px;
-    color:#111;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:var(--gray);
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.product-card{
-    background:#ffffff;
-    border:1px solid #e3e7eb;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 18px rgba(0,0,0,0.06);
-    transition:transform 0.3s ease,box-shadow 0.3s ease;
-}
-
-.product-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 28px rgba(0,0,0,0.12);
-}
-
-.product-image{
-    width:100%;
-    height:260px;
-    background:#f3f5f7;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-    padding:15px;
-}
-
-.product-info{
-    padding:20px;
-    text-align:center;
-}
-
-.product-info h3{
-    font-size:18px;
-    margin-bottom:15px;
-    color:#222;
-}
-
-.quote-btn{
-    display:inline-block;
-    background:var(--blue);
-    color:#ffffff;
-    text-decoration:none;
-    padding:10px 20px;
-    border-radius:6px;
-    font-weight:600;
-    font-size:14px;
-    transition:0.3s;
-}
-
-.quote-btn:hover{
-    background:var(--blue-dark);
-}
-
-/* CTA */
-
-.cta{
-    background:var(--blue);
-    color:#ffffff;
-    text-align:center;
-    padding:65px 25px;
-    margin-top:70px;
-}
-
-.cta h2{
-    font-size:34px;
-    margin-bottom:15px;
-}
-
-.cta p{
-    max-width:700px;
-    margin:0 auto 25px;
-    font-size:17px;
-}
-
-.cta-button{
-    display:inline-block;
-    background:#ffffff;
-    color:var(--blue);
-    padding:13px 28px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:700;
-    transition:0.3s;
-}
-
-.cta-button:hover{
-    background:#f1f1f1;
-}
-
-/* FOOTER */
-
-footer{
-    background:#111111;
-    color:#ffffff;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer p{
-    margin:5px 0;
-    color:#cccccc;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:700px){
-
-    .navbar{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .nav-links{
-        gap:15px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-}
-
-@media(max-width:500px){
-
-    .hero{
-        padding:50px 20px;
-    }
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-image{
-        height:280px;
-    }
-
-}
+body{background:var(--bg);color:#17212b}
+header{background:#111;border-bottom:1px solid #252b29}
+.brand{color:#fff}
+.brand span{color:var(--teal)}
+.navlinks a{color:#f4f7f5}
+.navlinks a:hover{color:var(--teal)}
+.cart-button,.primary{background:var(--teal);color:#081311}
+.cart-button:hover,.primary:hover{background:#009688;color:#fff}
+.secondary{background:#fff;border:1px solid var(--teal);color:#008f83}
+.secondary:hover{background:#e8fbf8}
+.hero{background:linear-gradient(120deg,#101413 0%,#171f1d 68%,#063d38 100%);border-bottom:4px solid var(--teal)}
+.eyebrow{color:var(--lime)}
+.hero p{color:#e7f2ee}
+.toolbar input,.toolbar select{background:#fff;color:#17212b;border:1px solid var(--line)}
+.count{color:var(--muted)}
+.card{background:#fff;border-color:#dde5e1;box-shadow:0 5px 18px rgba(17,24,23,.07)}
+.card:hover{border-color:#00b8a966;box-shadow:0 12px 28px rgba(0,184,169,.16)}
+.sku{color:#008f83}
+.card h2{color:#17212b}
+.specs{color:#526173}
+.price{color:#008f83}
+.price small{color:#64748b}
+.image-wrap,.modal-image{background:#fff}
+.tag{background:var(--lime);color:#15200c}
+footer{background:#111;color:#f1f5f3;border-top:3px solid var(--teal)}
+footer strong{color:#fff}
+footer a{color:var(--teal)}
+.modal{background:#fff;border-color:var(--teal)}
+.modal h2{color:#17212b}
+.modal ul{color:#46576a}
+.cart-panel{background:#fff;border-left:1px solid var(--teal);color:#17212b}
+.cart-head h2{color:#17212b}
+.cart-item{border-bottom-color:var(--line)}
+.qty button{background:#edf4f1;color:#17212b;border-color:#cbd8d2}
+.cart-total{color:#008f83}
+.notice,.empty{color:#64748b}
+@media(max-width:760px){.navlinks a{color:#f4f7f5}}
 
 </style>
 </head>
-
 <body>
-
-
-<!-- HEADER -->
-
 <header>
-
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-            LED KING
-        </a>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html#about">
-                    ABOUT US
-                </a>
-            </li>
-
-            <li>
-                <a href="products.html">
-                    PRODUCT
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#specialty">
-                    SPECIALTY
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#quote">
-                    GET A QUOTE
-                </a>
-            </li>
-
-            <li>
-                <a href="index.html#contact">
-                    CONTACT
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
+  <nav class="nav">
+    <a class="brand" href="index.html" aria-label="LED KING home">LED <span>KING</span></a>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="#products">Corn Bulbs</a>
+      <a href="index.html#quote">Request a Quote</a>
+      <button class="cart-button" onclick="toggleCart(true)">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+  </nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
-
-    <h1>Corn Bulbs</h1>
-
-    <p>
-        Explore LED KING's selection of LED corn bulbs
-        for commercial, industrial and residential lighting applications.
-    </p>
-
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Lighting Solutions</div>
+    <h1>LED Corn Bulbs</h1>
+    <p>Commercial and industrial LED corn lights for retrofit applications, wall packs, post lights, parking lots, garages, warehouses, and more. Select a product to view specifications or add it to your cart.</p>
+  </div>
 </section>
 
-
-<!-- BREADCRUMB -->
-
-<div class="breadcrumb">
-
-    <a href="index.html">Home</a>
-
-    <span> / </span>
-
-    <a href="products.html">Products</a>
-
-    <span> / Corn Bulbs</span>
-
+<div class="toolbar" id="products">
+  <input type="search" id="search" placeholder="Search by product, SKU, wattage, or CCT…" aria-label="Search corn bulbs">
+  <select id="watt-filter" aria-label="Filter by wattage">
+    <option value="">All wattages</option>
+    <option>12W</option><option>18W</option><option>27W</option><option>36W</option><option>45W</option><option>54W</option><option>63W</option><option>75W</option><option>80W</option><option>100W</option><option>120W</option><option>150W</option><option>240W</option>
+  </select>
 </div>
-
-
-<!-- PRODUCTS -->
-
-<section class="products-section">
-
-    <div class="section-title">
-
-        <h2>Corn Bulb Collection</h2>
-
-        <p>
-            Browse our corn bulb products and contact LED KING
-            for pricing, availability and product information.
-        </p>
-
-    </div>
-
-
-    <div class="product-grid">
-
-
-        <!-- CORN BULB 1 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-1.jpg"
-                    alt="LED Corn Bulb 1"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 1</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 2 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-2.jpg"
-                    alt="LED Corn Bulb 2"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 2</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 3 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-3.jpg"
-                    alt="LED Corn Bulb 3"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 3</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 4 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-4.jpg"
-                    alt="LED Corn Bulb 4"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 4</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 5 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-5.jpg"
-                    alt="LED Corn Bulb 5"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 5</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 6 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-6.jpg"
-                    alt="LED Corn Bulb 6"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 6</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 7 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-7.jpg"
-                    alt="LED Corn Bulb 7"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 7</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 8 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-8.jpg"
-                    alt="LED Corn Bulb 8"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 8</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- CORN BULB 9 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-
-                <img
-                    src="images/corn-bulbs/corn-bulb-9.jpg"
-                    alt="LED Corn Bulb 9"
-                >
-
-            </div>
-
-            <div class="product-info">
-
-                <h3>Corn Bulb 9</h3>
-
-                <a href="index.html#quote" class="quote-btn">
-                    Get a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-    <h2>Need the Right Corn Bulb?</h2>
-
-    <p>
-        Contact LED KING for pricing, availability and help
-        finding the right LED lighting solution for your project.
-    </p>
-
-    <a href="index.html#quote" class="cta-button">
-        Get a Free Quote
-    </a>
-
-</section>
-
-
-<!-- FOOTER -->
+<div class="count" id="result-count">Showing 9 products</div>
+<main class="grid" id="product-grid"></main>
 
 <footer>
-
-    <p>
-        <strong>LED KING</strong>
-    </p>
-
-    <p>
-        3701 Airport Fwy, Fort Worth, TX 76111
-    </p>
-
-    <p>
-        Professional LED Lighting Solutions
-    </p>
-
-    <p>
-        © 2026 LED KING. All Rights Reserved.
-    </p>
-
+  <strong>LED KING · Lighting Solutions</strong><br>
+  Professional LED lighting products and solutions in Fort Worth, Texas and across the United States.<br>
+  <a href="index.html#quote">Request a quote</a>
 </footer>
 
+<div class="modal-backdrop" id="detail-modal" onclick="if(event.target===this)closeDetails()">
+  <div class="modal">
+    <button class="close" aria-label="Close product details" onclick="closeDetails()">&times;</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
 
+<aside class="cart-panel" id="cart-panel" aria-label="Shopping cart">
+  <div class="cart-head"><h2>Your Cart</h2><button class="secondary" onclick="toggleCart(false)">Close</button></div>
+  <div id="cart-items"></div>
+  <div class="cart-total" id="cart-total">Estimated total: $0.00</div>
+  <button class="primary" style="width:100%" onclick="requestQuote()">Request a Quote</button>
+  <p class="notice">This cart is for quote requests only. Online payment is not enabled. Products marked “Price on request” need price confirmation.</p>
+</aside>
+
+<script>
+const products = [
+ {id:1,image:"CORN BULB 1.png",name:"18W LED Corn Light",sku:"610",price:45,base:"E26",cct:"5700K",voltage:"AC 100–277V",wattage:"18W",details:["HID retrofit for exterior wall packs, yard lights, post lights, parking-lot shoebox fixtures, security lighting, garages, and high-bay applications.","Full omni-directional illumination; suitable for enclosed fixtures according to supplied description.","50,000-hour lifespan; IP65 rated; cULus and DLC approved; 5-year manufacturer warranty.","Bronze finish; slip-fit mount / AM bracket; no built-in photocell, compatible with major photocells."]},
+ {id:2,image:"CORN BULB 2.png",name:"Selectable-Wattage LED Corn Light",sku:"2527",price:75,base:"E26",cct:"3000K / 4000K / 5000K",voltage:"AC 120–277V",wattage:"12W / 18W / 27W",details:["Selectable wattage: 12W, 18W, or 27W.","Selectable color temperature: 3000K, 4000K, or 5000K.","E26 medium screw base; AC 120–277V. Certification details were not supplied."]},
+ {id:3,image:"CORN BULB 3.png",name:"DLC 5.1 Selectable LED Corn Light",sku:"2127 / 2128",price:85,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"36W / 45W / 54W",details:["Selectable wattage: 36W, 45W, or 54W.","Listed as DLC 5.1; cULus approved per supplied description.","50,000-hour lifespan; IP65 rated; 5-year manufacturer warranty.","Bronze finish; slip-fit mount / AM bracket; compatible with major photocells."]},
+ {id:4,image:"CORN BULB 4.png",name:"63W LED Corn Light — Details Pending",sku:"200",price:null,base:"E39",cct:"3000K / 4000K / 5000K",voltage:"AC 120–277V",wattage:"63W (other options mentioned: 36W / 54W)",details:["SKU 200 supplied by customer.","The listing text also mentions 54W and 36W alternatives in one section; please confirm final product specifications and price before publishing this item for sale.","DLC and UL listed were mentioned in the supplied description, but final details are pending."]},
+ {id:5,image:"CORN BULB 5.png",name:"DLC 5.1 Selectable LED Corn Light",sku:"2129",price:105,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"54W / 63W / 80W",details:["Selectable wattage: 54W, 63W, or 80W (based on supplied heading).","50,000-hour lifespan; IP65 rated; cULus approved; 5-year manufacturer warranty.","Bronze finish; slip-fit mount / AM bracket; compatible with major photocells."]},
+ {id:6,image:"CORN BULB 6.png",name:"DLC 5.1 Selectable LED Corn Light",sku:"431",price:null,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"63W / 80W / 100W",details:["Selectable wattage: 63W, 80W, or 100W, based on supplied heading.","50,000-hour lifespan; IP65 rated; cULus approved; 5-year manufacturer warranty, as stated in supplied description.","Price not provided yet."]},
+ {id:7,image:"CORN BULB 7.png",name:"DLC 5.1 Selectable LED Corn Light",sku:"769",price:175,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"80W / 100W / 120W",details:["Selectable wattage: 80W, 100W, or 120W, based on supplied heading.","50,000-hour lifespan; IP65 rated; cULus approved; 5-year manufacturer warranty.","Bronze finish; slip-fit mount / AM bracket; compatible with major photocells."]},
+ {id:8,image:"CORN BULB 8.png",name:"150W LED Corn Light — Clear Cover",sku:"612",price:110,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"150W",details:["Clear cover; E39 base; UL and DLC listed, according to supplied title.","50,000-hour lifespan; IP65 rated; 5-year manufacturer warranty per supplied description.","Bronze finish; slip-fit mount / AM bracket; compatible with major photocells."]},
+ {id:9,image:"CORN BULB 9.png",name:"240W LED Corn Light — Clear Cover",sku:"1772",price:300,base:"E39",cct:"5700K",voltage:"AC 100–277V",wattage:"240W",details:["Clear cover; E39 base; UL and DLC listed, according to supplied title.","50,000-hour lifespan; IP65 rated; 5-year manufacturer warranty per supplied description.","Bronze finish; slip-fit mount / AM bracket; compatible with major photocells."]}
+];
+let cart = [];
+const money = n => "$" + Number(n).toFixed(2);
+function escapeHTML(s){return String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function imageMarkup(p, extra=""){
+  return `<img ${extra} src="${escapeHTML(p.image)}" alt="${escapeHTML(p.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="image-fallback">Product image<br><small>${escapeHTML(p.image)}</small></div>`;
+}
+function renderProducts(){
+  const q=document.getElementById("search").value.toLowerCase().trim();
+  const watt=document.getElementById("watt-filter").value;
+  const list=products.filter(p=>{
+    const hay=[p.name,p.sku,p.cct,p.voltage,p.wattage,p.base,...p.details].join(" ").toLowerCase();
+    return hay.includes(q) && (!watt || p.wattage.includes(watt));
+  });
+  document.getElementById("result-count").textContent=`Showing ${list.length} of ${products.length} products`;
+  document.getElementById("product-grid").innerHTML=list.map(p=>`
+    <article class="card">
+      <div class="image-wrap">${imageMarkup(p)}<span class="tag">${p.base} BASE</span></div>
+      <div class="card-body">
+        <div class="sku">SKU: ${escapeHTML(p.sku)}</div>
+        <h2>${escapeHTML(p.name)}</h2>
+        <p class="specs"><strong>Wattage:</strong> ${escapeHTML(p.wattage)}<br><strong>CCT:</strong> ${escapeHTML(p.cct)}<br><strong>Voltage:</strong> ${escapeHTML(p.voltage)}</p>
+        <div class="price">${p.price===null?'Price on request':money(p.price)}</div>
+        <div class="actions"><button class="secondary" onclick="showDetails(${p.id})">Details</button><button class="primary" onclick="addToCart(${p.id})">Add to Cart</button></div>
+      </div>
+    </article>`).join("");
+}
+function showDetails(id){
+  const p=products.find(x=>x.id===id);
+  document.getElementById("modal-content").innerHTML=`
+    <div class="modal-content">
+      <div class="modal-image">${imageMarkup(p)}</div>
+      <div>
+        <div class="sku">SKU: ${escapeHTML(p.sku)}</div><h2>${escapeHTML(p.name)}</h2>
+        <div class="price">${p.price===null?'Price on request':money(p.price)}</div>
+        <p><strong>Wattage:</strong> ${escapeHTML(p.wattage)}<br><strong>CCT:</strong> ${escapeHTML(p.cct)}<br><strong>Base:</strong> ${escapeHTML(p.base)}<br><strong>Voltage:</strong> ${escapeHTML(p.voltage)}</p>
+        <ul>${p.details.map(d=>`<li>${escapeHTML(d)}</li>`).join("")}</ul>
+        <button class="primary" onclick="addToCart(${p.id});closeDetails()">Add to Cart</button>
+      </div>
+    </div>`;
+  document.getElementById("detail-modal").classList.add("open");
+}
+function closeDetails(){document.getElementById("detail-modal").classList.remove("open")}
+function addToCart(id){
+  const p=products.find(x=>x.id===id);
+  const existing=cart.find(x=>x.id===id);
+  if(existing)existing.qty++;else cart.push({id,qty:1});
+  renderCart();
+  toggleCart(true);
+}
+function changeQty(id,delta){
+  const item=cart.find(x=>x.id===id);if(!item)return;
+  item.qty+=delta;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);
+  renderCart();
+}
+function renderCart(){
+  document.getElementById("cart-count").textContent=cart.reduce((s,x)=>s+x.qty,0);
+  const target=document.getElementById("cart-items");
+  if(!cart.length){target.innerHTML='<p class="empty">Your cart is empty.</p>';document.getElementById("cart-total").textContent="Estimated total: $0.00";return}
+  target.innerHTML=cart.map(item=>{
+    const p=products.find(x=>x.id===item.id);
+    return `<div class="cart-item"><strong>${escapeHTML(p.name)}</strong><span>SKU: ${escapeHTML(p.sku)} · ${p.price===null?'Price on request':money(p.price)}</span><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>Qty: ${item.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div>`;
+  }).join("");
+  const unknown=cart.some(item=>products.find(p=>p.id===item.id).price===null);
+  const total=cart.reduce((s,item)=>{const p=products.find(x=>x.id===item.id);return s+(p.price||0)*item.qty},0);
+  document.getElementById("cart-total").textContent="Estimated total: "+money(total)+(unknown?" + items requiring price confirmation":"");
+}
+function toggleCart(open){document.getElementById("cart-panel").classList.toggle("open",open)}
+function requestQuote(){
+  const lines=cart.map(item=>{const p=products.find(x=>x.id===item.id);return `${p.name} | SKU ${p.sku} | Qty ${item.qty} | ${p.price===null?'Price on request':money(p.price)}`});
+  const body=encodeURIComponent("Hello LED KING,\n\nPlease provide a quote for:\n"+lines.join("\n")+"\n\nPlease confirm final pricing, availability, and shipping.");
+  window.location.href="index.html#quote";
+  // If the homepage quote form is not connected to cart data, users can copy the list from this cart.
+  alert("Please mention these items in your quote request:\n\n"+lines.join("\n")+"\n\nEstimated merchandise total: "+document.getElementById("cart-total").textContent);
+}
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("watt-filter").addEventListener("change",renderProducts);
+renderProducts();renderCart();
+</script>
 </body>
 </html>
