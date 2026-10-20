@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shop LED KING linear strip fixtures, LED battens, and selectable-CCT linear lighting.">
+<title>Linear Strip Fixture | LED KING</title>
+<style>
+:root{--bg:#080d10;--panel:#10191d;--panel2:#142328;--text:#f3f8f8;--muted:#a8b8bb;--teal:#21d4c2;--lime:#c5f64a;--line:#263b40;--danger:#ffcf70}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+.topbar{background:#050809;border-bottom:1px solid var(--line);padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-weight:900;font-size:1.5rem;letter-spacing:1px}.brand span{color:var(--teal)}
+.toplinks{display:flex;gap:18px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:.94rem}
+.toplinks a:hover{color:var(--lime)}
+.cart-button,.primary,.secondary{border:0;border-radius:9px;padding:11px 16px;font-weight:800}
+.cart-button,.primary{background:var(--teal);color:#041110}
+.secondary{background:transparent;border:1px solid var(--teal);color:var(--teal)}
+.cart-button:hover,.primary:hover{filter:brightness(1.08)}
+.hero{padding:52px 5% 42px;background:radial-gradient(ellipse at 80% 0%,#12393b 0%,#080d10 55%)}
+.eyebrow{color:var(--lime);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,5vw,3.6rem);line-height:1.08;margin:12px 0}
+.hero p{max-width:700px;color:var(--muted);font-size:1.06rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.tag{border:1px solid #315056;background:#0e1c20;border-radius:99px;padding:6px 11px;color:#d8eeee;font-size:.84rem}
+main{padding:32px 5% 64px;max-width:1500px;margin:auto}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+.section-head h2{font-size:1.7rem;margin:0}.section-head p{color:var(--muted);margin:5px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .18s,border-color .18s}
+.card:hover{transform:translateY(-3px);border-color:#327b7d}
+.image-wrap{height:220px;background:#f4f6f6;display:flex;align-items:center;justify-content:center;padding:12px}
+.image-wrap img{width:100%;height:100%;object-fit:contain}
+.image-fallback{color:#53666a;font-size:.9rem;text-align:center;display:none}
+.card-body{padding:18px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:.76rem;color:var(--teal);font-weight:800;letter-spacing:.7px;text-transform:uppercase}
+.card h3{font-size:1.12rem;line-height:1.35;margin:7px 0 8px}
+.summary{font-size:.91rem;color:var(--muted);margin:0 0 14px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 15px}
+.price{font-size:1.5rem;font-weight:900;color:var(--lime)}
+.warranty{font-size:.77rem;color:#b6d6d3}
+.actions{display:flex;gap:9px;flex-wrap:wrap}
+.actions button{flex:1;min-width:105px}
+.details{display:none;margin-top:15px;padding-top:14px;border-top:1px solid var(--line);color:#d6e3e5;font-size:.9rem}
+.details.open{display:block}
+.details ul{padding-left:18px;margin:8px 0}
+.details li{margin:4px 0}
+.notice{margin:24px 0 0;padding:14px 16px;border:1px solid #554a2d;background:#211d12;color:#f4dfac;border-radius:10px;font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:26px 5%;color:var(--muted);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.cart-overlay{display:none;position:fixed;inset:0;background:#000b;z-index:10}
+.cart-overlay.show{display:block}
+.cart-panel{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);background:#0c1518;border-left:1px solid var(--line);z-index:11;transform:translateX(105%);transition:transform .25s;padding:22px;overflow:auto}
+.cart-panel.show{transform:translateX(0)}
+.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}
+.cart-head h2{margin:0}.close{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+.cart-line{padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-line strong{display:block}.cart-line small{color:var(--muted)}
+.qty-controls{display:flex;align-items:center;gap:10px;margin-top:9px}
+.qty-controls button{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:6px;width:30px;height:30px}
+.remove{background:none;border:0;color:#ff9d9d;margin-left:auto}
+.cart-total{font-size:1.2rem;font-weight:900;display:flex;justify-content:space-between;margin:20px 0}
+.cart-help{color:var(--muted);font-size:.88rem}
+.empty{color:var(--muted);padding:20px 0}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.image-wrap{height:230px}.hero{padding-top:38px}.topbar{align-items:flex-start}.toplinks{gap:12px}.section-head h2{font-size:1.45rem}}
+
+/* LED KING HOMEPAGE COLOR MATCH — overrides the old dark theme */
+:root{
+ --bg:#F4F0E8;
+ --panel:#FFFFFF;
+ --panel2:#F4F0E8;
+ --text:#26332B;
+ --muted:#647268;
+ --teal:#176B50;
+ --lime:#C5A66A;
+ --line:#DED6C8;
+ --danger:#9A3D32;
+}
+body{background:var(--bg);color:var(--text)}
+.topbar{background:#FFFFFF;border-bottom:1px solid var(--line)}
+.brand span{color:#176B50}
+.toplinks{color:#647268}
+.toplinks a:hover{color:#176B50}
+.cart-button,.primary{background:#176B50;color:#FFFFFF}
+.secondary{background:#FFFFFF;border:1px solid #176B50;color:#176B50}
+.cart-button:hover,.primary:hover{filter:brightness(1.08)}
+.hero{background:linear-gradient(120deg,#F4F0E8 0%,#FFFFFF 62%,#F5EBD8 100%);border-bottom:1px solid var(--line)}
+.eyebrow{color:#176B50}
+.hero h1{color:#26382E}
+.hero p{color:#647268}
+.tag{border:1px solid #DED6C8;background:#FFFFFF;color:#26382E}
+.card{background:#FFFFFF;border:1px solid #DED6C8;box-shadow:0 5px 18px rgba(38,56,46,.06)}
+.card:hover{border-color:#C5A66A;box-shadow:0 10px 24px rgba(38,56,46,.10)}
+.image-wrap{background:#F4F0E8}
+.image-fallback{color:#647268}
+.sku{color:#176B50}
+.summary{color:#647268}
+.price{color:#176B50}
+.warranty{color:#8A6B35}
+.details{border-top:1px solid #DED6C8;color:#26332B}
+.notice{border:1px solid #E6D38B;background:#FFF8D8;color:#51451E}
+footer{border-top:1px solid #DED6C8;color:#647268;background:#FFFFFF}
+.cart-overlay{background:rgba(38,51,43,.45)}
+.cart-panel{background:#FFFFFF;border-left:1px solid #DED6C8;color:#26332B;box-shadow:-10px 0 30px rgba(38,56,46,.12)}
+.cart-head{border-bottom:1px solid #DED6C8}
+.close{background:#FFFFFF;color:#26332B;border:1px solid #DED6C8}
+.cart-line{border-bottom:1px solid #DED6C8}
+.cart-line small{color:#647268}
+.qty-controls button{background:#F4F0E8;border:1px solid #DED6C8;color:#26332B}
+.remove{color:#9A3D32}
+.cart-help,.empty{color:#647268}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="LED KING homepage">LED <span>KING</span></a>
+  <nav class="toplinks" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="#products">Linear Strip Fixture</a>
+    <button class="cart-button" id="openCart" type="button">Cart (<span id="cartCount">0</span>)</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">LED KING · Commercial &amp; Residential Lighting</div>
+  <h1>Linear Strip Fixtures</h1>
+  <p>Explore LED battens, linear strip fixtures, selectable wattage and color temperature options, and emergency-backup models. Open a product for its listed specifications and add items to your cart.</p>
+  <div class="hero-tags">
+    <span class="tag">Indoor &amp; Commercial Lighting</span>
+    <span class="tag">Multiple Sizes</span>
+    <span class="tag">Selected Models with 5-Year Warranty</span>
+  </div>
+</section>
+
+<main id="products">
+  <div class="section-head">
+    <div><h2>Available Products</h2><p>10 products · Prices shown in USD</p></div>
+    <button class="secondary" type="button" id="openCart2">View Cart (<span id="cartCount2">0</span>)</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+  <div class="notice"><strong>Product information note:</strong> Some supplied descriptions contain conflicting wattage, size, lumen, or color-temperature details. This page emphasizes the main product title and the clearly listed specifications; please confirm any uncertain technical detail before purchase.</div>
+</main>
+
+<footer>
+  <div><strong>LED KING</strong><br>Professional LED Lighting</div>
+  <div>Contact LED KING for availability, shipping, and product questions.</div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+  <div class="cart-head"><h2>Your Cart</h2><button class="close" id="closeCart" type="button">Close ✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-total"><span>Subtotal</span><span id="cartTotal">$0.00</span></div>
+  <p class="cart-help">This is a front-end cart preview only. It does not process payments or submit an order. Connect it to your checkout or order system before accepting online orders.</p>
+  <button class="primary" id="copyCart" type="button" style="width:100%">Copy Cart Summary</button>
+</aside>
+
+<script>
+const products = [
+ {id:1,name:"LED BATTEN 20W 2FT Tube Light",sku:"622",price:29,image:"LINEAR%20STRIP%201.png",summary:"2 ft LED batten tube light, available in 4000K and 5000K.",specs:["Power: 20W","Length: 2 ft","Color temperature: 4000K / 5000K","Listed warranty: 5 years","Supplied description also mentions 800 lumens and 20,000 hours; confirm these details before ordering."]},
+ {id:2,name:"3FT LED Batten Light, 30W",sku:"923",price:45,image:"LINEAR%20STRIP%202.png",summary:"3 ft batten light with frosted PC cover and 5000K light.",specs:["Power: 30W","Length: 3 ft","Color temperature: 5000K","Frosted PC cover","125 lm/W; CRI 82","Independent version; 10 pieces per carton"]},
+ {id:3,name:"LED BATTEN 40W 4FT Tube Light",sku:"623",price:55,image:"LINEAR%20STRIP%203.png",summary:"4 ft LED batten tube light, available in 4000K and 5000K.",specs:["Power: 40W","Length: 4 ft","Color temperature: 4000K / 5000K","Listed warranty: 5 years","Supplied description mentions 100–277 VAC, PF >0.95, 220–270° beam angle, U-shape PCB, double-row LEDs, and ETL/DLC certifications; confirm exact model certifications before ordering."]},
+ {id:4,name:"35W Linear Strip Fixture, 4FT",sku:"1744",price:89,image:"LINEAR%20STRIP%204.png",summary:"4 ft linear strip fixture; supplied core specification lists 35W and 5000K.",specs:["Listed power: 35W","Length: 4 ft","Listed color temperature: 5000K","Input voltage described as 120–277V / AC100–277V","Bronze finish; no photocell listed","Listed warranty: 5 years","Supplied description also mentions 0–10V dimming, selectable CCT, IP65, and cULus/DLC; confirm the exact configuration."]},
+ {id:5,name:"60W Linear Strip Fixture, 8FT",sku:"1526",price:95,image:"LINEAR%20STRIP%205.png",summary:"8 ft linear strip fixture with a listed 60W rating and 5000K color temperature.",specs:["Listed power: 60W","Length: 8 ft","Listed color temperature: 5000K","Input voltage described as 120–277V / AC100–277V","Bronze finish; no photocell listed","Listed warranty: 5 years","Supplied description mentions 0–10V dimming, selectable CCT, IP65, and cULus/DLC; confirm the exact configuration."]},
+ {id:6,name:"4FT LED Strip Light, CCT & Wattage Selectable",sku:"2506",price:125,image:"LINEAR%20STRIP%206.png",summary:"White 4 ft strip light with selectable wattage and color temperature.",specs:["Length: 4 ft","Selectable wattage listed: 40W / 30W / 20W","Selectable CCT: 3000K / 3500K / 4000K / 5000K","Input: AC120–277V","Finish: white","Regular bracket listed","Supplied text also contains 8 ft and 90W references; confirm the exact model details."]},
+ {id:7,name:"4FT Linear Fixture, 40W, 5700K",sku:"924",price:175,image:"LINEAR%20STRIP%207.png",summary:"4 ft linkable linear fixture with frosted PC cover.",specs:["Power: 40W","Length: 4 ft","Color temperature: 5700K","Frosted PC cover","CRI 82; 130 lm/W listed","Linkable version; 4 pieces per carton","Supplied general description also mentions dimming and selectable CCT; confirm whether these apply to this specific 5700K model."]},
+ {id:8,name:"8FT LED Strip Light, CCT & Wattage Selectable",sku:"2507",price:175,image:"LINEAR%20STRIP%208.png",summary:"White 8 ft strip light with selectable wattage and color temperature.",specs:["Length: 8 ft","Selectable wattage listed: 80W / 60W / 50W","Selectable CCT: 3000K / 3500K / 4000K / 5000K","Input: AC100–277V","Finish: white","Regular bracket listed","Supplied text also contains a 90W reference; confirm the exact model details."]},
+ {id:9,name:"4FT Linear Strip with Emergency Battery Backup",sku:"2189",price:250,image:"LINEAR%20STRIP%209.png",summary:"4 ft white linear strip fixture with selectable wattage/CCT and emergency battery backup.",specs:["Length: 4 ft","Selectable wattage: 40W / 30W / 20W","Selectable CCT","Input voltage: 100–277V","Finish: white","Emergency battery backup"]},
+ {id:10,name:"Linear Strip with Emergency Battery Backup",sku:"2507 / 2189-1",price:250,image:"LINEAR%20STRIP%2010.png",summary:"White linear strip fixture with emergency battery backup and selectable wattage/CCT.",specs:["Supplied title describes 4 ft","Selectable wattage: 80W / 60W / 40W","Selectable CCT","Input voltage: 100–277V","Finish: white","Emergency battery backup","SKU supplied as 2507 and 2189-1; confirm the correct SKU and length before ordering."]}
+];
+const cart = {};
+const grid = document.getElementById("productGrid");
+const money = n => "$" + n.toFixed(2);
+
+function renderProducts(){
+ grid.innerHTML = products.map(p => `
+  <article class="card">
+   <div class="image-wrap">
+    <img src="https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="image-fallback">Product image<br>${p.id}</div>
+   </div>
+   <div class="card-body">
+    <div class="sku">SKU: ${p.sku}</div>
+    <h3>${p.name}</h3>
+    <p class="summary">${p.summary}</p>
+    <div class="price-row"><span class="price">${money(p.price)}</span><span class="warranty">${p.specs.some(s=>s.toLowerCase().includes("warranty"))?"5-year warranty listed":""}</span></div>
+    <div class="actions">
+      <button class="secondary" type="button" onclick="toggleDetails(${p.id},this)" aria-expanded="false">View Product</button>
+      <button class="primary" type="button" onclick="addToCart(${p.id})">Add to Cart</button>
+    </div>
+    <div class="details" id="details-${p.id}">
+      <strong>Product Details</strong>
+      <ul>${p.specs.map(s=>`<li>${s}</li>`).join("")}</ul>
+      <strong>Price: ${money(p.price)}</strong>
+    </div>
+   </div>
+  </article>`).join("");
+}
+function toggleDetails(id,button){
+ const box=document.getElementById("details-"+id);
+ const open=box.classList.toggle("open");
+ button.textContent=open?"Hide Details":"View Product";
+ button.setAttribute("aria-expanded",String(open));
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;updateCart();openCart();}
+function updateCart(){
+ const count=Object.values(cart).reduce((a,b)=>a+b,0);
+ document.getElementById("cartCount").textContent=count;
+ document.getElementById("cartCount2").textContent=count;
+ const entries=products.filter(p=>cart[p.id]);
+ document.getElementById("cartItems").innerHTML=entries.length?entries.map(p=>`
+  <div class="cart-line">
+   <strong>${p.name}</strong><small>SKU ${p.sku} · ${money(p.price)} each</small>
+   <div class="qty-controls">
+    <button type="button" aria-label="Decrease quantity" onclick="changeQty(${p.id},-1)">−</button>
+    <span>Qty: ${cart[p.id]}</span>
+    <button type="button" aria-label="Increase quantity" onclick="changeQty(${p.id},1)">+</button>
+    <button type="button" class="remove" onclick="removeItem(${p.id})">Remove</button>
+   </div>
+   <div style="margin-top:7px;font-weight:800">${money(p.price*cart[p.id])}</div>
+  </div>`).join(""):`<div class="empty">Your cart is empty. Add a product to get started.</div>`;
+ const total=entries.reduce((sum,p)=>sum+p.price*cart[p.id],0);
+ document.getElementById("cartTotal").textContent=money(total);
+}
+function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];updateCart();}
+function removeItem(id){delete cart[id];updateCart();}
+function openCart(){document.getElementById("cartOverlay").classList.add("show");document.getElementById("cartPanel").classList.add("show");document.getElementById("cartPanel").setAttribute("aria-hidden","false");}
+function closeCart(){document.getElementById("cartOverlay").classList.remove("show");document.getElementById("cartPanel").classList.remove("show");document.getElementById("cartPanel").setAttribute("aria-hidden","true");}
+document.getElementById("openCart").addEventListener("click",openCart);
+document.getElementById("openCart2").addEventListener("click",openCart);
+document.getElementById("closeCart").addEventListener("click",closeCart);
+document.getElementById("cartOverlay").addEventListener("click",closeCart);
+document.getElementById("copyCart").addEventListener("click",()=>{
+ const entries=products.filter(p=>cart[p.id]);
+ if(!entries.length){alert("Your cart is empty.");return;}
+ const lines=["LED KING — Cart Summary",""];
+ entries.forEach(p=>lines.push(`${p.name} | SKU ${p.sku} | Qty ${cart[p.id]} | ${money(p.price*cart[p.id])}`));
+ lines.push("",`Subtotal: ${document.getElementById("cartTotal").textContent}`,"Shipping and taxes not included.");
+ const text=lines.join("\n");
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>alert("Cart summary copied.")).catch(()=>window.prompt("Copy your cart summary:",text));}
+ else{window.prompt("Copy your cart summary:",text);}
+});
+renderProducts();updateCart();
+</script>
+</body>
+</html>
