@@ -9,25 +9,34 @@
 <style>
 /* =========================================================
    LED KING - BLACK + TEAL + LIME THEME
+   --orange    = vibrant orange, used on dark backgrounds and buttons
+   --electric-blue = bold blue, used for links and text on white backgrounds
+   (existing variable names are retained so the site structure stays unchanged)
    ========================================================= */
+
 :root{
-    --blue:#00B8A9;
-    --blue-dark:#009688;
-    --blue-light:#E6FBF8;
-    --gold-text:#008F83;
+    --blue:#00B8A9;          /* vibrant teal */
+    --blue-dark:#009688;     /* deeper teal hover */
+    --blue-light:#E6FBF8;    /* light teal tint */
+    --gold-text:#008F83;     /* deep teal for text on white */
     --gold-text-hover:#006B63;
+
     --navy:#050505;
     --dark:#090909;
     --black:#000000;
+
     --white:#ffffff;
     --gray:#f5f7fa;
     --gray2:#eef2f6;
+
     --text:#1a2028;
     --muted:#697586;
     --border:#dfe5ec;
+
     --shadow:0 12px 35px rgba(0,0,0,.08);
     --shadow-hover:0 18px 45px rgba(0,0,0,.14);
     --radius:12px;
+
     --page-max:2400px;
     --page-pad:clamp(20px,2.4vw,56px);
 }
@@ -60,7 +69,8 @@ header{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px soli
 /* NAVIGATION */
 .nav-menu{display:flex;align-items:center;gap:30px;list-style:none;font-size:14px;font-weight:800;}
 .nav-menu a{position:relative;padding:30px 0;transition:.2s;}
-.nav-menu a:hover,.nav-menu a.active{color:var(--gold-text);}
+.nav-menu a:hover{color:var(--gold-text);}
+.nav-menu a.active{color:var(--gold-text);}
 .nav-menu a.active:after{content:"";position:absolute;height:3px;left:0;right:0;bottom:17px;background:var(--blue);}
 
 /* NAV ACTIONS */
@@ -204,32 +214,53 @@ footer p{color:#9da8b5;font-size:13px;}
 .footer-col a:hover{color:#fff;}
 .footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid #26323e;text-align:center;color:#687583;font-size:12px;}
 
-/* ALIGNMENT + SIDE DECORATION */
+
+/* =========================================================
+   ALIGNMENT + SIDE DECORATION
+   - faint blueprint grid and soft orange glow on the sides of
+     light sections, so wide screens never look empty
+   - short orange bar under every heading (same spot every time)
+   ========================================================= */
 :root{
     --grid:linear-gradient(rgba(18,61,121,.025) 1px,transparent 1px),
            linear-gradient(90deg,rgba(18,61,121,.025) 1px,transparent 1px);
 }
-#products,.contact-section{
+#products,
+.contact-section{
     background:
         radial-gradient(circle at 0% 0%,rgba(255,90,31,.13),transparent 38%),
         radial-gradient(circle at 100% 100%,rgba(255,90,31,.10),transparent 38%),
-        var(--grid),#fff;
+        var(--grid),
+        #fff;
     background-size:auto,auto,48px 48px,48px 48px;
 }
-.specialty-section,.quote-section{
+.specialty-section,
+.quote-section{
     background:
         radial-gradient(circle at 100% 0%,rgba(255,90,31,.13),transparent 38%),
         radial-gradient(circle at 0% 100%,rgba(255,90,31,.10),transparent 38%),
-        var(--grid),#f5f7f9;
+        var(--grid),
+        #f5f7f9;
     background-size:auto,auto,48px 48px,48px 48px;
 }
-.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{
-    content:"";display:block;width:64px;height:4px;border-radius:2px;background:var(--blue);margin:14px auto 0;
+.section-heading-center h2:after,
+.products-title h2:after,
+.quote-text h2:after{
+    content:"";
+    display:block;
+    width:64px;
+    height:4px;
+    border-radius:2px;
+    background:var(--blue);
+    margin:14px auto 0;
 }
-.products-title h2:after,.quote-text h2:after{margin-left:0;}
+.products-title h2:after,
+.quote-text h2:after{margin-left:0;}
 .section-heading-center p{margin-top:14px;}
 .products-title p{margin-top:14px;}
 .quote-text p{margin-top:4px;}
+
+/* MOBILE BAR */
 .mobile-bar{display:none;}
 
 /* RESPONSIVE */
@@ -239,6 +270,7 @@ footer p{color:#9da8b5;font-size:13px;}
     .specialty-grid,.why-grid{grid-template-columns:repeat(2,1fr);}
     .hero h1{font-size:50px;}
 }
+
 @media(max-width:900px){
     .top-bar{display:flex;padding:9px 0;}
     .top-bar-inner{padding:0 20px;display:flex;flex-direction:column;align-items:stretch;gap:8px;font-size:13px;}
@@ -273,22 +305,58 @@ footer p{color:#9da8b5;font-size:13px;}
     .mobile-bar span{display:block;font-size:17px;}
     footer{padding-bottom:75px;}
 }
-@media (min-width:1500px){
-    .product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;}
+
+
+/* WIDER DESKTOP LAYOUT */
+@media (min-width: 1500px) {
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+    }
 }
-.container,.navbar,.hero-content,.top-bar-inner,.feature-inner{width:100%;}
-.product-card{min-width:0;}
-.product-info{min-width:0;overflow-wrap:anywhere;}
-.product-info h3{font-size:15px;}
-@media(max-width:1499px){
-    .product-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+
+/* USE SCREEN WIDTH MORE EFFECTIVELY */
+.container,
+.navbar,
+.hero-content,
+.top-bar-inner,
+.feature-inner {
+    width: 100%;
 }
-@media(max-width:1150px){
-    .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+/* KEEP PRODUCT CARDS PROPORTIONATE */
+.product-card {
+    min-width: 0;
 }
-@media(max-width:600px){
-    .product-grid{grid-template-columns:1fr;}
+
+.product-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
+
+.product-info h3 {
+    font-size: 15px;
+}
+
+/* KEEP TABLET AND MOBILE LAYOUTS RESPONSIVE */
+@media (max-width: 1499px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1150px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media(max-width:600px){
     .container{padding:0 18px;}
     .hero-content{padding:60px 20px;}
@@ -310,6 +378,1844 @@ footer p{color:#9da8b5;font-size:13px;}
     .form-row{grid-template-columns:1fr;}
     .form-box{padding:22px;}
     .logo{font-size:19px;}
+    .logo-symbol{width:37px;height:37px;font-size:18px;}
+    .promo-box{min-height:105px;}
+}
+/* CLEAN BACKGROUND: remove the square blueprint grid */
+#products,
+.contact-section{
+    background-image:
+        radial-gradient(circle at 0% 0%,rgba(255,90,31,.09),transparent 38%),
+        radial-gradient(circle at 100% 100%,rgba(255,90,31,.07),transparent 38%);
+    background-color:#fff;
+    background-size:auto,auto;
+    background-repeat:no-repeat;
+}
+.specialty-section,
+.quote-section{
+    background-image:
+        radial-gradient(circle at 100% 0%,rgba(255,90,31,.09),transparent 38%),
+        radial-gradient(circle at 0% 100%,rgba(255,90,31,.07),transparent 38%);
+    background-color:#f5f7f9;
+    background-size:auto,auto;
+    background-repeat:no-repeat;
+}
+
+
+/* BLACK-BACKGROUND FINISH: black is the main canvas; teal and lime stay vivid */
+body{background:#050505;color:#f5f7fa;}
+header{background:#050505;border-bottom:1px solid #202727;}
+.logo,.nav-icon,.menu-btn{color:#fff;}
+.nav-menu a{color:#f3f5f7;}
+.nav-menu a:hover,.nav-menu a.active{color:#C7F000;}
+.feature-strip{background:#080a0a;border-bottom:1px solid #202727;color:#fff;}
+.feature{border-right-color:#242a2a;}
+.feature-icon{color:#00B8A9;}
+.feature p{color:#b7c0c8;}
+#products,.contact-section,.specialty-section,.quote-section{
+    background:#050505 !important;
+    color:#f5f7fa;
+}
+.products-title h2,.section-heading-center h2,.quote-text h2{color:#fff;}
+.products-title p,.section-heading-center p,.quote-text p{color:#c1c8cf;}
+.products-title .small,.section-heading-center .small{color:#00B8A9;}
+.product-card,.specialty-item,.contact-card{
+    background:#101313;
+    color:#fff;
+    border-color:#263333;
+    box-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#fff;}
+.product-info p,.contact-card p{color:#bdc5cb;}
+.shop-link,.contact-card a{color:#C7F000;}
+.shop-link:hover,.contact-card a:hover{color:#00B8A9;}
+.product-image{background:#f1f3f3;}
+.more-card{background:#092e2b;border-color:#00B8A9;}
+.more-card:hover{background:#06423d;}
+.quote-text h2 span{color:#C7F000;}
+.quote-points li{color:#e6eaed;}
+.quote-points li:before{color:#C7F000;}
+.form-box{background:#101313;border-color:#293434;color:#fff;}
+.form-box h3,.form-group label{color:#fff;}
+.form-group input,.form-group select,.form-group textarea{background:#080b0b;color:#fff;border-color:#354141;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#aab3b8;}
+.form-group select option{background:#080b0b;color:#fff;}
+.contact-card:hover,.specialty-item:hover,.product-card:hover{border-color:#00B8A9;}
+.why-section{background:#000;color:#fff;}
+.why-section:before{background:rgba(0,184,169,.14);}
+.why-card{background:#0c1111;border-color:#263333;}
+.why-card p{color:#c0c8ce;}
+footer{background:#000;border-top:1px solid #172222;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#C7F000;}
+/* Remove the former blueprint-square pattern and colored side washes */
+#products,.contact-section,.specialty-section,.quote-section{
+    background-image:none !important;
+    background-color:#050505 !important;
+}
+@media(max-width:900px){
+    .nav-menu{background:#050505;border:1px solid #273333;}
+}
+
+
+
+/* =========================================================
+   LED KING PREMIUM LIGHT GRAY THEME
+   Palette: light gray, white, navy, bright blue, champagne gold
+   Background patterns intentionally removed.
+   ========================================================= */
+:root{
+    --blue:#1677FF;
+    --blue-dark:#105FCB;
+    --blue-light:#EAF2FF;
+    --gold-text:#A87922;
+    --gold-text-hover:#805719;
+    --navy:#173B65;
+    --dark:#102B49;
+    --black:#101820;
+    --white:#FFFFFF;
+    --gray:#F2F5F8;
+    --gray2:#E8EDF3;
+    --text:#202833;
+    --muted:#647184;
+    --border:#D9E0E8;
+    --shadow:0 12px 35px rgba(23,59,101,.09);
+    --shadow-hover:0 18px 45px rgba(23,59,101,.16);
+}
+body{background:#F2F5F8 !important;color:#202833 !important;}
+.top-bar{background:#173B65 !important;color:#fff;}
+header{background:#fff !important;border-bottom:1px solid #D9E0E8 !important;box-shadow:0 4px 18px rgba(23,59,101,.05);}
+.logo,.nav-icon,.menu-btn{color:#173B65 !important;}
+.logo-symbol{border-color:#1677FF;color:#A87922;}
+.logo-symbol:after{background:#D6A84F;}
+.logo span,.footer-logo span{color:#A87922 !important;}
+.nav-menu a{color:#26384D !important;}
+.nav-menu a:hover,.nav-menu a.active{color:#1677FF !important;}
+.nav-menu a.active:after{background:#D6A84F !important;}
+.nav-icon:hover{color:#1677FF !important;}
+.cart-number{background:#1677FF !important;color:#fff;}
+.hero{background:
+    linear-gradient(90deg,rgba(15,39,67,.94) 0%,rgba(23,59,101,.84) 42%,rgba(23,59,101,.46) 72%,rgba(23,59,101,.14) 100%),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat !important;}
+.hero:after{background:#D6A84F !important;}
+.hero-kicker,.hero h1 span{color:#F0CC7A !important;}
+.hero-kicker:before{background:#D6A84F !important;}
+.btn-blue{background:#1677FF !important;color:#fff !important;box-shadow:0 8px 22px rgba(22,119,255,.24) !important;}
+.btn-blue:hover{background:#105FCB !important;}
+.btn-outline{border-color:rgba(255,255,255,.85);color:#fff;}
+.feature-strip{background:#fff !important;border-bottom:1px solid #D9E0E8 !important;color:#202833 !important;}
+.feature{border-right-color:#D9E0E8 !important;}
+.feature-icon{color:#173B65 !important;}
+.feature h3{color:#202833;}
+.feature p{color:#647184 !important;}
+#products,.contact-section,.specialty-section,.quote-section{
+    background-color:#F2F5F8 !important;
+    background-image:none !important;
+    color:#202833 !important;
+}
+.products-title h2,.section-heading-center h2,.quote-text h2{color:#202833 !important;}
+.products-title p,.section-heading-center p,.quote-text p{color:#647184 !important;}
+.products-title .small,.section-heading-center .small{color:#A87922 !important;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#D6A84F !important;}
+.product-card,.specialty-item,.contact-card{
+    background:#fff !important;color:#202833 !important;border-color:#D9E0E8 !important;
+    box-shadow:0 7px 24px rgba(23,59,101,.07) !important;
+}
+.product-card:hover,.specialty-item:hover,.contact-card:hover{border-color:#1677FF !important;box-shadow:0 14px 30px rgba(23,59,101,.13) !important;}
+.product-image{background:#FFFFFF !important;}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#202833 !important;}
+.product-info p,.contact-card p{color:#647184 !important;}
+.shop-link,.contact-card a{color:#A87922 !important;}
+.shop-link:hover,.contact-card a:hover{color:#1677FF !important;}
+.promo-box{background:linear-gradient(100deg,rgba(23,59,101,.96),rgba(23,59,101,.72)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover !important;}
+.promo-label{background:#D6A84F !important;color:#173B65 !important;}
+.promo-box strong span{color:#F0CC7A !important;}
+.more-card{background:#173B65 !important;border-color:#173B65 !important;}
+.more-card:hover{background:#105FCB !important;border-color:#D6A84F !important;}
+.more-card h3{color:#fff !important;}
+.more-card p{color:#DCE6F2 !important;}
+.why-section{background:linear-gradient(120deg,#173B65 0%,#102B49 72%,#0B2139 100%) !important;color:#fff !important;}
+.why-section:before{background:rgba(214,173,96,.17) !important;}
+.why-section .section-heading-center .small{color:#F0CC7A !important;}
+.why-section .section-heading-center h2{color:#fff !important;}
+.why-section .section-heading-center p{color:#DCE6F2 !important;}
+.why-card{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.18) !important;}
+.why-number{color:#F0CC7A !important;}
+.why-card h3{color:#fff !important;}
+.why-card p{color:#DCE6F2 !important;}
+.quote-text h2 span{color:#A87922 !important;}
+.quote-points li{color:#344256 !important;}
+.quote-points li:before{color:#A87922 !important;}
+.form-box{background:#fff !important;border-color:#D9E0E8 !important;color:#202833 !important;box-shadow:0 12px 35px rgba(23,59,101,.09) !important;}
+.form-box h3,.form-group label{color:#202833 !important;}
+.form-group input,.form-group select,.form-group textarea{background:#fff !important;color:#202833 !important;border-color:#CCD6E2 !important;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#1677FF !important;box-shadow:0 0 0 3px rgba(22,119,255,.14) !important;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#7B8797 !important;}
+.form-group select option{background:#fff;color:#202833;}
+.contact-card{background:#fff !important;}
+footer{background:#173B65 !important;border-top:4px solid #D6A84F !important;color:#fff !important;}
+.footer-col h3{color:#F0CC7A !important;}
+footer p,.footer-col a{color:#DCE6F2 !important;}
+.footer-col a:hover{color:#fff !important;}
+.footer-bottom{border-top-color:rgba(255,255,255,.18) !important;color:#B8C9DD !important;}
+.mobile-bar{background:#173B65 !important;border-top:2px solid #D6A84F !important;}
+.mobile-bar a{color:#fff !important;border-right-color:rgba(255,255,255,.18) !important;}
+@media(max-width:900px){
+    .nav-menu{background:#fff !important;border:1px solid #D9E0E8 !important;box-shadow:0 10px 25px rgba(23,59,101,.12) !important;}
+    .nav-menu a{color:#26384D !important;}
+}
+/* Safety override: no grid, squares, or patterned background anywhere. */
+#products,.contact-section,.specialty-section,.quote-section{background-image:none !important;}
+
+
+
+/* =========================================================
+   LED KING WARM IVORY THEME
+   Palette: warm ivory, white, forest green, muted champagne gold.
+   Decorative square/grid background patterns are disabled.
+   ========================================================= */
+:root{
+    --blue:#34483D;
+    --blue-dark:#26382E;
+    --blue-light:#E8EEE8;
+    --gold-text:#A98745;
+    --gold-text-hover:#80652F;
+    --navy:#34483D;
+    --dark:#26382E;
+    --black:#20352A;
+    --white:#FFFFFF;
+    --gray:#F4F0E8;
+    --gray2:#E9E2D6;
+    --text:#26332B;
+    --muted:#647268;
+    --border:#DED6C8;
+    --shadow:0 12px 35px rgba(52,72,61,.08);
+    --shadow-hover:0 18px 45px rgba(52,72,61,.15);
+}
+html,body{background:#F4F0E8 !important;color:#26332B !important;}
+body{background-image:none !important;}
+.top-bar{background:#26382E !important;color:#fff !important;}
+header{background:#FFFFFF !important;border-bottom:1px solid #DED6C8 !important;box-shadow:0 4px 18px rgba(52,72,61,.06) !important;}
+.logo,.nav-icon,.menu-btn{color:#34483D !important;}
+.logo-symbol{border-color:#176B50 !important;color:#A98745 !important;}
+.logo-symbol:after{background:#C5A66A !important;}
+.logo span,.footer-logo span{color:#A98745 !important;}
+.nav-menu a{color:#34483D !important;}
+.nav-menu a:hover,.nav-menu a.active{color:#176B50 !important;}
+.nav-menu a.active:after{background:#C5A66A !important;}
+.nav-icon:hover{color:#176B50 !important;}
+.cart-number{background:#176B50 !important;color:#fff !important;}
+.hero{background:linear-gradient(90deg,rgba(30,52,40,.94) 0%,rgba(52,72,61,.82) 45%,rgba(52,72,61,.42) 76%,rgba(52,72,61,.12) 100%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=90") center/cover no-repeat !important;}
+.hero:after{background:#C5A66A !important;}
+.hero-kicker,.hero h1 span{color:#E5D1A3 !important;}
+.hero-kicker:before{background:#C5A66A !important;}
+.btn-blue{background:#176B50 !important;color:#fff !important;box-shadow:0 8px 22px rgba(23,107,80,.22) !important;}
+.btn-blue:hover{background:#124F3C !important;}
+.btn-outline{border-color:rgba(255,255,255,.85) !important;color:#fff !important;}
+.feature-strip{background:#FFFFFF !important;border-bottom:1px solid #DED6C8 !important;color:#26332B !important;}
+.feature{border-right-color:#DED6C8 !important;}
+.feature-icon{color:#176B50 !important;}
+.feature h3{color:#26332B !important;}
+.feature p{color:#647268 !important;}
+#products,.contact-section,.specialty-section,.quote-section{background-color:#F4F0E8 !important;background-image:none !important;color:#26332B !important;}
+.section-heading-center h2,.products-title h2,.quote-text h2{color:#26332B !important;}
+.products-title p,.section-heading-center p,.quote-text p{color:#647268 !important;}
+.products-title .small,.section-heading-center .small{color:#176B50 !important;}
+.section-heading-center h2:after,.products-title h2:after,.quote-text h2:after{background:#C5A66A !important;}
+.product-card,.specialty-item,.contact-card{background:#FFFFFF !important;color:#26332B !important;border-color:#DED6C8 !important;box-shadow:0 7px 24px rgba(52,72,61,.07) !important;}
+.product-card:hover,.specialty-item:hover,.contact-card:hover{border-color:#176B50 !important;box-shadow:0 14px 30px rgba(52,72,61,.13) !important;}
+.product-image{background:#FFFFFF !important;}
+.product-info h3,.specialty-item h3,.contact-card h3{color:#26332B !important;}
+.product-info p,.contact-card p{color:#647268 !important;}
+.shop-link,.contact-card a{color:#80652F !important;}
+.shop-link:hover,.contact-card a:hover{color:#176B50 !important;}
+.promo-box{background:linear-gradient(100deg,rgba(38,56,46,.96),rgba(52,72,61,.78)),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80") center/cover !important;}
+.promo-label{background:#C5A66A !important;color:#26382E !important;}
+.promo-box strong span{color:#E5D1A3 !important;}
+.more-card{background:#34483D !important;border-color:#34483D !important;}
+.more-card:hover{background:#26382E !important;border-color:#C5A66A !important;}
+.more-card h3{color:#FFFFFF !important;}
+.why-section{background:linear-gradient(120deg,#26382E 0%,#34483D 72%,#486653 100%) !important;color:#fff !important;}
+.why-section:before{background:rgba(197,166,106,.16) !important;}
+.why-section .section-heading-center .small{color:#E5D1A3 !important;}
+.why-card{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.18) !important;}
+.why-card p{color:#E8EEE8 !important;}
+.form-box{background:#FFFFFF !important;border-color:#DED6C8 !important;color:#26332B !important;}
+.form-box h3,.form-group label{color:#26332B !important;}
+.form-group input,.form-group select,.form-group textarea{background:#FFFEFB !important;color:#26332B !important;border-color:#D7D0C2 !important;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#176B50 !important;box-shadow:0 0 0 3px rgba(23,107,80,.13) !important;}
+.form-group input::placeholder,.form-group textarea::placeholder{color:#7B857D !important;}
+footer{background:#26382E !important;color:#fff !important;border-top:3px solid #C5A66A !important;}
+.footer-col h3{color:#E5D1A3 !important;}
+.footer-col a{color:#F4F0E8 !important;}
+.footer-col a:hover{color:#E5D1A3 !important;}
+.mobile-bar{background:#26382E !important;border-top:2px solid #C5A66A !important;}
+@media(max-width:900px){.nav-menu{background:#FFFFFF !important;border:1px solid #DED6C8 !important;}}
+
+
+/* TOP BAR: larger, evenly aligned and readable on every screen */
+.top-bar{background:#26382E !important;color:#FFFFFF !important;}
+.top-bar-inner{font-size:14px !important;line-height:1.45;min-height:30px;}
+.top-left,.top-right{align-items:center;}
+.top-item{align-items:center;}
+.top-icon{color:#E2C17E !important;}
+@media(max-width:600px){
+  .top-bar-inner{font-size:12.5px !important;padding:0 14px;gap:9px;}
+  .top-left,.top-right{justify-content:flex-start;gap:8px 16px;}
+  .top-item{max-width:100%;overflow-wrap:anywhere;}
+}
+
+
+
+/* =========================================================
+   LED KING HOMEPAGE UPDATE — ANNOUNCEMENT, CENTERED NAV,
+   SEARCH, ROTATING HERO, AND CIRCULAR FEATURED PRODUCTS
+   ========================================================= */
+.announcement-strip{width:100%;min-height:42px;padding:10px 18px;background:#FFD400;color:#111;text-align:center;font-size:13px;font-weight:900;letter-spacing:.7px;line-height:1.5;position:relative;z-index:1101}
+.announcement-strip span{padding:0 9px}
+.main-header{position:sticky;top:0;z-index:1100;background:#fff!important;border-bottom:1px solid #ded6c8!important;box-shadow:0 4px 18px rgba(38,56,46,.07)!important}
+.navbar{width:100%;max-width:2400px;height:86px;margin:0 auto;padding:0 clamp(18px,2.4vw,56px);display:grid;grid-template-columns:minmax(135px,1fr) auto minmax(190px,1fr);align-items:center;gap:20px}
+.logo{justify-self:start;display:block!important;white-space:nowrap;font-size:29px!important;line-height:1;font-weight:950!important;letter-spacing:-1.2px;color:#26382e!important}
+.logo span,.logo-symbol{display:none!important}
+.nav-menu{position:static!important;display:flex;justify-content:center;align-items:center;gap:clamp(10px,1.15vw,23px);list-style:none;white-space:nowrap;background:transparent;border:0;box-shadow:none;padding:0;margin:0;font-size:clamp(11px,.78vw,14px);font-weight:800}
+.nav-menu li{width:auto}
+.nav-menu a{display:block;padding:30px 0!important;color:#34483d!important;position:relative;transition:color .2s}
+.nav-menu a:hover,.nav-menu a.active{color:#176b50!important}
+.nav-menu a.active:after{content:"";position:absolute;left:0;right:0;bottom:18px;height:3px;background:#ffd400!important}
+.nav-actions{justify-self:end;display:flex;align-items:center;gap:14px;white-space:nowrap}
+.cart-link{position:relative;display:inline-flex;align-items:center;gap:5px;color:#26382e;font-weight:800;font-size:13px;padding:8px 2px}
+.cart-symbol{font-size:22px;line-height:1}
+.cart-number{position:absolute;top:-2px;left:16px;display:flex;align-items:center;justify-content:center;width:17px;height:17px;border-radius:50%;background:#ffd400!important;color:#111!important;font-size:10px;font-weight:900}
+.header-quote{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:0 18px;border-radius:6px;background:#176b50;color:#fff!important;font-size:12px;font-weight:900;letter-spacing:.35px;transition:.2s}
+.header-quote:hover{background:#124f3c;transform:translateY(-1px)}
+.menu-btn{display:none;color:#26382e;border:0;background:transparent;font-size:27px;cursor:pointer}
+.search-section{background:#f4f0e8;padding:18px clamp(18px,2.4vw,56px) 14px;border-bottom:1px solid #e4ddcf}
+.search-inner{max-width:1050px;margin:0 auto}
+.product-search{display:flex;align-items:center;gap:12px;width:100%;min-height:58px;padding:6px 7px 6px 18px;background:#fff;border:1px solid #d9d1c3;border-radius:9px;box-shadow:0 4px 16px rgba(38,56,46,.06)}
+.search-symbol{font-size:28px;line-height:1;color:#647268;transform:rotate(-20deg)}
+.product-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#26332b;font-size:15px;padding:9px 0}
+.product-search input::placeholder{color:#7b857d;opacity:1}
+.product-search button{align-self:stretch;padding:0 24px;border:0;border-radius:6px;background:#176b50;color:#fff;font-size:12px;font-weight:900;letter-spacing:.5px;cursor:pointer}
+.product-search button:hover{background:#124f3c}
+.search-hint{margin:6px 3px 0;color:#647268;font-size:11px}
+.search-feedback{display:none;margin:7px 3px 0;color:#26382e;font-size:13px;font-weight:700}
+.search-feedback.is-visible{display:block}
+.hero-slider{position:relative;min-height:570px;overflow:hidden;background:#26382e;color:#fff}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:center;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:0;visibility:hidden;transition:opacity .75s ease;pointer-events:none}
+.hero-slide.is-active{position:relative;min-height:570px;opacity:1;visibility:visible;pointer-events:auto}
+/* Image-only slides: show the uploaded banner artwork in full, without duplicate HTML text */
+.image-only-slider{background:#f5f5f2;color:#111;min-height:0!important;height:clamp(300px,36vw,570px)}
+.image-only-slider .hero-slide{align-items:stretch;background-size:100% 100%;background-position:center;background-color:#f5f5f2}
+.image-only-slider .hero-slide.is-active{min-height:0!important;height:100%}
+.image-only-slider .slider-arrow{background:rgba(0,0,0,.42)}
+.image-only-slider .slider-dots{bottom:12px}
+@media(max-width:650px){.image-only-slider,.image-only-slider .hero-slide.is-active{height:clamp(220px,58vw,360px);min-height:0!important}.image-only-slider .slider-arrow{width:32px;height:32px;font-size:23px}.image-only-slider .slider-dots{bottom:8px}}
+.hero-content{max-width:2400px;width:100%;margin:0 auto;padding:78px clamp(22px,3.4vw,78px);color:#fff;position:relative;z-index:2}
+.hero-text{max-width:790px}
+.hero-kicker{color:#ffd400!important;font-size:13px;font-weight:900;letter-spacing:2px;margin-bottom:17px}
+.hero-kicker:before{background:#ffd400!important}
+.hero h1{font-size:clamp(38px,4.1vw,64px);line-height:1.04;font-weight:950;letter-spacing:-1.5px;margin-bottom:22px}
+.hero h1 span{color:#ffd400!important;display:block}
+.hero p{max-width:680px;color:#f2f3ee;font-size:clamp(15px,1.25vw,18px);line-height:1.7;margin-bottom:28px}
+.hero-buttons{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.hero-buttons .btn{min-height:48px;padding:13px 19px;font-size:12px;border-radius:6px}
+.btn-blue{background:#176b50!important;color:#fff!important;box-shadow:0 8px 22px rgba(0,0,0,.15)!important}
+.btn-outline{background:rgba(255,255,255,.05)!important;color:#fff!important;border:1px solid rgba(255,255,255,.8)!important}
+.btn-yellow{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid #ffd400;background:#ffd400;color:#111;padding:15px 22px;border-radius:7px;font-size:12px;font-weight:900;transition:.25s}
+.btn-yellow:hover{background:#ffe45c;transform:translateY(-2px)}
+.slider-arrow{position:absolute;z-index:5;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(0,0,0,.25);color:#fff;font-size:30px;line-height:1;cursor:pointer;transition:.2s}
+.slider-arrow:hover{background:#ffd400;color:#111;border-color:#ffd400}
+.slider-prev{left:18px}.slider-next{right:18px}
+.slider-dots{position:absolute;z-index:5;bottom:22px;left:0;right:0;display:flex;justify-content:center;gap:9px}
+.slider-dot{width:10px;height:10px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.58);cursor:pointer}
+.slider-dot.is-active{width:27px;border-radius:8px;background:#ffd400}
+/* Circular and aligned featured product photography */
+#products .products-heading{justify-content:center;text-align:center;margin-bottom:35px}
+#products .products-title{max-width:850px;margin:0 auto}
+#products .products-title p{max-width:760px;margin-left:auto;margin-right:auto}
+#products .products-title h2:after{margin:14px auto 0!important}
+#products .promo-box{display:none}
+#products .product-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-items:start;gap:28px 22px}
+#products .product-card:not(.more-card){display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;min-height:0;overflow:visible;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;text-align:center;padding:0 6px;transform:none!important}
+#products .product-card:not(.more-card):hover{box-shadow:none!important}
+#products .product-image{width:clamp(112px,11vw,176px);height:clamp(112px,11vw,176px);aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 15px;padding:13px;background:#fff!important;border:1px solid #e2dacb;border-radius:50%!important;overflow:hidden;box-shadow:0 7px 22px rgba(38,56,46,.09);transition:transform .25s,box-shadow .25s}
+#products .product-card:not(.more-card):hover .product-image{transform:translateY(-4px);box-shadow:0 13px 27px rgba(38,56,46,.16);border-color:#176b50}
+#products .product-image img{width:100%;height:100%;object-fit:contain;border-radius:50%;transition:transform .25s}
+#products .product-card:not(.more-card):hover .product-image img{transform:scale(1.06)}
+#products .product-info{width:100%;min-width:0;padding:0 3px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-wrap:anywhere}
+#products .product-info h3{font-size:15px;line-height:1.35;color:#26332b;margin:0 0 5px}
+#products .product-info p{font-size:12px;line-height:1.45;color:#647268;margin:0 0 8px}
+#products .shop-link{font-size:11px;color:#80652f;font-weight:900}
+#products .more-card{grid-column:span 2;align-self:stretch;min-height:150px;display:flex;align-items:center;justify-content:center;background:#34483d!important;border:1px solid #34483d!important;border-radius:12px!important;text-align:center;box-shadow:0 7px 22px rgba(38,56,46,.1)!important}
+#products .more-card .more-inner{padding:22px}
+#products .more-card h3{color:#fff}
+#products .more-card p{color:#e8eee8}
+#products .more-card .btn{background:#ffd400!important;color:#111!important}
+@media(max-width:1450px){.navbar{grid-template-columns:minmax(115px,1fr) auto minmax(165px,1fr);gap:13px}.nav-menu{gap:12px;font-size:12px}.logo{font-size:25px!important}.nav-actions{gap:10px}.header-quote{padding:0 13px}#products .product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1100px){.navbar{grid-template-columns:1fr auto;height:76px}.nav-menu{display:none!important;position:absolute!important;top:76px;left:0;right:0;z-index:1105;flex-direction:column;align-items:stretch;gap:0;padding:8px 22px 18px!important;background:#fff!important;border-top:1px solid #eee!important;border-bottom:1px solid #ded6c8!important;box-shadow:0 14px 25px rgba(0,0,0,.1)!important;white-space:normal}.nav-menu.show{display:flex!important}.nav-menu li{width:100%}.nav-menu a{padding:12px 0!important}.nav-menu a.active:after{bottom:5px}.nav-actions{grid-column:2;grid-row:1}.menu-btn{display:block}.cart-label{display:none}#products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.announcement-strip{font-size:10px;letter-spacing:.15px;padding:9px 8px;line-height:1.45}.announcement-strip span{padding:0 3px}.navbar{height:68px;padding:0 15px;gap:8px}.logo{font-size:23px!important}.nav-actions{gap:9px}.cart-symbol{font-size:20px}.cart-number{left:13px;top:-3px}.header-quote{min-height:38px;padding:0 10px;font-size:10px}.menu-btn{font-size:25px}.search-section{padding:13px 14px 10px}.product-search{min-height:50px;gap:8px;padding-left:12px}.product-search input{font-size:12px}.product-search button{padding:0 12px;font-size:10px}.search-symbol{font-size:24px}.search-hint{font-size:10px}.hero-slider,.hero-slide.is-active{min-height:590px}.hero-content{padding:60px 25px 75px}.hero h1{font-size:36px;letter-spacing:-.6px}.hero p{font-size:14px;line-height:1.65}.hero-buttons{flex-direction:column;align-items:stretch;gap:9px}.hero-buttons .btn,.hero-buttons .btn-yellow{width:100%;min-height:44px}.slider-arrow{width:34px;height:34px;font-size:24px}.slider-prev{left:8px}.slider-next{right:8px}.slider-dots{bottom:17px}#products .products-title h2{font-size:30px}#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}#products .product-image{width:clamp(112px,35vw,155px);height:clamp(112px,35vw,155px);margin-bottom:12px}#products .product-info h3{font-size:14px}#products .product-info p{font-size:11px}#products .more-card{grid-column:span 2;min-height:125px}.mobile-bar{display:none!important}}
+@media(prefers-reduced-motion:reduce){.hero-slide{transition:none}.slider-arrow,.btn-yellow,#products .product-image{transition:none}}
+
+
+/* FINAL REQUESTED UPDATE: moving benefits ticker + larger 3-across square categories */
+.benefits-marquee{width:100%;overflow:hidden;background:transparent!important;color:#000!important;padding:13px 0 16px;white-space:nowrap;position:relative}
+.benefits-marquee-track{display:flex;width:max-content;animation:ledking-benefits-scroll 27s linear infinite;will-change:transform}
+.benefits-marquee-group{display:flex;flex:0 0 auto;align-items:center;gap:25px;padding-right:25px;color:#000;font-size:16px;font-weight:900;letter-spacing:.15px}
+.benefits-marquee-group span{font-weight:900;color:#000}
+.benefits-marquee:hover .benefits-marquee-track{animation-play-state:paused}
+@keyframes ledking-benefits-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#products .product-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;align-items:start;gap:34px 20px}
+#products .product-card:not(.more-card){grid-column:span 2;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;min-height:0;overflow:visible;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;text-align:center;padding:0 8px;transform:none!important}
+#products .product-card:not(.more-card):nth-child(10){grid-column:2 / span 2}
+#products .product-card:not(.more-card):nth-child(11){grid-column:4 / span 2}
+#products .product-image{width:clamp(220px,21vw,300px)!important;height:clamp(220px,21vw,300px)!important;aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 17px;padding:14px;background:#fff!important;border:1px solid #ded6c8;border-radius:10px!important;overflow:hidden;box-shadow:0 8px 24px rgba(38,56,46,.10);transition:transform .25s,box-shadow .25s}
+#products .product-card:not(.more-card):hover .product-image{transform:translateY(-4px);box-shadow:0 14px 29px rgba(38,56,46,.16);border-color:#176b50}
+#products .product-image img{width:100%;height:100%;object-fit:contain;border-radius:6px}
+#products .product-info{width:100%;min-width:0;padding:0 3px;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:flex-start;overflow-wrap:anywhere}
+#products .product-info h3{font-size:16px;line-height:1.35;color:#26332b;margin:0 0 6px}
+#products .product-info p{font-size:12px;line-height:1.5;color:#647268;margin:0 0 8px}
+#products .shop-link{font-size:11px;color:#80652f;font-weight:900}
+.view-all-products-wrap{display:flex;justify-content:center;align-items:center;width:100%;margin:42px auto 0;text-align:center}
+.view-all-products-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 30px;border-radius:7px;background:#176b50;color:#fff!important;font-size:13px;font-weight:900;letter-spacing:.6px;box-shadow:0 8px 22px rgba(23,107,80,.18);transition:background .2s,transform .2s}
+.view-all-products-btn:hover{background:#124f3c;transform:translateY(-2px)}
+@media(max-width:1100px){#products .product-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:30px 14px}#products .product-image{width:clamp(180px,22vw,245px)!important;height:clamp(180px,22vw,245px)!important}}
+@media(max-width:650px){.benefits-marquee{padding:11px 0 13px}.benefits-marquee-group{font-size:14px;gap:15px;padding-right:15px}.benefits-marquee-track{animation-duration:23s}#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:27px 12px}#products .product-card:not(.more-card){grid-column:auto;padding:0 3px}#products .product-card:not(.more-card):nth-child(10),#products .product-card:not(.more-card):nth-child(11){grid-column:auto}#products .product-image{width:clamp(145px,43vw,190px)!important;height:clamp(145px,43vw,190px)!important;padding:10px;margin-bottom:12px}#products .product-info h3{font-size:14px}#products .product-info p{font-size:11px}.view-all-products-wrap{margin-top:30px}.view-all-products-btn{min-height:48px;padding:0 22px;font-size:12px}}
+/* FINAL ALIGNMENT: center the last two category cards as a balanced pair */
+#products .product-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;justify-items:stretch}
+#products .product-grid > .product-card:not(.more-card):nth-child(10){grid-column:2 / span 2!important;justify-self:stretch}
+#products .product-grid > .product-card:not(.more-card):nth-child(11){grid-column:4 / span 2!important;justify-self:stretch}
+@media(max-width:650px){#products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#products .product-grid > .product-card:not(.more-card):nth-child(10),#products .product-grid > .product-card:not(.more-card):nth-child(11){grid-column:auto!important}}
+
+@media(prefers-reduced-motion:reduce){.benefits-marquee-track{animation:none}}
+
+
+/* Final alignment adjustment: keep every category tile left-aligned in the grid */
+@media(min-width:651px){
+  #products .product-grid > .product-card:not(.more-card):nth-child(10),
+  #products .product-grid > .product-card:not(.more-card):nth-child(11){
+    grid-column:span 2 !important;
+    justify-self:stretch !important;
+  }
+}
+
+/* CONTACT MAP + STORE HOURS UPDATE */
+.contact-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;align-items:stretch;}
+.map-card{grid-column:span 2;text-align:left;}
+.hours-card{text-align:left;}
+.map-frame{width:100%;height:260px;overflow:hidden;border-radius:10px;margin:14px 0 10px;border:1px solid #DED6C8;}
+.map-frame iframe{display:block;width:100%;height:100%;border:0;}
+.map-directions{text-align:center;margin-top:8px;}
+.store-hours{display:flex;flex-direction:column;gap:0;margin-top:14px;}
+.store-hours div{display:flex;flex-direction:column;gap:4px;padding:13px 0;border-bottom:1px solid #DED6C8;}
+.store-hours div:last-child{border-bottom:0;}
+.store-hours span{font-size:13px;color:#647268;}
+.store-hours strong{font-size:15px;color:#26332B;}
+@media(max-width:900px){.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}.map-card{grid-column:span 2;}}
+@media(max-width:600px){.contact-grid{grid-template-columns:1fr !important;}.map-card{grid-column:span 1;}.map-frame{height:230px;}}
+
+
+/* Added category image placeholders for categories without uploaded photos */
+#products .category-placeholder{
+  width:100%;height:100%;min-height:125px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:linear-gradient(145deg,#f7f5ef,#e7ece7);color:#34483D;text-align:center;
+}
+#products .category-placeholder-icon{width:58px;height:58px;border:2px solid #C5A66A;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#176B50;font-size:31px;font-weight:700;}
+#products .category-placeholder span{font-size:10px;font-weight:900;letter-spacing:2px;color:#34483D;}
+
+
+
+/* POPULAR LED LIGHTING: responsive 5 / 3 / 2-column product grid */
+#products .container{
+  width:100%;
+  max-width:2400px;
+  margin-inline:auto;
+  padding-inline:clamp(18px,2.4vw,56px);
+  box-sizing:border-box;
+}
+#products .product-grid{
+  display:grid !important;
+  grid-template-columns:repeat(5,minmax(0,1fr)) !important;
+  gap:24px 20px !important;
+  align-items:stretch;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+#products .product-grid > .product-card,
+#products .product-grid > .product-card:not(.more-card),
+#products .product-grid > .product-card:not(.more-card):nth-child(10),
+#products .product-grid > .product-card:not(.more-card):nth-child(11){
+  grid-column:auto !important;
+  justify-self:stretch !important;
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:0 5px !important;
+  margin:0 !important;
+}
+#products .product-grid > .product-card:not(.more-card){
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+#products .product-image{
+  width:clamp(120px,12vw,190px) !important;
+  height:clamp(120px,12vw,190px) !important;
+  flex:0 0 auto;
+  margin:0 auto 12px !important;
+  padding:10px !important;
+  box-sizing:border-box;
+}
+#products .product-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain !important;
+  object-position:center;
+}
+#products .product-info{
+  width:100%;
+  flex:1 1 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0 2px !important;
+  box-sizing:border-box;
+}
+#products .product-info h3{
+  min-height:2.7em;
+  margin:0 0 5px !important;
+  line-height:1.35;
+}
+#products .product-info p{
+  min-height:2.8em;
+  margin:0 0 7px !important;
+  line-height:1.4;
+}
+#products .shop-link{margin-top:auto;}
+#products .product-grid > .more-card{
+  grid-column:auto !important;
+  width:100%;
+  min-width:0;
+  min-height:0;
+  margin:0 !important;
+  box-sizing:border-box;
+}
+@media (min-width:1200px){
+  #products .product-grid{grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:24px 20px !important;}
+}
+@media (min-width:768px) and (max-width:1199px){
+  #products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:24px 18px !important;}
+  #products .product-image{width:clamp(145px,18vw,205px) !important;height:clamp(145px,18vw,205px) !important;}
+}
+@media (max-width:767px){
+  #products .container{padding-inline:15px;}
+  #products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:22px 12px !important;}
+  #products .product-grid > .product-card,
+  #products .product-grid > .product-card:not(.more-card){padding:0 2px !important;}
+  #products .product-image{width:clamp(125px,39vw,175px) !important;height:clamp(125px,39vw,175px) !important;margin-bottom:10px !important;padding:8px !important;}
+  #products .product-info h3{font-size:14px;min-height:2.7em;}
+  #products .product-info p{font-size:11px;min-height:2.8em;}
+  #products .product-grid > .more-card{grid-column:span 2 !important;}
+}
+
+
+/* POPULAR LED LIGHTING: corrected responsive category grid */
+#products .product-grid{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:start;
+  justify-items:stretch;
+  gap:20px;
+  width:100%;
+  margin:0!important;
+  padding:0!important;
+}
+#products .product-grid > .product-card.category-card{
+  grid-column:auto!important;
+  display:flex!important;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  min-width:0;
+  min-height:0;
+  width:100%;
+  padding:0!important;
+  margin:0!important;
+  box-sizing:border-box;
+  background:transparent!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  text-align:center;
+  transform:none!important;
+}
+#products .product-grid > .product-card.category-card .product-image{
+  width:clamp(120px,13vw,190px)!important;
+  height:clamp(120px,13vw,190px)!important;
+  aspect-ratio:1/1;
+  flex:0 0 auto;
+  margin:0 auto 16px;
+  padding:12px!important;
+  border-radius:50%!important;
+  overflow:hidden;
+  background:#fff!important;
+  border:1px solid #ded6c8!important;
+  box-shadow:0 8px 24px rgba(38,56,46,.10);
+  transition:transform .25s,box-shadow .25s;
+}
+#products .product-grid > .product-card.category-card .product-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:50%;
+}
+#products .product-grid > .product-card.category-card:hover .product-image{
+  transform:translateY(-4px);
+  box-shadow:0 14px 29px rgba(38,56,46,.16);
+  border-color:#176b50!important;
+}
+#products .product-grid > .product-card.category-card .product-info{
+  width:100%;
+  min-width:0;
+  padding:0 3px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+#products .product-grid > .product-card.category-card .product-info h3{
+  font-size:16px;
+  line-height:1.35;
+  min-height:2.7em;
+  color:#26332b;
+  margin:0 0 5px;
+}
+#products .product-grid > .product-card.category-card .product-info p{
+  font-size:12px;
+  line-height:1.45;
+  min-height:2.9em;
+  color:#647268;
+  margin:0 0 8px;
+}
+#products .product-grid > .product-card.category-card .shop-link{
+  color:#80652f;
+  font-size:11px;
+  font-weight:900;
+}
+@media(min-width:1200px){
+  #products .product-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:20px!important}
+}
+@media(min-width:768px) and (max-width:1199px){
+  #products .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:20px!important}
+  #products .product-grid > .product-card.category-card .product-image{
+    width:clamp(145px,18vw,205px)!important;
+    height:clamp(145px,18vw,205px)!important;
+  }
+}
+@media(max-width:767px){
+  #products .container{padding-inline:15px!important}
+  #products .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
+  #products .product-grid > .product-card.category-card{padding:0!important}
+  #products .product-grid > .product-card.category-card .product-image{
+    width:clamp(120px,38vw,175px)!important;
+    height:clamp(120px,38vw,175px)!important;
+    padding:9px!important;
+    margin-bottom:11px!important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3{font-size:14px}
+  #products .product-grid > .product-card.category-card .product-info p{font-size:11px}
+}
+
+
+
+/* FINAL POPULAR LED LIGHTING IMAGE FIX
+   Enlarge each existing image inside a uniform circle. Keep original source
+   files untouched: CSS cannot safely remove a white background baked into an image.
+*/
+#products .product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px 20px !important;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#products .product-grid > .product-card.category-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  grid-column: auto !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  text-align: center !important;
+}
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(190px, 20vw, 230px) !important;
+  height: clamp(190px, 20vw, 230px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 auto 14px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 1px solid rgba(222, 214, 200, .65) !important;
+  box-shadow: none !important;
+  line-height: 0 !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  flex: 0 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+}
+#products .product-grid > .product-card.category-card:hover .product-image {
+  background: transparent !important;
+  box-shadow: 0 8px 20px rgba(38, 56, 46, .08) !important;
+  transform: translateY(-3px) !important;
+}
+#products .product-grid > .product-card.category-card:hover .product-image img {
+  transform: none !important;
+}
+#products .product-grid > .product-card.category-card .product-info {
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 3px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  overflow-wrap: anywhere !important;
+}
+#products .product-grid > .product-card.category-card .product-info h3 {
+  width: 100%;
+  min-height: 2.7em;
+}
+#products .product-grid > .product-card.category-card .product-info p {
+  width: 100%;
+  min-height: 2.9em;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 22px 16px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(175px, 21vw, 220px) !important;
+    height: clamp(175px, 21vw, 220px) !important;
+  }
+}
+@media (max-width: 767px) {
+  #products .container { padding-inline: 15px !important; }
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 24px 12px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(145px, 43vw, 180px) !important;
+    height: clamp(145px, 43vw, 180px) !important;
+    margin-bottom: 11px !important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3 { font-size: 14px !important; }
+  #products .product-grid > .product-card.category-card .product-info p { font-size: 11px !important; }
+}
+
+
+
+/* LED KING product images: larger square presentation */
+#products .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+#products .product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+#products .product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+  border-radius: 10px;
+  background: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#products .product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+#products .product-card:hover .product-image img { transform: none; }
+#products .product-info { flex: 1 1 auto; padding: 15px 16px 18px; }
+@media (max-width: 900px) {
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  #products .product-grid { grid-template-columns: 1fr; }
+  #products .product-image { max-height: 360px; }
+}
+
+</style>
+
+<style id="ledking-square-product-images-final">
+/* FINAL OVERRIDE: product image containers must be square, never circular */
+#products .product-image {
+  width: clamp(220px, 21vw, 300px) !important;
+  height: clamp(220px, 21vw, 300px) !important;
+  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  padding: 8px !important;
+  margin: 0 auto 17px !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+#products .product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+@media (max-width: 900px) {
+  #products .product-image { width: clamp(170px, 28vw, 240px) !important; height: clamp(170px, 28vw, 240px) !important; }
+}
+@media (max-width: 650px) {
+  #products .product-image { width: min(40vw, 180px) !important; height: min(40vw, 180px) !important; padding: 6px !important; }
 }
 </style>
+
+
+<style id="ledking-force-square-shape">
+/* Force the category image OUTER CONTAINER to be square (override older circle rules). */
+#products .product-grid > .product-card.category-card .product-image,
+#products .product-grid > .product-card.category-card .product-image::before,
+#products .product-grid > .product-card.category-card .product-image::after {
+  border-radius: 8px !important;
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+}
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(220px, 21vw, 300px) !important;
+  height: clamp(220px, 21vw, 300px) !important;
+  aspect-ratio: 1 / 1 !important;
+  padding: 8px !important;
+  background: transparent !important;
+  overflow: hidden !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  width: 100% !important; height: 100% !important;
+  object-fit: contain !important; object-position: center !important;
+  border-radius: 0 !important;
+}
+@media (max-width: 900px) {
+  #products .product-grid > .product-card.category-card .product-image { width: clamp(170px, 28vw, 240px) !important; height: clamp(170px, 28vw, 240px) !important; }
+}
+@media (max-width: 650px) {
+  #products .product-grid > .product-card.category-card .product-image { width: min(40vw, 180px) !important; height: min(40vw, 180px) !important; padding: 6px !important; }
+}
+</style>
+
+
+<style id="led-king-popular-image-final-fix">
+/* POPULAR LED LIGHTING — responsive grid and consistent card alignment */
+#products .container {
+  width: min(100%, 2400px) !important;
+  max-width: 2400px !important;
+  box-sizing: border-box !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 2.2vw, 36px) !important;
+  padding-right: clamp(16px, 2.2vw, 36px) !important;
+}
+#products .product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+#products .product-grid > .product-card.category-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(130px, 13.5vw, 180px) !important;
+  height: clamp(130px, 13.5vw, 180px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding: 8px !important;
+  margin: 0 auto 10px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  flex: 0 0 auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+}
+#products .product-grid > .product-card.category-card:hover .product-image,
+#products .product-grid > .product-card.category-card:hover .product-image img {
+  background: transparent !important;
+  transform: none !important;
+}
+#products .product-grid > .product-card.category-card .product-info {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 2px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  overflow-wrap: anywhere !important;
+}
+#products .product-grid > .product-card.category-card .product-info h3 {
+  width: 100% !important;
+  min-height: 2.7em !important;
+  margin: 0 0 4px !important;
+  line-height: 1.3 !important;
+}
+#products .product-grid > .product-card.category-card .product-info p {
+  width: 100% !important;
+  min-height: 2.6em !important;
+  margin: 0 0 6px !important;
+  line-height: 1.35 !important;
+}
+#products .product-grid > .product-card.category-card .shop-link {
+  margin-top: auto !important;
+}
+#products .product-grid > .more-card {
+  min-width: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+@media (min-width: 1200px) {
+  #products .product-grid { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 20px !important; }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 20px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(145px, 18vw, 190px) !important;
+    height: clamp(145px, 18vw, 190px) !important;
+  }
+}
+@media (max-width: 767px) {
+  #products .container { padding-left: 15px !important; padding-right: 15px !important; }
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 20px 12px !important; }
+  #products .product-grid > .product-card.category-card { padding: 0 !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(120px, 38vw, 165px) !important;
+    height: clamp(120px, 38vw, 165px) !important;
+    margin-bottom: 9px !important;
+    padding: 7px !important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3 { font-size: 14px !important; }
+  #products .product-grid > .product-card.category-card .product-info p { font-size: 11px !important; }
+}
+</style>
+
+
+<!-- FINAL OVERRIDE: square product image containers (existing layout preserved) -->
+<style id="led-king-square-product-images">
+#products .product-grid > .product-card.category-card .product-image {
+  border-radius: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  border-radius: 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+</style>
+
+
+
+<!-- FINAL IMAGE-FILL OVERRIDE: fill each square image frame with no inner padding -->
+<style id="led-king-square-images-fill-frame">
+#products .product-grid > .product-card.category-card .product-image {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  padding: 0 !important;
+  margin: 0 0 10px !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+}
+@media (min-width: 1200px) {
+  #products .product-grid > .product-card.category-card .product-image { width: 100% !important; }
+}
+@media (max-width: 767px) {
+  #products .product-grid > .product-card.category-card .product-image { width: 100% !important; height: auto !important; aspect-ratio: 1 / 1 !important; padding: 0 !important; }
+}
+</style>
+
 </head>
+
+<body>
+
+<!-- YELLOW ANNOUNCEMENT STRIP -->
+<div class="announcement-strip">COMMERCIAL LIGHTING SOLUTIONS <span>•</span> BULK ORDER PRICING AVAILABLE <span>•</span> SHIPPING NATIONWIDE</div>
+
+<!-- MAIN HEADER: brand left, navigation centered, cart and quote right -->
+<header class="main-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#home" class="logo" aria-label="LED KING Home">LED KING</a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#products">Lighting Categories</a></li>
+      <li><a href="#specialty">Specialty Lighting</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="products.html" class="cart-link" aria-label="Shopping cart" title="Shopping cart"><span class="cart-symbol" aria-hidden="true">🛒</span><span class="cart-label">Cart</span><span class="cart-number">0</span></a>
+      <a href="#quote" class="header-quote">GET QUOTE</a>
+      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+</header>
+
+<!-- PRODUCT SEARCH -->
+<section class="search-section" aria-label="Search products">
+  <div class="search-inner">
+    <form class="product-search" id="productSearchForm" role="search">
+      <span class="search-symbol" aria-hidden="true">⌕</span>
+      <input id="productSearchInput" type="search" placeholder="Search by product name, SKU, wattage or type" aria-label="Search by product name, SKU, wattage or type" autocomplete="off">
+      <button type="submit">SEARCH</button>
+    </form>
+    <p class="search-hint">Find lighting by product name, SKU, wattage or category.</p>
+    <p class="search-feedback" id="searchFeedback" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- MOVING BENEFITS TICKER: transparent background, bold black text -->
+<div class="benefits-marquee" aria-label="LED KING benefits"><div class="benefits-marquee-track">
+  <div class="benefits-marquee-group">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
+  <div class="benefits-marquee-group" aria-hidden="true">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
+</div></div>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+<div class="container">
+
+    <div class="products-heading">
+
+        <div class="products-title">
+            <div class="small">FEATURED PRODUCTS</div>
+            <h2>Popular LED Lighting</h2>
+            <p>
+                Explore LED KING lighting products for
+                commercial, residential, outdoor and
+                specialty applications.
+            </p>
+        </div>
+
+        <div class="promo-box">
+            <span class="promo-label">LIMITED TIME</span>
+            <strong>QUALITY <span>LED LIGHTING</span></strong>
+            <small>Explore our lighting products</small>
+        </div>
+
+    </div>
+
+    <div class="product-grid">
+
+        <!-- CANOPY LIGHTS -->
+        <a class="product-card category-card" href="canopy-lights.html" data-search="canopy light parking garage gas station outdoor commercial lighting">
+            <div class="product-image"><img src="Canopy%201.png" alt="Canopy Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Canopy Lights</h3>
+                <p>Explore our canopy lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LED BULBS -->
+        <a class="product-card category-card" href="led-bulbs.html" data-search="led bulbs replacement lamps residential commercial">
+            <div class="product-image"><img src="132.jpg" alt="LED Bulbs" loading="lazy"></div>
+            <div class="product-info">
+                <h3>LED Bulbs</h3>
+                <p>Explore our led bulbs selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- CORN BULBS -->
+        <a class="product-card category-card" href="corn-bulbs.html" data-search="corn bulbs led retrofit lamps">
+            <div class="product-image"><img src="130.jpg" alt="Corn Bulbs" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Corn Bulbs</h3>
+                <p>Explore our corn bulbs selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- PANEL LIGHTS & TROFFER -->
+        <a class="product-card category-card" href="panel-lights-troffer.html" data-search="led panel troffer office ceiling grid lighting">
+            <div class="product-image"><img src="133.jpg" alt="Panel Lights & Troffer" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Panel Lights & Troffer</h3>
+                <p>Explore our panel lights & troffer selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LINEAR STRIP FIXTURE -->
+        <a class="product-card category-card" href="linear-strip-fixture.html" data-search="linear strip fixtures shop garage commercial lighting">
+            <div class="product-image"><img src="138.jpg" alt="Linear Strip Fixture" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Linear Strip Fixture</h3>
+                <p>Explore our linear strip fixture selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LED TUBES -->
+        <a class="product-card category-card" href="led-tubes.html" data-search="led tube lights t8 replacement lamps">
+            <div class="product-image"><img src="135.jpg" alt="LED Tubes" loading="lazy"></div>
+            <div class="product-info">
+                <h3>LED Tubes</h3>
+                <p>Explore our led tubes selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- CEILING LIGHTS -->
+        <a class="product-card category-card" href="ceiling-lights.html" data-search="ceiling light fixtures indoor lighting">
+            <div class="product-image"><img src="136.jpg" alt="Ceiling Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Ceiling Lights</h3>
+                <p>Explore our ceiling lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- FIXTURE -->
+        <a class="product-card category-card" href="fixtures.html" data-search="led lighting fixtures indoor outdoor">
+            <div class="product-image"><img src="131.jpg" alt="Fixture" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Fixture</h3>
+                <p>Explore our fixture selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LINEAR HIGH BAY FIXTURE -->
+        <a class="product-card category-card" href="linear-highbay-fixture.html" data-search="linear high bay warehouse industrial lighting">
+            <div class="product-image"><img src="134.jpg" alt="Linear High Bay Fixture" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Linear High Bay Fixture</h3>
+                <p>Explore our linear high bay fixture selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- UFO HIGH BAY LIGHTS -->
+        <a class="product-card category-card" href="ufo-highbay-lights.html" data-search="ufo high bay warehouse shop industrial lighting">
+            <div class="product-image"><img src="139.jpg" alt="UFO High Bay Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>UFO High Bay Lights</h3>
+                <p>Explore our ufo high bay lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- FLOOD LIGHTS -->
+        <a class="product-card category-card" href="flood-lights.html" data-search="flood lights outdoor security area lighting">
+            <div class="product-image"><img src="127.jpg" alt="Flood Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Flood Lights</h3>
+                <p>Explore our flood lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- LED POLE LIGHTS -->
+        <a class="product-card category-card" href="led-pole-lights.html" data-search="led pole shoebox street parking area lighting">
+            <div class="product-image"><img src="128.jpg" alt="LED Pole Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>LED Pole Lights</h3>
+                <p>Explore our led pole lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- SINGLE SIDE CORN BULBS -->
+        <a class="product-card category-card" href="single-side-corn-bulbs.html" data-search="single side corn bulb retrofit lamp">
+            <div class="product-image"><img src="140.jpg" alt="Single Side Corn Bulbs" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Single Side Corn Bulbs</h3>
+                <p>Explore our single side corn bulbs selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- WALL PACK -->
+        <a class="product-card category-card" href="wall-pack.html" data-search="wall pack exterior building security lighting">
+            <div class="product-image"><img src="141.jpg" alt="Wall Pack" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Wall Pack</h3>
+                <p>Explore our wall pack selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- MINI WALL PACK -->
+        <a class="product-card category-card" href="mini-wall-pack.html" data-search="mini wall pack compact outdoor building lighting">
+            <div class="product-image"><img src="142.jpg" alt="Mini Wall Pack" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Mini Wall Pack</h3>
+                <p>Explore our mini wall pack selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- UP & DOWN LIGHTS -->
+        <a class="product-card category-card" href="up-down-lights.html" data-search="up and down wall lights architectural exterior">
+            <div class="product-image"><img src="120.jpg" alt="Up & Down Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Up & Down Lights</h3>
+                <p>Explore our up & down lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- SECURITY LIGHTS -->
+        <a class="product-card category-card" href="security-lights.html" data-search="security lights outdoor motion area lighting">
+            <div class="product-image"><img src="144.jpg" alt="Security Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Security Lights</h3>
+                <p>Explore our security lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- STADIUM LIGHTS -->
+        <a class="product-card category-card" href="stadium-lights.html" data-search="stadium sports field high mast flood lighting">
+            <div class="product-image"><img src="145.jpg" alt="Stadium Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Stadium Lights</h3>
+                <p>Explore our stadium lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- GROW LIGHTS -->
+        <a class="product-card category-card" href="grow-lights.html" data-search="led grow lights horticulture indoor plants">
+            <div class="product-image"><img src="146.jpg" alt="Grow Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Grow Lights</h3>
+                <p>Explore our grow lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- HOTEL FIXTURES -->
+        <a class="product-card category-card" href="hotel-fixtures.html" data-search="hotel fixture hospitality indoor lighting">
+            <div class="product-image"><img src="123.jpg" alt="Hotel Fixtures" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Hotel Fixtures</h3>
+                <p>Explore our hotel fixtures selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- BOLLARD LIGHTS -->
+        <a class="product-card category-card" href="bollard-lights.html" data-search="bollard lights pathway outdoor landscape lighting">
+            <div class="product-image"><img src="121.jpg" alt="Bollard Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Bollard Lights</h3>
+                <p>Explore our bollard lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- WALL SCONCES -->
+        <a class="product-card category-card" href="wall-sconces.html" data-search="wall sconces wall light fixture indoor outdoor lighting">
+            <div class="product-image"><img src="143.jpg" alt="Wall Sconces" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Wall Sconces</h3>
+                <p>Explore our wall sconces selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- OUTDOOR WALL LIGHTS -->
+        <a class="product-card category-card" href="outdoor-wall-lights.html" data-search="outdoor wall light exterior outdoor lighting">
+            <div class="product-image"><img src="126.jpg" alt="Outdoor Wall Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Outdoor Wall Lights</h3>
+                <p>Explore our outdoor wall lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- VANITY LIGHTS -->
+        <a class="product-card category-card" href="vanity-lights.html" data-search="vanity lights bathroom mirror indoor lighting">
+            <div class="product-image"><img src="124.jpg" alt="Vanity Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Vanity Lights</h3>
+                <p>Explore our vanity lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- POST TOP LIGHTS -->
+        <a class="product-card category-card" href="post-top-lights.html" data-search="post top light pole area outdoor parking lighting">
+            <div class="product-image"><img src="122.jpg" alt="Post Top Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Post Top Lights</h3>
+                <p>Explore our post top lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- TRACK LIGHTS -->
+        <a class="product-card category-card" href="track-lights.html" data-search="track lights indoor commercial lighting">
+            <div class="product-image"><img src="125.jpg" alt="Track Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Track Lights</h3>
+                <p>Explore our track lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- ACCESSORIES -->
+        <a class="product-card category-card" href="accessories.html" data-search="lighting accessories mounting hardware">
+            <div class="product-image"><img src="147.jpg" alt="Accessories" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Accessories</h3>
+                <p>Explore our accessories selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- INJECTION MODULE -->
+        <a class="product-card category-card" href="injection-module.html" data-search="injection modules led signage modules">
+            <div class="product-image"><img src="148.jpg" alt="Injection Module" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Injection Module</h3>
+                <p>Explore our injection module selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- POWER SUPPLY / DRIVERS -->
+        <a class="product-card category-card" href="power-supply-drivers.html" data-search="power supplies led drivers transformers">
+            <div class="product-image"><img src="149.jpg" alt="Power Supply / Drivers" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Power Supply / Drivers</h3>
+                <p>Explore our power supply / drivers selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- TENONS -->
+        <a class="product-card category-card" href="tenons.html" data-search="tenons pole mounts brackets mounting accessories">
+            <div class="product-image"><img src="150.jpg" alt="Tenons" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Tenons</h3>
+                <p>Explore our tenons selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+        <!-- STRIP / ROPE LIGHTS -->
+        <a class="product-card category-card" href="strip-rope-lights.html" data-search="led strip rope lights specialty lighting">
+            <div class="product-image"><img src="29_Specialty_Lights.jpg" alt="Strip / Rope Lights" loading="lazy"></div>
+            <div class="product-info">
+                <h3>Strip / Rope Lights</h3>
+                <p>Explore our strip / rope lights selection.</p>
+                <span class="shop-link">SHOP NOW →</span>
+            </div>
+        </a>
+
+</div>
+
+<div class="view-all-products-wrap"><a class="view-all-products-btn" href="products.html">VIEW ALL PRODUCTS <span aria-hidden="true">→</span></a></div>
+
+</div>
+</section>
+
+<!-- SPECIALTY -->
+<section class="section specialty-section" id="specialty">
+<div class="container">
+
+    <div class="section-heading-center">
+        <div class="small">SPECIALTY & TECHNOLOGY</div>
+        <h2>Specialized Lighting Solutions</h2>
+        <p>
+            Products designed for specialized commercial,
+            architectural and technology applications.
+        </p>
+    </div>
+
+    <div class="specialty-grid">
+        <div class="specialty-item"><div class="specialty-icon">💡</div><h3>Signage Lights</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">⛽</div><h3>Gas Price Sign</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">⚡</div><h3>EV Chargers</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">〰️</div><h3>LED Strip Lights</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">🔲</div><h3>LED Panels</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">🔆</div><h3>Up & Down Lights</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">🪞</div><h3>LED Mirrors</h3></div>
+        <div class="specialty-item"><div class="specialty-icon">🏨</div><h3>Hotel Bed Lamps</h3></div>
+    </div>
+
+</div>
+</section>
+
+<!-- WHY LED KING -->
+<section class="section why-section" id="about">
+<div class="container">
+
+    <div class="section-heading-center">
+        <div class="small">WHY LED KING</div>
+        <h2 style="color:white;">Professional Lighting. Straightforward Service.</h2>
+        <p style="color:#aeb8c4;">
+            A lighting partner for contractors,
+            businesses, designers and homeowners.
+        </p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-number">01</div>
+            <h3>Wide Product Selection</h3>
+            <p>Commercial, residential, outdoor and specialty lighting products.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-number">02</div>
+            <h3>Project Support</h3>
+            <p>Get assistance with product selection and commercial lighting projects.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-number">03</div>
+            <h3>Bulk & Commercial Quotes</h3>
+            <p>Request pricing for large orders, projects and custom requirements.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-number">04</div>
+            <h3>Nationwide Service</h3>
+            <p>Serving customers across all 50 U.S. states.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- QUOTE -->
+<section class="section quote-section" id="quote">
+<div class="container">
+    <div class="quote-grid">
+
+        <div class="quote-text">
+            <h2>Need Lighting For A <span>Project?</span></h2>
+            <p>
+                Send us your project requirements and
+                our team can help with product selection,
+                quantities and commercial pricing.
+            </p>
+            <ul class="quote-points">
+                <li>Contractor & electrician pricing</li>
+                <li>Bulk orders</li>
+                <li>Commercial projects</li>
+                <li>Product selection assistance</li>
+                <li>Custom lighting requirements</li>
+                <li>Project support</li>
+            </ul>
+        </div>
+
+        <div class="form-box">
+
+            <h3>Request a Commercial Quote</h3>
+
+            <form action="https://formsubmit.co/ledkingfortworth@gmail.com" method="POST">
+
+                <input type="hidden" name="_subject" value="New LED KING Quote Request">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://www.ledkingfworth.com/?quote=success#quote">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" name="first_name" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" name="last_name" autocomplete="family-name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" name="business_name" autocomplete="organization">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" autocomplete="tel">
+                </div>
+
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <select name="project_type">
+                        <option>Commercial</option>
+                        <option>Warehouse</option>
+                        <option>Hotel / Apartment</option>
+                        <option>Gas Station</option>
+                        <option>Office</option>
+                        <option>Retail</option>
+                        <option>Residential</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea name="project_details" placeholder="Tell us what lighting you need..."></textarea>
+                </div>
+
+                <button class="btn btn-blue" type="submit">SEND QUOTE REQUEST</button>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+<div class="container">
+
+    <div class="section-heading-center">
+        <div class="small">CONTACT LED KING</div>
+        <h2>Let's Talk Lighting</h2>
+        <p>
+            Call, text or email LED KING for product
+            information, pricing and lighting assistance.
+        </p>
+    </div>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Call Us</h3>
+            <p><a href="tel:+16822003004">682-200-3004</a></p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>Message Us</h3>
+            <p><a href="sms:+18723029425">872-302-9425</a></p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email</h3>
+            <p><a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
+        </div>
+
+        <div class="contact-card map-card">
+            <div class="contact-icon">📍</div>
+            <h3>Find Our Store</h3>
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps?q=3701+Airport+Fwy,+Fort+Worth,+TX+76111&z=15&output=embed"
+                    title="Google Map showing LED KING store location"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="map-directions"><a href="https://maps.app.goo.gl/cSBHaHkVf13EuM1P8" target="_blank" rel="noopener">Open in Google Maps ↗</a></p>
+        </div>
+
+        <div class="contact-card hours-card">
+            <div class="contact-icon">🕒</div>
+            <h3>Store Hours</h3>
+            <div class="store-hours">
+                <div><span>Monday – Friday</span><strong>8:00 AM – 6:30 PM</strong></div>
+                <div><span>Saturday</span><strong>8:00 AM – 5:00 PM</strong></div>
+                <div><span>Sunday</span><strong>Closed</strong></div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+            <div class="footer-logo">LED <span>KING</span></div>
+            <p>
+                Professional LED lighting products
+                and solutions for commercial,
+                residential, outdoor and specialty
+                applications.
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+            <h3>PRODUCTS</h3>
+            <a href="products.html">All Products</a>
+            <a href="#products">Featured Products</a>
+            <a href="#specialty">Specialty Lighting</a>
+            <a href="#quote">Request a Quote</a>
+        </div>
+
+        <div class="footer-col">
+            <h3>CONTACT</h3>
+            <a href="tel:+16822003004">682-200-3004</a>
+            <a href="sms:+18723029425">872-302-9425</a>
+            <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a>
+            <a href="https://maps.app.goo.gl/cSBHaHkVf13EuM1P8" target="_blank" rel="noopener">Open Google Maps</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © <span id="year"></span> LED KING. All Rights Reserved.
+    </div>
+
+</div>
+</footer>
+
+<!-- MOBILE BOTTOM BAR -->
+<div class="mobile-bar">
+    <a href="products.html"><span>💡</span> PRODUCTS</a>
+    <a href="#quote"><span>📋</span> QUOTE</a>
+    <a href="#contact"><span>📞</span> CONTACT</a>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+/* MOBILE MENU */
+function toggleMenu(){
+    var menu = document.getElementById("navMenu");
+    var button = document.querySelector(".menu-btn");
+    var isOpen = menu.classList.toggle("show");
+    if (button) button.setAttribute("aria-expanded", String(isOpen));
+}
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+document.querySelectorAll(".nav-menu a").forEach(function(link){
+    link.addEventListener("click", function(){
+        document.getElementById("navMenu").classList.remove("show");
+    });
+});
+
+/* SEARCH FEATURED CATEGORIES BY NAME OR TYPE. If a search term is not in the
+   homepage highlights, the customer is directed to the complete product catalog. */
+(function(){
+  var form = document.getElementById("productSearchForm");
+  var input = document.getElementById("productSearchInput");
+  var feedback = document.getElementById("searchFeedback");
+  if (!form || !input) return;
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    var query = input.value.trim().toLowerCase();
+    var cards = Array.from(document.querySelectorAll("#products .product-card:not(.more-card)"));
+    if (!query) { input.focus(); return; }
+    var matches = [];
+    cards.forEach(function(card){
+      var haystack = ((card.getAttribute("data-search") || "") + " " + card.innerText).toLowerCase();
+      var match = query.split(/\s+/).some(function(word){ return haystack.includes(word); });
+      card.style.display = match ? "flex" : "none";
+      if (match) matches.push(card);
+    });
+    var moreCard = document.querySelector("#products .more-card");
+    if (moreCard) moreCard.style.display = "flex";
+    if (feedback){
+      feedback.classList.add("is-visible");
+      if (matches.length){
+        feedback.textContent = "Showing " + matches.length + " matching featured categor" + (matches.length === 1 ? "y." : "ies.") + " Search again or view all products.";
+      } else {
+        feedback.innerHTML = "No featured category matched “" + query.replace(/[&<>\"]/g, "") + "”. <a href=\"products.html\">Browse all products →</a>";
+      }
+    }
+    document.getElementById("products").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+  input.addEventListener("input", function(){
+    if (!input.value.trim()){
+      document.querySelectorAll("#products .product-card:not(.more-card)").forEach(function(card){ card.style.display = "flex"; });
+      var moreCard = document.querySelector("#products .more-card"); if (moreCard) moreCard.style.display = "flex";
+      if (feedback){ feedback.textContent = ""; feedback.classList.remove("is-visible"); }
+    }
+  });
+})();
+
+/* CURRENT YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+
+
+<style id="led-king-smaller-square-category-images">
+/* Smaller, consistent square images for the Popular LED Lighting categories */
+#products .product-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 18px 14px !important;
+}
+#products .product-grid > .product-card.category-card .product-image {
+  width: clamp(120px, 10vw, 155px) !important;
+  height: clamp(120px, 10vw, 155px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+  padding: 5px !important;
+  margin: 0 auto 9px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+#products .product-grid > .product-card.category-card .product-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+}
+#products .product-grid > .product-card.category-card .product-info h3 {
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  min-height: 2.5em !important;
+}
+#products .product-grid > .product-card.category-card .product-info p {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  min-height: 2.5em !important;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #products .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 18px 12px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(115px, 14vw, 145px) !important;
+    height: clamp(115px, 14vw, 145px) !important;
+  }
+}
+@media (max-width: 767px) {
+  #products .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 18px 10px !important; }
+  #products .product-grid > .product-card.category-card .product-image {
+    width: clamp(100px, 34vw, 130px) !important;
+    height: clamp(100px, 34vw, 130px) !important;
+    padding: 4px !important;
+    margin-bottom: 8px !important;
+  }
+  #products .product-grid > .product-card.category-card .product-info h3 { font-size: 12px !important; }
+  #products .product-grid > .product-card.category-card .product-info p { font-size: 10px !important; }
+}
+</style>
+
+</body>
+</html>
