@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Fixtures | LED KING</title>
+<meta name="description" content="Explore LED KING's collection of 13 lighting fixtures. Contact us for product details and pricing.">
+
+<style>
+:root {
+  --green: #26382E;
+  --green-dark: #19271F;
+  --gold: #C5A66A;
+  --ivory: #F8F6F0;
+  --text: #202820;
+  --muted: #6C746D;
+  --border: #E4E2D9;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:Arial,Helvetica,sans-serif; color:var(--text); background:var(--ivory); line-height:1.6; }
+a { color:inherit; text-decoration:none; }
+button,input { font:inherit; }
+img { display:block; max-width:100%; }
+
+.top-bar {
+  background:var(--green); color:white; text-align:center;
+  padding:9px 15px; font-size:13px; border-bottom:2px solid var(--gold);
+}
+header { background:white; position:sticky; top:0; z-index:100; border-bottom:1px solid var(--border); }
+.navbar {
+  max-width:2400px; min-height:80px; margin:auto; padding:12px clamp(18px,3vw,55px);
+  display:flex; justify-content:space-between; align-items:center; gap:18px;
+}
+.logo { display:flex; align-items:center; gap:11px; font-size:26px; font-weight:900; color:var(--green); }
+.logo-symbol {
+  width:46px; height:46px; border:3px solid var(--green); border-radius:50%;
+  display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:24px;
+}
+.logo small { display:block; font-size:10px; letter-spacing:1.2px; color:#777D75; line-height:1.2; }
+.nav-links { display:flex; align-items:center; gap:22px; font-size:14px; font-weight:700; }
+.nav-links a:hover { color:#98743B; }
+.nav-quote { background:var(--green); color:white!important; padding:11px 16px; border-radius:5px; }
+
+.hero {
+  background:linear-gradient(120deg,#19271F,#354B3B);
+  color:white; text-align:center; padding:60px 20px 54px; border-bottom:4px solid var(--gold);
+}
+.eyebrow { color:#E5C98E; font-size:12px; font-weight:900; letter-spacing:3px; margin-bottom:12px; }
+.hero h1 { font-size:clamp(32px,4vw,50px); line-height:1.15; margin-bottom:15px; }
+.hero p { max-width:740px; margin:auto; color:#E5E9E5; font-size:16px; }
+
+.catalog { max-width:2400px; margin:auto; padding:42px clamp(18px,2.5vw,48px) 65px; }
+.heading { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:23px; }
+.heading h2 { color:var(--green); font-size:clamp(25px,3vw,34px); line-height:1.2; }
+.heading p { color:var(--muted); font-size:14px; margin-top:7px; }
+.count { background:#EAE8DE; color:var(--green); padding:8px 13px; border-radius:5px; font-size:13px; font-weight:800; white-space:nowrap; }
+
+.search-row { display:flex; gap:10px; margin-bottom:28px; }
+.search-box {
+  flex:1; min-width:0; min-height:48px; padding:12px 15px; border:1px solid #D7D8CE;
+  border-radius:6px; background:white; outline:none;
+}
+.search-box:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(38,56,46,.1); }
+.clear-btn { padding:0 18px; background:white; border:1px solid var(--green); border-radius:6px; color:var(--green); font-weight:800; cursor:pointer; }
+.clear-btn:hover { background:var(--green); color:white; }
+
+.product-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:20px; }
+.product-card { min-width:0; background:white; border:1px solid var(--border); border-radius:9px; overflow:hidden; transition:.22s; }
+.product-card:hover { transform:translateY(-4px); border-color:var(--gold); box-shadow:0 12px 28px rgba(31,43,33,.12); }
+.image-button { display:block; width:100%; border:0; padding:0; background:white; cursor:zoom-in; }
+.product-image { width:100%; aspect-ratio:1/1; padding:8px; background:white; display:flex; justify-content:center; align-items:center; overflow:hidden; }
+.product-image img { width:100%; height:100%; object-fit:contain; transition:transform .25s; }
+.product-card:hover .product-image img { transform:scale(1.04); }
+.product-info { padding:14px; border-top:1px solid #F0EFE9; }
+.product-info h3 { color:var(--green); font-size:16px; margin-bottom:4px; }
+.product-info p { color:var(--muted); font-size:12px; margin-bottom:12px; }
+.product-link { display:inline-block; color:#765B2D; font-size:12px; font-weight:900; }
+.product-link:hover { text-decoration:underline; }
+
+.no-results { display:none; background:white; padding:30px; text-align:center; border:1px solid var(--border); border-radius:8px; }
+.no-results.show { display:block; }
+
+.quote-strip { background:#EAE8DE; padding:40px 20px; text-align:center; border-top:1px solid #D9D4C6; }
+.quote-strip h2 { color:var(--green); font-size:clamp(23px,3vw,32px); margin-bottom:8px; }
+.quote-strip p { max-width:700px; margin:0 auto 20px; color:#5F665F; font-size:14px; }
+.primary-btn { display:inline-block; background:var(--green); color:white; padding:13px 24px; border-radius:5px; font-size:14px; font-weight:800; }
+.primary-btn:hover { background:var(--green-dark); }
+
+footer { background:var(--green-dark); color:white; text-align:center; padding:32px 20px; }
+.footer-logo { font-size:24px; font-weight:900; margin-bottom:6px; }
+footer p { color:#D4DBD4; font-size:13px; margin:5px 0; }
+.footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin:17px 0; font-size:13px; font-weight:700; }
+.footer-links a:hover { color:#E5C98E; }
+.copyright { border-top:1px solid rgba(255,255,255,.16); padding-top:16px; margin-top:18px!important; font-size:12px; }
+
+.lightbox {
+  display:none; position:fixed; inset:0; z-index:2000; background:rgba(12,18,14,.93);
+  padding:24px; align-items:center; justify-content:center;
+}
+.lightbox.open { display:flex; }
+.lightbox-content { max-width:min(900px,94vw); max-height:88vh; text-align:center; color:white; }
+.lightbox-content img { max-width:100%; max-height:78vh; width:auto; height:auto; object-fit:contain; margin:auto; background:white; border-radius:5px; }
+.lightbox-caption { margin-top:12px; font-weight:800; }
+.lightbox-close { position:absolute; top:12px; right:22px; color:white; background:none; border:0; font-size:42px; cursor:pointer; }
+
+@media(max-width:1500px) { .product-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+@media(max-width:1050px) { .product-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; } .nav-links { gap:12px; } }
+@media(max-width:700px) {
+  .navbar { min-height:70px; }
+  .logo { font-size:22px; }
+  .logo-symbol { width:40px; height:40px; font-size:21px; }
+  .nav-links { gap:8px; font-size:12px; }
+  .nav-links a:not(.nav-quote) { display:none; }
+  .nav-quote { padding:9px 11px; }
+  .hero { padding:43px 18px; }
+  .catalog { padding-top:30px; }
+  .heading { align-items:start; flex-direction:column; gap:10px; }
+  .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .product-info { padding:11px 10px 13px; }
+  .product-info h3 { font-size:14px; }
+  .product-info p { font-size:11px; }
+  .search-row { gap:7px; }
+  .clear-btn { padding:0 12px; }
+}
+@media(max-width:360px) { .product-grid { gap:8px; } .product-info h3 { font-size:13px; } }
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">LED KING &nbsp; | &nbsp; Professional LED Lighting Solutions</div>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo" aria-label="LED KING homepage">
+      <span class="logo-symbol">K</span>
+      <span>LED KING<small>LIGHTING SOLUTIONS</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">All Products</a>
+      <a class="nav-quote" href="index.html#quote">Request a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">LED KING PRODUCT COLLECTION</div>
+  <h1>Lighting Fixtures</h1>
+  <p>Explore our lighting fixture collection. View the product pictures below and contact LED KING for specifications, availability, and pricing.</p>
+</section>
+
+<main class="catalog">
+  <div class="heading">
+    <div>
+      <h2>Explore Our Fixtures</h2>
+      <p>Select a product picture to enlarge it.</p>
+    </div>
+    <div class="count" id="productCount">13 Products</div>
+  </div>
+
+  <div class="search-row">
+    <input type="search" id="productSearch" class="search-box"
+      placeholder="Search fixtures by product number..." aria-label="Search fixtures">
+    <button class="clear-btn" id="clearSearch" type="button">Clear</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+  <div class="no-results" id="noResults">
+    <h3>No matching fixtures found</h3>
+    <p>Try another product number or clear your search.</p>
+  </div>
+</main>
+
+<section class="quote-strip">
+  <h2>Need Information About a Fixture?</h2>
+  <p>Contact LED KING for product details, availability, and wholesale or retail pricing.</p>
+  <a class="primary-btn" href="index.html#quote">Request a Quote</a>
+</section>
+
+<footer>
+  <div class="footer-logo">LED KING</div>
+  <p>Professional LED Lighting Solutions</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#products">All Products</a>
+    <a href="index.html#quote">Request a Quote</a>
+    <a href="mailto:ledkingfortworth@gmail.com">Email Us</a>
+    <a href="tel:6822003004">Call Us</a>
+  </div>
+  <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+  <p>Phone: 682-200-3004</p>
+  <p>Email: ledkingfortworth@gmail.com</p>
+  <p class="copyright">&copy; <span id="currentYear"></span> LED KING. All rights reserved.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged fixture picture">
+  <button class="lightbox-close" id="closeLightbox" aria-label="Close enlarged image">&times;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImage" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<script>
+const fixtureImages = [
+  "f1.png",
+  "f2.png",
+  "f3.png",
+  "f4.png",
+  "f5.png",
+  "f6.png",
+  "f7.png",
+  "f8.png",
+  "f9.png",
+  "f10.png",
+  "f11.png",
+  "f12.png",
+  "f13.png"
+];
+
+const grid = document.getElementById("productGrid");
+const searchInput = document.getElementById("productSearch");
+const clearButton = document.getElementById("clearSearch");
+const productCount = document.getElementById("productCount");
+const noResults = document.getElementById("noResults");
+
+function renderProducts(filter = "") {
+  grid.innerHTML = "";
+  const search = filter.trim().toLowerCase();
+
+  const filtered = fixtureImages.filter(filename =>
+    ("fixture " + filename.replace(".png", "") + " " + filename).toLowerCase().includes(search)
+  );
+
+  filtered.forEach(filename => {
+    const number = filename.match(/\d+/)[0];
+    const title = "Fixture " + number;
+
+    const card = document.createElement("article");
+    card.className = "product-card";
+
+    const imageButton = document.createElement("button");
+    imageButton.className = "image-button";
+    imageButton.type = "button";
+    imageButton.setAttribute("aria-label", "Enlarge " + title);
+
+    const imageBox = document.createElement("div");
+    imageBox.className = "product-image";
+
+    const img = document.createElement("img");
+    img.src = filename;
+    img.alt = title;
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    img.onerror = function() {
+      this.onerror = null;
+      this.style.display = "none";
+      const message = document.createElement("span");
+      message.textContent = "Image not found: " + filename;
+      message.style.cssText = "font-size:12px;color:#8B3A32;text-align:center;padding:12px;";
+      imageBox.appendChild(message);
+    };
+
+    imageBox.appendChild(img);
+    imageButton.appendChild(imageBox);
+    imageButton.addEventListener("click", () => openLightbox(filename, title));
+
+    const info = document.createElement("div");
+    info.className = "product-info";
+
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+
+    const description = document.createElement("p");
+    description.textContent = "Contact us for product details and pricing.";
+
+    const link = document.createElement("a");
+    link.className = "product-link";
+    link.href = "index.html#quote";
+    link.textContent = "REQUEST A QUOTE →";
+
+    info.append(heading, description, link);
+    card.append(imageButton, info);
+    grid.appendChild(card);
+  });
+
+  productCount.textContent = filtered.length +
+    (filtered.length === 1 ? " Product" : " Products");
+  noResults.classList.toggle("show", filtered.length === 0);
+}
+
+searchInput.addEventListener("input", () => renderProducts(searchInput.value));
+clearButton.addEventListener("click", () => {
+  searchInput.value = "";
+  renderProducts();
+  searchInput.focus();
+});
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const closeLightbox = document.getElementById("closeLightbox");
+
+function openLightbox(filename, title) {
+  lightboxImage.src = filename;
+  lightboxImage.alt = title;
+  lightboxCaption.textContent = title;
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+  closeLightbox.focus();
+}
+
+function hideLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImage.src = "";
+  document.body.style.overflow = "";
+}
+
+closeLightbox.addEventListener("click", hideLightbox);
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) hideLightbox();
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && lightbox.classList.contains("open")) hideLightbox();
+});
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+renderProducts();
+</script>
+
+</body>
+</html>
