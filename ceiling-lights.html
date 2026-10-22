@@ -1,1 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Ceiling Lights | LED KING</title>
+<meta name="description" content="Explore 50 ceiling light products at LED KING. Contact us for product specifications, availability, and wholesale or retail quotes.">
+
+<style>
+:root {
+  --green: #26382E;
+  --green-dark: #19271F;
+  --gold: #C5A66A;
+  --ivory: #F8F6F0;
+  --white: #FFFFFF;
+  --text: #202820;
+  --muted: #6C746D;
+  --border: #E4E2D9;
+  --page-width: 2400px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--ivory);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: var(--green);
+  color: white;
+  padding: 9px 24px;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: .3px;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* HEADER */
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  max-width: var(--page-width);
+  min-height: 82px;
+  padding: 12px clamp(18px, 3vw, 55px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--green);
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo-symbol {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--green);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.logo small {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #777D75;
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: #98743B;
+}
+
+.nav-quote {
+  background: var(--green);
+  color: white !important;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+
+.nav-quote:hover {
+  background: var(--green-dark);
+}
+
+/* PAGE INTRO */
+.page-intro {
+  background:
+    linear-gradient(120deg, rgba(25,39,31,.98), rgba(38,56,46,.94));
+  color: white;
+  padding: 62px 24px 55px;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
+}
+
+.eyebrow {
+  color: #E5C98E;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.page-intro h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.page-intro p {
+  max-width: 760px;
+  margin: auto;
+  color: #E5E9E5;
+  font-size: 16px;
+}
+
+/* CATALOG */
+.catalog {
+  max-width: var(--page-width);
+  margin: auto;
+  padding: 42px clamp(18px, 2.5vw, 48px) 65px;
+}
+
+.catalog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.catalog-heading h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+  color: var(--green);
+}
+
+.catalog-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.count {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  background: #EAE8DE;
+  padding: 8px 13px;
+  border-radius: 5px;
+}
+
+/* SEARCH */
+.search-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.search-box {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  background: white;
+  border: 1px solid #D7D8CE;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-box:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(38,56,46,.10);
+}
+
+.clear-btn {
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  padding: 0 20px;
+  background: white;
+  color: var(--green);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  overflow: hidden;
+  min-width: 0;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px rgba(31,43,33,.12);
+}
+
+.image-button {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: #FFFFFF;
+  cursor: zoom-in;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .25s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.04);
+}
+
+.product-info {
+  padding: 14px 14px 16px;
+  border-top: 1px solid #F0EFE9;
+}
+
+.product-info h3 {
+  color: var(--green);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.product-info p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.product-link {
+  display: inline-block;
+  color: #765B2D;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+
+.product-link:hover {
+  text-decoration: underline;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  background: white;
+  padding: 35px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.no-results.show {
+  display: block;
+}
+
+/* QUOTE STRIP */
+.quote-strip {
+  background: #EAE8DE;
+  padding: 40px 22px;
+  text-align: center;
+  border-top: 1px solid #D9D4C6;
+}
+
+.quote-strip h2 {
+  color: var(--green);
+  font-size: clamp(23px, 3vw, 32px);
+  margin-bottom: 8px;
+}
+
+.quote-strip p {
+  color: #5F665F;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 14px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 13px 24px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  border: 1px solid var(--green);
+  transition: .2s;
+}
+
+.primary-btn:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background: var(--green-dark);
+  color: white;
+  padding: 32px 22px;
+  text-align: center;
+}
+
+footer .footer-logo {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+footer p {
+  color: #D4DBD4;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 17px 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-links a:hover {
+  color: #E5C98E;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,.16);
+  padding-top: 16px;
+  margin-top: 18px !important;
+  font-size: 12px;
+}
+
+/* IMAGE ENLARGEMENT */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(12,18,14,.92);
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: min(900px, 94vw);
+  max-height: 88vh;
+  text-align: center;
+  color: white;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.lightbox-caption {
+  margin-top: 12px;
+  font-weight: 800;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1500px) {
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1050px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    min-height: 70px;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .logo-symbol {
+    width: 41px;
+    height: 41px;
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .nav-links a:not(.nav-quote) {
+    display: none;
+  }
+
+  .nav-quote {
+    padding: 10px 12px;
+  }
+
+  .page-intro {
+    padding: 44px 18px;
+  }
+
+  .catalog {
+    padding-top: 30px;
+  }
+
+  .catalog-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-info {
+    padding: 11px 10px 13px;
+  }
+
+  .product-info h3 {
+    font-size: 14px;
+  }
+
+  .product-info p {
+    font-size: 11px;
+  }
+
+  .search-row {
+    gap: 7px;
+  }
+
+  .clear-btn {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .product-grid {
+    gap: 8px;
+  }
+
+  .product-info h3 {
+    font-size: 13px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+  LED KING &nbsp; | &nbsp; Professional LED Lighting Solutions
+</div>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo" aria-label="LED KING homepage">
+      <span class="logo-symbol">K</span>
+      <span>LED KING<small>LIGHTING SOLUTIONS</small></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#products">All Products</a>
+      <a class="nav-quote" href="index.html#quote">Request a Quote</a>
+    </div>
+  </nav>
+</header>
+
+<section class="page-intro">
+  <div class="eyebrow">LED KING PRODUCT COLLECTION</div>
+  <h1>Ceiling Lights</h1>
+  <p>
+    Explore our collection of ceiling lighting options.
+    Browse the product pictures below and contact LED KING
+    for specifications, availability, and pricing.
+  </p>
+</section>
+
+<main class="catalog">
+  <div class="catalog-heading">
+    <div>
+      <h2>Explore Our Ceiling Lights</h2>
+      <p>Select any product image to view it larger.</p>
+    </div>
+    <div class="count" id="productCount">50 Products</div>
+  </div>
+
+  <div class="search-row">
+    <input
+      type="search"
+      id="productSearch"
+      class="search-box"
+      placeholder="Search ceiling lights by product number..."
+      aria-label="Search ceiling lights"
+    >
+    <button class="clear-btn" id="clearSearch" type="button">
+      Clear
+    </button>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+
+  <div class="no-results" id="noResults">
+    <h3>No matching ceiling lights found</h3>
+    <p>Try another product number or clear your search.</p>
+  </div>
+</main>
+
+<section class="quote-strip">
+  <h2>Need More Information About a Ceiling Light?</h2>
+  <p>
+    Contact LED KING for product details, current availability,
+    wholesale and retail pricing, and help choosing the right light
+    for your project.
+  </p>
+  <a class="primary-btn" href="index.html#quote">Request a Quote</a>
+</section>
+
+<footer>
+  <div class="footer-logo">LED KING</div>
+  <p>Professional LED Lighting Solutions</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#products">All Products</a>
+    <a href="index.html#quote">Request a Quote</a>
+    <a href="mailto:ledkingfortworth@gmail.com">Email Us</a>
+    <a href="tel:6822003004">Call Us</a>
+  </div>
+
+  <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+  <p>Phone: 682-200-3004</p>
+  <p>Email: ledkingfortworth@gmail.com</p>
+  <p class="copyright">
+    &copy; <span id="currentYear"></span> LED KING. All rights reserved.
+  </p>
+</footer>
+
+<!-- ENLARGED PRODUCT IMAGE -->
+<div
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Enlarged ceiling light picture"
+>
+  <button class="lightbox-close" id="closeLightbox"
+    aria-label="Close enlarged image">&times;</button>
+
+  <div class="lightbox-content">
+    <img id="lightboxImage" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<script>
+/*
+  EXACT IMAGE FILENAMES:
+  49.png
+  CL1.png through CL48.png
+  CL50.png
+
+  Keep all image files in the same GitHub folder as this HTML file.
+*/
+
+const ceilingLights = [
+  "CL1.png",
+  "CL2.png",
+  "CL3.png",
+  "CL4.png",
+  "CL5.png",
+  "CL6.png",
+  "CL7.png",
+  "CL8.png",
+  "CL9.png",
+  "CL10.png",
+  "CL11.png",
+  "CL12.png",
+  "CL13.png",
+  "CL14.png",
+  "CL15.png",
+  "CL16.png",
+  "CL17.png",
+  "CL18.png",
+  "CL19.png",
+  "CL20.png",
+  "CL21.png",
+  "CL22.png",
+  "CL23.png",
+  "CL24.png",
+  "CL25.png",
+  "CL26.png",
+  "CL27.png",
+  "CL28.png",
+  "CL29.png",
+  "CL30.png",
+  "CL31.png",
+  "CL32.png",
+  "CL33.png",
+  "CL34.png",
+  "CL35.png",
+  "CL36.png",
+  "CL37.png",
+  "CL38.png",
+  "CL39.png",
+  "CL40.png",
+  "CL41.png",
+  "CL42.png",
+  "CL43.png",
+  "CL44.png",
+  "CL45.png",
+  "CL46.png",
+  "CL47.png",
+  "CL48.png",
+  "49.png",
+  "CL50.png"
+];
+
+const grid = document.getElementById("productGrid");
+const searchInput = document.getElementById("productSearch");
+const clearButton = document.getElementById("clearSearch");
+const productCount = document.getElementById("productCount");
+const noResults = document.getElementById("noResults");
+
+function getProductNumber(filename) {
+  if (filename === "49.png") return 49;
+  const match = filename.match(/^CL(\d+)\.png$/i);
+  return match ? Number(match[1]) : "";
+}
+
+function renderProducts(filter = "") {
+  grid.innerHTML = "";
+
+  const search = filter.trim().toLowerCase();
+
+  const filtered = ceilingLights.filter(filename => {
+    const number = getProductNumber(filename);
+    const searchableText =
+      "ceiling light " + number + " " + filename.toLowerCase();
+
+    return searchableText.includes(search);
+  });
+
+  filtered.forEach(filename => {
+    const number = getProductNumber(filename);
+    const title = "Ceiling Light " + number;
+
+    const card = document.createElement("article");
+    card.className = "product-card";
+
+    const imageButton = document.createElement("button");
+    imageButton.className = "image-button";
+    imageButton.type = "button";
+    imageButton.setAttribute("aria-label", "Enlarge " + title);
+
+    const imageBox = document.createElement("div");
+    imageBox.className = "product-image";
+
+    const img = document.createElement("img");
+    img.src = filename;
+    img.alt = title;
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    // Display a helpful message if a filename is incorrect or missing.
+    img.onerror = function () {
+      this.onerror = null;
+      this.alt = "Image not found: " + filename;
+      this.style.display = "none";
+
+      const errorText = document.createElement("span");
+      errorText.textContent = "Image not found: " + filename;
+      errorText.style.cssText =
+        "font-size:12px;color:#8B3A32;text-align:center;padding:12px;";
+      imageBox.appendChild(errorText);
+    };
+
+    imageBox.appendChild(img);
+    imageButton.appendChild(imageBox);
+
+    imageButton.addEventListener("click", () => {
+      openLightbox(filename, title);
+    });
+
+    const info = document.createElement("div");
+    info.className = "product-info";
+
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+
+    const description = document.createElement("p");
+    description.textContent = "Contact us for product details and pricing.";
+
+    const link = document.createElement("a");
+    link.className = "product-link";
+    link.href = "index.html#quote";
+    link.textContent = "REQUEST A QUOTE →";
+
+    info.appendChild(heading);
+    info.appendChild(description);
+    info.appendChild(link);
+
+    card.appendChild(imageButton);
+    card.appendChild(info);
+    grid.appendChild(card);
+  });
+
+  productCount.textContent =
+    filtered.length + (filtered.length === 1 ? " Product" : " Products");
+
+  noResults.classList.toggle("show", filtered.length === 0);
+}
+
+searchInput.addEventListener("input", () => {
+  renderProducts(searchInput.value);
+});
+
+clearButton.addEventListener("click", () => {
+  searchInput.value = "";
+  renderProducts();
+  searchInput.focus();
+});
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxCaption = document.getElementById("lightboxCaption");
+const closeLightbox = document.getElementById("closeLightbox");
+
+function openLightbox(filename, title) {
+  lightboxImage.src = filename;
+  lightboxImage.alt = title;
+  lightboxCaption.textContent = title;
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+  closeLightbox.focus();
+}
+
+function hideLightbox() {
+  lightbox.classList.remove("open");
+  lightboxImage.src = "";
+  document.body.style.overflow = "";
+}
+
+closeLightbox.addEventListener("click", hideLightbox);
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) {
+    hideLightbox();
+  }
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && lightbox.classList.contains("open")) {
+    hideLightbox();
+  }
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+
+// Show all 50 products when the page first loads.
+renderProducts();
+</script>
+
+</body>
+</html>
