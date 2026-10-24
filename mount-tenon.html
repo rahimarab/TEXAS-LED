@@ -4,369 +4,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="LED KING Mount Tenon adapters, bullhorns, metal arms, pole mounts and lighting accessories.">
-<title>Mount Tenon & Lighting Mounting Accessories | LED KING</title>
+
+<title>Mount Tenon Lights | LED KING</title>
+<meta name="description" content="Explore Mount Tenon lighting accessories at LED KING. View our product pictures and contact us for pricing and availability.">
 
 <style>
 :root {
-  --blue: #1261a0;
-  --dark-blue: #0b4778;
-  --orange: #f58220;
-  --light: #f5f7fa;
-  --text: #222;
-  --border: #e1e5eb;
-  --white: #fff;
+    --teal: #00a99d;
+    --dark: #111817;
+    --muted: #65716f;
+    --light: #f5f8f7;
 }
-* { box-sizing: border-box; }
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--light);
-  line-height: 1.5;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--dark);
 }
-a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
-button { cursor: pointer; }
+
 header {
-  background: var(--white);
-  border-bottom: 3px solid var(--orange);
-  position: sticky;
-  top: 0;
-  z-index: 20;
+    background: #111817;
+    padding: 20px;
+    color: white;
 }
+
 .header-inner {
-  max-width: 1400px;
-  margin: auto;
-  padding: 14px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
 }
+
 .logo {
-  font-size: 29px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: 1px;
+    color: white;
+    font-size: 27px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
-.logo span { color: var(--orange); }
-nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  font-size: 14px;
-  font-weight: 700;
+
+.logo span {
+    color: var(--teal);
 }
-nav a:hover { color: var(--orange); }
-.cart-button, .primary-button {
-  border: 0;
-  border-radius: 6px;
-  background: var(--orange);
-  color: white;
-  padding: 11px 16px;
-  font-weight: 700;
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #52615e;
+    border-radius: 7px;
+    padding: 11px 15px;
+    font-size: 14px;
 }
-.cart-button:hover, .primary-button:hover { background: #d96c10; }
+
+.back-link:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+
 .hero {
-  background: linear-gradient(120deg, var(--dark-blue), var(--blue));
-  color: white;
-  padding: 48px 22px;
-  text-align: center;
+    background: #e7f3f1;
+    text-align: center;
+    padding: 48px 18px 42px;
 }
-.hero h1 {
-  font-size: clamp(28px, 4vw, 42px);
-  margin: 0 0 10px;
+
+.eyebrow {
+    color: #00877d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
+
+h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 12px 0;
+}
+
 .hero p {
-  max-width: 780px;
-  margin: auto;
-  font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #52615e;
 }
-.hero .primary-button {
-  display: inline-block;
-  margin-top: 22px;
+
+main {
+    max-width: 1500px;
+    margin: auto;
+    padding: 38px 22px 60px;
 }
-.container {
-  max-width: 1400px;
-  padding: 30px 22px;
-  margin: auto;
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
 }
-.section-heading { margin-bottom: 22px; }
-.section-heading h2 { color: var(--dark-blue); margin: 0 0 6px; }
-.section-heading p { margin: 0; color: #5f6873; }
+
+.section-heading h2 {
+    margin: 0 0 10px;
+    font-size: 27px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
 }
+
 .product-card {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform .2s, box-shadow .2s;
+    background: white;
+    border: 1px solid #e0e8e6;
+    border-radius: 12px;
+    padding: 14px;
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
 }
+
 .product-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 22px #00000012;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .08);
 }
-.product-image {
-  height: 220px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
-  cursor: pointer;
+
+.image-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
-.image-fallback {
-  color: #667085;
-  font-size: 14px;
-  text-align: center;
-  padding: 20px;
+
+.product-card h3 {
+    text-align: center;
+    font-size: 16px;
+    margin: 15px 0 5px;
 }
-.product-info {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+
+.product-card p {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 12px;
 }
-.product-info h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 0 0 10px;
+
+.quote-link {
+    display: block;
+    background: var(--teal);
+    color: #071d1a;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 8px;
+    border-radius: 7px;
+    font-weight: 800;
+    font-size: 12px;
 }
-.price {
-  color: var(--blue);
-  font-size: 23px;
-  font-weight: 800;
-  margin: 4px 0 12px;
+
+.quote-link:hover {
+    background: #008f83;
+    color: white;
 }
-.product-description {
-  font-size: 13px;
-  color: #59616b;
-  margin: 0 0 14px;
-  flex: 1;
-}
-.card-actions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-.secondary-button {
-  border: 1px solid var(--blue);
-  color: var(--blue);
-  background: white;
-  border-radius: 6px;
-  padding: 10px;
-  font-weight: 700;
-}
-.secondary-button:hover { background: #eef6fd; }
-.card-actions .primary-button { width: 100%; }
-.info-strip {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 22px;
-  margin-top: 30px;
-}
-.info-strip h2 { margin-top: 0; color: var(--dark-blue); }
+
 footer {
-  background: #102a43;
-  color: white;
-  padding: 32px 22px;
-  margin-top: 30px;
+    background: #111817;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    line-height: 1.8;
 }
-.footer-inner {
-  max-width: 1400px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+
+footer a {
+    color: #35d4c6;
+    text-decoration: none;
 }
-footer h3 { color: #ffad66; margin-top: 0; }
-footer a { text-decoration: underline; }
-footer p { margin: 7px 0; }
-.modal-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: #0009;
-  padding: 20px;
-  align-items: center;
-  justify-content: center;
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
 }
-.modal-backdrop.open { display: flex; }
-.modal {
-  background: white;
-  width: min(850px, 100%);
-  max-height: 90vh;
-  overflow-y: auto;
-  border-radius: 12px;
-  position: relative;
-  padding: 25px;
-}
-.close-button {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  border: 0;
-  background: transparent;
-  font-size: 28px;
-  color: #555;
-}
-.modal-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 25px;
-  padding-top: 12px;
-}
-.modal-image {
-  min-height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.modal-image img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: contain;
-}
-.modal h2 { color: var(--dark-blue); margin-top: 0; }
-.modal-price {
-  font-size: 27px;
-  font-weight: 800;
-  color: var(--blue);
-}
-.modal-details { white-space: pre-line; color: #505966; }
-.quantity-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 16px 0;
-}
-.quantity-row input {
-  width: 80px;
-  padding: 9px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-}
-.cart-backdrop {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  background: #0008;
-}
-.cart-backdrop.open { display: block; }
-.cart-drawer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: min(470px, 100%);
-  height: 100%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-}
-.cart-header {
-  padding: 18px 20px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.cart-header h2 { margin: 0; color: var(--dark-blue); }
-.cart-header button {
-  border: 0;
-  background: none;
-  font-size: 27px;
-}
-.cart-items {
-  padding: 16px 20px;
-  overflow-y: auto;
-  flex: 1;
-}
-.cart-item {
-  border-bottom: 1px solid var(--border);
-  padding: 13px 0;
-}
-.cart-item h4 { margin: 0 0 5px; }
-.cart-item p { margin: 4px 0; color: #606975; font-size: 14px; }
-.cart-item-controls {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 9px;
-}
-.cart-item-controls input {
-  width: 65px;
-  padding: 6px;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-}
-.remove-button {
-  border: 0;
-  background: none;
-  color: #b42318;
-  font-weight: 700;
-}
-.cart-footer {
-  border-top: 1px solid var(--border);
-  padding: 18px 20px;
-}
-.subtotal {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-.cart-footer .primary-button { width: 100%; margin-bottom: 8px; }
-.cart-note { color: #68717d; font-size: 12px; margin: 5px 0 0; }
-.empty-cart { color: #68717d; text-align: center; padding: 35px 10px; }
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #102a43;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 7px;
-  z-index: 100;
-  display: none;
-}
-.toast.show { display: block; }
-@media (max-width: 1050px) {
-  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (max-width: 720px) {
-  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .product-image { height: 175px; }
-  .product-info { padding: 12px; }
-  .product-info h3 { font-size: 14px; }
-  .price { font-size: 20px; }
-  .header-inner { justify-content: center; }
-  nav { justify-content: center; }
-  .modal-content { grid-template-columns: 1fr; }
-  .modal-image { min-height: 170px; }
-  .footer-inner { grid-template-columns: 1fr; }
-}
-@media (max-width: 400px) {
-  .product-grid { grid-template-columns: 1fr; }
-  .product-image { height: 220px; }
+
+@media (max-width: 650px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    main {
+        padding: 28px 12px 42px;
+    }
+
+    .product-card {
+        padding: 9px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 36px 16px;
+    }
 }
 </style>
 </head>
@@ -374,526 +233,193 @@ footer p { margin: 7px 0; }
 <body>
 
 <header>
-  <div class="header-inner">
-    <a class="logo" href="index.html">LED <span>KING</span></a>
-    <nav>
-      <a href="index.html#about">About Us</a>
-      <a href="index.html#products">Products</a>
-      <a href="index.html#specialty">Specialty</a>
-      <a href="index.html#quote">Get a Quote</a>
-      <a href="index.html#contact">Contact</a>
-      <button class="cart-button" type="button" onclick="openCart()">
-        Cart (<span id="cartCount">0</span>)
-      </button>
-    </nav>
-  </div>
+    <div class="header-inner">
+        <a class="logo" href="index.html">LED <span>KING</span></a>
+        <a class="back-link" href="index.html#products">← All Categories</a>
+    </div>
 </header>
 
 <section class="hero">
-  <h1>Mount Tenon & Lighting Accessories</h1>
-  <p>
-    Explore LED KING's selection of tenon adapters, bullhorns, metal arms,
-    pole mounts and track lighting accessories for lighting installations.
-  </p>
-  <a class="primary-button" href="#products">View Products</a>
+    <div class="eyebrow">LED KING Product Collection</div>
+    <h1>Mount Tenon</h1>
+    <p>
+        Explore our Mount Tenon product collection.
+        Browse the pictures below and contact LED KING
+        for product details, pricing and availability.
+    </p>
 </section>
 
-<main class="container" id="products">
-  <div class="section-heading">
-    <h2>Mount Tenon Products</h2>
-    <p>All products are listed at $100 each. Contact us for product compatibility and installation details.</p>
-  </div>
+<main>
+    <div class="section-heading">
+        <h2>Our Mount Tenon Products</h2>
+        <p>Browse the available product pictures below.</p>
+    </div>
 
-  <div class="product-grid" id="productGrid"></div>
+    <div class="product-grid">
 
-  <section class="info-strip">
-    <h2>Need Help Choosing a Mounting Accessory?</h2>
-    <p>
-      Contact LED KING with your pole size, fixture type and mounting requirements.
-      Our team can help you identify a suitable product for your project.
-    </p>
-    <a class="primary-button" href="index.html#quote">Request a Quote</a>
-  </section>
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT1.png" alt="Mount Tenon product 1" loading="lazy">
+            </div>
+            <h3>Mount Tenon 1</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT2.png" alt="Mount Tenon product 2" loading="lazy">
+            </div>
+            <h3>Mount Tenon 2</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT3.png" alt="Mount Tenon product 3" loading="lazy">
+            </div>
+            <h3>Mount Tenon 3</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT4.png" alt="Mount Tenon product 4" loading="lazy">
+            </div>
+            <h3>Mount Tenon 4</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT5.png" alt="Mount Tenon product 5" loading="lazy">
+            </div>
+            <h3>Mount Tenon 5</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT6.png" alt="Mount Tenon product 6" loading="lazy">
+            </div>
+            <h3>Mount Tenon 6</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT7.png" alt="Mount Tenon product 7" loading="lazy">
+            </div>
+            <h3>Mount Tenon 7</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT8.png" alt="Mount Tenon product 8" loading="lazy">
+            </div>
+            <h3>Mount Tenon 8</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT9.png" alt="Mount Tenon product 9" loading="lazy">
+            </div>
+            <h3>Mount Tenon 9</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT10.png" alt="Mount Tenon product 10" loading="lazy">
+            </div>
+            <h3>Mount Tenon 10</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT11.png" alt="Mount Tenon product 11" loading="lazy">
+            </div>
+            <h3>Mount Tenon 11</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT12.png" alt="Mount Tenon product 12" loading="lazy">
+            </div>
+            <h3>Mount Tenon 12</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT13.png" alt="Mount Tenon product 13" loading="lazy">
+            </div>
+            <h3>Mount Tenon 13</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT14.png" alt="Mount Tenon product 14" loading="lazy">
+            </div>
+            <h3>Mount Tenon 14</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT15.png" alt="Mount Tenon product 15" loading="lazy">
+            </div>
+            <h3>Mount Tenon 15</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT16.png" alt="Mount Tenon product 16" loading="lazy">
+            </div>
+            <h3>Mount Tenon 16</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+        <article class="product-card">
+            <div class="image-box">
+                <img src="MT17.png" alt="Mount Tenon product 17" loading="lazy">
+            </div>
+            <h3>Mount Tenon 17</h3>
+            <p>Contact us for details and pricing.</p>
+            <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+        </article>
+
+    </div>
 </main>
 
 <footer>
-  <div class="footer-inner">
-    <div>
-      <h3>LED KING</h3>
-      <p>Lighting Made Simple. Quality You Can Trust.</p>
-      <p>Professional LED lighting products and solutions.</p>
-    </div>
-    <div>
-      <h3>Contact Us</h3>
-      <p>Phone: <a href="tel:6822003004">682-200-3004</a></p>
-      <p>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
-      <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
-      <p><a href="https://maps.app.goo.gl/bjyUvjcwKhLtDpHf7" target="_blank" rel="noopener">Get Directions</a></p>
-    </div>
-    <div>
-      <h3>Store Hours</h3>
-      <p>Monday–Friday: 8:00 AM–6:30 PM</p>
-      <p>Saturday: 8:00 AM–5:00 PM</p>
-      <p>Sunday: Please contact us.</p>
-    </div>
-  </div>
+    <strong>LED KING</strong><br>
+    Professional LED Lighting Solutions<br>
+    <a href="index.html#contact">Contact Us</a>
+    &nbsp; | &nbsp;
+    <a href="index.html#products">All Categories</a>
 </footer>
-
-<!-- Product Details Modal -->
-<div class="modal-backdrop" id="productModal" onclick="backdropClose(event)">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="close-button" type="button" aria-label="Close" onclick="closeModal()">×</button>
-    <div class="modal-content">
-      <div class="modal-image">
-        <img id="modalImage" src="" alt="">
-      </div>
-      <div>
-        <h2 id="modalTitle"></h2>
-        <div class="modal-price">$100.00</div>
-        <p class="modal-details" id="modalDescription"></p>
-        <div class="quantity-row">
-          <label for="modalQuantity">Quantity:</label>
-          <input id="modalQuantity" type="number" min="1" step="1" value="1">
-        </div>
-        <button class="primary-button" type="button" onclick="addModalToCart()">Add to Cart — $100 Each</button>
-        <p class="cart-note">Online payment is not enabled yet. Request a quote to arrange your order.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Shopping Cart Drawer -->
-<div class="cart-backdrop" id="cartBackdrop" onclick="cartBackdropClose(event)">
-  <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart">
-    <div class="cart-header">
-      <h2>Your Cart</h2>
-      <button type="button" aria-label="Close cart" onclick="closeCart()">×</button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-footer">
-      <div class="subtotal">
-        <span>Subtotal</span>
-        <span id="cartSubtotal">$0.00</span>
-      </div>
-      <button class="primary-button" type="button" onclick="requestQuote()">Request Quote by Email</button>
-      <p class="cart-note">Subtotal excludes any applicable taxes, shipping or delivery charges. Payment is arranged separately.</p>
-    </div>
-  </aside>
-</div>
-
-<div class="toast" id="toast" role="status"></div>
-
-<script>
-const IMAGE_BASE =
-  "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/";
-
-const products = [
-  {
-    image: "MT1.png",
-    name: "Tenon Adaptor for Square Pole",
-    description: "Tenon adaptor for square pole. The product description indicates a 4-inch square pole application. Confirm the pole dimensions and fixture compatibility before ordering."
-  },
-  {
-    image: "MT2.png",
-    name: "Metal Arm — L Shape",
-    description: "L-shaped metal arm with black finish. Intended as a mounting arm for compatible lighting or other equipment. Confirm dimensions and mounting requirements before installation."
-  },
-  {
-    image: "MT3.png",
-    name: "Round Pole Side Tenon — Weld-On",
-    description: "Round pole side tenon with black finish. Weld-on mounting accessory intended for compatible round-pole lighting installations. Professional installation may be required."
-  },
-  {
-    image: "MT4.png",
-    name: "Bullhorn with 2 Arms at 180 Degrees",
-    description: "Two-arm bullhorn with black finish. The arms are arranged at 180 degrees. Described as a slip-fit accessory for 2-3/8-inch tenons. Verify fit before ordering."
-  },
-  {
-    image: "MT5.png",
-    name: "Bullhorn with 3 Arms at 120 Degrees",
-    description: "Three-arm bullhorn with black finish and 120-degree arm spacing. Described for slip-fit installation onto 2-3/8-inch tenons. Confirm dimensions and fixture compatibility."
-  },
-  {
-    image: "MT6.png",
-    name: "Metal Arm — 4-Inch Square Pole Mount",
-    description: "Metal arm for a 4-inch square pole with an internal tenon adaptor and black finish. The supplied description specifies a 2-3/8-inch pipe diameter. Verify exact dimensions before installation."
-  },
-  {
-    image: "MT7.png",
-    name: "Low-Profile Bullhorn with 2 Tenons at 180 Degrees",
-    description: "Low-profile bullhorn with two tenons arranged at 180 degrees and a black finish. Described as a slip-fit accessory for 2-3/8-inch tenons."
-  },
-  {
-    image: "MT8.png",
-    name: "Low-Profile Bullhorn with 3 Tenons",
-    description: "Low-profile bullhorn with three tenons and black finish. The supplied description refers to a 180-degree arrangement; please verify the exact configuration and dimensions before ordering."
-  },
-  {
-    image: "MT9.png",
-    name: "Low-Profile Bullhorn with 4 Tenons Inline",
-    description: "Low-profile bullhorn with four inline tenons and black finish. Described for 2-3/8-inch round tenons. Confirm the product dimensions and fixture fit before installation."
-  },
-  {
-    image: "MT10.png",
-    name: "Tenon Adapter for 4-Inch Square Pole — 2 Tenons, 180 Degrees",
-    description: "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 180 degrees and a black finish. Designed for fixtures mounted in opposite directions."
-  },
-  {
-    image: "MT11.png",
-    name: "Tenon Adapter for 4-Inch Square Pole — 2 Tenons, 90 Degrees",
-    description: "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 90 degrees and a black finish. Verify mounting dimensions and compatibility before ordering."
-  },
-  {
-    image: "MT12.png",
-    name: "Tenon Adapter for 4-Inch Square Pole — 3 Tenons, 90 Degrees",
-    description: "Tenon adapter for a 4-inch square pole with three horizontal tenons, black finish. Intended for compatible multi-fixture mounting arrangements. Confirm the exact configuration before ordering."
-  },
-  {
-    image: "MT13.png",
-    name: "Tenon Adapter for 4-Inch Square Pole — 4 Tenons, 90 Degrees",
-    description: "Tenon adapter for a 4-inch square pole with four horizontal tenons and a black finish. Confirm pole dimensions, tenon size and fixture compatibility before installation."
-  },
-  {
-    image: "MT14.png",
-    name: "Tenon Adapter for 2-3/8-Inch Round Pole — 2 Tenons, 180 Degrees",
-    description: "Tenon adapter for a 2-3/8-inch round pole with two horizontal tenons arranged at 180 degrees and a black finish. Verify the mounting fit before ordering."
-  },
-  {
-    image: "MT15.png",
-    name: "Tenon Adapter for 2-3/8-Inch Round Pole — 3 Tenons, 90 Degrees",
-    description: "Tenon adapter for a 2-3/8-inch round pole with three horizontal tenons and a black finish. Confirm the precise arm arrangement and compatibility before installation."
-  },
-  {
-    image: "MT16.png",
-    name: "Bullhorn — 2 Tenons, 180 Degrees, Square Base",
-    description: "Bullhorn mounting accessory with two tenons arranged at 180 degrees and a square base. Intended for compatible outdoor lighting installations. Confirm base dimensions and fit before ordering."
-  },
-  {
-    image: "MT17.png",
-    name: "3-Pin Track Rail — 1 Meter",
-    description: "Black 1-meter track rail with a 3-pin configuration. Connector head and tail are included. Check that the rail and connectors are compatible with your track lighting system."
-  },
-  {
-    image: "MT18.png",
-    name: "L-Style 3-Pin Track Rail Connector",
-    description: "L-style connector for compatible 3-pin track rails, with a black finish. Designed to connect track sections around a corner. Confirm track system compatibility before ordering."
-  },
-  {
-    image: "MT19.png",
-    name: "Metal Arm — 3-Way, 120 Degrees, Round",
-    description: "Round three-way metal arm with a 120-degree configuration. Intended for compatible mounting applications. Material, dimensions, finish and load rating should be confirmed before installation."
-  },
-  {
-    image: "MT20.png",
-    name: "Metal Arm — 4-Inch Round Pole Mount",
-    description: "Metal arm described for mounting to a 4-inch round pole. Intended for compatible lighting or equipment applications. Confirm the actual pole diameter, clamp or attachment style and dimensions before ordering."
-  },
-  {
-    image: "MT21.png",
-    name: "Metal Arm — Round Pole, 5-Foot",
-    description: "Metal arm/round-pole product described as 5 feet in length. The supplied description mentions a durable, coated construction. Confirm the exact dimensions, intended use and mounting method before installation."
-  },
-  {
-    image: "MT22.png",
-    name: "Tenon — 3-Way, 120 Degrees, Long Arm",
-    description: "Long-arm tenon accessory with a three-way, 120-degree configuration. Intended for compatible mounting arrangements. Verify dimensions, material, fit and load requirements before installation."
-  },
-  {
-    image: "MT23.png",
-    name: "Tenon — 2-Way, 180 Degrees, Long Arm",
-    description: "Long-arm tenon accessory with a two-way, 180-degree configuration. Intended for compatible mounting arrangements. Confirm the exact dimensions and fixture compatibility before ordering."
-  },
-  {
-    image: "MT24.png",
-    name: "Tenon — 4-Way, 90 Degrees, Long Arm",
-    description: "Long-arm tenon accessory with a four-way, 90-degree configuration. Intended for compatible mounting arrangements. Confirm the dimensions, material and installation requirements before ordering."
-  }
-];
-
-const PRICE = 100;
-let activeProduct = null;
-let cart = [];
-
-const productGrid = document.getElementById("productGrid");
-const productModal = document.getElementById("productModal");
-const cartBackdrop = document.getElementById("cartBackdrop");
-
-function money(amount) {
-  return amount.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD"
-  });
-}
-
-function showToast(message) {
-  const toast = document.getElementById("toast");
-  toast.textContent = message;
-  toast.classList.add("show");
-  window.setTimeout(() => toast.classList.remove("show"), 2200);
-}
-
-function renderProducts() {
-  productGrid.innerHTML = "";
-
-  products.forEach((product, index) => {
-    const card = document.createElement("article");
-    card.className = "product-card";
-
-    const imageWrap = document.createElement("div");
-    imageWrap.className = "product-image";
-    imageWrap.tabIndex = 0;
-    imageWrap.setAttribute("role", "button");
-    imageWrap.setAttribute("aria-label", "View " + product.name);
-
-    const img = document.createElement("img");
-    img.src = IMAGE_BASE + product.image;
-    img.alt = product.name;
-    img.loading = "lazy";
-
-    const fallback = document.createElement("div");
-    fallback.className = "image-fallback";
-    fallback.textContent = "Product image: " + product.image;
-    fallback.hidden = true;
-
-    img.onerror = function() {
-      img.hidden = true;
-      fallback.hidden = false;
-    };
-
-    imageWrap.append(img, fallback);
-    imageWrap.addEventListener("click", () => openModal(index));
-    imageWrap.addEventListener("keydown", event => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        openModal(index);
-      }
-    });
-
-    const info = document.createElement("div");
-    info.className = "product-info";
-
-    const title = document.createElement("h3");
-    title.textContent = product.name;
-
-    const price = document.createElement("div");
-    price.className = "price";
-    price.textContent = money(PRICE);
-
-    const description = document.createElement("p");
-    description.className = "product-description";
-    description.textContent = product.description;
-
-    const actions = document.createElement("div");
-    actions.className = "card-actions";
-
-    const detailsButton = document.createElement("button");
-    detailsButton.className = "secondary-button";
-    detailsButton.type = "button";
-    detailsButton.textContent = "View Details";
-    detailsButton.addEventListener("click", () => openModal(index));
-
-    const addButton = document.createElement("button");
-    addButton.className = "primary-button";
-    addButton.type = "button";
-    addButton.textContent = "Add to Cart";
-    addButton.addEventListener("click", () => addToCart(index, 1));
-
-    actions.append(detailsButton, addButton);
-    info.append(title, price, description, actions);
-    card.append(imageWrap, info);
-    productGrid.appendChild(card);
-  });
-}
-
-function openModal(index) {
-  activeProduct = index;
-  const product = products[index];
-
-  document.getElementById("modalTitle").textContent = product.name;
-  document.getElementById("modalDescription").textContent =
-    product.description + "\n\nPrice: " + money(PRICE) + "\nSKU: Not listed";
-  document.getElementById("modalQuantity").value = 1;
-
-  const img = document.getElementById("modalImage");
-  img.src = IMAGE_BASE + product.image;
-  img.alt = product.name;
-  img.onerror = function() {
-    img.removeAttribute("src");
-    img.alt = "Image unavailable: " + product.image;
-  };
-
-  productModal.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-  productModal.classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function backdropClose(event) {
-  if (event.target === productModal) closeModal();
-}
-
-function addToCart(index, quantity) {
-  const product = products[index];
-  const qty = Math.max(1, Math.floor(Number(quantity) || 1));
-  const existing = cart.find(item => item.index === index);
-
-  if (existing) {
-    existing.quantity += qty;
-  } else {
-    cart.push({ index, quantity: qty });
-  }
-
-  renderCart();
-  showToast(product.name + " added to cart.");
-}
-
-function addModalToCart() {
-  if (activeProduct === null) return;
-
-  const input = document.getElementById("modalQuantity");
-  const quantity = Math.max(1, Math.floor(Number(input.value) || 1));
-
-  addToCart(activeProduct, quantity);
-  closeModal();
-}
-
-function renderCart() {
-  const cartItems = document.getElementById("cartItems");
-  cartItems.innerHTML = "";
-
-  let count = 0;
-  let subtotal = 0;
-
-  if (cart.length === 0) {
-    const empty = document.createElement("p");
-    empty.className = "empty-cart";
-    empty.textContent = "Your cart is empty.";
-    cartItems.appendChild(empty);
-  }
-
-  cart.forEach(item => {
-    const product = products[item.index];
-    count += item.quantity;
-    subtotal += PRICE * item.quantity;
-
-    const row = document.createElement("div");
-    row.className = "cart-item";
-
-    const title = document.createElement("h4");
-    title.textContent = product.name;
-
-    const price = document.createElement("p");
-    price.textContent = money(PRICE) + " each";
-
-    const lineTotal = document.createElement("p");
-    lineTotal.textContent = "Line total: " + money(PRICE * item.quantity);
-
-    const controls = document.createElement("div");
-    controls.className = "cart-item-controls";
-
-    const label = document.createElement("label");
-    label.textContent = "Qty";
-
-    const qtyInput = document.createElement("input");
-    qtyInput.type = "number";
-    qtyInput.min = "1";
-    qtyInput.step = "1";
-    qtyInput.value = item.quantity;
-    qtyInput.setAttribute("aria-label", "Quantity for " + product.name);
-
-    qtyInput.addEventListener("change", () => {
-      item.quantity = Math.max(1, Math.floor(Number(qtyInput.value) || 1));
-      renderCart();
-    });
-
-    const remove = document.createElement("button");
-    remove.className = "remove-button";
-    remove.type = "button";
-    remove.textContent = "Remove";
-    remove.addEventListener("click", () => {
-      cart = cart.filter(cartItem => cartItem.index !== item.index);
-      renderCart();
-    });
-
-    controls.append(label, qtyInput, remove);
-    row.append(title, price, lineTotal, controls);
-    cartItems.appendChild(row);
-  });
-
-  document.getElementById("cartCount").textContent = count;
-  document.getElementById("cartSubtotal").textContent = money(subtotal);
-}
-
-function openCart() {
-  closeModal();
-  renderCart();
-  cartBackdrop.classList.add("open");
-  document.body.style.overflow = "hidden";
-}
-
-function closeCart() {
-  cartBackdrop.classList.remove("open");
-  document.body.style.overflow = "";
-}
-
-function cartBackdropClose(event) {
-  if (event.target === cartBackdrop) closeCart();
-}
-
-function requestQuote() {
-  if (cart.length === 0) {
-    showToast("Please add a product to your cart first.");
-    return;
-  }
-
-  const lines = cart.map(item => {
-    const product = products[item.index];
-    return product.name +
-      " | Image: " + product.image +
-      " | SKU: Not listed" +
-      " | Quantity: " + item.quantity +
-      " | Unit price: " + money(PRICE) +
-      " | Line total: " + money(PRICE * item.quantity);
-  });
-
-  const subtotal = cart.reduce(
-    (sum, item) => sum + PRICE * item.quantity, 0
-  );
-
-  const subject = "LED KING Mount Tenon Quote Request";
-  const body =
-    "Hello LED KING,\n\n" +
-    "I would like a quote for the following Mount Tenon products:\n\n" +
-    lines.join("\n") +
-    "\n\nSubtotal: " + money(subtotal) +
-    "\n\nPlease confirm availability, applicable tax, delivery or pickup options, and the final total.\n\n" +
-    "Customer name:\n" +
-    "Phone number:\n" +
-    "Delivery location or pickup:\n" +
-    "Additional details:\n\n" +
-    "Thank you.";
-
-  const mailto =
-    "mailto:ledkingfortworth@gmail.com" +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(body);
-
-  window.location.href = mailto;
-}
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeModal();
-    closeCart();
-  }
-});
-
-renderProducts();
-renderCart();
-</script>
 
 </body>
 </html>
