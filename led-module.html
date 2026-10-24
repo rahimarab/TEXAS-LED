@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LED Modules | LED KING</title>
+<meta name="description" content="Explore LED KING's LED module product collection. Contact us for pricing and product specifications.">
+
+<style>
+:root {
+  --teal: #00B8A9;
+  --teal-dark: #008F83;
+  --green: #176B50;
+  --black: #080A09;
+  --light: #F5F7F5;
+  --border: #E1E7E2;
+  --text: #202820;
+  --muted: #68756C;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+/* HEADER */
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  max-width: 1800px;
+  margin: auto;
+  min-height: 76px;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.logo {
+  color: #111;
+  font-size: 28px;
+  font-weight: 950;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.quote-btn {
+  display: inline-block;
+  padding: 11px 17px;
+  border-radius: 5px;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.quote-btn:hover {
+  background: #10503B;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(120deg, #080D09, #10291D 70%, #07564A);
+  color: #fff;
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.hero .eyebrow {
+  color: #9FF3E8;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #E1EBE4;
+  font-size: 15px;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+  padding: 17px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.breadcrumb span {
+  margin: 0 8px;
+}
+
+/* SECTION HEADING */
+.section-heading {
+  text-align: center;
+  margin: 20px auto 35px;
+  max-width: 750px;
+}
+
+.section-heading h2 {
+  font-size: clamp(25px, 3vw, 34px);
+  line-height: 1.2;
+  color: #17231B;
+}
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  background: var(--teal);
+  border-radius: 3px;
+  margin: 13px auto;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PRODUCT GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  padding-bottom: 60px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #fff;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 9px 25px rgba(0, 0, 0, .08);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  padding: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.product-info {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #EEF1EE;
+}
+
+.product-info h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 7px;
+}
+
+.product-info p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.details-label {
+  display: inline-block;
+  padding: 8px 13px;
+  background: #E8F7F3;
+  color: #176B50;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* CONTACT BANNER */
+.contact-banner {
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.contact-banner h2 {
+  font-size: clamp(23px, 3vw, 32px);
+  margin-bottom: 10px;
+}
+
+.contact-banner p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-actions a {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 12px 19px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.contact-primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.contact-secondary {
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+/* FOOTER */
+footer {
+  background: #080D09;
+  color: #fff;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 950;
+  margin-bottom: 8px;
+}
+
+.footer-logo span {
+  color: var(--teal);
+}
+
+footer p {
+  color: #AAB6AD;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 15px 0;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: #E3EAE4;
+}
+
+.copyright {
+  border-top: 1px solid #26332A;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    min-height: 65px;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .nav-links .hide-mobile {
+    display: none;
+  }
+
+  .quote-btn {
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 48px 18px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-bottom: 40px;
+  }
+
+  .product-image {
+    padding: 7px;
+  }
+
+  .product-info {
+    padding: 11px 6px;
+  }
+
+  .product-info h3 {
+    font-size: 12px;
+  }
+
+  .product-info p {
+    font-size: 10px;
+  }
+
+  .details-label {
+    font-size: 9px;
+    padding: 7px 8px;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-links a {
+    font-size: 9px;
+  }
+
+  .quote-btn {
+    padding: 8px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <a class="logo" href="index.html">LED <span>KING</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a class="hide-mobile" href="index.html#products">CATEGORIES</a>
+      <a href="index.html#contact">CONTACT</a>
+      <a class="quote-btn" href="index.html#quote">GET A QUOTE</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">LED KING PRODUCT COLLECTION</div>
+  <h1>LED Modules</h1>
+  <p>Explore our collection of LED modules. Product specifications, availability and pricing can be requested from our team.</p>
+</section>
+
+<main>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="index.html#products">Lighting Categories</a>
+      <span>›</span>
+      <strong>LED Modules</strong>
+    </div>
+
+    <div class="section-heading">
+      <h2>Explore Our LED Modules</h2>
+      <p>Browse all 22 product images below. Contact LED KING for product details and pricing.</p>
+    </div>
+
+    <div class="gallery">
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%201.png" alt="LED Module 1" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 1</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%202.png" alt="LED Module 2" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 2</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%203.png" alt="LED Module 3" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 3</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%204.png" alt="LED Module 4" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 4</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%205.png" alt="LED Module 5" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 5</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%206.png" alt="LED Module 6" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 6</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%207.png" alt="LED Module 7" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 7</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%208.png" alt="LED Module 8" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 8</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%209.png" alt="LED Module 9" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 9</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2010.png" alt="LED Module 10" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 10</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2011.png" alt="LED Module 11" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 11</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2012.png" alt="LED Module 12" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 12</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2013.png" alt="LED Module 13" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 13</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2014.png" alt="LED Module 14" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 14</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2015.png" alt="LED Module 15" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 15</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2016.png" alt="LED Module 16" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 16</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2017.png" alt="LED Module 17" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 17</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2018.png" alt="LED Module 18" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 18</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2019.png" alt="LED Module 19" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 19</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2020.png" alt="LED Module 20" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 20</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2021.png" alt="LED Module 21" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 21</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-image">
+          <img src="LED%20MODULE%2022.png" alt="LED Module 22" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>LED Module 22</h3>
+          <p>Specifications coming soon</p>
+          <span class="details-label">CONTACT FOR DETAILS</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<section class="contact-banner">
+  <div class="container">
+    <h2>Need LED Module Pricing?</h2>
+    <p>Contact LED KING for product availability, specifications and quotes.</p>
+    <div class="contact-actions">
+      <a class="contact-primary" href="index.html#quote">REQUEST A QUOTE</a>
+      <a class="contact-secondary" href="mailto:ledkingfortworth@gmail.com">EMAIL LED KING</a>
+      <a class="contact-secondary" href="tel:+16822003004">CALL 682-200-3004</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">LED <span>KING</span></div>
+  <p>Professional LED Lighting Solutions Across the United States</p>
+  <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#products">All Categories</a>
+    <a href="index.html#quote">Request a Quote</a>
+    <a href="mailto:ledkingfortworth@gmail.com">Email Us</a>
+  </div>
+  <p class="copyright">© <span id="year"></span> LED KING. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
