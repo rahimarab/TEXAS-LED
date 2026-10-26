@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>LED Track Lights | LED KING</title>
+<meta name="description" content="Explore track lighting products at LED KING in Fort Worth, Texas. Contact us for product specifications, pricing, and availability.">
+
+<style>
+:root {
+    --teal: #00B8A9;
+    --teal-dark: #009688;
+    --lime: #B7E532;
+    --black: #101414;
+    --light: #F4F8F7;
+    --white: #FFFFFF;
+    --gray: #687171;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--black);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.top-bar {
+    background: var(--black);
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #E5EBE9;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1500px;
+    margin: auto;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--black);
+}
+
+.logo span {
+    color: var(--teal-dark);
+}
+
+.logo small {
+    display: block;
+    margin-top: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #697371;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--teal-dark);
+}
+
+.quote-button {
+    display: inline-block;
+    background: var(--teal-dark);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.quote-button:hover {
+    background: #007E74;
+}
+
+.hero {
+    background: var(--black);
+    color: white;
+    padding: 48px 5% 44px;
+    text-align: center;
+    border-bottom: 5px solid var(--teal);
+}
+
+.eyebrow {
+    color: var(--lime);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 14px 0;
+    line-height: 1.12;
+}
+
+.hero h1 span {
+    color: var(--teal);
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #D7E1DF;
+    font-size: 16px;
+}
+
+.breadcrumb {
+    max-width: 1500px;
+    margin: auto;
+    padding: 20px 5% 0;
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.breadcrumb a {
+    color: var(--teal-dark);
+    font-weight: 700;
+}
+
+main {
+    max-width: 1500px;
+    margin: auto;
+    padding: 25px 5% 60px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    margin: 0;
+}
+
+.section-heading h2 span {
+    color: var(--teal-dark);
+}
+
+.section-heading p {
+    color: var(--gray);
+    margin: 7px 0 0;
+    font-size: 14px;
+}
+
+.product-count {
+    background: #E0F5F1;
+    color: #006E64;
+    border: 1px solid #B8E7DE;
+    border-radius: 30px;
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    min-width: 0;
+    background: white;
+    border: 1px solid #E0E8E5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(14, 40, 35, 0.045);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(14, 40, 35, 0.11);
+    border-color: var(--teal);
+}
+
+.product-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #EDF1EF;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-info {
+    padding: 15px 12px 17px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.product-info p {
+    margin: 7px 0 0;
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.details-note {
+    margin-top: 11px;
+    color: var(--teal-dark);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.contact-banner {
+    background: var(--black);
+    color: white;
+    margin-top: 45px;
+    border-radius: 14px;
+    padding: 30px 24px;
+    text-align: center;
+    border-bottom: 4px solid var(--teal);
+}
+
+.contact-banner h2 {
+    margin: 0 0 10px;
+    font-size: 25px;
+}
+
+.contact-banner p {
+    color: #D4DEDC;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    max-width: 650px;
+    font-size: 14px;
+}
+
+footer {
+    background: #0B0F0F;
+    color: #D8E0DE;
+    padding: 25px 5%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: var(--teal);
+}
+
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    nav {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        padding: 15px 4%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-info {
+        padding: 12px 8px 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .product-grid {
+        gap: 9px;
+    }
+
+    .product-image {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    LED KING &nbsp; | &nbsp; PROFESSIONAL LED LIGHTING SOLUTIONS
+</div>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            LED <span>KING</span>
+            <small>LIGHTING SOLUTIONS</small>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="#track-lights">Track Lights</a>
+            <a href="#contact">Contact</a>
+            <a class="quote-button" href="index.html#quote">Request a Quote</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="eyebrow">LED KING · PRODUCT COLLECTION</div>
+    <h1>LED <span>Track Lights</span></h1>
+    <p>
+        Explore our track lighting collection for a variety of lighting
+        applications. Contact LED KING for product specifications,
+        pricing, and availability.
+    </p>
+</section>
+
+<div class="breadcrumb">
+    <a href="index.html">Home</a> &nbsp; / &nbsp; Track Lights
+</div>
+
+<main>
+    <section id="track-lights">
+        <div class="section-heading">
+            <div>
+                <h2>Our <span>Track Lights</span></h2>
+                <p>Browse our current track light products. More details coming soon.</p>
+            </div>
+            <div class="product-count">2 PRODUCTS</div>
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="TRACK LIGHT1.png"
+                         alt="LED Track Light 1"
+                         loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Track Light 1</h3>
+                    <p>LED Track Lighting</p>
+                    <div class="details-note">Product details coming soon</div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="TRACK LIGHT2.png"
+                         alt="LED Track Light 2"
+                         loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Track Light 2</h3>
+                    <p>LED Track Lighting</p>
+                    <div class="details-note">Product details coming soon</div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="contact-banner" id="contact">
+        <h2>Need Help With Track Lighting?</h2>
+        <p>
+            Contact LED KING for product information, pricing, availability,
+            and assistance with your lighting project.
+        </p>
+        <a class="quote-button" href="index.html#quote">Request a Quote</a>
+    </section>
+</main>
+
+<footer>
+    <strong>LED KING</strong> · Lighting Solutions<br>
+    3701 Airport Fwy, Fort Worth, TX 76111<br>
+    Phone: 682-200-3004 &nbsp; | &nbsp;
+    Email: ledkingfortworth@gmail.com<br>
+    © 2026 LED KING. All rights reserved.
+</footer>
+
+</body>
+</html>
+```
