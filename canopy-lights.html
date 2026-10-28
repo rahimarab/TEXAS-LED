@@ -1,104 +1,87 @@
-from pathlib import Path
-import re
-
-src = Path("/mnt/data/LED_KING_Canopy_Lights_Friendly_Theme.html")
-html = src.read_text(encoding="utf-8")
-
-# Replace the existing CSS theme with a coordinated brown-and-black palette.
-start = html.index("<style>")
-end = html.index("</style>", start) + len("</style>")
-new_style = r"""<style>
-:root{
-  --brown:#8b5e3c;
-  --brown-dark:#65432b;
-  --brown-deep:#3b281d;
-  --brown-light:#ead8c5;
-  --ink:#171412;
-  --muted:#71665e;
-  --line:#e7ddd4;
-  --bg:#f7f3ef;
-  --white:#fff;
-  --shadow:0 10px 28px rgba(45,29,18,.09);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shop LED KING canopy lights for parking garages, gas stations, commercial properties, and outdoor covered areas.">
+<title>Canopy Lights | LED KING</title>
+<style>
+:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb;--white:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
 button,input{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
 a{color:inherit}
-.site-header{background:#151210;border-bottom:1px solid #3d3028;position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #17110d20}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
 .header-inner{max-width:1240px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{font-weight:900;font-size:26px;letter-spacing:1px;color:#fff;text-decoration:none}
-.logo span{color:#c49a72}
+.logo{font-weight:900;font-size:25px;letter-spacing:1px;color:#111;text-decoration:none}
+.logo span{color:var(--orange)}
 .nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
-.nav a{text-decoration:none;font-size:14px;font-weight:750;color:#f5eee8;transition:color .2s}
-.nav a:hover{color:#d7b28d}
-.cart-button{border:0;border-radius:999px;background:var(--brown);color:white;padding:11px 17px;cursor:pointer;font-weight:850;white-space:nowrap;box-shadow:0 5px 14px #8b5e3c25;transition:transform .2s,background .2s}
-.cart-button:hover{background:var(--brown-dark);transform:translateY(-1px)}
-.cart-count{display:inline-flex;min-width:23px;height:23px;border-radius:50%;background:#e0c1a2;color:#21170f;align-items:center;justify-content:center;margin-left:5px;font-size:12px}
-.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 85% 10%,#a7795029,transparent 35%),linear-gradient(125deg,#151210 0%,#292019 58%,#543822 100%);color:white;padding:68px 22px 64px;border-bottom:5px solid var(--brown)}
-.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #d7b28d30;border-radius:50%;right:-75px;bottom:-180px;box-shadow:0 0 0 30px #d7b28d08,0 0 0 60px #d7b28d06;pointer-events:none}
-.hero-inner{max-width:1240px;margin:auto;position:relative;z-index:1}
-.eyebrow{text-transform:uppercase;letter-spacing:2.2px;color:#d7b28d;font-weight:850;font-size:12px}
-.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.08;letter-spacing:-1.2px;margin:13px 0 16px;max-width:780px}
-.hero p{max-width:740px;color:#eee4da;margin:0;font-size:17px}
-.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
-.hero-tags span{border:1px solid #c49a7288;border-radius:999px;padding:8px 13px;font-size:13px;color:#fff8f1;background:#ffffff09}
-.page-wrap{max-width:1240px;margin:0 auto;padding:38px 22px 62px}
-.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap}
-.toolbar h2{margin:0;font-size:28px;letter-spacing:-.5px;color:#382619}
+.nav a{text-decoration:none;font-size:14px;font-weight:700}
+.nav a:hover{color:var(--blue)}
+.cart-button{border:0;border-radius:9px;background:var(--blue);color:white;padding:10px 14px;cursor:pointer;font-weight:700;white-space:nowrap}
+.cart-count{display:inline-flex;min-width:22px;height:22px;border-radius:20px;background:var(--orange);align-items:center;justify-content:center;margin-left:5px;font-size:12px}
+.hero{background:linear-gradient(120deg,#082d4c,#1261a0);color:white;padding:56px 22px}
+.hero-inner{max-width:1240px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#ffd1a5;font-weight:800;font-size:12px}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:720px;color:#e7f2fb;margin:0;font-size:17px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-tags span{border:1px solid #ffffff55;border-radius:24px;padding:7px 12px;font-size:13px}
+.page-wrap{max-width:1240px;margin:0 auto;padding:34px 22px 60px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:25px}
 .toolbar p{margin:4px 0 0;color:var(--muted);font-size:14px}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.product-card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s,border-color .22s}
-.product-card:hover{transform:translateY(-5px);box-shadow:0 18px 36px #5d3a201b;border-color:#c9a17e}
-.product-image{height:238px;background:linear-gradient(180deg,#fff,#fbf8f5);display:flex;align-items:center;justify-content:center;padding:18px;border-bottom:1px solid #eee5dd}
-.product-image img{width:100%;height:100%;object-fit:contain;transition:transform .25s}
-.product-card:hover .product-image img{transform:scale(1.035)}
-.image-fallback{font-weight:800;color:#75675d;text-align:center;display:none}
-.product-info{padding:20px;display:flex;flex-direction:column;flex:1}
-.sku{font-size:12px;color:var(--brown-dark);font-weight:850;margin-bottom:8px;letter-spacing:.25px}
-.product-info h3{font-size:18px;line-height:1.35;margin:0 0 9px;color:#302219}
-.short-specs{font-size:13px;color:#71665e;margin:0 0 14px;flex:1}
-.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 16px}
-.price{font-size:26px;font-weight:900;color:var(--brown-dark);letter-spacing:-.4px}
-.unit{font-size:12px;color:var(--muted);background:#f5eee7;padding:5px 8px;border-radius:999px}
+.product-card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #0b47780b;transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0b47781a}
+.product-image{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:16px;border-bottom:1px solid #edf1f5}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.image-fallback{font-weight:800;color:#64748b;text-align:center;display:none}
+.product-info{padding:18px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.product-info h3{font-size:18px;line-height:1.35;margin:0 0 9px}
+.short-specs{font-size:13px;color:#526173;margin:0 0 14px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 14px}
+.price{font-size:24px;font-weight:900;color:var(--blue-dark)}
+.unit{font-size:12px;color:var(--muted)}
 .actions{display:flex;gap:9px}
-.btn{border:0;border-radius:10px;padding:11px 13px;cursor:pointer;font-weight:800;transition:background .18s,transform .18s,border-color .18s}
-.btn:hover{transform:translateY(-1px)}
-.btn-primary{background:var(--brown);color:#fff;flex:1}
-.btn-primary:hover{background:var(--brown-dark)}
-.btn-outline{background:#fff;color:var(--brown-dark);border:1px solid #c9a17e;flex:1}
-.btn-outline:hover{background:#f8f0e8;border-color:var(--brown)}
-.footer{background:#151210;color:#f4eee8;padding:34px 22px;border-top:4px solid var(--brown)}
+.btn{border:0;border-radius:8px;padding:11px 13px;cursor:pointer;font-weight:800;transition:background .15s}
+.btn-primary{background:var(--blue);color:white;flex:1}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-outline{background:#fff;color:var(--blue);border:1px solid #b8cde0;flex:1}
+.btn-outline:hover{background:#eef6fc}
+.footer{background:#101c28;color:#e5edf5;padding:30px 22px}
 .footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.footer p{margin:4px 0;color:#c8bcb1;font-size:14px}
-.overlay{position:fixed;inset:0;background:#17110dc9;z-index:50;display:none;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(4px)}
+.footer p{margin:4px 0;color:#b9c6d3;font-size:14px}
+.overlay{position:fixed;inset:0;background:#071522b8;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
 .overlay.open{display:flex}
-.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:20px;box-shadow:0 24px 70px #0005;position:relative}
-.modal-head{position:sticky;top:0;background:#151210;color:#fff;border-bottom:1px solid #44352a;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;box-shadow:0 24px 70px #0004;position:relative}
+.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
 .modal-head strong{font-size:16px}
-.close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#f0e5da;color:#24180f;cursor:pointer;font-size:23px;line-height:1}
-.modal-content{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:28px;padding:26px}
-.modal-photo{background:#f8f4f0;border:1px solid var(--line);border-radius:14px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
+.close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#edf2f7;cursor:pointer;font-size:23px;line-height:1}
+.modal-content{display:grid;grid-template-columns: minmax(0, .95fr) minmax(0,1.05fr);gap:28px;padding:24px}
+.modal-photo{background:#f8fafc;border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
 .modal-photo img{width:100%;max-height:380px;object-fit:contain}
-.modal h2{font-size:27px;line-height:1.25;margin:3px 0 8px;color:#382619}
-.modal-price{font-size:31px;font-weight:900;color:var(--brown-dark);margin:10px 0}
-.spec-list{padding-left:19px;margin:12px 0;color:#5e5147;font-size:14px}
-.spec-list li{margin:6px 0}
-.description{font-size:14px;color:#62564d}
+.modal h2{font-size:26px;line-height:1.25;margin:3px 0 8px}
+.modal-price{font-size:29px;font-weight:900;color:var(--blue-dark);margin:10px 0}
+.spec-list{padding-left:19px;margin:12px 0;color:#46576a;font-size:14px}
+.spec-list li{margin:5px 0}
+.description{font-size:14px;color:#46576a}
 .qty-row{display:flex;align-items:center;gap:12px;margin:18px 0}
-.qty-control{display:inline-flex;align-items:center;border:1px solid #ddcbb9;border-radius:10px;overflow:hidden}
-.qty-control button{border:0;background:#f5eee7;width:38px;height:40px;cursor:pointer;font-size:20px;color:#382619}
-.qty-control input{width:48px;height:40px;border:0;text-align:center;outline:none;background:white}
-.modal-add{width:100%;padding:14px;background:var(--brown);color:white;border:0;border-radius:11px;font-weight:900;cursor:pointer;transition:background .2s,transform .2s}
-.modal-add:hover{background:var(--brown-dark);transform:translateY(-1px)}
+.qty-control{display:inline-flex;align-items:center;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden}
+.qty-control button{border:0;background:#f1f5f9;width:36px;height:40px;cursor:pointer;font-size:20px}
+.qty-control input{width:48px;height:40px;border:0;text-align:center;outline:none}
+.modal-add{width:100%;padding:13px;background:var(--orange);color:#1f2937;border:0;border-radius:9px;font-weight:900;cursor:pointer}
+.modal-add:hover{background:#ff9a3d}
 .notice{font-size:12px;color:var(--muted);margin-top:10px}
 .cart-drawer{position:fixed;inset:0;z-index:60;display:none}
 .cart-drawer.open{display:block}
-.drawer-shade{position:absolute;inset:0;background:#17110da8}
+.drawer-shade{position:absolute;inset:0;background:#0715229c}
 .drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:white;box-shadow:-10px 0 40px #0002;display:flex;flex-direction:column}
-.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;background:#faf6f2}
-.drawer-head h2{margin:0;color:#382619}
+.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h2{margin:0}
 .drawer-items{padding:16px 20px;overflow:auto;flex:1}
 .cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
 .cart-item strong{display:block;font-size:14px}
@@ -106,19 +89,233 @@ a{color:inherit}
 .cart-item-right{text-align:right;white-space:nowrap}
 .remove-item{border:0;background:transparent;color:#b42318;cursor:pointer;font-size:12px;padding:5px 0}
 .drawer-bottom{padding:20px;border-top:1px solid var(--line)}
-.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px;color:#382619}
-.checkout-later{background:#f8f4f0;border:1px solid var(--line);border-radius:10px;padding:12px;color:#71665e;font-size:13px}
+.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px}
+.checkout-later{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:12px;color:#64748b;font-size:13px}
 .empty-cart{text-align:center;color:var(--muted);padding:45px 10px}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#171412;color:white;padding:12px 18px;border-radius:12px;box-shadow:0 8px 24px #0003;z-index:100;display:none;font-size:14px;border:1px solid #8b5e3c}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#102b40;color:white;padding:12px 18px;border-radius:10px;box-shadow:0 8px 24px #0003;z-index:100;display:none;font-size:14px}
 .toast.show{display:block}
-button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #d7b28d;outline-offset:3px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
-@media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap;padding:13px 16px}.nav{order:3;width:100%;gap:14px}.nav a{font-size:13px}.hero{padding:43px 18px 45px}.hero h1{letter-spacing:-.6px}.hero p{font-size:15px}.page-wrap{padding:28px 14px 45px}.grid{grid-template-columns:1fr;gap:17px}.product-image{height:250px}.product-info{padding:18px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:24px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-</style>"""
+@media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
 
-html = html[:start] + new_style + html[end:]
-out = Path("/mnt/data/LED_KING_Canopy_Lights_Brown_Black_Theme.html")
-out.write_text(html, encoding="utf-8")
-print(f"Created: {out}")
-print("Updated theme to brown and black with warm beige accents; retained all prices, products, images, descriptions, and cart logic.")
+/* LED KING theme: black + brown + cream */
+:root{
+  --blue:#6F4E37;
+  --blue-dark:#4B3022;
+  --orange:#B8875B;
+  --ink:#211A16;
+  --muted:#76695F;
+  --line:#E4D7C8;
+  --bg:#F7F0E5;
+  --white:#FFF9F0;
+  --teal:#6F4E37;
+  --lime:#E8D8B8;
+}
+body{color:var(--ink);background:var(--bg)}
+.site-header{background:#111;border-bottom:1px solid #4B3022}
+.logo{color:#FFF9F0}
+.logo span{color:#C49A6C}
+.nav a{color:#F7F0E5}
+.nav a:hover{color:#D5B58A}
+.cart-button{background:#6F4E37;color:#FFF9F0}
+.cart-button:hover{background:#4B3022}
+.cart-count{background:#E8D8B8;color:#211A16}
+.hero{background:linear-gradient(120deg,#111 0%,#2A211B 62%,#5A3D2B 100%);border-bottom:4px solid #B8875B}
+.eyebrow{color:#E8D8B8}
+.hero p{color:#F2E7D8}
+.hero-tags span{border-color:#D5B58A88;background:#E8D8B812}
+.product-card{background:#FFF9F0;border-color:#E4D7C8;box-shadow:0 5px 18px rgba(33,26,22,.08)}
+.product-card:hover{box-shadow:0 12px 28px rgba(111,78,55,.18);border-color:#B8875B}
+.product-image{background:#FFFDF8;border-bottom:1px solid #E4D7C8}
+.price{color:#6F4E37}
+.btn-primary{background:#6F4E37;color:#FFF9F0}
+.btn-primary:hover{background:#4B3022;color:#FFF9F0}
+.btn-outline{background:#FFF9F0;color:#6F4E37;border-color:#B8875B}
+.btn-outline:hover{background:#F0E3D2}
+.modal{background:#FFF9F0}
+.modal-head{background:#211A16;color:#FFF9F0;border-bottom-color:#4B3022}
+.modal-photo{background:#F7F0E5;border-color:#E4D7C8}
+.modal-price{color:#6F4E37}
+.modal-add{background:#B8875B;color:#211A16}
+.modal-add:hover{background:#D5B58A}
+.footer{background:#111;color:#FFF9F0;border-top:3px solid #B8875B}
+.footer p{color:#D8C8B7}
+.close-btn{background:#E8D8B8;color:#211A16}
+.qty-control{border-color:#D5C2AD}
+.qty-control button{background:#F0E3D2;color:#211A16}
+.checkout-later{background:#F7F0E5;border-color:#E4D7C8;color:#76695F}
+.toast{background:#211A16;border:1px solid #B8875B;color:#FFF9F0}
+.overlay{background:#17110dcc}
+.drawer-panel{background:#FFF9F0}
+.drawer-head,.drawer-bottom{border-color:#E4D7C8}
+.cart-item{border-color:#E4D7C8}
+.empty-cart{color:#76695F}
+@media(max-width:620px){.nav a{color:#F7F0E5}}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#products">Canopy Lights</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial Lighting</div>
+    <h1>Professional LED Canopy Lights</h1>
+    <p>Energy-efficient canopy lighting for parking garages, gas stations, covered walkways, and commercial spaces. Explore product specifications and add items to your cart.</p>
+    <div class="hero-tags"><span>UL / DLC-listed models</span><span>Commercial applications</span><span>Prices shown per item</span></div>
+  </div>
+</section>
+
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div><h2>Canopy Lights</h2><p>Choose a product to view full details and specifications.</p></div>
+    <p><strong>10 products</strong> · Prices shown per item</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</main>
+
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+    <h2 style="margin-top:0">About LED KING</h2>
+    <p style="color:#526173;margin-bottom:0">LED KING provides professional LED lighting products and solutions for commercial and industrial applications. Contact us for product questions, bulk orders, or project quotes.</p>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div><strong style="font-size:20px">LED KING</strong><p>Professional LED lighting products and solutions.</p></div>
+    <div><strong>Contact</strong><p>Phone: 682-200-3004</p><p>Email: ledkingfortworth@gmail.com</p><p>3701 Airport Fwy, Fort Worth, TX 76111</p></div>
+  </div>
+</footer>
+
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head"><strong>Product details</strong><button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom">
+      <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="checkout-later">Online payment and checkout will be connected later. For now, your cart works on this page and shows your selected products and subtotal.</div>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const products = [
+  {id:1,name:"LED Parking Garage Light 55W",price:150.00,sku:"1462",image:"Canopy%201.png",specs:["55W power","5700K color temperature","Epistar 2835 LED chips (as supplied)","AC 100–277V","UL / DLC listed"],description:"Designed for parking garage and covered commercial applications. Your supplied details list efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start, no flickering or humming, easy installation, uniform light, and a 5-year warranty. Additional supplied driver and chip-brand details are retained as provided."},
+  {id:2,name:"5th Round LED Parking Garage Light 55W",price:92.75,sku:"2021",image:"Canopy%202.png",specs:["55W power","5700K color temperature","Lumileds 2835 LED chips","China-brand driver (as supplied)","AC 100–277V","UL / DLC listed"],description:"A round LED parking garage fixture designed for efficient, consistent illumination. Supplied additional details include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free construction, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Driver and chip information is displayed as supplied."},
+  {id:3,name:"75W LED Canopy Light",price:150.00,sku:"932",image:"Canopy%203.png",specs:["75W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A 75W LED canopy light for outdoor canopy and commercial applications. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white illumination, and UL / DLC listings. Its broad voltage range supports use with compatible electrical systems."},
+  {id:4,name:"LED Parking Garage Light 75W",price:175.00,sku:"2597",image:"Canopy%204.png",specs:["75W rated power","3000K (warm white)","4000K (neutral white)","5000K (cool white)"],description:"A 75W LED parking garage light with selectable color temperatures. Choose 3000K for warm white, 4000K for neutral white, or 5000K for cool white. Intended for well-lit, energy-efficient commercial and industrial spaces."},
+  {id:5,name:"DLC5.1 LED Parking Garage Light",price:175.00,sku:"2483",image:"Canopy%205.png",specs:["Wattage options: 40W / 60W / 75W","AC 100–277V","China-brand driver","White fixture","Color temperatures: 3000K / 4000K / 5000K"],description:"A DLC5.1 parking garage canopy fixture with wattage and color temperature options. Your supplied product details list 40W, 60W, and 75W options; AC 100–277V; a China-brand driver; a white fixture; and 3000K, 4000K, and 5000K color temperature choices."},
+  {id:6,name:"New DLC5.1 Integrated LED Canopy Light 95W",price:300.00,sku:"1928",image:"Canopy%206.png",specs:["95W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],description:"An integrated LED canopy light designed for gas stations, parking garages, and covered walkways. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."},
+  {id:7,name:"150W LED Canopy Light",price:299.00,sku:"",image:"Canopy%207.png",specs:["150W power","5700K daylight","Beaded lens","2835 LED chips","Non-isolated driver","UL / DLC listed"],description:"A 150W LED canopy light with 5700K daylight output, a beaded lens, 2835 LED chips, and a non-isolated driver. Listed certifications are UL and DLC. Designed for canopy and other commercial outdoor covered areas."},
+  {id:8,name:"New DLC5.1 Integrated LED Canopy Light 150W",price:299.00,sku:"675",image:"Canopy%208.png",specs:["150W power","Lumileds 2835 chips (as supplied)","Non-isolated driver (as supplied)","AC 100–277V","UL / DLC listed","IP65 rating and 5-year warranty (additional details supplied)"],description:"A high-powered integrated LED canopy fixture for gas stations, parking garages, and other commercial areas. Supplied additional specifications include efficacy up to 140 lm/W, minimum CRI above 80, power factor above 0.9, THD below 25%, IP65 rating, mercury-free design, instant start without flickering or humming, easy installation, long lifespan, soft uniform light, and a 5-year warranty. Other driver and chip details are retained as supplied."},
+  {id:9,name:"New 180W Big Size LED Canopy Light",price:550.00,sku:"1929",image:"Canopy%209.png",specs:["180W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A high-output 180W LED canopy light suitable for larger outdoor canopy spaces. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."},
+  {id:10,name:"New Big Size 240W LED Canopy Light",price:450.00,sku:"1186",image:"Canopy%2010.png",specs:["240W power","AC 100–277V","Sosen driver","5700K color temperature","UL / DLC listed"],description:"A high-output 240W LED canopy light for large spaces requiring ample illumination. The supplied specifications list AC 100–277V input, a Sosen driver, 5700K cool-white light, and UL / DLC listings."}
+];
+
+let activeProduct = null;
+let cart = {};
+let toastTimer;
+
+function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+file;}
+function money(value){return "$"+Number(value).toFixed(2);}
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+  grid.innerHTML=products.map(p=>`
+    <article class="product-card">
+      <div class="product-image">
+        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>
+      </div>
+      <div class="product-info">
+        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Canopy Lights"}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
+        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">per item</span></div>
+        <div class="actions">
+          <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
+          <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function openProduct(id){
+  activeProduct=products.find(p=>p.id===id);
+  if(!activeProduct)return;
+  const p=activeProduct;
+  document.getElementById("modalContent").innerHTML=`
+    <div class="modal-photo">
+      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
+    </div>
+    <div>
+      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Canopy Lights</div>
+      <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
+      <div class="modal-price">${money(p.price)}</div>
+      <p class="description">${escapeHtml(p.description)}</p>
+      <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
+      <ul class="spec-list">${p.specs.map(s=>"<li>"+escapeHtml(s)+"</li>").join("")}</ul>
+      <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
+      <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
+    </div>`;
+  document.getElementById("productOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeProduct(){document.getElementById("productOverlay").classList.remove("open");document.body.style.overflow="";}
+function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
+function changeModalQty(delta){
+  const input=document.getElementById("modalQty");
+  input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);
+  document.getElementById("modalLinePrice").textContent=money(activeProduct.price*(parseInt(input.value,10)||1));
+}
+function addFromModal(){
+  const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);
+  addToCart(activeProduct.id,qty);closeProduct();openCart();
+}
+function quickAdd(id){addToCart(id,1);showToast("Added to cart");}
+function addToCart(id,qty){cart[id]=(cart[id]||0)+qty;renderCart();updateCartCount();}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function renderCart(){
+  const holder=document.getElementById("cartItems");
+  const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a canopy light to get started.</p></div>';}
+  else{
+    holder.innerHTML=ids.map(id=>{
+      const p=products.find(x=>x.id===Number(id));const q=cart[id];
+      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
+    }).join("");
+  }
+  const subtotal=ids.reduce((sum,id)=>sum+cart[id]*products.find(p=>p.id===Number(id)).price,0);
+  document.getElementById("cartSubtotal").textContent=money(subtotal);
+}
+function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
+function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1){delete cart[id]}else{cart[id]=q}renderCart();updateCartCount();}
+function removeFromCart(id){delete cart[id];renderCart();updateCartCount();}
+function openCart(){renderCart();document.getElementById("cartDrawer").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.body.style.overflow="";}
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart();}});
+renderProducts();renderCart();updateCartCount();
+</script>
+</body>
+</html>
+
