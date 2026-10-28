@@ -1,1 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Wall Pack Lights | LED KING Lighting Solutions</title>
+    <meta name="description" content="Explore LED wall pack lights at LED KING in Fort Worth, Texas. Contact us for commercial and outdoor wall pack lighting specifications and pricing.">
+
+    <style>
+        :root {
+            --black: #080b0b;
+            --teal: #00B8A9;
+            --teal-dark: #009688;
+            --lime: #B7E532;
+            --white: #ffffff;
+            --light-bg: #f5f8f7;
+            --text: #202727;
+            --muted: #687373;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background: var(--black);
+            color: var(--white);
+            border-bottom: 4px solid var(--teal);
+        }
+
+        .header-inner {
+            width: min(100% - 36px, 1800px);
+            margin: auto;
+            min-height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 27px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--lime);
+        }
+
+        .tagline {
+            color: #c6d1cf;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            margin-top: 2px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            color: var(--lime);
+        }
+
+        .announcement {
+            background: var(--teal);
+            color: var(--black);
+            text-align: center;
+            padding: 10px 14px;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+        }
+
+        .hero {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 55px 20px 60px;
+            border-bottom: 5px solid var(--lime);
+        }
+
+        .eyebrow {
+            color: var(--lime);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 54px);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: var(--teal);
+        }
+
+        .hero p {
+            max-width: 780px;
+            margin: auto;
+            color: #d6dfdd;
+            font-size: 17px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 25px;
+            background: var(--lime);
+            color: var(--black);
+            padding: 13px 25px;
+            border-radius: 5px;
+            font-weight: 900;
+        }
+
+        .hero-button:hover {
+            background: var(--teal);
+        }
+
+        main {
+            width: min(100% - 36px, 1800px);
+            margin: auto;
+            padding: 42px 0 60px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-heading h2 {
+            color: var(--black);
+            font-size: clamp(25px, 3vw, 36px);
+            margin-bottom: 8px;
+        }
+
+        .section-heading h2 span {
+            color: var(--teal-dark);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #e0e8e6;
+            border-bottom: 4px solid var(--teal);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            height: 235px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+            border-bottom: 1px solid #edf1f0;
+        }
+
+        .product-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 17px 12px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .product-number {
+            color: var(--teal-dark);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+
+        .product-info p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 17px;
+        }
+
+        .quote-button {
+            display: inline-block;
+            margin-top: auto;
+            background: var(--teal-dark);
+            color: var(--white);
+            padding: 11px 15px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: 800;
+            transition: background 0.2s ease;
+        }
+
+        .quote-button:hover {
+            background: var(--black);
+            color: var(--lime);
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 38px;
+        }
+
+        .back-link a {
+            display: inline-block;
+            color: var(--black);
+            border: 2px solid var(--teal-dark);
+            padding: 11px 22px;
+            border-radius: 5px;
+            font-weight: 800;
+        }
+
+        .back-link a:hover {
+            background: var(--teal-dark);
+            color: var(--white);
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 38px 18px 22px;
+            border-top: 5px solid var(--teal);
+        }
+
+        .footer-inner {
+            width: min(100%, 1400px);
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: var(--lime);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        footer p,
+        footer a {
+            color: #d3dcda;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        footer a:hover {
+            color: var(--lime);
+        }
+
+        .footer-bottom {
+            width: min(100%, 1400px);
+            margin: 28px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid #303838;
+            text-align: center;
+            color: #aeb9b7;
+            font-size: 13px;
+        }
+
+        @media (min-width: 1800px) {
+            .product-image {
+                height: 270px;
+            }
+        }
+
+        @media (max-width: 1250px) {
+            .product-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 950px) {
+            .product-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .footer-inner {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 650px) {
+            .header-inner {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px 16px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .product-image {
+                height: 185px;
+                padding: 10px;
+            }
+
+            .product-info {
+                padding: 13px 9px;
+            }
+
+            .product-info h3 {
+                font-size: 16px;
+            }
+
+            .product-info p {
+                font-size: 12px;
+            }
+
+            .quote-button {
+                padding: 10px 9px;
+                font-size: 12px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            main {
+                width: min(100% - 24px, 1800px);
+                padding-top: 30px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-image {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-inner">
+            <div>
+                <a class="logo" href="index.html">LED <span>KING</span></a>
+                <div class="tagline">LIGHTING SOLUTIONS</div>
+            </div>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#quote">Request a Quote</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="announcement">
+        🚚 FAST SHIPPING &nbsp; • &nbsp; 🛡️ TOP QUALITY &nbsp; • &nbsp; 🏷️ GREAT PRICES &nbsp; • &nbsp; EXPERT LIGHTING SOLUTIONS
+    </div>
+
+    <section class="hero">
+        <div class="eyebrow">LED KING • LIGHTING SOLUTIONS</div>
+        <h1>LED <span>Wall Pack Lights</span></h1>
+        <p>
+            Discover wall pack lighting for commercial buildings, entrances,
+            exterior walls, and outdoor spaces. Contact LED KING for product
+            specifications, pricing, and availability.
+        </p>
+        <a class="hero-button" href="index.html#quote">Request a Quote</a>
+    </section>
+
+    <main>
+        <section class="section-heading">
+            <h2>Our <span>Wall Pack Lights</span></h2>
+            <p>Browse all 19 Wall Pack product images below.</p>
+        </section>
+
+        <section class="product-grid" aria-label="Wall Pack Lights products">
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK 1.png" alt="Wall Pack Light 1" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 01</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK 2.png" alt="Wall Pack Light 2" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 02</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK 3.png" alt="Wall Pack Light 3" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 03</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK4.png" alt="Wall Pack Light 4" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 04</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK5.png" alt="Wall Pack Light 5" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 05</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK6.png" alt="Wall Pack Light 6" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 06</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK7.png" alt="Wall Pack Light 7" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 07</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK8.png" alt="Wall Pack Light 8" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 08</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK9.png" alt="Wall Pack Light 9" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 09</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK10.png" alt="Wall Pack Light 10" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 10</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK11.png" alt="Wall Pack Light 11" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 11</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK12.png" alt="Wall Pack Light 12" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 12</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK13.png" alt="Wall Pack Light 13" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 13</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK14.png" alt="Wall Pack Light 14" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 14</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK15.png" alt="Wall Pack Light 15" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 15</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK16.png" alt="Wall Pack Light 16" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 16</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK17.png" alt="Wall Pack Light 17" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 17</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK18.png" alt="Wall Pack Light 18" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 18</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="WALLPACK19.png" alt="Wall Pack Light 19" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <div class="product-number">Product 19</div>
+                    <h3>Wall Pack Light</h3>
+                    <p>Contact us for specifications, pricing, and availability.</p>
+                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
+                </div>
+            </article>
+
+        </section>
+
+        <div class="back-link">
+            <a href="index.html#products">← Back to All Categories</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <h3>LED KING</h3>
+                <p>Professional LED lighting products and solutions for businesses, contractors, and homeowners.</p>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>Phone: <a href="tel:6822003004">682-200-3004</a></p>
+                <p>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
+            </div>
+
+            <div>
+                <h3>Visit Our Store</h3>
+                <p>3701 Airport Fwy</p>
+                <p>Fort Worth, TX 76111</p>
+                <p><a href="https://maps.app.goo.gl/bjyUvjcwKhLtDpHf7" target="_blank" rel="noopener noreferrer">Get Directions</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © <span id="year"></span> LED KING Lighting Solutions. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+```
