@@ -6,302 +6,79 @@
 <meta name="description" content="Shop LED KING LED bulbs including A19, BR30, BR40, PAR, MR16, G4, GU10, GU24 and candelabra LED bulbs.">
 <title>LED Bulbs | LED KING Lighting Solutions</title>
 <style>
-:root{
-  --teal:#00b8a9;
-  --teal-dark:#008f83;
-  --ink:#101716;
-  --muted:#66716f;
-  --page:#f4f7f6;
-  --card:#fff;
-  --line:#e2e9e7;
-  --lime:#d7f36a;
-  --max:1600px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--page);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
-a{color:inherit}
-.site-header{background:#101716;color:#fff;border-bottom:4px solid var(--teal)}
-.header-inner{max-width:var(--max);margin:auto;padding:17px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-weight:900;letter-spacing:1.2px;font-size:clamp(23px,3vw,34px);text-decoration:none;white-space:nowrap}
-.brand span{color:var(--teal)}
-.brand small{display:block;font-size:10px;letter-spacing:2.1px;color:#d5dfdc;font-weight:600;margin-top:-3px}
-.header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.header-actions a,.header-actions button{display:inline-block;border:1px solid #52605c;border-radius:8px;padding:10px 14px;text-decoration:none;background:transparent;color:#fff;font-size:13px;font-weight:700;cursor:pointer}
-.header-actions .cart-button{background:var(--teal);border-color:var(--teal);color:#071311}
-.hero{background:linear-gradient(120deg,#111a18,#1c2c28);color:#fff}
-.hero-inner{max-width:var(--max);margin:auto;padding:46px 28px 42px}
-.eyebrow{color:var(--lime);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-.hero h1{font-size:clamp(32px,5vw,55px);line-height:1.06;margin:9px 0 12px;letter-spacing:-1px}
-.hero p{max-width:760px;color:#d3dfdb;margin:0;font-size:16px}
-.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}
-.hero-badges span{border:1px solid #43524d;border-radius:999px;padding:7px 12px;color:#e9f2ef;font-size:12px;font-weight:700}
-main{max-width:var(--max);margin:auto;padding:28px}
-.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:20px}
-.toolbar p{margin:0;color:var(--muted);font-size:14px}
-.search-sort{display:flex;gap:9px;flex-wrap:wrap}
-.search-sort input,.search-sort select{min-height:43px;border:1px solid #d4dfdc;border-radius:9px;background:#fff;padding:0 12px;font-size:14px;min-width:180px;color:var(--ink)}
-.category-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
-.chip{border:1px solid #d8e2df;background:#fff;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;cursor:pointer}
-.chip.active,.chip:hover{background:var(--teal);border-color:var(--teal);color:#071311}
-.product-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
-.product-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 4px 16px rgba(13,38,32,.04);transition:transform .18s ease,box-shadow .18s ease}
-.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(13,38,32,.09)}
-.image-wrap{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:10px;border-bottom:1px solid #edf1f0;cursor:pointer}
-.image-wrap img{width:100%;height:100%;object-fit:contain;display:block}
-.image-wrap .fallback{display:none;color:#7c8985;text-align:center;font-size:12px;padding:20px}
-.card-body{padding:15px;display:flex;flex-direction:column;flex:1}
-.sku{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--teal-dark);font-weight:800}
-.product-card h2{font-size:16px;line-height:1.3;margin:5px 0 8px}
-.specs{font-size:12px;color:var(--muted);margin:0 0 12px;flex:1;white-space:pre-line}
-.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
-.price{font-size:19px;font-weight:900}
-.price.missing{font-size:12px;color:var(--muted);font-weight:700}
-.details-btn{border:0;border-radius:8px;background:#101716;color:#fff;padding:9px 11px;font-size:12px;font-weight:800;cursor:pointer}
-.details-btn:hover{background:var(--teal);color:#071311}
-.empty{display:none;text-align:center;padding:50px 15px;color:var(--muted);background:#fff;border:1px dashed #cbd8d4;border-radius:12px}
-.note{margin:24px 0 0;color:var(--muted);font-size:12px}
-.site-footer{margin-top:42px;background:#101716;color:#d8e2df}
-.footer-inner{max-width:var(--max);margin:auto;padding:25px 28px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.footer-inner strong{color:#fff}
-.footer-inner a{color:var(--lime);text-decoration:none}
-.modal-backdrop{position:fixed;inset:0;background:rgba(4,13,11,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}
-.modal-backdrop.open{display:flex}
-.modal{background:#fff;border-radius:16px;max-width:850px;width:100%;max-height:92vh;overflow:auto;position:relative}
-.modal-close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#101716;color:#fff;font-size:23px;cursor:pointer;z-index:2}
-.modal-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding:28px}
-.modal-image{min-height:290px;display:flex;align-items:center;justify-content:center;background:#f7f9f8;border-radius:12px;padding:15px}
-.modal-image img{width:100%;height:100%;max-height:420px;object-fit:contain}
-.modal-info{padding:16px 6px 10px 0}
-.modal-info h2{font-size:26px;line-height:1.15;margin:8px 0}
-.modal-info .modal-price{font-size:24px;font-weight:900;margin:12px 0}
-.modal-info p{font-size:14px;color:#56615e;white-space:pre-line}
-.modal-info .sku-line{font-size:12px;font-weight:800;color:var(--teal-dark)}
-.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.modal-actions button,.modal-actions a{border:0;border-radius:9px;padding:12px 15px;font-weight:800;font-size:13px;text-decoration:none;cursor:pointer}
-.primary{background:var(--teal);color:#071311}
-.secondary{background:#101716;color:#fff}
-.cart-panel{position:fixed;top:0;right:0;height:100vh;width:min(420px,100%);background:#fff;z-index:1100;box-shadow:-12px 0 40px rgba(0,0,0,.2);padding:22px;display:none;overflow:auto}
-.cart-panel.open{display:block}
-.cart-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}
-.cart-top h2{margin:0}
-.cart-top button{border:0;background:transparent;font-size:26px;cursor:pointer}
-.cart-item{display:grid;grid-template-columns:60px 1fr auto;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
-.cart-item img{width:60px;height:60px;object-fit:contain;background:#f7f9f8;border-radius:8px}
-.cart-item strong{font-size:13px;display:block}
-.cart-item small{color:var(--muted)}
-.remove-item{border:0;background:#f0f3f2;border-radius:6px;padding:6px;cursor:pointer}
-.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin:18px 0}
-.cart-help{font-size:12px;color:var(--muted)}
-.cart-quote{display:block;text-align:center;padding:12px;border-radius:9px;background:var(--teal);color:#071311;font-weight:900;text-decoration:none;margin-top:12px}
-@media(max-width:1250px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.image-wrap{height:210px}}
-@media(max-width:950px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.modal-content{grid-template-columns:1fr}.modal-image{min-height:230px}.modal-info{padding:0}}
-@media(max-width:650px){.header-inner{padding:14px 17px;align-items:flex-start;flex-direction:column}.header-actions{width:100%}.header-actions a,.header-actions button{flex:1;text-align:center}main{padding:18px 13px}.hero-inner{padding:34px 18px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.image-wrap{height:165px;padding:7px}.card-body{padding:10px}.product-card h2{font-size:14px}.specs{font-size:11px}.price{font-size:16px}.details-btn{padding:8px;font-size:11px}.search-sort{width:100%}.search-sort input{flex:1;min-width:140px}.search-sort select{min-width:120px}.modal-content{padding:17px}.modal-info h2{font-size:22px}}
-@media(max-width:380px){.product-grid{grid-template-columns:1fr 1fr}.image-wrap{height:140px}.price-row{align-items:flex-start;flex-direction:column}.details-btn{width:100%}}
+:root{--forest:#34483D;--forest-dark:#26382E;--green:#176B50;--green-hover:#124F3C;--ivory:#F4F0E8;--gold:#C5A66A;--gold-text:#A98745;--yellow:#FFD400;--ink:#26332B;--muted:#647268;--line:#DED6C8;--white:#fff;--max:1600px;--shadow:0 12px 35px rgba(52,72,61,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}a{color:inherit}
+.announcement{background:var(--yellow);color:#26332B;text-align:center;padding:8px 12px;font-size:11px;font-weight:900;letter-spacing:1px}
+.site-header{background:#fff;color:var(--forest);border-bottom:1px solid var(--line);box-shadow:0 4px 18px rgba(52,72,61,.06);position:relative;z-index:5}.header-inner{max-width:var(--max);margin:auto;padding:17px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:1.2px;font-size:clamp(23px,3vw,34px);text-decoration:none;white-space:nowrap;color:var(--forest)}.brand span{color:var(--gold-text)}.brand small{display:block;font-size:10px;letter-spacing:2.1px;color:var(--muted);font-weight:700;margin-top:-3px}.header-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.header-actions a,.header-actions button{display:inline-block;border:1px solid var(--line);border-radius:7px;padding:10px 14px;text-decoration:none;background:#fff;color:var(--forest);font-size:13px;font-weight:800;cursor:pointer}.header-actions a:hover{border-color:var(--green);color:var(--green)}.header-actions .cart-button{background:var(--green);border-color:var(--green);color:#fff}.header-actions .cart-button:hover{background:var(--green-hover)}
+.hero{background:linear-gradient(115deg,rgba(38,56,46,.98),rgba(52,72,61,.94));color:#fff;border-bottom:4px solid var(--gold)}.hero-inner{max-width:var(--max);margin:auto;padding:48px 28px 43px}.eyebrow{color:var(--yellow);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,55px);line-height:1.06;margin:9px 0 12px;letter-spacing:-1px}.hero p{max-width:760px;color:#e3e9e3;margin:0;font-size:16px}.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:23px}.hero-badges span{border:1px solid rgba(197,166,106,.65);border-radius:999px;padding:7px 12px;color:#fff;font-size:12px;font-weight:700;background:rgba(255,255,255,.04)}
+main{max-width:var(--max);margin:auto;padding:28px}.toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:20px}.toolbar p{margin:0;color:var(--muted);font-size:14px}.search-sort{display:flex;gap:9px;flex-wrap:wrap}.search-sort input,.search-sort select{min-height:43px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:0 12px;font-size:14px;min-width:180px;color:var(--ink)}.search-sort input:focus,.search-sort select:focus{outline:2px solid var(--gold);outline-offset:1px}.category-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:800;cursor:pointer;color:var(--forest)}.chip.active,.chip:hover{background:var(--green);border-color:var(--green);color:#fff}
+.product-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}.product-card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0;box-shadow:0 4px 16px rgba(38,56,46,.04);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(38,56,46,.12);border-color:var(--gold)}.image-wrap{height:230px;background:#FAF8F3;display:flex;align-items:center;justify-content:center;padding:10px;border-bottom:1px solid var(--line);cursor:pointer}.image-wrap img{width:100%;height:100%;object-fit:contain;display:block}.image-wrap .fallback{display:none;color:var(--muted);text-align:center;font-size:12px;padding:20px}.card-body{padding:15px;display:flex;flex-direction:column;flex:1}.sku{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--green);font-weight:900}.product-card h2{font-size:16px;line-height:1.3;margin:5px 0 8px;color:var(--forest-dark)}.specs{font-size:12px;color:var(--muted);margin:0 0 12px;flex:1;white-space:pre-line}.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}.price{font-size:19px;font-weight:900;color:var(--forest)}.price.missing{font-size:12px;color:var(--muted);font-weight:800}.details-btn{border:0;border-radius:7px;background:var(--green);color:#fff;padding:9px 11px;font-size:12px;font-weight:900;cursor:pointer}.details-btn:hover{background:var(--green-hover)}.empty{display:none;text-align:center;padding:50px 15px;color:var(--muted);background:#fff;border:1px dashed var(--gold);border-radius:12px}.note{margin:24px 0 0;color:var(--muted);font-size:12px}
+.site-footer{margin-top:42px;background:var(--forest-dark);color:#e6e9e3;border-top:4px solid var(--gold)}.footer-inner{max-width:var(--max);margin:auto;padding:25px 28px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}.footer-inner strong{color:#fff}.footer-inner a{color:var(--yellow);text-decoration:none}.footer-inner a:hover{text-decoration:underline}
+.modal-backdrop{position:fixed;inset:0;background:rgba(4,13,11,.72);display:none;align-items:center;justify-content:center;padding:18px;z-index:1000}.modal-backdrop.open{display:flex}.modal{background:#fff;border-radius:14px;border:1px solid var(--line);max-width:850px;width:100%;max-height:92vh;overflow:auto;position:relative}.modal-close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:var(--forest-dark);color:#fff;font-size:23px;cursor:pointer;z-index:2}.modal-content{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding:28px}.modal-image{min-height:290px;display:flex;align-items:center;justify-content:center;background:#FAF8F3;border:1px solid var(--line);border-radius:10px;padding:15px}.modal-image img{width:100%;height:100%;max-height:420px;object-fit:contain}.modal-info{padding:16px 6px 10px 0}.modal-info h2{font-size:26px;line-height:1.15;margin:8px 0;color:var(--forest-dark)}.modal-info .modal-price{font-size:24px;font-weight:900;color:var(--green);margin:12px 0}.modal-info p{font-size:14px;color:#56615e;white-space:pre-line}.modal-info .sku-line{font-size:12px;font-weight:900;color:var(--green)}.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.modal-actions button,.modal-actions a{border:0;border-radius:8px;padding:12px 15px;font-weight:900;font-size:13px;text-decoration:none;cursor:pointer}.primary{background:var(--green);color:#fff}.primary:hover{background:var(--green-hover)}.secondary{background:var(--forest-dark);color:#fff}
+.cart-panel{position:fixed;top:0;right:0;height:100vh;width:min(420px,100%);background:#fff;z-index:1100;box-shadow:-12px 0 40px rgba(0,0,0,.2);padding:22px;display:none;overflow:auto;border-left:4px solid var(--gold)}.cart-panel.open{display:block}.cart-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:12px}.cart-top h2{margin:0;color:var(--forest)}.cart-top button{border:0;background:transparent;font-size:26px;cursor:pointer;color:var(--forest)}.cart-item{display:grid;grid-template-columns:60px 1fr auto;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.cart-item img{width:60px;height:60px;object-fit:contain;background:#FAF8F3;border-radius:7px}.cart-item strong{font-size:13px;display:block;color:var(--forest)}.cart-item small{color:var(--muted)}.remove-item{border:0;background:#f0ede6;border-radius:6px;padding:6px;cursor:pointer;color:var(--forest)}.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:900;margin:18px 0;color:var(--forest)}.cart-help{font-size:12px;color:var(--muted)}.cart-quote{display:block;text-align:center;padding:12px;border-radius:8px;background:var(--green);color:#fff;font-weight:900;text-decoration:none;margin-top:12px}.cart-quote:hover{background:var(--green-hover)}
+@media(max-width:1250px){.product-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.image-wrap{height:210px}}@media(max-width:950px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.modal-content{grid-template-columns:1fr}.modal-image{min-height:230px}.modal-info{padding:0}}@media(max-width:650px){.header-inner{padding:14px 17px;align-items:flex-start;flex-direction:column}.header-actions{width:100%}.header-actions a,.header-actions button{flex:1;text-align:center}main{padding:18px 13px}.hero-inner{padding:34px 18px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.image-wrap{height:165px;padding:7px}.card-body{padding:10px}.product-card h2{font-size:14px}.specs{font-size:11px}.price{font-size:16px}.details-btn{padding:8px;font-size:11px}.search-sort{width:100%}.search-sort input{flex:1;min-width:140px}.search-sort select{min-width:120px}.modal-content{padding:17px}.modal-info h2{font-size:22px}}@media(max-width:380px){.product-grid{grid-template-columns:1fr 1fr}.image-wrap{height:140px}.price-row{align-items:flex-start;flex-direction:column}.details-btn{width:100%}}
 </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">LED <span>KING</span><small>LIGHTING SOLUTIONS</small></a>
-    <div class="header-actions">
-      <a href="index.html">Home</a>
-      <a href="index.html#quote">Request a Quote</a>
-      <button class="cart-button" id="openCartBtn" type="button">Cart (<span id="cartCount">0</span>)</button>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">LED KING · Lighting Solutions</div>
-    <h1>LED Bulbs</h1>
-    <p>Explore LED bulbs for homes, businesses, retail spaces and specialty lighting applications. Browse the available bulb styles, color temperatures, specifications and prices below.</p>
-    <div class="hero-badges"><span>Residential & Commercial</span><span>Multiple Color Temperatures</span><span>Request a Quote</span></div>
-  </div>
-</section>
-
-<main>
-  <div class="toolbar">
-    <p><strong id="resultCount">39</strong> bulb listings</p>
-    <div class="search-sort">
-      <input id="searchInput" type="search" placeholder="Search name, SKU, model or specs…" aria-label="Search LED bulbs">
-      <select id="sortSelect" aria-label="Sort products">
-        <option value="default">Sort: Default order</option>
-        <option value="price-asc">Price: Low to high</option>
-        <option value="price-desc">Price: High to low</option>
-        <option value="name">Name: A to Z</option>
-      </select>
-    </div>
-  </div>
-  <div class="category-chips" id="categoryChips" aria-label="Filter bulb type">
-    <button class="chip active" data-filter="all">All Bulbs</button>
-    <button class="chip" data-filter="A19">A19 / A21</button>
-    <button class="chip" data-filter="BR30">BR30</button>
-    <button class="chip" data-filter="BR40">BR40</button>
-    <button class="chip" data-filter="PAR">PAR</button>
-    <button class="chip" data-filter="MR16">MR16 / GU10</button>
-    <button class="chip" data-filter="Other">Other Bulbs</button>
-  </div>
-  <section class="product-grid" id="productGrid" aria-label="LED bulb products"></section>
-  <div class="empty" id="emptyState">No bulbs match your search. Try another keyword or select “All Bulbs.”</div>
-  <p class="note">Product images are loaded from <strong>BULB1.png</strong> through <strong>BULB39.png</strong> in the same folder as this HTML file. If an image does not appear, check that the filename and capitalization match exactly. One product listing currently has no price provided.</p>
-</main>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div><strong>LED KING</strong><br>Professional LED Lighting · Fort Worth, Texas</div>
-    <div><a href="index.html#quote">Request a Quote</a> &nbsp;·&nbsp; <a href="index.html">Back to Home</a></div>
-    <div>© <span id="year"></span> LED KING. All rights reserved.</div>
-  </div>
-</footer>
-
-<div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-label="Product details">
-  <div class="modal">
-    <button class="modal-close" id="closeModalBtn" type="button" aria-label="Close product details">×</button>
-    <div class="modal-content" id="modalContent"></div>
-  </div>
-</div>
-
-<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
-  <div class="cart-top"><h2>Your Cart</h2><button id="closeCartBtn" aria-label="Close cart" type="button">×</button></div>
-  <div id="cartItems"></div>
-  <div class="cart-total"><span>Estimated total</span><span id="cartTotal">$0.00</span></div>
-  <p class="cart-help">This cart is a product selection helper only. Online payment is not enabled. Send your selection to LED KING to confirm availability, shipping and final pricing.</p>
-  <a class="cart-quote" id="quoteLink" href="index.html#quote">Continue to Request a Quote</a>
-</aside>
-
+<div class="announcement">COMMERCIAL LIGHTING SOLUTIONS &nbsp; • &nbsp; BULK ORDER PRICING AVAILABLE &nbsp; • &nbsp; SHIPPING NATIONWIDE</div>
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html">LED <span>KING</span><small>LIGHTING SOLUTIONS</small></a><div class="header-actions"><a href="index.html">Home</a><a href="index.html#quote">Request a Quote</a><button class="cart-button" id="openCartBtn" type="button">Cart (<span id="cartCount">0</span>)</button></div></div></header>
+<section class="hero"><div class="hero-inner"><div class="eyebrow">LED KING · Lighting Solutions</div><h1>LED Bulbs</h1><p>Explore LED bulbs for homes, businesses, retail spaces and specialty lighting applications. Browse the available bulb styles, color temperatures, specifications and prices below.</p><div class="hero-badges"><span>Residential & Commercial</span><span>Multiple Color Temperatures</span><span>Request a Quote</span></div></div></section>
+<main><div class="toolbar"><p><strong id="resultCount">39</strong> bulb listings</p><div class="search-sort"><input id="searchInput" type="search" placeholder="Search name, SKU, model or specs…" aria-label="Search LED bulbs"><select id="sortSelect" aria-label="Sort products"><option value="default">Sort: Default order</option><option value="price-asc">Price: Low to high</option><option value="price-desc">Price: High to low</option><option value="name">Name: A to Z</option></select></div></div>
+<div class="category-chips" id="categoryChips" aria-label="Filter bulb type"><button class="chip active" data-filter="all">All Bulbs</button><button class="chip" data-filter="A19">A19 / A21</button><button class="chip" data-filter="BR30">BR30</button><button class="chip" data-filter="BR40">BR40</button><button class="chip" data-filter="PAR">PAR</button><button class="chip" data-filter="MR16">MR16 / GU10</button><button class="chip" data-filter="Other">Other Bulbs</button></div>
+<section class="product-grid" id="productGrid" aria-label="LED bulb products"></section><div class="empty" id="emptyState">No bulbs match your search. Try another keyword or select “All Bulbs.”</div><p class="note">Product images are loaded from <strong>BULB1.png</strong> through <strong>BULB39.png</strong> in the same folder as this HTML file. If an image does not appear, check that the filename and capitalization match exactly. One product listing currently has no price provided.</p></main>
+<footer class="site-footer"><div class="footer-inner"><div><strong>LED KING</strong><br>Professional LED Lighting · Fort Worth, Texas</div><div><a href="index.html#quote">Request a Quote</a> &nbsp;·&nbsp; <a href="index.html">Back to Home</a></div><div>© <span id="year"></span> LED KING. All rights reserved.</div></div></footer>
+<div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-label="Product details"><div class="modal"><button class="modal-close" id="closeModalBtn" type="button" aria-label="Close product details">×</button><div class="modal-content" id="modalContent"></div></div></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Shopping cart"><div class="cart-top"><h2>Your Cart</h2><button id="closeCartBtn" aria-label="Close cart" type="button">×</button></div><div id="cartItems"></div><div class="cart-total"><span>Estimated total</span><span id="cartTotal">$0.00</span></div><p class="cart-help">This cart is a product selection helper only. Online payment is not enabled. Send your selection to LED KING to confirm availability, shipping and final pricing.</p><a class="cart-quote" id="quoteLink" href="index.html#quote">Continue to Request a Quote</a></aside>
 <script>
 const products = [
- {id:1,image:"BULB1.png",name:"A19 7W LED Bulb – Warm White",sku:"MPL-106",price:8,group:"A19",specs:"A19 bulb\\n7 watts · Warm White (WW)",categories:"A19 Bulbs, Bulbs"},
- {id:2,image:"BULB2.png",name:"A19 9W LED Bulb – 6000K",sku:"708",price:6,group:"A19",specs:"9 watts · 6000K\\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
- {id:3,image:"BULB3.png",name:"A19 9W LED Bulb – 3000K",sku:"883",price:6,group:"A19",specs:"9 watts · 3000K\\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
- {id:4,image:"BULB4.png",name:"A19 9W LED Bulb – 4000K",sku:"1674",price:3.99,group:"A19",specs:"9 watts · 4000K\\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
- {id:5,image:"BULB5.png",name:"A19 9W Greenwatt – 5000K",sku:"2426",price:6,group:"A19",specs:"9 watts · 5000K\\nGreenwatt · UL listed · Dimmable",categories:"A19 Bulbs, Bulbs"},
- {id:6,image:"BULB6.png",name:"A19 9W E26 Bulb – Multi-CCT",sku:"883 / 1674 / 708",price:6,group:"A19",specs:"E26 base · AC 120V\\nColor options: 3000K, 4000K or 6000K\\nUPC: 8190810246964",categories:"A19 Bulbs, Bulbs"},
- {id:7,image:"BULB7.png",name:"A19 11W LED Bulb – Cool White",sku:"10",price:11,group:"A19",specs:"11 watts · Cool White (CW)",categories:"A19 Bulbs, Bulbs"},
- {id:8,image:"BULB8.png",name:"A19 11W LED Bulb – Warm White",sku:"12",price:11,group:"A19",specs:"11 watts · Warm White (WW)",categories:"A19 Bulbs, Bulbs"},
- {id:9,image:"BULB9.png",name:"A19 12W E26 Bulb – Multi-CCT",sku:"1058 / 1658",price:4.99,group:"A19",specs:"E26 base · AC 120V\\nColor options: 3000K, 4000K or 6000K\\nUPC: 8190810256628",categories:"A19 Bulbs, Bulbs"},
- {id:10,image:"BULB10.png",name:"BR30 10W LED Bulb – Cool White",sku:"13",price:14,group:"BR30",specs:"10 watts · Cool White (CW)\\nNon-dimmable",categories:"BR30, Bulbs"},
- {id:11,image:"BULB11.png",name:"BR30 10W LED Bulb – Neutral White",sku:"14",price:14,group:"BR30",specs:"10 watts · Neutral White (NW)\\nNon-dimmable",categories:"BR30, Bulbs"},
- {id:12,image:"BULB12.png",name:"BR30 10W LED Bulb – Warm White",sku:"15",price:14,group:"BR30",specs:"10 watts · Warm White (WW)\\nNon-dimmable",categories:"BR30, Bulbs"},
- {id:13,image:"BULB13.png",name:"PAR30 11W LED Bulb – 5000K",sku:"21",price:25,group:"PAR",specs:"Greenwatt · White housing\\nE26 · 120VAC · Dimmable\\n5000K · 30° beam angle",categories:"PAR30, Bulbs"},
- {id:14,image:"BULB14.png",name:"MR16 7W LED Bulb – 5000K",sku:"32",price:10,group:"MR16",specs:"7 watts · 5000K\\nGreenwatt · 12V",categories:"MR16, Bulbs"},
- {id:15,image:"BULB15.png",name:"MR16 7W LED Bulb – Warm White",sku:"33",price:10,group:"MR16",specs:"7 watts · Warm White (WW)",categories:"MR16, Bulbs"},
- {id:16,image:"BULB16.png",name:"G4 2W LED Bulb – Warm White",sku:"34",price:5,group:"Other",specs:"2 watts · Warm White (WW)",categories:"G4, Bulbs"},
- {id:17,image:"BULB17.png",name:"PAR38 14W RGB LED Bulb",sku:"35",price:50,group:"PAR",specs:"14 watts · RGB color lighting",categories:"PAR38, Bulbs"},
- {id:18,image:"BULB18.png",name:"PAR38 20W LED Bulb – 5000K",sku:"404",price:29,group:"PAR",specs:"Greenwatt · White housing\\nE26 · 120VAC · 5000K",categories:"PAR38, Bulbs"},
- {id:19,image:"BULB19.png",name:"PAR38 20W LED Bulb – Warm White",sku:"405",price:29,group:"PAR",specs:"White housing · E26 · 120VAC\\nDimmable · 3000K ±200K\\n30° beam angle",categories:"PAR38, Bulbs"},
- {id:20,image:"BULB20.png",name:"MR16 GU10 7W LED Bulb – 3000K",sku:"683",price:13.5,group:"MR16",specs:"Model: M:T-L12MR16D-7W-CCOB-LI\\n120V–60Hz · Dimmable\\nETL & ES · 1-year warranty",categories:"MR16, GU10, Bulbs"},
- {id:21,image:"BULB21.png",name:"GU24 11W LED Bulb – Warm White",sku:"860",price:10.99,group:"Other",specs:"11 watts · Warm White (WW)\\nDuracell",categories:"GU24, Bulbs"},
- {id:22,image:"BULB22.png",name:"A19 12W LED Bulb – 6500K",sku:"1058",price:4.99,group:"A19",specs:"Model: CRH-A60012\\n6500K · UL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
- {id:23,image:"BULB23.png",name:"A19 12W LED Bulb – 3000K",sku:"1059",price:4.99,group:"A19",specs:"Model: CRH-A60012\\n3000K · UL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
- {id:24,image:"BULB24.png",name:"BR30 10W LED Bulb – 4000K",sku:"1310",price:20,group:"BR30",specs:"E26 base · Dimmable\\nES / UL",categories:"BR30, Bulbs"},
- {id:25,image:"BULB25.png",name:"BR40 20W LED Bulb – 4000K",sku:"1316",price:23,group:"BR40",specs:"Model: BR40-20-DIM\\nE26 base · Dimmable · ES / UL",categories:"BR40, Bulbs"},
- {id:26,image:"BULB26.png",name:"BR30 10W LED Bulb – 2700K",sku:"1317",price:12,group:"BR30",specs:"Model: BR30-10W-DIM\\nE26 base · Dimmable · ES / UL",categories:"BR30, Bulbs"},
- {id:27,image:"BULB27.png",name:"BR40 12W LED Bulb – 2700K",sku:"1318",price:18,group:"BR40",specs:"12 watts · E26 base\\nDimmable · ES / UL",categories:"BR40, Bulbs"},
- {id:28,image:"BULB28.png",name:"BR40 12W LED Bulb – 6500K",sku:"1320",price:18,group:"BR40",specs:"Model: BR40-12W-DIM\\nE26 base · Dimmable · ES / UL",categories:"BR40, Bulbs"},
- {id:29,image:"BULB29.png",name:"Candelabra 4.5W Clear – 3000K",sku:"1572",price:8,group:"Other",specs:"4.5 watts · Clear glass\\n2700K / 3000K listing\\nGreenwatt · UL listed · Dimmable",categories:"Candelabra, Bulbs"},
- {id:30,image:"BULB30.png",name:"PAR38 26W LED Bulb – Cool White",sku:"403",price:35,group:"PAR",specs:"White housing · E26 · 120VAC\\nDimmable · 7000K ±200K\\n30° beam angle",categories:"PAR38, Bulbs"},
- {id:31,image:"BULB31.png",name:"PAR38 55W LED Bulb – 10000K",sku:"1766",price:null,group:"PAR",specs:"AC 100–277V · BA 45°\\nE26 base · White finish\\n4700–5100 lumens · ETL / CE / RoHS",categories:"PAR38, Bulbs"},
- {id:32,image:"BULB32.png",name:"MR16 GU10 7W LED Bulb – 4000K",sku:"1932",price:13.5,group:"MR16",specs:"7 watts · 4000K\\nDimmable · Greenwatt",categories:"MR16, GU10, Bulbs"},
- {id:33,image:"BULB33.png",name:"BR30 10W LED Bulb – 3000K",sku:"1933",price:20,group:"BR30",specs:"Model: M:T-L2BR30D-13W-Li\\n120V–60Hz · E26 · Dimmable\\nETL · 1-year warranty",categories:"BR30, Bulbs"},
- {id:34,image:"BULB34.png",name:"BR30 10W LED Bulb – 4000K",sku:"1934",price:20,group:"BR30",specs:"Model: M:T-L2BR30D-13W-Li\\n120V–60Hz · E26 · Dimmable\\nETL · 1-year warranty",categories:"BR30, Bulbs"},
- {id:35,image:"BULB35.png",name:"BR40 17W LED Bulb – 3000K",sku:"SKU not provided",price:20,group:"BR40",specs:"Model: M:T-L2BR40D-17W\\n120V–60Hz · E26 · Dimmable\\nETL · 1-year warranty",categories:"BR40, Bulbs"},
- {id:36,image:"BULB36.png",name:"BR40 17W LED Bulb – 4000K",sku:"1937",price:20,group:"BR40",specs:"Model: M:T-L2BR40D-17W\\n120V–60Hz · E26 · Dimmable\\nETL · 1-year warranty",categories:"BR40, Bulbs"},
- {id:37,image:"BULB37.png",name:"BR40 17W LED Bulb – 5000K",sku:"1938",price:20,group:"BR40",specs:"17 watts · 5000K\\nGreenwatt · 3152023",categories:"BR40, Bulbs"},
- {id:38,image:"BULB38.png",name:"Candelabra 4.5W Clear – 4000K",sku:"2118",price:10,group:"Other",specs:"4.5 watts · 4000K\\nGreenwatt · UL listed · Dimmable",categories:"Candelabra, Bulbs"},
- {id:39,image:"BULB39.png",name:"A21 15W E26 LED Bulb – 6000K",sku:"2132",price:16,group:"A19",specs:"15 watts · E26 · AC 120V · 6000K\\nUPC: 8190610351987\\nCategories: A19 Bulbs / Bulbs / Top Rated",categories:"A21, Bulbs, Top Rated"}
+{id:1,image:"BULB1.png",name:"A19 7W LED Bulb – Warm White",sku:"MPL-106",price:8,group:"A19",specs:"A19 bulb\n7 watts · Warm White (WW)",categories:"A19 Bulbs, Bulbs"},
+{id:2,image:"BULB2.png",name:"A19 9W LED Bulb – 6000K",sku:"708",price:6,group:"A19",specs:"9 watts · 6000K\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
+{id:3,image:"BULB3.png",name:"A19 9W LED Bulb – 3000K",sku:"883",price:6,group:"A19",specs:"9 watts · 3000K\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
+{id:4,image:"BULB4.png",name:"A19 9W LED Bulb – 4000K",sku:"1674",price:3.99,group:"A19",specs:"9 watts · 4000K\nUL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
+{id:5,image:"BULB5.png",name:"A19 9W Greenwatt – 5000K",sku:"2426",price:6,group:"A19",specs:"9 watts · 5000K\nGreenwatt · UL listed · Dimmable",categories:"A19 Bulbs, Bulbs"},
+{id:6,image:"BULB6.png",name:"A19 9W E26 Bulb – Multi-CCT",sku:"883 / 1674 / 708",price:6,group:"A19",specs:"E26 base · AC 120V\nColor options: 3000K, 4000K or 6000K\nUPC: 8190810246964",categories:"A19 Bulbs, Bulbs"},
+{id:7,image:"BULB7.png",name:"A19 11W LED Bulb – Cool White",sku:"10",price:11,group:"A19",specs:"11 watts · Cool White (CW)",categories:"A19 Bulbs, Bulbs"},
+{id:8,image:"BULB8.png",name:"A19 11W LED Bulb – Warm White",sku:"12",price:11,group:"A19",specs:"11 watts · Warm White (WW)",categories:"A19 Bulbs, Bulbs"},
+{id:9,image:"BULB9.png",name:"A19 12W E26 Bulb – Multi-CCT",sku:"1058 / 1658",price:4.99,group:"A19",specs:"E26 base · AC 120V\nColor options: 3000K, 4000K or 6000K\nUPC: 8190810256628",categories:"A19 Bulbs, Bulbs"},
+{id:10,image:"BULB10.png",name:"BR30 10W LED Bulb – Cool White",sku:"13",price:14,group:"BR30",specs:"10 watts · Cool White (CW)\nNon-dimmable",categories:"BR30, Bulbs"},
+{id:11,image:"BULB11.png",name:"BR30 10W LED Bulb – Neutral White",sku:"14",price:14,group:"BR30",specs:"10 watts · Neutral White (NW)\nNon-dimmable",categories:"BR30, Bulbs"},
+{id:12,image:"BULB12.png",name:"BR30 10W LED Bulb – Warm White",sku:"15",price:14,group:"BR30",specs:"10 watts · Warm White (WW)\nNon-dimmable",categories:"BR30, Bulbs"},
+{id:13,image:"BULB13.png",name:"PAR30 11W LED Bulb – 5000K",sku:"21",price:25,group:"PAR",specs:"Greenwatt · White housing\nE26 · 120VAC · Dimmable\n5000K · 30° beam angle",categories:"PAR30, Bulbs"},
+{id:14,image:"BULB14.png",name:"MR16 7W LED Bulb – 5000K",sku:"32",price:10,group:"MR16",specs:"7 watts · 5000K\nGreenwatt · 12V",categories:"MR16, Bulbs"},
+{id:15,image:"BULB15.png",name:"MR16 7W LED Bulb – Warm White",sku:"33",price:10,group:"MR16",specs:"7 watts · Warm White (WW)",categories:"MR16, Bulbs"},
+{id:16,image:"BULB16.png",name:"G4 2W LED Bulb – Warm White",sku:"34",price:5,group:"Other",specs:"2 watts · Warm White (WW)",categories:"G4, Bulbs"},
+{id:17,image:"BULB17.png",name:"PAR38 14W RGB LED Bulb",sku:"35",price:50,group:"PAR",specs:"14 watts · RGB color lighting",categories:"PAR38, Bulbs"},
+{id:18,image:"BULB18.png",name:"PAR38 20W LED Bulb – 5000K",sku:"404",price:29,group:"PAR",specs:"Greenwatt · White housing\nE26 · 120VAC · 5000K",categories:"PAR38, Bulbs"},
+{id:19,image:"BULB19.png",name:"PAR38 20W LED Bulb – Warm White",sku:"405",price:29,group:"PAR",specs:"White housing · E26 · 120VAC\nDimmable · 3000K ±200K\n30° beam angle",categories:"PAR38, Bulbs"},
+{id:20,image:"BULB20.png",name:"MR16 GU10 7W LED Bulb – 3000K",sku:"683",price:13.5,group:"MR16",specs:"Model: M:T-L12MR16D-7W-CCOB-LI\n120V–60Hz · Dimmable\nETL & ES · 1-year warranty",categories:"MR16, GU10, Bulbs"},
+{id:21,image:"BULB21.png",name:"GU24 11W LED Bulb – Warm White",sku:"860",price:10.99,group:"Other",specs:"11 watts · Warm White (WW)\nDuracell",categories:"GU24, Bulbs"},
+{id:22,image:"BULB22.png",name:"A19 12W LED Bulb – 6500K",sku:"1058",price:4.99,group:"A19",specs:"Model: CRH-A60012\n6500K · UL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
+{id:23,image:"BULB23.png",name:"A19 12W LED Bulb – 3000K",sku:"1059",price:4.99,group:"A19",specs:"Model: CRH-A60012\n3000K · UL listed · 1-year warranty",categories:"A19 Bulbs, Bulbs"},
+{id:24,image:"BULB24.png",name:"BR30 10W LED Bulb – 4000K",sku:"1310",price:20,group:"BR30",specs:"E26 base · Dimmable\nES / UL",categories:"BR30, Bulbs"},
+{id:25,image:"BULB25.png",name:"BR40 20W LED Bulb – 4000K",sku:"1316",price:23,group:"BR40",specs:"Model: BR40-20-DIM\nE26 base · Dimmable · ES / UL",categories:"BR40, Bulbs"},
+{id:26,image:"BULB26.png",name:"BR30 10W LED Bulb – 2700K",sku:"1317",price:12,group:"BR30",specs:"Model: BR30-10W-DIM\nE26 base · Dimmable · ES / UL",categories:"BR30, Bulbs"},
+{id:27,image:"BULB27.png",name:"BR40 12W LED Bulb – 2700K",sku:"1318",price:18,group:"BR40",specs:"12 watts · E26 base\nDimmable · ES / UL",categories:"BR40, Bulbs"},
+{id:28,image:"BULB28.png",name:"BR40 12W LED Bulb – 6500K",sku:"1320",price:18,group:"BR40",specs:"Model: BR40-12W-DIM\nE26 base · Dimmable · ES / UL",categories:"BR40, Bulbs"},
+{id:29,image:"BULB29.png",name:"Candelabra 4.5W Clear – 3000K",sku:"1572",price:8,group:"Other",specs:"4.5 watts · Clear glass\n2700K / 3000K listing\nGreenwatt · UL listed · Dimmable",categories:"Candelabra, Bulbs"},
+{id:30,image:"BULB30.png",name:"PAR38 26W LED Bulb – Cool White",sku:"403",price:35,group:"PAR",specs:"White housing · E26 · 120VAC\nDimmable · 7000K ±200K\n30° beam angle",categories:"PAR38, Bulbs"},
+{id:31,image:"BULB31.png",name:"PAR38 55W LED Bulb – 10000K",sku:"1766",price:null,group:"PAR",specs:"AC 100–277V · BA 45°\nE26 base · White finish\n4700–5100 lumens · ETL / CE / RoHS",categories:"PAR38, Bulbs"},
+{id:32,image:"BULB32.png",name:"MR16 GU10 7W LED Bulb – 4000K",sku:"1932",price:13.5,group:"MR16",specs:"7 watts · 4000K\nDimmable · Greenwatt",categories:"MR16, GU10, Bulbs"},
+{id:33,image:"BULB33.png",name:"BR30 10W LED Bulb – 3000K",sku:"1933",price:20,group:"BR30",specs:"Model: M:T-L2BR30D-13W-Li\n120V–60Hz · E26 · Dimmable\nETL · 1-year warranty",categories:"BR30, Bulbs"},
+{id:34,image:"BULB34.png",name:"BR30 10W LED Bulb – 4000K",sku:"1934",price:20,group:"BR30",specs:"Model: M:T-L2BR30D-13W-Li\n120V–60Hz · E26 · Dimmable\nETL · 1-year warranty",categories:"BR30, Bulbs"},
+{id:35,image:"BULB35.png",name:"BR40 17W LED Bulb – 3000K",sku:"SKU not provided",price:20,group:"BR40",specs:"Model: M:T-L2BR40D-17W\n120V–60Hz · E26 · Dimmable\nETL · 1-year warranty",categories:"BR40, Bulbs"},
+{id:36,image:"BULB36.png",name:"BR40 17W LED Bulb – 4000K",sku:"1937",price:20,group:"BR40",specs:"Model: M:T-L2BR40D-17W\n120V–60Hz · E26 · Dimmable\nETL · 1-year warranty",categories:"BR40, Bulbs"},
+{id:37,image:"BULB37.png",name:"BR40 17W LED Bulb – 5000K",sku:"1938",price:20,group:"BR40",specs:"17 watts · 5000K\nGreenwatt · 3152023",categories:"BR40, Bulbs"},
+{id:38,image:"BULB38.png",name:"Candelabra 4.5W Clear – 4000K",sku:"2118",price:10,group:"Other",specs:"4.5 watts · 4000K\nGreenwatt · UL listed · Dimmable",categories:"Candelabra, Bulbs"},
+{id:39,image:"BULB39.png",name:"A21 15W E26 LED Bulb – 6000K",sku:"2132",price:16,group:"A19",specs:"15 watts · E26 · AC 120V · 6000K\nUPC: 8190610351987\nCategories: A19 Bulbs / Bulbs / Top Rated",categories:"A21, Bulbs, Top Rated"}
 ];
-
-const grid = document.getElementById("productGrid");
-const searchInput = document.getElementById("searchInput");
-const sortSelect = document.getElementById("sortSelect");
-const resultCount = document.getElementById("resultCount");
-const emptyState = document.getElementById("emptyState");
-const modal = document.getElementById("productModal");
-const modalContent = document.getElementById("modalContent");
-const cartPanel = document.getElementById("cartPanel");
-let activeFilter = "all";
-let cart = [];
-
-function money(value){return value == null ? "Price on request" : "$" + Number(value).toFixed(2);}
-function safeText(value){return String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));}
-function filteredProducts(){
-  const term = searchInput.value.trim().toLowerCase();
-  let list = products.filter(p => {
-    const filterMatch = activeFilter === "all" || p.group === activeFilter || (activeFilter === "Other" && p.group === "Other");
-    const haystack = [p.name,p.sku,p.specs,p.categories,p.image].join(" ").toLowerCase();
-    return filterMatch && haystack.includes(term);
-  });
-  if(sortSelect.value === "price-asc") list.sort((a,b)=>(a.price ?? Infinity)-(b.price ?? Infinity));
-  if(sortSelect.value === "price-desc") list.sort((a,b)=>(b.price ?? -Infinity)-(a.price ?? -Infinity));
-  if(sortSelect.value === "name") list.sort((a,b)=>a.name.localeCompare(b.name));
-  return list;
-}
-function renderProducts(){
-  const list = filteredProducts();
-  resultCount.textContent = list.length;
-  grid.innerHTML = list.map(p => `
-    <article class="product-card">
-      <div class="image-wrap" role="button" tabindex="0" aria-label="View ${safeText(p.name)} details" data-detail="${p.id}">
-        <img src="${p.image}" alt="${safeText(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <div class="fallback">Image not found<br><strong>${safeText(p.image)}</strong></div>
-      </div>
-      <div class="card-body">
-        <div class="sku">SKU: ${safeText(p.sku)}</div>
-        <h2>${safeText(p.name)}</h2>
-        <p class="specs">${safeText(p.specs)}</p>
-        <div class="price-row"><span class="price ${p.price==null?'missing':''}">${money(p.price)}</span><button class="details-btn" data-detail="${p.id}" type="button">View Details</button></div>
-      </div>
-    </article>`).join("");
-  emptyState.style.display = list.length ? "none" : "block";
-}
-function openDetails(id){
-  const p = products.find(x=>x.id===Number(id)); if(!p)return;
-  modalContent.innerHTML = `
-    <div class="modal-image"><img src="${p.image}" alt="${safeText(p.name)}" onerror="this.style.opacity='.15'"></div>
-    <div class="modal-info">
-      <div class="sku-line">LED KING · SKU: ${safeText(p.sku)}</div>
-      <h2>${safeText(p.name)}</h2>
-      <div class="modal-price">${money(p.price)}</div>
-      <p>${safeText(p.specs)}</p>
-      <p><strong>Product category:</strong> ${safeText(p.categories)}</p>
-      <div class="modal-actions">
-        <button class="primary" type="button" id="addToCartBtn">Add to Cart</button>
-        <a class="secondary" href="index.html#quote">Request a Quote</a>
-      </div>
-    </div>`;
-  modal.classList.add("open");
-  document.getElementById("addToCartBtn").addEventListener("click",()=>{addToCart(p.id);modal.classList.remove("open");cartPanel.classList.add("open");});
-}
-function addToCart(id){const p=products.find(x=>x.id===Number(id));if(!p)return;const found=cart.find(x=>x.id===p.id);if(found)found.qty++;else cart.push({...p,qty:1});renderCart();}
-function removeFromCart(id){cart=cart.filter(x=>x.id!==Number(id));renderCart();}
-function renderCart(){
-  document.getElementById("cartCount").textContent=cart.reduce((n,p)=>n+p.qty,0);
-  document.getElementById("cartItems").innerHTML=cart.length?cart.map(p=>`
-    <div class="cart-item"><img src="${p.image}" alt=""><div><strong>${safeText(p.name)}</strong><small>Qty: ${p.qty} · ${money(p.price)}</small></div><button class="remove-item" type="button" data-remove="${p.id}">Remove</button></div>`).join(""):'<p>Your cart is empty. Open a product and select “Add to Cart” to build a quote list.</p>';
-  const total=cart.reduce((sum,p)=>sum+(p.price==null?0:p.price*p.qty),0);
-  document.getElementById("cartTotal").textContent=money(total);
-  const lines=cart.map(p=>`${p.name} | SKU: ${p.sku} | Qty: ${p.qty} | ${money(p.price)}`).join("\n");
-  const quoteLink=document.getElementById("quoteLink");
-  quoteLink.href="index.html#quote";
-  quoteLink.onclick=function(){if(lines){try{sessionStorage.setItem("ledKingCartSelection",lines);}catch(e){}}};
-}
-grid.addEventListener("click",e=>{const target=e.target.closest("[data-detail]");if(target)openDetails(target.dataset.detail);});
-grid.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-detail]")){e.preventDefault();openDetails(e.target.dataset.detail);}});
-document.getElementById("categoryChips").addEventListener("click",e=>{const btn=e.target.closest("[data-filter]");if(!btn)return;activeFilter=btn.dataset.filter;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===btn));renderProducts();});
-searchInput.addEventListener("input",renderProducts);
-sortSelect.addEventListener("change",renderProducts);
-document.getElementById("closeModalBtn").addEventListener("click",()=>modal.classList.remove("open"));
-modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open");});
-document.getElementById("openCartBtn").addEventListener("click",()=>cartPanel.classList.add("open"));
-document.getElementById("closeCartBtn").addEventListener("click",()=>cartPanel.classList.remove("open"));
-document.getElementById("cartItems").addEventListener("click",e=>{const b=e.target.closest("[data-remove]");if(b)removeFromCart(b.dataset.remove);});
-document.addEventListener("keydown",e=>{if(e.key==="Escape"){modal.classList.remove("open");cartPanel.classList.remove("open");}});
-document.getElementById("year").textContent=new Date().getFullYear();
-renderProducts();
-renderCart();
+const grid=document.getElementById("productGrid"),searchInput=document.getElementById("searchInput"),sortSelect=document.getElementById("sortSelect"),resultCount=document.getElementById("resultCount"),emptyState=document.getElementById("emptyState"),modal=document.getElementById("productModal"),modalContent=document.getElementById("modalContent"),cartPanel=document.getElementById("cartPanel");let activeFilter="all",cart=[];
+function money(value){return value==null?"Price on request":"$"+Number(value).toFixed(2)}function safeText(value){return String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]))}
+function filteredProducts(){const term=searchInput.value.trim().toLowerCase();let list=products.filter(p=>{const filterMatch=activeFilter==="all"||p.group===activeFilter;const haystack=[p.name,p.sku,p.specs,p.categories,p.image].join(" ").toLowerCase();return filterMatch&&haystack.includes(term)});if(sortSelect.value==="price-asc")list.sort((a,b)=>(a.price??Infinity)-(b.price??Infinity));if(sortSelect.value==="price-desc")list.sort((a,b)=>(b.price??-Infinity)-(a.price??-Infinity));if(sortSelect.value==="name")list.sort((a,b)=>a.name.localeCompare(b.name));return list}
+function renderProducts(){const list=filteredProducts();resultCount.textContent=list.length;grid.innerHTML=list.map(p=>`<article class="product-card"><div class="image-wrap" role="button" tabindex="0" aria-label="View ${safeText(p.name)} details" data-detail="${p.id}"><img src="${p.image}" alt="${safeText(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback">Image not found<br><strong>${safeText(p.image)}</strong></div></div><div class="card-body"><div class="sku">SKU: ${safeText(p.sku)}</div><h2>${safeText(p.name)}</h2><p class="specs">${safeText(p.specs)}</p><div class="price-row"><span class="price ${p.price==null?'missing':''}">${money(p.price)}</span><button class="details-btn" data-detail="${p.id}" type="button">View Details</button></div></div></article>`).join("");emptyState.style.display=list.length?"none":"block"}
+function openDetails(id){const p=products.find(x=>x.id===Number(id));if(!p)return;modalContent.innerHTML=`<div class="modal-image"><img src="${p.image}" alt="${safeText(p.name)}" onerror="this.style.opacity='.15'"></div><div class="modal-info"><div class="sku-line">LED KING · SKU: ${safeText(p.sku)}</div><h2>${safeText(p.name)}</h2><div class="modal-price">${money(p.price)}</div><p>${safeText(p.specs)}</p><p><strong>Product category:</strong> ${safeText(p.categories)}</p><div class="modal-actions"><button class="primary" type="button" id="addToCartBtn">Add to Cart</button><a class="secondary" href="index.html#quote">Request a Quote</a></div></div>`;modal.classList.add("open");document.getElementById("addToCartBtn").addEventListener("click",()=>{addToCart(p.id);modal.classList.remove("open");cartPanel.classList.add("open")})}
+function addToCart(id){const p=products.find(x=>x.id===Number(id));if(!p)return;const found=cart.find(x=>x.id===p.id);if(found)found.qty++;else cart.push({...p,qty:1});renderCart()}function removeFromCart(id){cart=cart.filter(x=>x.id!==Number(id));renderCart()}
+function renderCart(){document.getElementById("cartCount").textContent=cart.reduce((n,p)=>n+p.qty,0);document.getElementById("cartItems").innerHTML=cart.length?cart.map(p=>`<div class="cart-item"><img src="${p.image}" alt=""><div><strong>${safeText(p.name)}</strong><small>Qty: ${p.qty} · ${money(p.price)}</small></div><button class="remove-item" type="button" data-remove="${p.id}">Remove</button></div>`).join(""):'<p>Your cart is empty. Open a product and select “Add to Cart” to build a quote list.</p>';const total=cart.reduce((sum,p)=>sum+(p.price==null?0:p.price*p.qty),0);document.getElementById("cartTotal").textContent=money(total);const lines=cart.map(p=>`${p.name} | SKU: ${p.sku} | Qty: ${p.qty} | ${money(p.price)}`).join("\n");const quoteLink=document.getElementById("quoteLink");quoteLink.href="index.html#quote";quoteLink.onclick=function(){if(lines){try{sessionStorage.setItem("ledKingCartSelection",lines)}catch(e){}}}}
+grid.addEventListener("click",e=>{const target=e.target.closest("[data-detail]");if(target)openDetails(target.dataset.detail)});grid.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-detail]")){e.preventDefault();openDetails(e.target.dataset.detail)}});document.getElementById("categoryChips").addEventListener("click",e=>{const btn=e.target.closest("[data-filter]");if(!btn)return;activeFilter=btn.dataset.filter;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===btn));renderProducts()});searchInput.addEventListener("input",renderProducts);sortSelect.addEventListener("change",renderProducts);document.getElementById("closeModalBtn").addEventListener("click",()=>modal.classList.remove("open"));modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("open")});document.getElementById("openCartBtn").addEventListener("click",()=>cartPanel.classList.add("open"));document.getElementById("closeCartBtn").addEventListener("click",()=>cartPanel.classList.remove("open"));document.getElementById("cartItems").addEventListener("click",e=>{const b=e.target.closest("[data-remove]");if(b)removeFromCart(b.dataset.remove)});document.addEventListener("keydown",e=>{if(e.key==="Escape"){modal.classList.remove("open");cartPanel.classList.remove("open")}});document.getElementById("year").textContent=new Date().getFullYear();renderProducts();renderCart();
 </script>
 </body>
 </html>
