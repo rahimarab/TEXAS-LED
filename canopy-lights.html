@@ -97,60 +97,67 @@ a{color:inherit}
 @media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
 @media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
 
-/* LED KING theme: black + brown + cream */
+/* LED KING master index theme: forest green, warm ivory, champagne gold, and yellow */
 :root{
-  --blue:#6F4E37;
-  --blue-dark:#4B3022;
-  --orange:#B8875B;
-  --ink:#211A16;
-  --muted:#76695F;
-  --line:#E4D7C8;
-  --bg:#F7F0E5;
-  --white:#FFF9F0;
-  --teal:#6F4E37;
-  --lime:#E8D8B8;
+  --blue:#34483D;
+  --blue-dark:#26382E;
+  --orange:#C5A66A;
+  --ink:#26332B;
+  --muted:#647268;
+  --line:#DED6C8;
+  --bg:#F4F0E8;
+  --white:#FFFFFF;
+  --teal:#34483D;
+  --lime:#FFD400;
+  --gold-text:#A98745;
+  --gold-text-hover:#80652F;
+  --green:#176B50;
 }
-body{color:var(--ink);background:var(--bg)}
-.site-header{background:#111;border-bottom:1px solid #4B3022}
-.logo{color:#FFF9F0}
-.logo span{color:#C49A6C}
-.nav a{color:#F7F0E5}
-.nav a:hover{color:#D5B58A}
-.cart-button{background:#6F4E37;color:#FFF9F0}
-.cart-button:hover{background:#4B3022}
-.cart-count{background:#E8D8B8;color:#211A16}
-.hero{background:linear-gradient(120deg,#111 0%,#2A211B 62%,#5A3D2B 100%);border-bottom:4px solid #B8875B}
-.eyebrow{color:#E8D8B8}
-.hero p{color:#F2E7D8}
-.hero-tags span{border-color:#D5B58A88;background:#E8D8B812}
-.product-card{background:#FFF9F0;border-color:#E4D7C8;box-shadow:0 5px 18px rgba(33,26,22,.08)}
-.product-card:hover{box-shadow:0 12px 28px rgba(111,78,55,.18);border-color:#B8875B}
-.product-image{background:#FFFDF8;border-bottom:1px solid #E4D7C8}
-.price{color:#6F4E37}
-.btn-primary{background:#6F4E37;color:#FFF9F0}
-.btn-primary:hover{background:#4B3022;color:#FFF9F0}
-.btn-outline{background:#FFF9F0;color:#6F4E37;border-color:#B8875B}
-.btn-outline:hover{background:#F0E3D2}
-.modal{background:#FFF9F0}
-.modal-head{background:#211A16;color:#FFF9F0;border-bottom-color:#4B3022}
-.modal-photo{background:#F7F0E5;border-color:#E4D7C8}
-.modal-price{color:#6F4E37}
-.modal-add{background:#B8875B;color:#211A16}
-.modal-add:hover{background:#D5B58A}
-.footer{background:#111;color:#FFF9F0;border-top:3px solid #B8875B}
-.footer p{color:#D8C8B7}
-.close-btn{background:#E8D8B8;color:#211A16}
-.qty-control{border-color:#D5C2AD}
-.qty-control button{background:#F0E3D2;color:#211A16}
-.checkout-later{background:#F7F0E5;border-color:#E4D7C8;color:#76695F}
-.toast{background:#211A16;border:1px solid #B8875B;color:#FFF9F0}
-.overlay{background:#17110dcc}
-.drawer-panel{background:#FFF9F0}
-.drawer-head,.drawer-bottom{border-color:#E4D7C8}
-.cart-item{border-color:#E4D7C8}
-.empty-cart{color:#76695F}
-@media(max-width:620px){.nav a{color:#F7F0E5}}
-
+body{color:var(--ink);background:#F4F0E8;}
+.site-header{background:#FFFFFF;border-bottom:1px solid var(--line);box-shadow:0 3px 15px rgba(38,56,46,.06)}
+.logo{color:#34483D}
+.logo span{color:#A98745}
+.nav a{color:#34483D}
+.nav a:hover{color:#176B50}
+.cart-button{background:#176B50;color:#FFFFFF;border-radius:7px}
+.cart-button:hover{background:#124F3C}
+.cart-count{background:#FFD400;color:#20352A}
+.hero{background:linear-gradient(115deg,#26382E 0%,#34483D 68%,#526957 100%);border-bottom:4px solid #C5A66A}
+.eyebrow{color:#E5D1A3}
+.hero p{color:#F4F0E8}
+.hero-tags span{border-color:#E5D1A388;background:#E5D1A312}
+.product-card{background:#FFFFFF;border-color:#DED6C8;box-shadow:0 5px 18px rgba(38,56,46,.07)}
+.product-card:hover{box-shadow:0 12px 28px rgba(38,56,46,.14);border-color:#C5A66A}
+.product-image{background:#FFFFFF;border-bottom:1px solid #E9E2D6}
+.price{color:#176B50}
+.btn-primary{background:#176B50;color:#FFFFFF}
+.btn-primary:hover{background:#124F3C;color:#FFFFFF}
+.btn-outline{background:#FFFFFF;color:#34483D;border-color:#C5A66A}
+.btn-outline:hover{background:#F4F0E8}
+.modal{background:#FFFFFF}
+.modal-head{background:#26382E;color:#FFFFFF;border-bottom-color:#DED6C8}
+.modal-photo{background:#F4F0E8;border-color:#DED6C8}
+.modal-price{color:#176B50}
+.modal-add{background:#FFD400;color:#20352A}
+.modal-add:hover{background:#E8C200}
+.footer{background:#26382E;color:#FFFFFF;border-top:3px solid #C5A66A}
+.footer p{color:#D9E0D9}
+.close-btn{background:#E8EEE8;color:#26382E}
+.qty-control{border-color:#DED6C8}
+.qty-control button{background:#E8EEE8;color:#26382E}
+.checkout-later{background:#F4F0E8;border-color:#DED6C8;color:#647268}
+.toast{background:#26382E;border:1px solid #C5A66A;color:#FFFFFF}
+.overlay{background:rgba(32,53,42,.78)}
+.drawer-panel{background:#FFFFFF}
+.drawer-head,.drawer-bottom{border-color:#DED6C8}
+.cart-item{border-color:#DED6C8}
+.empty-cart{color:#647268}
+.modal h2{color:#26382E}
+.spec-list,.description{color:#526257}
+.sku,.unit,.notice{color:#647268}
+#about>div{background:#FFFFFF!important;border-color:#DED6C8!important}
+#about p{color:#526257!important}
+@media(max-width:620px){.nav a{color:#34483D}}
 </style>
 </head>
 <body>
