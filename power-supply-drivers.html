@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop LED KING mount tenon adapters, bullhorns, and pole mounting accessories.">
-<title>Mount Tenons | LED KING</title>
+<meta name="description" content="Shop LED KING power supplies, LED drivers, emergency drivers, and lighting accessories.">
+<title>Power Supply / Drivers | LED KING</title>
 <style>
 :root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb;--white:#fff}
 *{box-sizing:border-box}
@@ -165,7 +165,7 @@ body{color:var(--ink);background:#F4F0E8;}
   <div class="header-inner">
     <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#products">Mount Tenons</a>
+      <a href="#products">Power Supply / Drivers</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -176,16 +176,16 @@ body{color:var(--ink);background:#F4F0E8;}
 <section class="hero">
   <div class="hero-inner">
     <div class="eyebrow">LED KING · Commercial Lighting</div>
-    <h1>Professional LED Mount Tenons</h1>
-    <p>Mount tenon adapters, bullhorns, and pole mounting accessories for outdoor and commercial lighting installations. Explore product specifications and add items to your cart.</p>
-    <div class="hero-tags"><span>Pole mounting accessories</span><span>Commercial applications</span><span>Prices shown per item</span></div>
+    <h1>Professional LED Power Supplies & Drivers</h1>
+    <p>Reliable power supplies, LED drivers, dimmable drivers, emergency drivers, and related electrical accessories for LED lighting applications. Explore product specifications and add items to your cart.</p>
+    <div class="hero-tags"><span>LED Drivers & Power Supplies</span><span>Commercial & Residential Applications</span><span>Product Details & Pricing</span></div>
   </div>
 </section>
 
 <main class="page-wrap" id="products">
   <div class="toolbar">
-    <div><h2>Mount Tenons</h2><p>Choose a product to view full details and specifications.</p></div>
-    <p><strong>17 products</strong> · Prices shown per item</p>
+    <div><h2>Power Supply / Drivers</h2><p>Choose a product to view full details and specifications.</p></div>
+    <p><strong>9 products</strong> · Prices shown where available</p>
   </div>
   <div class="grid" id="productGrid"></div>
 </main>
@@ -193,7 +193,7 @@ body{color:var(--ink);background:#F4F0E8;}
 <section class="page-wrap" id="about" style="padding-top:0">
   <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
     <h2 style="margin-top:0">About LED KING</h2>
-    <p style="color:#526173;margin-bottom:0">LED KING provides mount tenon adapters, bullhorns, and pole mounting accessories for commercial and outdoor lighting projects. Contact us for product questions, bulk orders, or project quotes.</p>
+    <p style="color:#526173;margin-bottom:0">LED KING offers power supplies, LED drivers, dimmable drivers, emergency drivers, and related accessories for a range of lighting applications. Contact us for product questions, bulk orders, or project quotes.</p>
   </div>
 </section>
 
@@ -218,7 +218,7 @@ body{color:var(--ink);background:#F4F0E8;}
     <div class="drawer-items" id="cartItems"></div>
     <div class="drawer-bottom">
       <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
-      <div class="checkout-later">Online payment and checkout will be connected later. For now, your cart works on this page and shows your selected products and subtotal.</div>
+      <div class="checkout-later">Online payment and checkout will be connected later. Items marked Contact for Price are not included in the subtotal.</div>
     </div>
   </aside>
 </div>
@@ -227,258 +227,85 @@ body{color:var(--ink);background:#F4F0E8;}
 <script>
 const products = [
   {
-    "id": 1,
-    "name": "Tenon Adaptor for Square Pole",
-    "sku": "784",
-    "upc": "6505925386122",
-    "price": 35.0,
-    "image": "MT1.png",
-    "specs": [
-      "For 4-inch square pole",
-      "UPC: 6505925386122"
-    ],
-    "description": "Tenon adaptor for mounting a fixture designed for a round pole onto a 4-inch square pole."
+    id:1,
+    name:"Class 2 LED Driver 60W Power Supply",
+    price:75,
+    sku:"2531",
+    image:"LED%20DRIVER%202.png",
+    specs:["60W power capacity","Input: 100–265V AC","Output: 12V DC","Waterproof IP65 rating","ETL listed","Low-voltage LED power adapter"],
+    description:"A Class 2 LED driver designed to power compatible LED lighting systems. This 60W power supply converts 100–265V AC input to 12V DC output. The supplied product information lists an IP65 waterproof rating and ETL listing. Verify that the output voltage, wattage, and connection requirements match the LED lighting system before installation."
   },
   {
-    "id": 2,
-    "name": "Metal Arm (L Shape)",
-    "sku": "1243",
-    "upc": "6505925378066",
-    "price": 40.0,
-    "image": "MT2.png",
-    "specs": [
-      "L-shaped metal mounting arm",
-      "Black finish",
-      "UPC: 6505925378066"
-    ],
-    "description": "L-shaped metal arm for mounting or supporting lighting fixtures. Black finish."
+    id:2,
+    name:"SS-150M Series LED Driver",
+    price:105,
+    sku:"2023 / 2024",
+    image:"LED%20DRIVER1.png",
+    specs:["SS-150M Series","Constant-voltage or constant-current output, depending on model","High efficiency and reliability","Over-current and over-voltage protection","Short-circuit and over-temperature protection","Some models may offer LonWorks interfaces"],
+    description:"The SS-150M Series LED Driver is a power supply line designed for LED lighting applications. The supplied description notes high efficiency and reliability, with protection against over-current, over-voltage, short-circuit, and over-temperature conditions. Output type and ratings vary by model. Some models may include a LonWorks interface for building-automation integration. Consult the specific model datasheet for exact electrical ratings and features."
   },
   {
-    "id": 3,
-    "name": "Round Pole Side Tenon",
-    "sku": "2290",
-    "upc": "8190810215106",
-    "price": 25.0,
-    "image": "MT3.png",
-    "specs": [
-      "Weld-on side tenon",
-      "For round pole mounting",
-      "Black finish",
-      "UPC: 8190810215106"
-    ],
-    "description": "Weld-on side tenon used to mount a lighting fixture to the side of a round pole. Black finish."
+    id:3,
+    name:"SS-320NH-E Series LED Driver",
+    price:140,
+    sku:"2188 / 2080",
+    image:"LED%20DRIVER3.png",
+    specs:["SS-320NH-E Series","Output configuration varies by model","High efficiency and reliability","Over-current and over-voltage protection","Short-circuit and over-temperature protection","Safety and EMC compliance noted in supplied description"],
+    description:"The SS-320NH-E Series LED Driver is designed to power LED lighting systems. The supplied description lists high efficiency, reliable operation, and built-in protection against over-current, over-voltage, short-circuit, and over-temperature conditions. Output configurations and ratings vary between models. Refer to the manufacturer’s documentation for exact specifications and available control or interface options."
   },
   {
-    "id": 4,
-    "name": "Bullhorn with 2 Arms at 180°",
-    "sku": "1691",
-    "upc": "6505925383916",
-    "price": 150.0,
-    "image": "MT4.png",
-    "specs": [
-      "2 arms at 180°",
-      "Slip fit onto 2-3/8-inch tenons",
-      "Black finish",
-      "UPC: 6505925383916"
-    ],
-    "description": "Two-arm bullhorn arranged in opposite directions at 180°. Designed to slip onto 2-3/8-inch tenons. Black finish."
+    id:4,
+    name:"Photoelectric Switch JL-403C",
+    price:20,
+    sku:"2616",
+    image:"LED%20DRIVER4.png",
+    specs:["Model: JL-403C","Photoelectric object detection","Emitter and receiver operation","Detects interruption of a light beam","For industrial automation and control applications"],
+    description:"The JL-403C is a photoelectric switch used for object detection in industrial automation. It typically uses an emitter to send a light beam to a receiver. When an object interrupts the beam, the switch changes state to indicate the presence or absence of the object. Detection range, light source, and response time depend on the exact model and manufacturer specifications."
   },
   {
-    "id": 5,
-    "name": "Bullhorn with 3 Arms at 120°",
-    "sku": "1692",
-    "upc": "6505925384074",
-    "price": 175.0,
-    "image": "MT5.png",
-    "specs": [
-      "3 arms at 120°",
-      "Slip fit onto 2-3/8-inch tenons",
-      "Black finish",
-      "UPC: 6505925384074"
-    ],
-    "description": "Three-arm bullhorn arranged at 120-degree intervals. Designed to slip onto 2-3/8-inch tenons. Black finish."
+    id:5,
+    name:"Photoelectric Switch JL-423C / JL-423CM",
+    price:30,
+    sku:"2617",
+    image:"LED%20DRIVER5.png",
+    specs:["Models: JL-423C / JL-423CM","Photoelectric object detection","Emitter and receiver operation","Detects changes in received light intensity","For industrial automation and control systems"],
+    description:"The JL-423C, also referred to in the supplied description as JL-423CM, is a photoelectric switch for industrial automation and control systems. It uses an emitter and receiver to detect changes in light intensity when an object enters the sensing area. It can be used for object detection, counting, and positioning. Exact detection range, response time, and other features depend on the specific model."
   },
   {
-    "id": 6,
-    "name": "Metal Arm – 4-inch Square Pole Mount",
-    "sku": "1841",
-    "upc": "6505925394592",
-    "price": 55.0,
-    "image": "MT6.png",
-    "specs": [
-      "4-inch square pole mount",
-      "Internal tenon adaptor",
-      "2-3/8-inch pipe diameter",
-      "Black finish",
-      "UPC: 6505925394592"
-    ],
-    "description": "Metal arm designed for a 4-inch square pole, with an internal tenon adaptor. Fits a 2-3/8-inch pipe diameter. Black finish."
+    id:6,
+    name:"Constant Voltage Phase / Triac Dimmable Driver — 120W Series",
+    price:150,
+    sku:"2283 / 2284",
+    image:"LED%20DRIVER6.png",
+    specs:["120W maximum power output","Constant-voltage output","Phase-cut / Triac dimming","Leading-edge and trailing-edge dimmer compatibility","Typical input: 100–240V AC","Protection against overload, short circuit, over-voltage, and over-temperature"],
+    description:"A 120W-series constant-voltage LED driver designed for phase-cut / Triac dimming. The supplied description lists compatibility with leading-edge and trailing-edge dimmers, a typical 100–240V AC input range, and protection against overload, short circuit, over-voltage, and over-temperature. Confirm dimmer compatibility and the exact electrical specifications for the selected model before installation."
   },
   {
-    "id": 7,
-    "name": "Low Profile Bullhorn – 2 Tenons at 180°",
-    "sku": "1689",
-    "upc": "6505925383770",
-    "price": 155.0,
-    "image": "MT7.png",
-    "specs": [
-      "2 tenons at 180°",
-      "Slip fit onto 2-3/8-inch tenons",
-      "Low-profile design",
-      "Black finish",
-      "UPC: 6505925383770"
-    ],
-    "description": "Low-profile bullhorn with two tenons arranged at 180°. Designed to slip onto 2-3/8-inch tenons. Black finish."
+    id:7,
+    name:"120W LED Power Supply — 24V DC, 10A",
+    price:50,
+    sku:"2435",
+    image:"LED%20DRIVER7.png",
+    specs:["Model: MS-AC-PS-10","120W power output","24V DC output at 10A","Input: AC 100–240V, 50–60Hz","AC cable: 1.2m; DC cable: 1m","Approx. size: 6.5 × 2.5 × 1.6 inches"],
+    description:"The MS-AC-PS-10 LED Power Supply is an AC-to-DC converter for LED lighting and other compatible low-voltage applications. The supplied specifications list AC 100–240V input at 50–60Hz and a 24V DC output at 10A (120W). It includes an AC cable approximately 1.2m long and a DC cable approximately 1m long. Approximate dimensions are 6.5 × 2.5 × 1.6 inches."
   },
   {
-    "id": 8,
-    "name": "Low Profile Bullhorn – 3 Tenons",
-    "sku": "1690",
-    "upc": "6505925383848",
-    "price": 150.0,
-    "image": "MT8.png",
-    "specs": [
-      "3 tenons",
-      "Supplied description states 180° arrangement",
-      "Slip fit onto 2-3/8-inch tenons",
-      "Black finish",
-      "UPC: 6505925383848"
-    ],
-    "description": "Low-profile bullhorn with three tenons. The supplied description states a 180-degree arrangement. Designed to slip onto 2-3/8-inch tenons. Black finish."
+    id:8,
+    name:"16AWG Power Extension Cable — US Plug to Stripped Tinned, 1.8m",
+    price:25,
+    sku:"290",
+    image:"LED%20DRIVER8.png",
+    specs:["Model: MS-AC-LS-07","16AWG copper conductors","1.8m length","US plug to stripped / tinned wire ends","Rated: 250V / 10A","PVC insulation"],
+    description:"The MS-AC-LS-07 Power Extension Cable is designed for LED drivers, power supplies, and other compatible electrical applications. The supplied details list 16AWG copper conductors, a 1.8m length, a US plug on one end, and stripped / tinned wires on the other end. It is rated at 250V / 10A and has PVC insulation."
   },
   {
-    "id": 9,
-    "name": "Low Profile Bullhorn – 4 Tenons Inline",
-    "sku": "2440",
-    "upc": "8190610351986",
-    "price": 175.0,
-    "image": "MT9.png",
-    "specs": [
-      "4 tenons inline",
-      "For 2-3/8-inch round tenon",
-      "Low-profile design",
-      "Black finish",
-      "UPC: 8190610351986"
-    ],
-    "description": "Low-profile bullhorn with four tenons aligned in a straight line, designed for a 2-3/8-inch round tenon. Black finish."
-  },
-  {
-    "id": 10,
-    "name": "Tenon Adapter – 4-inch Square Pole, 2 Horizontal Tenons",
-    "sku": "2235",
-    "upc": "8190810256178",
-    "price": 140.0,
-    "image": "MT10.png",
-    "specs": [
-      "For 4-inch square pole",
-      "2 horizontal tenons at 180°",
-      "Black finish",
-      "UPC: 8190810256178"
-    ],
-    "description": "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 180°. Black finish."
-  },
-  {
-    "id": 11,
-    "name": "Tenon Adapter – 4-inch Square Pole, 2 Horizontal Tenons",
-    "sku": "2437",
-    "upc": "8190810201796",
-    "price": 75.0,
-    "image": "MT11.png",
-    "specs": [
-      "For 4-inch square pole",
-      "2 horizontal tenons at 90°",
-      "Black finish",
-      "UPC: 8190810201796"
-    ],
-    "description": "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 90°. Black finish."
-  },
-  {
-    "id": 12,
-    "name": "Tenon Adapter – 4-inch Square Pole, 3 Horizontal Tenons",
-    "sku": "2438",
-    "upc": "8190810221350",
-    "price": 85.0,
-    "image": "MT12.png",
-    "specs": [
-      "For 4-inch square pole",
-      "3 horizontal tenons at 90°",
-      "Black finish",
-      "UPC: 8190810221350"
-    ],
-    "description": "Tenon adapter for a 4-inch square pole with three horizontal tenons arranged at 90°. Black finish."
-  },
-  {
-    "id": 13,
-    "name": "Tenon Adapter – 4-inch Square Pole, 4 Horizontal Tenons",
-    "sku": "2439",
-    "upc": "8190810219470",
-    "price": 95.0,
-    "image": "MT13.png",
-    "specs": [
-      "For 4-inch square pole",
-      "4 horizontal tenons at 90°",
-      "Black finish",
-      "UPC: 8190810219470"
-    ],
-    "description": "Tenon adapter for a 4-inch square pole with four horizontal tenons arranged at 90°. Black finish."
-  },
-  {
-    "id": 14,
-    "name": "Tenon Adapter – 2-3/8-inch Round Pole, 2 Horizontal Tenons",
-    "sku": "1536",
-    "upc": "6505925378516",
-    "price": null,
-    "image": "MT14.png",
-    "specs": [
-      "For 2-3/8-inch round pole",
-      "2 horizontal tenons at 180°",
-      "Black finish",
-      "UPC: 6505925378516"
-    ],
-    "description": "Tenon adapter for a 2-3/8-inch round pole with two horizontal tenons arranged at 180°. Black finish. Contact LED KING for pricing."
-  },
-  {
-    "id": 15,
-    "name": "Tenon Adapter – 2-3/8-inch Round Pole, 3 Horizontal Tenons",
-    "sku": "1577",
-    "upc": "6505925378820",
-    "price": 60.0,
-    "image": "MT15.png",
-    "specs": [
-      "For 2-3/8-inch round pole",
-      "3 horizontal tenons at 90°",
-      "Black finish",
-      "UPC: 6505925378820"
-    ],
-    "description": "Tenon adapter for a 2-3/8-inch round pole with three horizontal tenons arranged at 90°. Black finish."
-  },
-  {
-    "id": 16,
-    "name": "Bullhorn – 2 Tenons, 180°, Square Base",
-    "sku": "2583",
-    "upc": null,
-    "price": 155.0,
-    "image": "MT16.png",
-    "specs": [
-      "2 tenons at 180°",
-      "Square base"
-    ],
-    "description": "Outdoor lighting mounting accessory with two tenons extending in opposite directions at 180°, and a square-shaped base for attachment."
-  },
-  {
-    "id": 17,
-    "name": "3-Pin Track Rail – 1m",
-    "sku": "2271",
-    "upc": null,
-    "price": 30.0,
-    "image": "MT17.png",
-    "specs": [
-      "3-pin track rail",
-      "1 metre length",
-      "Black finish",
-      "Connector head and tail included"
-    ],
-    "description": "Black 1-metre track rail with 3 pins. Connector head and tail are included for installation and connectivity."
+    id:9,
+    name:"Constant Power LED Emergency Driver",
+    price:null,
+    sku:"",
+    image:"LED%20DRIVER9.png",
+    specs:["Model numbers: FE-E50, FE-E70, FE-E100","Up to 90 minutes of emergency lighting","Rechargeable Li-ion battery","Universal input voltage design","Over-current, over-voltage, and short-circuit protection","UL and DOE approval stated in supplied description"],
+    description:"The Constant Power LED Emergency Driver is designed to provide emergency power to compatible LED fixtures during a power outage. The supplied description lists FE-E50, FE-E70, and FE-E100 models, a rechargeable Li-ion battery providing up to 90 minutes of emergency lighting, and integrated over-current, over-voltage, and short-circuit protection. It is described as having a compact metal housing and universal input voltage design. Check the specific model documentation for compatibility and exact output ratings. Price: Contact LED KING."
   }
 ];
 
@@ -487,7 +314,7 @@ let cart = {};
 let toastTimer;
 
 function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+file;}
-function money(value){return value===null || value===undefined ? "Contact for Price" : "$"+Number(value).toFixed(2);}
+function money(value){return "$"+Number(value).toFixed(2);}
 function renderProducts(){
   const grid=document.getElementById("productGrid");
   grid.innerHTML=products.map(p=>`
@@ -497,10 +324,10 @@ function renderProducts(){
         <div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>
       </div>
       <div class="product-info">
-        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Mount Tenons"}</div>
+        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Power Supply / Drivers"}</div>
         <h3>${escapeHtml(p.name)}</h3>
         <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
-        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">${p.price===null ? "" : "per item"}</span></div>
+        <div class="price-row"><span class="price">${p.price == null ? "Contact for Price" : money(p.price)}</span><span class="unit">${p.price == null ? "Contact LED KING" : "per item"}</span></div>
         <div class="actions">
           <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
           <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
@@ -518,14 +345,14 @@ function openProduct(id){
       <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
     </div>
     <div>
-      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Mount Tenons</div>
+      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Power Supply / Drivers</div>
       <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
-      <div class="modal-price">${money(p.price)}</div>
+      <div class="modal-price">${p.price == null ? "Contact for Price" : money(p.price)}</div>
       <p class="description">${escapeHtml(p.description)}</p>
       <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
       <ul class="spec-list">${p.specs.map(s=>"<li>"+escapeHtml(s)+"</li>").join("")}</ul>
       <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
-      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${p.price == null ? "Contact for Price" : money(p.price)}</span></button>
       <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
     </div>`;
   document.getElementById("productOverlay").classList.add("open");
@@ -536,7 +363,7 @@ function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
 function changeModalQty(delta){
   const input=document.getElementById("modalQty");
   input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);
-  document.getElementById("modalLinePrice").textContent=activeProduct.price===null ? "Contact for Price" : money(activeProduct.price*(parseInt(input.value,10)||1));
+  document.getElementById("modalLinePrice").textContent=activeProduct.price == null ? "Contact for Price" : money(activeProduct.price*(parseInt(input.value,10)||1));
 }
 function addFromModal(){
   const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);
@@ -548,15 +375,16 @@ function updateCartCount(){document.getElementById("cartCount").textContent=Obje
 function renderCart(){
   const holder=document.getElementById("cartItems");
   const ids=Object.keys(cart).filter(id=>cart[id]>0);
-  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a mount tenon product to get started.</p></div>';}
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a power supply or driver to get started.</p></div>';}
   else{
     holder.innerHTML=ids.map(id=>{
       const p=products.find(x=>x.id===Number(id));const q=cart[id];
-      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${p.price===null ? "Contact for Price" : money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
+      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${p.price == null ? "Contact for Price" : money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${p.price == null ? "Contact for Price" : money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
     }).join("");
   }
-  const subtotal=ids.reduce((sum,id)=>{const price=products.find(p=>p.id===Number(id)).price;return sum+(price===null?0:cart[id]*price);},0);
-  document.getElementById("cartSubtotal").textContent=money(subtotal);
+  const subtotal=ids.reduce((sum,id)=>{const p=products.find(x=>x.id===Number(id));return sum+(p.price == null ? 0 : cart[id]*p.price);},0);
+  const hasUnpriced=ids.some(id=>products.find(p=>p.id===Number(id)).price == null);
+  document.getElementById("cartSubtotal").textContent=money(subtotal)+(hasUnpriced ? " + Contact for Price item" : "");
 }
 function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
 function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1){delete cart[id]}else{cart[id]=q}renderCart();updateCartCount();}
