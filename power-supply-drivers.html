@@ -1,492 +1,572 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Power Supply & LED Drivers | LED KING</title>
-
-<meta name="description" content="Explore power supplies and LED drivers from LED KING.">
-
+<meta name="description" content="Shop LED KING mount tenon adapters, bullhorns, and pole mounting accessories.">
+<title>Mount Tenons | LED KING</title>
 <style>
-:root {
-    --teal: #00B8A9;
-    --teal-dark: #008F83;
-    --lime: #C5E86C;
-    --black: #101414;
-    --gray: #f4f7f6;
-    --text: #202827;
+:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.header-inner{max-width:1240px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:25px;letter-spacing:1px;color:#111;text-decoration:none}
+.logo span{color:var(--orange)}
+.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:14px;font-weight:700}
+.nav a:hover{color:var(--blue)}
+.cart-button{border:0;border-radius:9px;background:var(--blue);color:white;padding:10px 14px;cursor:pointer;font-weight:700;white-space:nowrap}
+.cart-count{display:inline-flex;min-width:22px;height:22px;border-radius:20px;background:var(--orange);align-items:center;justify-content:center;margin-left:5px;font-size:12px}
+.hero{background:linear-gradient(120deg,#082d4c,#1261a0);color:white;padding:56px 22px}
+.hero-inner{max-width:1240px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#ffd1a5;font-weight:800;font-size:12px}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:720px;color:#e7f2fb;margin:0;font-size:17px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-tags span{border:1px solid #ffffff55;border-radius:24px;padding:7px 12px;font-size:13px}
+.page-wrap{max-width:1240px;margin:0 auto;padding:34px 22px 60px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:25px}
+.toolbar p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #0b47780b;transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0b47781a}
+.product-image{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:16px;border-bottom:1px solid #edf1f5}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.image-fallback{font-weight:800;color:#64748b;text-align:center;display:none}
+.product-info{padding:18px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.product-info h3{font-size:18px;line-height:1.35;margin:0 0 9px}
+.short-specs{font-size:13px;color:#526173;margin:0 0 14px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 14px}
+.price{font-size:24px;font-weight:900;color:var(--blue-dark)}
+.unit{font-size:12px;color:var(--muted)}
+.actions{display:flex;gap:9px}
+.btn{border:0;border-radius:8px;padding:11px 13px;cursor:pointer;font-weight:800;transition:background .15s}
+.btn-primary{background:var(--blue);color:white;flex:1}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-outline{background:#fff;color:var(--blue);border:1px solid #b8cde0;flex:1}
+.btn-outline:hover{background:#eef6fc}
+.footer{background:#101c28;color:#e5edf5;padding:30px 22px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer p{margin:4px 0;color:#b9c6d3;font-size:14px}
+.overlay{position:fixed;inset:0;background:#071522b8;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.overlay.open{display:flex}
+.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;box-shadow:0 24px 70px #0004;position:relative}
+.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.modal-head strong{font-size:16px}
+.close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#edf2f7;cursor:pointer;font-size:23px;line-height:1}
+.modal-content{display:grid;grid-template-columns: minmax(0, .95fr) minmax(0,1.05fr);gap:28px;padding:24px}
+.modal-photo{background:#f8fafc;border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-photo img{width:100%;max-height:380px;object-fit:contain}
+.modal h2{font-size:26px;line-height:1.25;margin:3px 0 8px}
+.modal-price{font-size:29px;font-weight:900;color:var(--blue-dark);margin:10px 0}
+.spec-list{padding-left:19px;margin:12px 0;color:#46576a;font-size:14px}
+.spec-list li{margin:5px 0}
+.description{font-size:14px;color:#46576a}
+.qty-row{display:flex;align-items:center;gap:12px;margin:18px 0}
+.qty-control{display:inline-flex;align-items:center;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden}
+.qty-control button{border:0;background:#f1f5f9;width:36px;height:40px;cursor:pointer;font-size:20px}
+.qty-control input{width:48px;height:40px;border:0;text-align:center;outline:none}
+.modal-add{width:100%;padding:13px;background:var(--orange);color:#1f2937;border:0;border-radius:9px;font-weight:900;cursor:pointer}
+.modal-add:hover{background:#ff9a3d}
+.notice{font-size:12px;color:var(--muted);margin-top:10px}
+.cart-drawer{position:fixed;inset:0;z-index:60;display:none}
+.cart-drawer.open{display:block}
+.drawer-shade{position:absolute;inset:0;background:#0715229c}
+.drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:white;box-shadow:-10px 0 40px #0002;display:flex;flex-direction:column}
+.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h2{margin:0}
+.drawer-items{padding:16px 20px;overflow:auto;flex:1}
+.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-item strong{display:block;font-size:14px}
+.cart-item small{color:var(--muted)}
+.cart-item-right{text-align:right;white-space:nowrap}
+.remove-item{border:0;background:transparent;color:#b42318;cursor:pointer;font-size:12px;padding:5px 0}
+.drawer-bottom{padding:20px;border-top:1px solid var(--line)}
+.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px}
+.checkout-later{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:12px;color:#64748b;font-size:13px}
+.empty-cart{text-align:center;color:var(--muted);padding:45px 10px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#102b40;color:white;padding:12px 18px;border-radius:10px;box-shadow:0 8px 24px #0003;z-index:100;display:none;font-size:14px}
+.toast.show{display:block}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
+@media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
+
+/* LED KING master index theme: forest green, warm ivory, champagne gold, and yellow */
+:root{
+  --blue:#34483D;
+  --blue-dark:#26382E;
+  --orange:#C5A66A;
+  --ink:#26332B;
+  --muted:#647268;
+  --line:#DED6C8;
+  --bg:#F4F0E8;
+  --white:#FFFFFF;
+  --teal:#34483D;
+  --lime:#FFD400;
+  --gold-text:#A98745;
+  --gold-text-hover:#80652F;
+  --green:#176B50;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: var(--text);
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* HEADER */
-header {
-    background: var(--black);
-    color: #ffffff;
-    padding: 20px 5%;
-    border-bottom: 3px solid var(--teal);
-}
-
-.header-inner {
-    max-width: 1500px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    font-size: 29px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--teal);
-}
-
-.logo-subtitle {
-    color: #d4dfdc;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.home-link {
-    display: inline-block;
-    color: #ffffff;
-    border: 1px solid var(--teal);
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.home-link:hover {
-    background: var(--teal);
-    color: #101414;
-}
-
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #101414, #203331);
-    color: #ffffff;
-    text-align: center;
-    padding: 65px 20px;
-}
-
-.hero h1 {
-    font-size: clamp(30px, 4vw, 48px);
-    line-height: 1.2;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: var(--teal);
-}
-
-.hero p {
-    color: #e0e9e6;
-    font-size: 17px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-line {
-    width: 75px;
-    height: 4px;
-    background: var(--lime);
-    margin: 22px auto 0;
-    border-radius: 10px;
-}
-
-/* BREADCRUMB */
-.breadcrumb {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 18px 5%;
-    font-size: 14px;
-    color: #65716e;
-}
-
-.breadcrumb a {
-    color: var(--teal-dark);
-    font-weight: bold;
-}
-
-.breadcrumb span {
-    margin: 0 8px;
-}
-
-/* PRODUCTS */
-.products-section {
-    max-width: 1700px;
-    margin: auto;
-    padding: 15px 4% 70px;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    color: var(--black);
-    font-size: clamp(25px, 3vw, 34px);
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: #65716e;
-    font-size: 15px;
-}
-
-/* RESPONSIVE PRODUCT GRID */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.product-card {
-    background: #ffffff;
-    border: 1px solid #e0e8e5;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s;
-    min-width: 0;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 28px rgba(0, 143, 131, 0.14);
-    border-color: var(--teal);
-}
-
-.product-image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    overflow: hidden;
-}
-
-.product-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.04);
-}
-
-.product-info {
-    padding: 15px 12px 18px;
-    text-align: center;
-    background: #f9fbfa;
-    border-top: 1px solid #edf1ef;
-}
-
-.product-info h3 {
-    font-size: 17px;
-    color: var(--black);
-    margin-bottom: 8px;
-}
-
-.product-label {
-    display: inline-block;
-    background: #e1f7f3;
-    color: #006f65;
-    padding: 6px 13px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-    background: var(--black);
-    color: #ffffff;
-    text-align: center;
-    padding: 28px 20px;
-    border-top: 3px solid var(--teal);
-}
-
-footer strong {
-    color: var(--teal);
-}
-
-footer p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.footer-home {
-    display: inline-block;
-    margin-top: 12px;
-    color: var(--lime);
-    font-weight: bold;
-}
-
-/* TABLET */
-@media (max-width: 1100px) {
-    .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-    }
-}
-
-/* MOBILE */
-@media (max-width: 650px) {
-    header {
-        padding: 16px 5%;
-    }
-
-    .logo {
-        font-size: 25px;
-    }
-
-    .header-inner {
-        gap: 12px;
-    }
-
-    .hero {
-        padding: 45px 18px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .products-section {
-        padding: 10px 4% 45px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .product-image {
-        padding: 6px;
-    }
-
-    .product-info {
-        padding: 12px 6px 14px;
-    }
-
-    .product-info h3 {
-        font-size: 14px;
-    }
-
-    .product-label {
-        font-size: 11px;
-        padding: 5px 9px;
-    }
-}
+body{color:var(--ink);background:#F4F0E8;}
+.site-header{background:#FFFFFF;border-bottom:1px solid var(--line);box-shadow:0 3px 15px rgba(38,56,46,.06)}
+.logo{color:#34483D}
+.logo span{color:#A98745}
+.nav a{color:#34483D}
+.nav a:hover{color:#176B50}
+.cart-button{background:#176B50;color:#FFFFFF;border-radius:7px}
+.cart-button:hover{background:#124F3C}
+.cart-count{background:#FFD400;color:#20352A}
+.hero{background:linear-gradient(115deg,#26382E 0%,#34483D 68%,#526957 100%);border-bottom:4px solid #C5A66A}
+.eyebrow{color:#E5D1A3}
+.hero p{color:#F4F0E8}
+.hero-tags span{border-color:#E5D1A388;background:#E5D1A312}
+.product-card{background:#FFFFFF;border-color:#DED6C8;box-shadow:0 5px 18px rgba(38,56,46,.07)}
+.product-card:hover{box-shadow:0 12px 28px rgba(38,56,46,.14);border-color:#C5A66A}
+.product-image{background:#FFFFFF;border-bottom:1px solid #E9E2D6}
+.price{color:#176B50}
+.btn-primary{background:#176B50;color:#FFFFFF}
+.btn-primary:hover{background:#124F3C;color:#FFFFFF}
+.btn-outline{background:#FFFFFF;color:#34483D;border-color:#C5A66A}
+.btn-outline:hover{background:#F4F0E8}
+.modal{background:#FFFFFF}
+.modal-head{background:#26382E;color:#FFFFFF;border-bottom-color:#DED6C8}
+.modal-photo{background:#F4F0E8;border-color:#DED6C8}
+.modal-price{color:#176B50}
+.modal-add{background:#FFD400;color:#20352A}
+.modal-add:hover{background:#E8C200}
+.footer{background:#26382E;color:#FFFFFF;border-top:3px solid #C5A66A}
+.footer p{color:#D9E0D9}
+.close-btn{background:#E8EEE8;color:#26382E}
+.qty-control{border-color:#DED6C8}
+.qty-control button{background:#E8EEE8;color:#26382E}
+.checkout-later{background:#F4F0E8;border-color:#DED6C8;color:#647268}
+.toast{background:#26382E;border:1px solid #C5A66A;color:#FFFFFF}
+.overlay{background:rgba(32,53,42,.78)}
+.drawer-panel{background:#FFFFFF}
+.drawer-head,.drawer-bottom{border-color:#DED6C8}
+.cart-item{border-color:#DED6C8}
+.empty-cart{color:#647268}
+.modal h2{color:#26382E}
+.spec-list,.description{color:#526257}
+.sku,.unit,.notice{color:#647268}
+#about>div{background:#FFFFFF!important;border-color:#DED6C8!important}
+#about p{color:#526257!important}
+@media(max-width:620px){.nav a{color:#34483D}}
 </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-<header>
-    <div class="header-inner">
-        <a href="index.html" aria-label="LED KING Homepage">
-            <div class="logo">LED <span>KING</span></div>
-            <div class="logo-subtitle">Lighting Solutions</div>
-        </a>
-
-        <a class="home-link" href="index.html">
-            ← Back to Home
-        </a>
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#products">Mount Tenons</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-    <h1>POWER SUPPLY <span>&amp; LED DRIVERS</span></h1>
-    <p>
-        Explore our selection of LED power supplies and drivers
-        for lighting applications.
-    </p>
-    <div class="hero-line"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial Lighting</div>
+    <h1>Professional LED Mount Tenons</h1>
+    <p>Mount tenon adapters, bullhorns, and pole mounting accessories for outdoor and commercial lighting installations. Explore product specifications and add items to your cart.</p>
+    <div class="hero-tags"><span>Pole mounting accessories</span><span>Commercial applications</span><span>Prices shown per item</span></div>
+  </div>
 </section>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
-    <a href="index.html">Home</a>
-    <span>›</span>
-    Power Supply / Drivers
-</div>
-
-<!-- PRODUCT GALLERY -->
-<main class="products-section">
-
-    <div class="section-heading">
-        <h2>Power Supply / Drivers</h2>
-        <p>Browse our available LED driver products.</p>
-    </div>
-
-    <div class="product-grid">
-
-        <!-- LED DRIVER 1 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER%202.png"
-                     alt="LED Driver 1"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 1</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 2 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER1.png"
-                     alt="LED Driver 2"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 2</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 3 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER3.png"
-                     alt="LED Driver 3"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 3</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 4 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER4.png"
-                     alt="LED Driver 4"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 4</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 5 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER5.png"
-                     alt="LED Driver 5"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 5</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 6 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER6.png"
-                     alt="LED Driver 6"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 6</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 7 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER7.png"
-                     alt="LED Driver 7"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 7</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 8 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER8.png"
-                     alt="LED Driver 8"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 8</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-        <!-- LED DRIVER 9 -->
-        <article class="product-card">
-            <div class="product-image">
-                <img src="LED%20DRIVER9.png"
-                     alt="LED Driver 9"
-                     loading="lazy">
-            </div>
-            <div class="product-info">
-                <h3>LED Driver 9</h3>
-                <span class="product-label">Product Details Coming Soon</span>
-            </div>
-        </article>
-
-    </div>
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div><h2>Mount Tenons</h2><p>Choose a product to view full details and specifications.</p></div>
+    <p><strong>17 products</strong> · Prices shown per item</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
 </main>
 
-<!-- FOOTER -->
-<footer>
-    <p><strong>LED KING</strong> — Lighting Solutions</p>
-    <p>Power Supply / Drivers</p>
-    <p>Professional LED lighting products and solutions.</p>
-    <a class="footer-home" href="index.html">Return to Homepage</a>
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+    <h2 style="margin-top:0">About LED KING</h2>
+    <p style="color:#526173;margin-bottom:0">LED KING provides mount tenon adapters, bullhorns, and pole mounting accessories for commercial and outdoor lighting projects. Contact us for product questions, bulk orders, or project quotes.</p>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div><strong style="font-size:20px">LED KING</strong><p>Professional LED lighting products and solutions.</p></div>
+    <div><strong>Contact</strong><p>Phone: 682-200-3004</p><p>Email: ledkingfortworth@gmail.com</p><p>3701 Airport Fwy, Fort Worth, TX 76111</p></div>
+  </div>
 </footer>
 
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head"><strong>Product details</strong><button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom">
+      <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="checkout-later">Online payment and checkout will be connected later. For now, your cart works on this page and shows your selected products and subtotal.</div>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const products = [
+  {
+    "id": 1,
+    "name": "Tenon Adaptor for Square Pole",
+    "sku": "784",
+    "upc": "6505925386122",
+    "price": 35.0,
+    "image": "MT1.png",
+    "specs": [
+      "For 4-inch square pole",
+      "UPC: 6505925386122"
+    ],
+    "description": "Tenon adaptor for mounting a fixture designed for a round pole onto a 4-inch square pole."
+  },
+  {
+    "id": 2,
+    "name": "Metal Arm (L Shape)",
+    "sku": "1243",
+    "upc": "6505925378066",
+    "price": 40.0,
+    "image": "MT2.png",
+    "specs": [
+      "L-shaped metal mounting arm",
+      "Black finish",
+      "UPC: 6505925378066"
+    ],
+    "description": "L-shaped metal arm for mounting or supporting lighting fixtures. Black finish."
+  },
+  {
+    "id": 3,
+    "name": "Round Pole Side Tenon",
+    "sku": "2290",
+    "upc": "8190810215106",
+    "price": 25.0,
+    "image": "MT3.png",
+    "specs": [
+      "Weld-on side tenon",
+      "For round pole mounting",
+      "Black finish",
+      "UPC: 8190810215106"
+    ],
+    "description": "Weld-on side tenon used to mount a lighting fixture to the side of a round pole. Black finish."
+  },
+  {
+    "id": 4,
+    "name": "Bullhorn with 2 Arms at 180°",
+    "sku": "1691",
+    "upc": "6505925383916",
+    "price": 150.0,
+    "image": "MT4.png",
+    "specs": [
+      "2 arms at 180°",
+      "Slip fit onto 2-3/8-inch tenons",
+      "Black finish",
+      "UPC: 6505925383916"
+    ],
+    "description": "Two-arm bullhorn arranged in opposite directions at 180°. Designed to slip onto 2-3/8-inch tenons. Black finish."
+  },
+  {
+    "id": 5,
+    "name": "Bullhorn with 3 Arms at 120°",
+    "sku": "1692",
+    "upc": "6505925384074",
+    "price": 175.0,
+    "image": "MT5.png",
+    "specs": [
+      "3 arms at 120°",
+      "Slip fit onto 2-3/8-inch tenons",
+      "Black finish",
+      "UPC: 6505925384074"
+    ],
+    "description": "Three-arm bullhorn arranged at 120-degree intervals. Designed to slip onto 2-3/8-inch tenons. Black finish."
+  },
+  {
+    "id": 6,
+    "name": "Metal Arm – 4-inch Square Pole Mount",
+    "sku": "1841",
+    "upc": "6505925394592",
+    "price": 55.0,
+    "image": "MT6.png",
+    "specs": [
+      "4-inch square pole mount",
+      "Internal tenon adaptor",
+      "2-3/8-inch pipe diameter",
+      "Black finish",
+      "UPC: 6505925394592"
+    ],
+    "description": "Metal arm designed for a 4-inch square pole, with an internal tenon adaptor. Fits a 2-3/8-inch pipe diameter. Black finish."
+  },
+  {
+    "id": 7,
+    "name": "Low Profile Bullhorn – 2 Tenons at 180°",
+    "sku": "1689",
+    "upc": "6505925383770",
+    "price": 155.0,
+    "image": "MT7.png",
+    "specs": [
+      "2 tenons at 180°",
+      "Slip fit onto 2-3/8-inch tenons",
+      "Low-profile design",
+      "Black finish",
+      "UPC: 6505925383770"
+    ],
+    "description": "Low-profile bullhorn with two tenons arranged at 180°. Designed to slip onto 2-3/8-inch tenons. Black finish."
+  },
+  {
+    "id": 8,
+    "name": "Low Profile Bullhorn – 3 Tenons",
+    "sku": "1690",
+    "upc": "6505925383848",
+    "price": 150.0,
+    "image": "MT8.png",
+    "specs": [
+      "3 tenons",
+      "Supplied description states 180° arrangement",
+      "Slip fit onto 2-3/8-inch tenons",
+      "Black finish",
+      "UPC: 6505925383848"
+    ],
+    "description": "Low-profile bullhorn with three tenons. The supplied description states a 180-degree arrangement. Designed to slip onto 2-3/8-inch tenons. Black finish."
+  },
+  {
+    "id": 9,
+    "name": "Low Profile Bullhorn – 4 Tenons Inline",
+    "sku": "2440",
+    "upc": "8190610351986",
+    "price": 175.0,
+    "image": "MT9.png",
+    "specs": [
+      "4 tenons inline",
+      "For 2-3/8-inch round tenon",
+      "Low-profile design",
+      "Black finish",
+      "UPC: 8190610351986"
+    ],
+    "description": "Low-profile bullhorn with four tenons aligned in a straight line, designed for a 2-3/8-inch round tenon. Black finish."
+  },
+  {
+    "id": 10,
+    "name": "Tenon Adapter – 4-inch Square Pole, 2 Horizontal Tenons",
+    "sku": "2235",
+    "upc": "8190810256178",
+    "price": 140.0,
+    "image": "MT10.png",
+    "specs": [
+      "For 4-inch square pole",
+      "2 horizontal tenons at 180°",
+      "Black finish",
+      "UPC: 8190810256178"
+    ],
+    "description": "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 180°. Black finish."
+  },
+  {
+    "id": 11,
+    "name": "Tenon Adapter – 4-inch Square Pole, 2 Horizontal Tenons",
+    "sku": "2437",
+    "upc": "8190810201796",
+    "price": 75.0,
+    "image": "MT11.png",
+    "specs": [
+      "For 4-inch square pole",
+      "2 horizontal tenons at 90°",
+      "Black finish",
+      "UPC: 8190810201796"
+    ],
+    "description": "Tenon adapter for a 4-inch square pole with two horizontal tenons arranged at 90°. Black finish."
+  },
+  {
+    "id": 12,
+    "name": "Tenon Adapter – 4-inch Square Pole, 3 Horizontal Tenons",
+    "sku": "2438",
+    "upc": "8190810221350",
+    "price": 85.0,
+    "image": "MT12.png",
+    "specs": [
+      "For 4-inch square pole",
+      "3 horizontal tenons at 90°",
+      "Black finish",
+      "UPC: 8190810221350"
+    ],
+    "description": "Tenon adapter for a 4-inch square pole with three horizontal tenons arranged at 90°. Black finish."
+  },
+  {
+    "id": 13,
+    "name": "Tenon Adapter – 4-inch Square Pole, 4 Horizontal Tenons",
+    "sku": "2439",
+    "upc": "8190810219470",
+    "price": 95.0,
+    "image": "MT13.png",
+    "specs": [
+      "For 4-inch square pole",
+      "4 horizontal tenons at 90°",
+      "Black finish",
+      "UPC: 8190810219470"
+    ],
+    "description": "Tenon adapter for a 4-inch square pole with four horizontal tenons arranged at 90°. Black finish."
+  },
+  {
+    "id": 14,
+    "name": "Tenon Adapter – 2-3/8-inch Round Pole, 2 Horizontal Tenons",
+    "sku": "1536",
+    "upc": "6505925378516",
+    "price": null,
+    "image": "MT14.png",
+    "specs": [
+      "For 2-3/8-inch round pole",
+      "2 horizontal tenons at 180°",
+      "Black finish",
+      "UPC: 6505925378516"
+    ],
+    "description": "Tenon adapter for a 2-3/8-inch round pole with two horizontal tenons arranged at 180°. Black finish. Contact LED KING for pricing."
+  },
+  {
+    "id": 15,
+    "name": "Tenon Adapter – 2-3/8-inch Round Pole, 3 Horizontal Tenons",
+    "sku": "1577",
+    "upc": "6505925378820",
+    "price": 60.0,
+    "image": "MT15.png",
+    "specs": [
+      "For 2-3/8-inch round pole",
+      "3 horizontal tenons at 90°",
+      "Black finish",
+      "UPC: 6505925378820"
+    ],
+    "description": "Tenon adapter for a 2-3/8-inch round pole with three horizontal tenons arranged at 90°. Black finish."
+  },
+  {
+    "id": 16,
+    "name": "Bullhorn – 2 Tenons, 180°, Square Base",
+    "sku": "2583",
+    "upc": null,
+    "price": 155.0,
+    "image": "MT16.png",
+    "specs": [
+      "2 tenons at 180°",
+      "Square base"
+    ],
+    "description": "Outdoor lighting mounting accessory with two tenons extending in opposite directions at 180°, and a square-shaped base for attachment."
+  },
+  {
+    "id": 17,
+    "name": "3-Pin Track Rail – 1m",
+    "sku": "2271",
+    "upc": null,
+    "price": 30.0,
+    "image": "MT17.png",
+    "specs": [
+      "3-pin track rail",
+      "1 metre length",
+      "Black finish",
+      "Connector head and tail included"
+    ],
+    "description": "Black 1-metre track rail with 3 pins. Connector head and tail are included for installation and connectivity."
+  }
+];
+
+let activeProduct = null;
+let cart = {};
+let toastTimer;
+
+function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+file;}
+function money(value){return value===null || value===undefined ? "Contact for Price" : "$"+Number(value).toFixed(2);}
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+  grid.innerHTML=products.map(p=>`
+    <article class="product-card">
+      <div class="product-image">
+        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>
+      </div>
+      <div class="product-info">
+        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Mount Tenons"}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
+        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">${p.price===null ? "" : "per item"}</span></div>
+        <div class="actions">
+          <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
+          <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function openProduct(id){
+  activeProduct=products.find(p=>p.id===id);
+  if(!activeProduct)return;
+  const p=activeProduct;
+  document.getElementById("modalContent").innerHTML=`
+    <div class="modal-photo">
+      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
+    </div>
+    <div>
+      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Mount Tenons</div>
+      <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
+      <div class="modal-price">${money(p.price)}</div>
+      <p class="description">${escapeHtml(p.description)}</p>
+      <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
+      <ul class="spec-list">${p.specs.map(s=>"<li>"+escapeHtml(s)+"</li>").join("")}</ul>
+      <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
+      <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
+    </div>`;
+  document.getElementById("productOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeProduct(){document.getElementById("productOverlay").classList.remove("open");document.body.style.overflow="";}
+function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
+function changeModalQty(delta){
+  const input=document.getElementById("modalQty");
+  input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);
+  document.getElementById("modalLinePrice").textContent=activeProduct.price===null ? "Contact for Price" : money(activeProduct.price*(parseInt(input.value,10)||1));
+}
+function addFromModal(){
+  const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);
+  addToCart(activeProduct.id,qty);closeProduct();openCart();
+}
+function quickAdd(id){addToCart(id,1);showToast("Added to cart");}
+function addToCart(id,qty){cart[id]=(cart[id]||0)+qty;renderCart();updateCartCount();}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function renderCart(){
+  const holder=document.getElementById("cartItems");
+  const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a mount tenon product to get started.</p></div>';}
+  else{
+    holder.innerHTML=ids.map(id=>{
+      const p=products.find(x=>x.id===Number(id));const q=cart[id];
+      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${p.price===null ? "Contact for Price" : money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
+    }).join("");
+  }
+  const subtotal=ids.reduce((sum,id)=>{const price=products.find(p=>p.id===Number(id)).price;return sum+(price===null?0:cart[id]*price);},0);
+  document.getElementById("cartSubtotal").textContent=money(subtotal);
+}
+function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
+function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1){delete cart[id]}else{cart[id]=q}renderCart();updateCartCount();}
+function removeFromCart(id){delete cart[id];renderCart();updateCartCount();}
+function openCart(){renderCart();document.getElementById("cartDrawer").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.body.style.overflow="";}
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart();}});
+renderProducts();renderCart();updateCartCount();
+</script>
 </body>
 </html>
+
