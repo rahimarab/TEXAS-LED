@@ -1,427 +1,381 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Shop LED KING LED grow lights for indoor growing and greenhouse applications.">
 <title>LED Grow Lights | LED KING</title>
-<meta name="description" content="Explore LED grow lights from LED KING for indoor growing, greenhouse lighting and horticultural applications. Contact us for pricing and product details.">
-
 <style>
-:root {
-    --teal: #00B8A9;
-    --lime: #B7E532;
-    --black: #090D0D;
-    --card: #151B1B;
-    --text: #F5F7F6;
-    --muted: #B8C2C0;
+:root{--blue:#1261a0;--blue-dark:#0b4778;--orange:#f58220;--ink:#17212b;--muted:#64748b;--line:#e2e8f0;--bg:#f5f8fb;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.header-inner{max-width:1240px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:25px;letter-spacing:1px;color:#111;text-decoration:none}
+.logo span{color:var(--orange)}
+.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nav a{text-decoration:none;font-size:14px;font-weight:700}
+.nav a:hover{color:var(--blue)}
+.cart-button{border:0;border-radius:9px;background:var(--blue);color:white;padding:10px 14px;cursor:pointer;font-weight:700;white-space:nowrap}
+.cart-count{display:inline-flex;min-width:22px;height:22px;border-radius:20px;background:var(--orange);align-items:center;justify-content:center;margin-left:5px;font-size:12px}
+.hero{background:linear-gradient(120deg,#082d4c,#1261a0);color:white;padding:56px 22px}
+.hero-inner{max-width:1240px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#ffd1a5;font-weight:800;font-size:12px}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:720px;color:#e7f2fb;margin:0;font-size:17px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-tags span{border:1px solid #ffffff55;border-radius:24px;padding:7px 12px;font-size:13px}
+.page-wrap{max-width:1240px;margin:0 auto;padding:34px 22px 60px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:25px}
+.toolbar p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.product-card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #0b47780b;transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0b47781a}
+.product-image{height:230px;background:#fff;display:flex;align-items:center;justify-content:center;padding:16px;border-bottom:1px solid #edf1f5}
+.product-image img{width:100%;height:100%;object-fit:contain}
+.image-fallback{font-weight:800;color:#64748b;text-align:center;display:none}
+.product-info{padding:18px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:7px}
+.product-info h3{font-size:18px;line-height:1.35;margin:0 0 9px}
+.short-specs{font-size:13px;color:#526173;margin:0 0 14px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:4px 0 14px}
+.price{font-size:24px;font-weight:900;color:var(--blue-dark)}
+.unit{font-size:12px;color:var(--muted)}
+.actions{display:flex;gap:9px}
+.btn{border:0;border-radius:8px;padding:11px 13px;cursor:pointer;font-weight:800;transition:background .15s}
+.btn-primary{background:var(--blue);color:white;flex:1}
+.btn-primary:hover{background:var(--blue-dark)}
+.btn-outline{background:#fff;color:var(--blue);border:1px solid #b8cde0;flex:1}
+.btn-outline:hover{background:#eef6fc}
+.footer{background:#101c28;color:#e5edf5;padding:30px 22px}
+.footer-inner{max-width:1240px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer p{margin:4px 0;color:#b9c6d3;font-size:14px}
+.overlay{position:fixed;inset:0;background:#071522b8;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.overlay.open{display:flex}
+.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:16px;box-shadow:0 24px 70px #0004;position:relative}
+.modal-head{position:sticky;top:0;background:white;border-bottom:1px solid var(--line);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.modal-head strong{font-size:16px}
+.close-btn{width:38px;height:38px;border:0;border-radius:50%;background:#edf2f7;cursor:pointer;font-size:23px;line-height:1}
+.modal-content{display:grid;grid-template-columns: minmax(0, .95fr) minmax(0,1.05fr);gap:28px;padding:24px}
+.modal-photo{background:#f8fafc;border:1px solid var(--line);border-radius:12px;min-height:300px;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal-photo img{width:100%;max-height:380px;object-fit:contain}
+.modal h2{font-size:26px;line-height:1.25;margin:3px 0 8px}
+.modal-price{font-size:29px;font-weight:900;color:var(--blue-dark);margin:10px 0}
+.spec-list{padding-left:19px;margin:12px 0;color:#46576a;font-size:14px}
+.spec-list li{margin:5px 0}
+.description{font-size:14px;color:#46576a}
+.qty-row{display:flex;align-items:center;gap:12px;margin:18px 0}
+.qty-control{display:inline-flex;align-items:center;border:1px solid #cbd5e1;border-radius:8px;overflow:hidden}
+.qty-control button{border:0;background:#f1f5f9;width:36px;height:40px;cursor:pointer;font-size:20px}
+.qty-control input{width:48px;height:40px;border:0;text-align:center;outline:none}
+.modal-add{width:100%;padding:13px;background:var(--orange);color:#1f2937;border:0;border-radius:9px;font-weight:900;cursor:pointer}
+.modal-add:hover{background:#ff9a3d}
+.notice{font-size:12px;color:var(--muted);margin-top:10px}
+.cart-drawer{position:fixed;inset:0;z-index:60;display:none}
+.cart-drawer.open{display:block}
+.drawer-shade{position:absolute;inset:0;background:#0715229c}
+.drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:white;box-shadow:-10px 0 40px #0002;display:flex;flex-direction:column}
+.drawer-head{padding:20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h2{margin:0}
+.drawer-items{padding:16px 20px;overflow:auto;flex:1}
+.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-item strong{display:block;font-size:14px}
+.cart-item small{color:var(--muted)}
+.cart-item-right{text-align:right;white-space:nowrap}
+.remove-item{border:0;background:transparent;color:#b42318;cursor:pointer;font-size:12px;padding:5px 0}
+.drawer-bottom{padding:20px;border-top:1px solid var(--line)}
+.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px}
+.checkout-later{background:#f8fafc;border:1px solid var(--line);border-radius:8px;padding:12px;color:#64748b;font-size:13px}
+.empty-cart{text-align:center;color:var(--muted);padding:45px 10px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#102b40;color:white;padding:12px 18px;border-radius:10px;box-shadow:0 8px 24px #0003;z-index:100;display:none;font-size:14px}
+.toast.show{display:block}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:12px}.modal-content{grid-template-columns:1fr}.modal-photo{min-height:230px}}
+@media(max-width:620px){.header-inner{align-items:flex-start;flex-wrap:wrap}.nav{order:3;width:100%;gap:12px}.nav a{font-size:13px}.hero{padding:40px 20px}.page-wrap{padding:26px 14px 45px}.grid{grid-template-columns:1fr;gap:16px}.product-image{height:240px}.modal-content{padding:16px;gap:18px}.modal h2{font-size:22px}.modal-photo{min-height:210px}.actions{flex-direction:column}.toolbar h2{font-size:22px}}
+
+/* LED KING master index theme: forest green, warm ivory, champagne gold, and yellow */
+:root{
+  --blue:#34483D;
+  --blue-dark:#26382E;
+  --orange:#C5A66A;
+  --ink:#26332B;
+  --muted:#647268;
+  --line:#DED6C8;
+  --bg:#F4F0E8;
+  --white:#FFFFFF;
+  --teal:#34483D;
+  --lime:#FFD400;
+  --gold-text:#A98745;
+  --gold-text-hover:#80652F;
+  --green:#176B50;
 }
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--black);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-header {
-    background: #050808;
-    border-bottom: 2px solid var(--teal);
-    padding: 16px 5%;
-}
-
-.navbar {
-    max-width: 1500px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    font-size: 27px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo span {
-    color: var(--teal);
-}
-
-.logo small {
-    display: block;
-    color: var(--lime);
-    font-size: 11px;
-    letter-spacing: 3px;
-    font-weight: 600;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-}
-
-nav a {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-nav a:hover {
-    color: var(--lime);
-}
-
-.hero {
-    padding: 58px 5% 48px;
-    text-align: center;
-    background: linear-gradient(135deg, #101818, #071010);
-    border-bottom: 1px solid #263535;
-}
-
-.eyebrow {
-    color: var(--lime);
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    margin: 12px 0;
-    font-size: clamp(32px, 5vw, 52px);
-    line-height: 1.15;
-}
-
-.hero h1 span,
-.section-heading h2 span {
-    color: var(--teal);
-}
-
-.hero p {
-    max-width: 760px;
-    margin: 15px auto 25px;
-    color: var(--muted);
-}
-
-.button {
-    display: inline-block;
-    background: var(--teal);
-    color: #031010;
-    padding: 12px 23px;
-    border-radius: 6px;
-    font-weight: 800;
-    transition: 0.2s ease;
-}
-
-.button:hover {
-    background: var(--lime);
-    transform: translateY(-2px);
-}
-
-main {
-    max-width: 1800px;
-    margin: auto;
-    padding: 35px 4%;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 28px;
-}
-
-.section-heading h2 {
-    font-size: clamp(25px, 3vw, 35px);
-    margin: 0 0 8px;
-}
-
-.section-heading p {
-    color: var(--muted);
-    margin: 0;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.product-card {
-    background: var(--card);
-    border: 1px solid #2B3837;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--teal);
-}
-
-.product-image {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    background: #FFFFFF;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.product-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.product-info {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-}
-
-.product-number {
-    color: var(--lime);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.product-info h3 {
-    font-size: 18px;
-    margin: 5px 0 8px;
-}
-
-.product-info p {
-    color: var(--muted);
-    font-size: 13px;
-    margin: 0 0 15px;
-}
-
-.product-info .button {
-    margin-top: auto;
-    width: 100%;
-    text-align: center;
-    padding: 10px 12px;
-    font-size: 14px;
-}
-
-.quote-section {
-    margin: 45px 0 10px;
-    padding: 35px 20px;
-    background: #121B1A;
-    border: 1px solid #28413D;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.quote-section p {
-    color: var(--muted);
-}
-
-footer {
-    margin-top: 40px;
-    background: #050808;
-    border-top: 2px solid var(--teal);
-    padding: 30px 5%;
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 23px;
-    font-weight: 900;
-}
-
-.footer-logo span {
-    color: var(--teal);
-}
-
-footer p {
-    margin: 8px 0;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-footer a:hover {
-    color: var(--lime);
-}
-
-@media (max-width: 1200px) {
-    .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 767px) {
-    .navbar {
-        justify-content: center;
-        text-align: center;
-    }
-
-    nav {
-        justify-content: center;
-        gap: 12px 16px;
-    }
-
-    .hero {
-        padding: 42px 5%;
-    }
-
-    main {
-        padding: 28px 4%;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .product-info {
-        padding: 11px;
-    }
-
-    .product-info h3 {
-        font-size: 16px;
-    }
-
-    .product-info p {
-        font-size: 12px;
-    }
-
-    .product-info .button {
-        font-size: 12px;
-        padding: 10px 6px;
-    }
-}
-
-@media (max-width: 360px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-}
+body{color:var(--ink);background:#F4F0E8;}
+.site-header{background:#FFFFFF;border-bottom:1px solid var(--line);box-shadow:0 3px 15px rgba(38,56,46,.06)}
+.logo{color:#34483D}
+.logo span{color:#A98745}
+.nav a{color:#34483D}
+.nav a:hover{color:#176B50}
+.cart-button{background:#176B50;color:#FFFFFF;border-radius:7px}
+.cart-button:hover{background:#124F3C}
+.cart-count{background:#FFD400;color:#20352A}
+.hero{background:linear-gradient(115deg,#26382E 0%,#34483D 68%,#526957 100%);border-bottom:4px solid #C5A66A}
+.eyebrow{color:#E5D1A3}
+.hero p{color:#F4F0E8}
+.hero-tags span{border-color:#E5D1A388;background:#E5D1A312}
+.product-card{background:#FFFFFF;border-color:#DED6C8;box-shadow:0 5px 18px rgba(38,56,46,.07)}
+.product-card:hover{box-shadow:0 12px 28px rgba(38,56,46,.14);border-color:#C5A66A}
+.product-image{background:#FFFFFF;border-bottom:1px solid #E9E2D6}
+.price{color:#176B50}
+.btn-primary{background:#176B50;color:#FFFFFF}
+.btn-primary:hover{background:#124F3C;color:#FFFFFF}
+.btn-outline{background:#FFFFFF;color:#34483D;border-color:#C5A66A}
+.btn-outline:hover{background:#F4F0E8}
+.modal{background:#FFFFFF}
+.modal-head{background:#26382E;color:#FFFFFF;border-bottom-color:#DED6C8}
+.modal-photo{background:#F4F0E8;border-color:#DED6C8}
+.modal-price{color:#176B50}
+.modal-add{background:#FFD400;color:#20352A}
+.modal-add:hover{background:#E8C200}
+.footer{background:#26382E;color:#FFFFFF;border-top:3px solid #C5A66A}
+.footer p{color:#D9E0D9}
+.close-btn{background:#E8EEE8;color:#26382E}
+.qty-control{border-color:#DED6C8}
+.qty-control button{background:#E8EEE8;color:#26382E}
+.checkout-later{background:#F4F0E8;border-color:#DED6C8;color:#647268}
+.toast{background:#26382E;border:1px solid #C5A66A;color:#FFFFFF}
+.overlay{background:rgba(32,53,42,.78)}
+.drawer-panel{background:#FFFFFF}
+.drawer-head,.drawer-bottom{border-color:#DED6C8}
+.cart-item{border-color:#DED6C8}
+.empty-cart{color:#647268}
+.modal h2{color:#26382E}
+.spec-list,.description{color:#526257}
+.sku,.unit,.notice{color:#647268}
+#about>div{background:#FFFFFF!important;border-color:#DED6C8!important}
+#about p{color:#526257!important}
+@media(max-width:620px){.nav a{color:#34483D}}
 </style>
 </head>
-
 <body>
-
-<header>
-    <div class="navbar">
-        <a href="index.html" class="logo">
-            LED <span>KING</span>
-            <small>LIGHTING SOLUTIONS</small>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About Us</a>
-            <a href="index.html#products">Products</a>
-            <a href="index.html#quote">Request a Quote</a>
-            <a href="index.html#contact">Contact</a>
-        </nav>
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#" aria-label="LED KING home">LED <span>KING</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#products">Grow Lights</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" type="button" onclick="openCart()" aria-label="Open shopping cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  </div>
 </header>
 
 <section class="hero">
-    <div class="eyebrow">LED KING · Horticultural Lighting</div>
-    <h1>LED <span>Grow Lights</span></h1>
-    <p>
-        Explore our grow light collection for indoor growing, greenhouses
-        and horticultural lighting applications. Contact LED KING for
-        product specifications, pricing and availability.
-    </p>
-    <a class="button" href="index.html#quote">Request a Quote</a>
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial Lighting</div>
+    <h1>Professional LED Grow Lights</h1>
+    <p>Explore LED grow lights designed for indoor growing and greenhouse applications. Compare 480W, 660W, and 960W models, review specifications, and add products to your cart.</p>
+    <div class="hero-tags"><span>480W / 660W / 960W models</span><span>5-year warranty</span><span>Prices shown per item</span></div>
+  </div>
 </section>
 
-<main>
-    <div class="section-heading">
-        <h2>Our <span>Grow Light Collection</span></h2>
-        <p>Browse our available product images and request details for your project.</p>
-    </div>
-
-    <div class="product-grid">
-
-        <article class="product-card">
-            <div class="product-image">
-                <img src="GL.png" alt="LED Grow Light 1" loading="lazy">
-            </div>
-            <div class="product-info">
-                <div class="product-number">Product 01</div>
-                <h3>Grow Light 1</h3>
-                <p>Contact us for specifications, pricing and availability.</p>
-                <a class="button" href="index.html#quote">Request a Quote</a>
-            </div>
-        </article>
-
-        <article class="product-card">
-            <div class="product-image">
-                <img src="GL2.png" alt="LED Grow Light 2" loading="lazy">
-            </div>
-            <div class="product-info">
-                <div class="product-number">Product 02</div>
-                <h3>Grow Light 2</h3>
-                <p>Contact us for specifications, pricing and availability.</p>
-                <a class="button" href="index.html#quote">Request a Quote</a>
-            </div>
-        </article>
-
-        <article class="product-card">
-            <div class="product-image">
-                <img src="GL3.png" alt="LED Grow Light 3" loading="lazy">
-            </div>
-            <div class="product-info">
-                <div class="product-number">Product 03</div>
-                <h3>Grow Light 3</h3>
-                <p>Contact us for specifications, pricing and availability.</p>
-                <a class="button" href="index.html#quote">Request a Quote</a>
-            </div>
-        </article>
-
-    </div>
-
-    <section class="quote-section">
-        <h2>Need Grow Lights for Your Project?</h2>
-        <p>Contact LED KING for product information, bulk orders and project quotes.</p>
-        <a class="button" href="index.html#quote">Get a Quote</a>
-    </section>
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div><h2>Grow Lights</h2><p>Choose a product to view full details and specifications.</p></div>
+    <p><strong>3 products</strong> · Prices shown per item</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
 </main>
 
-<footer>
-    <div class="footer-logo">LED <span>KING</span></div>
-    <p>Professional LED Lighting Solutions</p>
-    <p>3701 Airport Fwy, Fort Worth, TX 76111</p>
-    <p>Phone: <a href="tel:6822003004">682-200-3004</a></p>
-    <p>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
-    <p>&copy; <span id="year"></span> LED KING. All rights reserved.</p>
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px">
+    <h2 style="margin-top:0">About LED KING</h2>
+    <p style="color:#526173;margin-bottom:0">LED KING provides professional LED lighting products and solutions for commercial and industrial applications. Contact us for product questions, bulk orders, or project quotes.</p>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div><strong style="font-size:20px">LED KING</strong><p>Professional LED lighting products and solutions.</p></div>
+    <div><strong>Contact</strong><p>Phone: 682-200-3004</p><p>Email: ledkingfortworth@gmail.com</p><p>3701 Airport Fwy, Fort Worth, TX 76111</p></div>
+  </div>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head"><strong>Product details</strong><button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
 
+<div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom">
+      <div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+      <div class="checkout-later">Online payment and checkout will be connected later. For now, your cart works on this page and shows your selected products and subtotal.</div>
+    </div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const products = [
+  {
+    id:1,
+    name:"480W LED Grow Light",
+    price:1000.00,
+    sku:"2276",
+    image:"GL.png",
+    specs:[
+      "Rated power: 480W",
+      "Input voltage: 120–277VAC",
+      "Frequency: 50/60Hz",
+      "Fixture color: Silver or customized",
+      "Warranty: 5 years",
+      "Product series: GL02 LED grow lights",
+      "Spectrum options: Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), or Greenhouse Spectrum (GS)"
+    ],
+    description:`A 480W LED grow light from the GL02 product series. Input is 120–277VAC at 50/60Hz. The luminaire is available in silver or a customized finish and includes a 5-year warranty. Spectrum options listed in the supplied product information are Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), and Greenhouse Spectrum (GS).
+
+Grow-light selection guide: Consider what types of plants you will grow, whether you will grow year-round or only start seeds in spring, how tall the plants will become, where the light will be installed (living space or a separate growing area), and whether a mobile setup such as one on casters is needed.
+
+Product code guide: LKNG identifies the company; GL02 identifies the LED grow light product series; 480W is the rated power; N identifies the driver manufacturer; X identifies the LED manufacturer and may be any alphabet; A1 is the version number; the fixture-color code identifies the luminaire color (BH = black, SH = silver); and the spectrum code identifies the spectrum option (FS = full spectrum, IS = indoor spectrum, DI = customized indoor spectrum, GS = greenhouse spectrum).`
+  },
+  {
+    id:2,
+    name:"660W LED Grow Light",
+    price:1250.00,
+    sku:"2277",
+    image:"GL2.png",
+    specs:[
+      "Rated power: 660W",
+      "Input voltage: 120–277VAC",
+      "Frequency: 50/60Hz",
+      "Fixture color: Silver or customized",
+      "Warranty: 5 years",
+      "Product series: GL02 LED grow lights",
+      "Spectrum options: Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), or Greenhouse Spectrum (GS)"
+    ],
+    description:`A 660W LED grow light from the GL02 product series. Input is 120–277VAC at 50/60Hz. The luminaire is available in silver or a customized finish and includes a 5-year warranty. Spectrum options listed in the supplied product information are Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), and Greenhouse Spectrum (GS).
+
+Grow-light selection guide: Consider what types of plants you will grow, whether you will grow year-round or only start seeds in spring, how tall the plants will become, where the light will be installed (living space or a separate growing area), and whether a mobile setup such as one on casters is needed.
+
+Product code guide: LKNG identifies the company; GL02 identifies the LED grow light product series; 660W is the rated power; N identifies the driver manufacturer; X identifies the LED manufacturer and may be any alphabet; A1 is the version number; the fixture-color code identifies the luminaire color (BH = black, SH = silver); and the spectrum code identifies the spectrum option (FS = full spectrum, IS = indoor spectrum, DI = customized indoor spectrum, GS = greenhouse spectrum).`
+  },
+  {
+    id:3,
+    name:"960W LED Grow Light",
+    price:1500.00,
+    sku:"2278",
+    image:"GL3.png",
+    specs:[
+      "Rated power: 960W",
+      "Input voltage: 120–277VAC",
+      "Frequency: 50/60Hz",
+      "Fixture color: Silver or customized",
+      "Warranty: 5 years",
+      "Product series: GL02 LED grow lights",
+      "Spectrum options: Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), or Greenhouse Spectrum (GS)"
+    ],
+    description:`A 960W LED grow light from the GL02 product series. Input is 120–277VAC at 50/60Hz. The luminaire is available in silver or a customized finish and includes a 5-year warranty. Spectrum options listed in the supplied product information are Full Spectrum (FS), Indoor Spectrum (IS), Customized Indoor Spectrum (DI), and Greenhouse Spectrum (GS).
+
+Grow-light selection guide: Consider what types of plants you will grow, whether you will grow year-round or only start seeds in spring, how tall the plants will become, where the light will be installed (living space or a separate growing area), and whether a mobile setup such as one on casters is needed.
+
+Product code guide: LKNG identifies the company; GL02 identifies the LED grow light product series; 960W is the rated power; N identifies the driver manufacturer; X identifies the LED manufacturer and may be any alphabet; A1 is the version number; the fixture-color code identifies the luminaire color (BH = black, SH = silver); and the spectrum code identifies the spectrum option (FS = full spectrum, IS = indoor spectrum, DI = customized indoor spectrum, GS = greenhouse spectrum).`
+  }
+];
+
+let activeProduct = null;
+let cart = {};
+let toastTimer;
+
+function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+file;}
+function money(value){return "$"+Number(value).toFixed(2);}
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+  grid.innerHTML=products.map(p=>`
+    <article class="product-card">
+      <div class="product-image">
+        <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>
+      </div>
+      <div class="product-info">
+        <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku) : "Grow Lights"}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${escapeHtml(p.specs.slice(0,3).join(" · "))}</p>
+        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">per item</span></div>
+        <div class="actions">
+          <button class="btn btn-outline" onclick="openProduct(${p.id})">View Product</button>
+          <button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button>
+        </div>
+      </div>
+    </article>`).join("");
+}
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function openProduct(id){
+  activeProduct=products.find(p=>p.id===id);
+  if(!activeProduct)return;
+  const p=activeProduct;
+  document.getElementById("modalContent").innerHTML=`
+    <div class="modal-photo">
+      <img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}<br><small>Product image unavailable</small></div>')">
+    </div>
+    <div>
+      <div class="sku">${p.sku ? "SKU: "+escapeHtml(p.sku)+" · " : ""}Grow Lights</div>
+      <h2 id="modalTitle">${escapeHtml(p.name)}</h2>
+      <div class="modal-price">${money(p.price)}</div>
+      <p class="description">${escapeHtml(p.description)}</p>
+      <h3 style="font-size:16px;margin:18px 0 6px">Specifications</h3>
+      <ul class="spec-list">${p.specs.map(s=>"<li>"+escapeHtml(s)+"</li>").join("")}</ul>
+      <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button>
+      <div class="notice">Online payment is not enabled yet. You can review items and subtotal in the cart.</div>
+    </div>`;
+  document.getElementById("productOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+function closeProduct(){document.getElementById("productOverlay").classList.remove("open");document.body.style.overflow="";}
+function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
+function changeModalQty(delta){
+  const input=document.getElementById("modalQty");
+  input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);
+  document.getElementById("modalLinePrice").textContent=money(activeProduct.price*(parseInt(input.value,10)||1));
+}
+function addFromModal(){
+  const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);
+  addToCart(activeProduct.id,qty);closeProduct();openCart();
+}
+function quickAdd(id){addToCart(id,1);showToast("Added to cart");}
+function addToCart(id,qty){cart[id]=(cart[id]||0)+qty;renderCart();updateCartCount();}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function renderCart(){
+  const holder=document.getElementById("cartItems");
+  const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:36px">🛒</div><strong>Your cart is empty</strong><p>Add a grow light to get started.</p></div>';}
+  else{
+    holder.innerHTML=ids.map(id=>{
+      const p=products.find(x=>x.id===Number(id));const q=cart[id];
+      return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>${p.sku?"SKU: "+escapeHtml(p.sku)+" · ":""}Qty: ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease ${escapeHtml(p.name)} quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase ${escapeHtml(p.name)} quantity">+</button></div></div></div>`;
+    }).join("");
+  }
+  const subtotal=ids.reduce((sum,id)=>sum+cart[id]*products.find(p=>p.id===Number(id)).price,0);
+  document.getElementById("cartSubtotal").textContent=money(subtotal);
+}
+function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
+function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1){delete cart[id]}else{cart[id]=q}renderCart();updateCartCount();}
+function removeFromCart(id){delete cart[id];renderCart();updateCartCount();}
+function openCart(){renderCart();document.getElementById("cartDrawer").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.body.style.overflow="";}
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart();}});
+renderProducts();renderCart();updateCartCount();
+</script>
 </body>
 </html>
-```
+
