@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +8,13 @@
 
 <style>
 :root {
-  --blue: #1261a0;
-  --dark-blue: #0b4778;
-  --orange: #f58220;
-  --ink: #17212b;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --bg: #f5f8fb;
+  --blue: #5A3B2A;
+  --dark-blue: #2B1D16;
+  --orange: #B58A55;
+  --ink: #241B15;
+  --muted: #786B5E;
+  --line: #D9CBB8;
+  --bg: #F3EBDD;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -29,7 +28,7 @@ body {
 button, input { font: inherit; }
 button { cursor: pointer; }
 .site-header {
-  background: #fff;
+  background: #FFF9EF;
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -48,7 +47,7 @@ button { cursor: pointer; }
   font-weight: 900;
   font-size: 25px;
   letter-spacing: 1px;
-  color: #111;
+  color: #171310;
   text-decoration: none;
 }
 .logo span { color: var(--orange); }
@@ -85,7 +84,7 @@ button { cursor: pointer; }
   font-size: 12px;
 }
 .hero {
-  background: linear-gradient(120deg, #082d4c, #1261a0);
+  background: linear-gradient(120deg, #171310, #5A3B2A);
   color: white;
   padding: 56px 22px;
 }
@@ -93,7 +92,7 @@ button { cursor: pointer; }
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ffd1a5;
+  color: #E8CDAA;
   font-weight: 800;
   font-size: 12px;
 }
@@ -104,7 +103,7 @@ button { cursor: pointer; }
 }
 .hero p {
   max-width: 720px;
-  color: #e7f2fb;
+  color: #F5EBDD;
   margin: 0;
   font-size: 17px;
 }
@@ -115,7 +114,7 @@ button { cursor: pointer; }
   margin-top: 22px;
 }
 .hero-tags span {
-  border: 1px solid #ffffff55;
+  border: 1px solid #E8DCCB88;
   border-radius: 24px;
   padding: 7px 12px;
   font-size: 13px;
@@ -141,27 +140,27 @@ button { cursor: pointer; }
   gap: 22px;
 }
 .product-card {
-  background: white;
+  background: #FFF9EF;
   border: 1px solid var(--line);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 5px 18px #0b47780b;
+  box-shadow: 0 5px 18px #2B1D160B;
   transition: transform .18s, box-shadow .18s;
 }
 .product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px #0b47781a;
+  box-shadow: 0 12px 28px #2B1D161A;
 }
 .product-image {
   height: 230px;
-  background: white;
+  background: #FFF9EF;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
-  border-bottom: 1px solid #edf1f5;
+  border-bottom: 1px solid #E9DFD1;
 }
 .product-image img {
   width: 100%;
@@ -192,7 +191,7 @@ button { cursor: pointer; }
 }
 .short-specs {
   font-size: 13px;
-  color: #526173;
+  color: #6B5A4B;
   margin: 0 0 14px;
   flex: 1;
 }
@@ -219,15 +218,15 @@ button { cursor: pointer; }
 .btn-primary { background: var(--blue); color: white; flex: 1; }
 .btn-primary:hover { background: var(--dark-blue); }
 .btn-outline {
-  background: white;
+  background: #FFF9EF;
   color: var(--blue);
-  border: 1px solid #b8cde0;
+  border: 1px solid #CDB99F;
   flex: 1;
 }
-.btn-outline:hover { background: #eef6fc; }
+.btn-outline:hover { background: #F1E4D2; }
 .footer {
-  background: #101c28;
-  color: #e5edf5;
+  background: #171310;
+  color: #F5EBDD;
   padding: 30px 22px;
 }
 .footer-inner {
@@ -238,11 +237,11 @@ button { cursor: pointer; }
   gap: 20px;
   flex-wrap: wrap;
 }
-.footer p { margin: 4px 0; color: #b9c6d3; font-size: 14px; }
+.footer p { margin: 4px 0; color: #D3C2AD; font-size: 14px; }
 .overlay {
   position: fixed;
   inset: 0;
-  background: #071522b8;
+  background: #171310B8;
   z-index: 50;
   display: none;
   align-items: center;
@@ -254,14 +253,14 @@ button { cursor: pointer; }
   width: min(960px, 100%);
   max-height: 92vh;
   overflow: auto;
-  background: white;
+  background: #FFF9EF;
   border-radius: 16px;
   box-shadow: 0 24px 70px #0004;
 }
 .modal-head {
   position: sticky;
   top: 0;
-  background: white;
+  background: #FFF9EF;
   border-bottom: 1px solid var(--line);
   padding: 15px 20px;
   display: flex;
@@ -274,7 +273,7 @@ button { cursor: pointer; }
   height: 38px;
   border: 0;
   border-radius: 50%;
-  background: #edf2f7;
+  background: #EDE2D2;
   font-size: 23px;
 }
 .modal-content {
@@ -284,7 +283,7 @@ button { cursor: pointer; }
   padding: 24px;
 }
 .modal-photo {
-  background: #f8fafc;
+  background: #F7F0E5;
   border: 1px solid var(--line);
   border-radius: 12px;
   min-height: 300px;
@@ -296,20 +295,20 @@ button { cursor: pointer; }
 .modal-photo img { width: 100%; max-height: 380px; object-fit: contain; }
 .modal h2 { font-size: 26px; line-height: 1.25; margin: 3px 0 8px; }
 .modal-price { font-size: 29px; font-weight: 900; color: var(--dark-blue); margin: 10px 0; }
-.spec-list { padding-left: 19px; margin: 12px 0; color: #46576a; font-size: 14px; }
+.spec-list { padding-left: 19px; margin: 12px 0; color: #665647; font-size: 14px; }
 .spec-list li { margin: 5px 0; }
-.description { font-size: 14px; color: #46576a; }
+.description { font-size: 14px; color: #665647; }
 .qty-row { display: flex; align-items: center; gap: 12px; margin: 18px 0; }
 .qty-control {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #CDBDA8;
   border-radius: 8px;
   overflow: hidden;
 }
 .qty-control button {
   border: 0;
-  background: #f1f5f9;
+  background: #EFE4D5;
   width: 36px;
   height: 40px;
   font-size: 20px;
@@ -324,7 +323,7 @@ button { cursor: pointer; }
   width: 100%;
   padding: 13px;
   background: var(--orange);
-  color: #1f2937;
+  color: #21170F;
   border: 0;
   border-radius: 9px;
   font-weight: 900;
@@ -332,15 +331,15 @@ button { cursor: pointer; }
 .notice { font-size: 12px; color: var(--muted); margin-top: 10px; }
 .cart-drawer { position: fixed; inset: 0; z-index: 60; display: none; }
 .cart-drawer.open { display: block; }
-.drawer-shade { position: absolute; inset: 0; background: #0715229c; }
+.drawer-shade { position: absolute; inset: 0; background: #1713109C; }
 .drawer-panel {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
   width: min(450px, 100%);
-  background: white;
-  box-shadow: -10px 0 40px #0002;
+  background: #FFF9EF;
+  box-shadow: -10px 0 40px #241B1522;
   display: flex;
   flex-direction: column;
 }
@@ -366,7 +365,7 @@ button { cursor: pointer; }
 .remove-item {
   border: 0;
   background: transparent;
-  color: #b42318;
+  color: #9B3D2E;
   font-size: 12px;
   padding: 5px 0;
 }
@@ -379,11 +378,11 @@ button { cursor: pointer; }
   margin-bottom: 10px;
 }
 .checkout-later {
-  background: #f8fafc;
+  background: #F7F0E5;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
-  color: #64748b;
+  color: #786B5E;
   font-size: 13px;
 }
 .empty-cart { text-align: center; color: var(--muted); padding: 45px 10px; }
@@ -392,7 +391,7 @@ button { cursor: pointer; }
   bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
-  background: #102b40;
+  background: #2B1D16;
   color: white;
   padding: 12px 18px;
   border-radius: 10px;
@@ -453,7 +452,7 @@ button { cursor: pointer; }
       <h2>Pole Lights</h2>
       <p>Choose a product to view its full description and specifications.</p>
     </div>
-    <p><strong>15 products</strong> · Display price: $100.00 each</p>
+    <p><strong>15 products</strong> · Prices shown per item</p>
   </div>
   <div class="grid" id="productGrid"></div>
 </main>
@@ -512,77 +511,77 @@ const IMAGE_BASE = "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"
 
 const products = [
   {
-    id:1, name:"Solar 30W LED Street Light", price:100, image:"P1.png",
+    id:1, sku:"1711", name:"Solar 30W LED Street Light", price:750, image:"P1.png",
     specs:["30W","18VDC","Solar LED street light","Streets and outdoor areas"],
     description:"A solar-powered LED street light for outdoor illumination. Supplied specifications list 30W power and 18VDC. Confirm the solar panel, battery capacity, operating time, and mounting details for your required configuration."
   },
   {
-    id:2, name:"Solar 50W LED Street Light", price:100, image:"P2.png",
+    id:2, sku:"1712", name:"Solar 50W LED Street Light", price:200, image:"P2.png",
     specs:["50W","18VDC","Solar LED street light","Streets and outdoor areas"],
     description:"A solar-powered LED street light intended for outdoor lighting. Supplied specifications list 50W power and 18VDC. Please confirm panel wattage, battery capacity, runtime, and installation requirements before ordering."
   },
   {
-    id:3, name:"12th Gen LED Shoebox Light", price:100, image:"P3.png",
+    id:3, sku:"2226", name:"12th Gen LED Shoebox Light", price:300, image:"P3.png",
     specs:["100W / 150W / 240W / 300W","5700K","AC 100–277V","Sosen driver","Black","AM bracket","UL listed"],
     description:"The 12th Gen LED shoebox light is available in several wattage options: 100W, 150W, 240W, and 300W. Supplied specifications list 5700K, AC 100–277V, a Sosen driver, black housing, an AM bracket, and UL listing. Confirm the selected wattage and exact fixture configuration when requesting a quote."
   },
   {
-    id:4, name:"SB16 LED Shoebox Light — 150W", price:100, image:"P4.png",
+    id:4, sku:"1893", name:"SB16 LED Shoebox Light — 150W", price:550, image:"P4.png",
     specs:["150W","5700K","AC 277–480V","10KV surge protection","China-brand driver","Black","AM bracket","UL / DLC listed"],
     description:"The SB16 150W LED shoebox light is intended for commercial outdoor area lighting. Supplied specifications list 5700K, AC 277–480V, 10KV surge protection, a China-brand driver, black housing, and an AM bracket. UL and DLC listing are stated in the supplied product information. Verify voltage compatibility before installation."
   },
   {
-    id:5, name:"SB19 LED Shoebox Light", price:100, image:"P5.png",
+    id:5, sku:"2485", name:"SB19 LED Shoebox Light", price:275, image:"P5.png",
     specs:["150W / 300W","5700K","AC 120–277V","10KV surge protection","China-brand driver","Black","AM bracket","UL / DLC listed"],
     description:"The SB19 LED shoebox light is listed in 150W and 300W options. Supplied specifications include 5700K, AC 120–277V, 10KV surge protection, a China-brand driver, black housing, an AM bracket, and UL/DLC listing. Confirm the wattage you need when requesting a quote."
   },
   {
-    id:6, name:"New SG12C LED Shoebox Light — 150W", price:100, image:"P6.png",
+    id:6, sku:"2542", name:"New SG12C LED Shoebox Light — 150W", price:450, image:"P6.png",
     specs:["150W","AC 100–277V","10KV surge protection","Black","AM bracket","UL / DLC listed"],
     description:"The SG12C 150W LED shoebox light is designed for outdoor commercial lighting. Supplied information lists AC 100–277V, 10KV surge protection, black housing, an AM bracket, and UL/DLC listing. Confirm the color temperature and remaining electrical specifications for the exact model."
   },
   {
-    id:7, name:"Updated SB14B LED Shoebox Light — 150W", price:100, image:"P7.png",
+    id:7, sku:"2149", name:"Updated SB14B LED Shoebox Light — 150W", price:195, image:"P7.png",
     specs:["150W","5700K","AC 100–277V","10KV surge protection","China-brand driver","Black","AM bracket","UL listed"],
     description:"The updated SB14B 150W LED shoebox light is specified with 5700K, AC 100–277V, 10KV surge protection, a China-brand driver, black housing, and an AM bracket. The supplied information identifies it as UL listed."
   },
   {
-    id:8, name:"New SG12C LED Shoebox Light — 300W", price:100, image:"P8.png",
+    id:8, sku:"2543", name:"New SG12C LED Shoebox Light — 300W", price:450, image:"P8.png",
     specs:["300W","AC 100–277V","10KV surge protection","Black","AM bracket","UL / DLC listed"],
     description:"The SG12C 300W LED shoebox light is intended for commercial outdoor area lighting. Supplied specifications list AC 100–277V, 10KV surge protection, black housing, an AM bracket, and UL/DLC listing. Confirm the exact color temperature and electrical configuration before ordering."
   },
   {
-    id:9, name:"300W LED Parking Lot Shoebox Light", price:100, image:"P9.png",
+    id:9, sku:"2150", name:"300W LED Parking Lot Shoebox Light", price:350, image:"P9.png",
     specs:["300W","5000K","LED parking lot light","Pole / street lighting","Shoebox area fixture"],
     description:"A 300W LED shoebox area light for parking lots and outdoor lighting applications. The supplied product information lists 5000K. Please confirm input voltage, driver, mounting style, certifications, and other model-specific specifications."
   },
   {
-    id:10, name:"SB14B LED Shoebox Light — 300W", price:100, image:"P10.png",
+    id:10, sku:"2484", name:"SB14B LED Shoebox Light — 300W", price:399, image:"P10.png",
     specs:["300W","AC 100–277V","10KV surge protection","Black","Blue light stated in supplied specs","China-brand driver","AM bracket","UL listed"],
     description:"The SB14B 300W LED shoebox light is listed with AC 100–277V, 10KV surge protection, black housing, a China-brand driver, and an AM bracket. The supplied product details describe the light color as blue; please verify the actual color temperature and light color before ordering."
   },
   {
-    id:11, name:"SB16 LED Shoebox Light — 300W", price:100, image:"P11.png",
+    id:11, sku:"1892", name:"SB16 LED Shoebox Light — 300W", price:750, image:"P11.png",
     specs:["300W","5700K","AC 277–480V","10KV surge protection","China-brand driver","Black","AM bracket","UL / DLC listed"],
     description:"The SB16 300W LED shoebox light is designed for commercial area lighting. Supplied specifications list 5700K, AC 277–480V, 10KV surge protection, a China-brand driver, black housing, and an AM bracket. UL/DLC listing is stated in the supplied information. Confirm voltage compatibility before installation."
   },
   {
-    id:12, name:"SG16 LED Shoebox Light — 300W", price:100, image:"P12.png",
+    id:12, sku:"2564", name:"SG16 LED Shoebox Light — 300W", price:750, image:"P12.png",
     specs:["300W","5700K","AC 277–480V","China-brand driver","Black","UL / DLC listed"],
     description:"The SG16 300W LED shoebox light is specified for outdoor commercial lighting. Supplied details list 5700K, AC 277–480V, a China-brand driver, black housing, and UL/DLC listing. Confirm the mounting type, surge protection, and voltage compatibility for your installation."
   },
   {
-    id:13, name:"LED KING LED Shoebox Light — 450W", price:100, image:"P13.png",
+    id:13, sku:"1684", name:"LED KING LED Shoebox Light — 450W", price:600, image:"P13.png",
     specs:["450W","5700K","AC 100–277V","Seoul 3030 LED chips","Non-isolated driver","Black","Surge protector","AM bracket","UL / DLC listed"],
     description:"This 450W LED shoebox light is listed with Seoul 3030 LED chips and 5700K output. Supplied specifications include AC 100–277V, a non-isolated driver with surge protection, black housing, and an AM bracket. UL/DLC listing is stated in the supplied information. Confirm all electrical details before ordering."
   },
   {
-    id:14, name:"LED Shoebox Light — 480W", price:100, image:"P14.png",
+    id:14, sku:"832", name:"LED Shoebox Light — 480W", price:899, image:"P14.png",
     specs:["480W","5700K","AC 100–277V","Lumileds 3030 chips","Sosen driver","Black","Slip-fitter mount","UL listed"],
     description:"This 480W LED shoebox light is specified with Lumileds 3030 LED chips, 5700K output, AC 100–277V, and a Sosen driver. It has a black finish and slip-fitter mounting. The supplied specifications identify it as UL listed. Verify pole compatibility and fixture configuration before purchase."
   },
   {
-    id:15, name:"480W Outdoor Sports LED Flood Light", price:100, image:"P15.png",
+    id:15, sku:"2144", name:"480W Outdoor Sports LED Flood Light", price:999, image:"P15.png",
     specs:["480W","Outdoor sports lighting","Adjustable power stated in supplied specs","Color-tunable stated in supplied specs","Outdoor flood-light mounting"],
     description:"This 480W outdoor sports light is listed for outdoor area and sports lighting. The supplied product information mentions adjustable power and color-tunable operation. Confirm the supported wattage settings, color-temperature range, beam optics, voltage, and mounting hardware for the exact model."
   }
@@ -617,7 +616,7 @@ function renderProducts() {
         </div>
       </div>
       <div class="product-info">
-        <div class="sku">Pole Light ${String(p.id).padStart(2, "0")}</div>
+        <div class="sku">SKU ${escapeHtml(p.sku)}</div>
         <h3>${escapeHtml(p.name)}</h3>
         <p class="short-specs">${escapeHtml(p.specs.slice(0, 4).join(" · "))}</p>
         <div class="price-row">
@@ -648,7 +647,7 @@ function openProduct(id) {
       </div>
     </div>
     <div>
-      <div class="sku">Pole Light ${String(p.id).padStart(2, "0")}</div>
+      <div class="sku">SKU ${escapeHtml(p.sku)}</div>
       <h2>${escapeHtml(p.name)}</h2>
       <div class="modal-price">${money(p.price)}</div>
       <p class="description">${escapeHtml(p.description)}</p>
@@ -722,7 +721,7 @@ function renderCart() {
         <div class="cart-item">
           <div>
             <strong>${escapeHtml(p.name)}</strong>
-            <small>Qty: ${q} × ${money(p.price)}</small>
+            <small>SKU: ${escapeHtml(p.sku)} · Qty: ${q} × ${money(p.price)}</small>
             <div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div>
           </div>
           <div class="cart-item-right">
