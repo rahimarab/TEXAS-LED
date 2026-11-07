@@ -3,589 +3,229 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shop LED KING stadium and sports field LED lighting. Browse product details and request a quote.">
 <title>Stadium Lights | LED KING</title>
-<meta name="description" content="Professional LED stadium and sports lighting products from LED KING.">
-
 <style>
-:root {
-    --green: #34483D;
-    --dark: #26382E;
-    --gold: #C5A66A;
-    --ink: #26332B;
-    --muted: #647268;
-    --line: #DED6C8;
-    --bg: #F4F0E8;
-    --white: #FFFFFF;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-}
-
-header {
-    background: var(--green);
-    color: white;
-    padding: 22px 5%;
-    text-align: center;
-}
-
-.logo {
-    font-size: 30px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: var(--gold);
-}
-
-.tagline {
-    margin-top: 6px;
-    font-size: 13px;
-    letter-spacing: 2px;
-}
-
-.top-bar {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-.hero {
-    background: var(--green);
-    color: white;
-    text-align: center;
-    padding: 55px 20px;
-}
-
-.hero h1 {
-    font-size: clamp(30px, 5vw, 48px);
-    margin: 0 0 15px;
-}
-
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.7;
-    color: #F1EBDD;
-}
-
-.container {
-    max-width: 1500px;
-    margin: auto;
-    padding: 35px 4%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.section-title h2 {
-    font-size: 30px;
-    color: var(--green);
-    margin-bottom: 8px;
-}
-
-.section-title p {
-    color: var(--muted);
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.product-card {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .2s, box-shadow .2s;
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 22px rgba(0,0,0,.10);
-}
-
-.product-image {
-    height: 240px;
-    padding: 15px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.product-info {
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.product-info h3 {
-    color: var(--green);
-    font-size: 17px;
-    line-height: 1.4;
-    margin: 0 0 10px;
-}
-
-.sku {
-    font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 12px;
-}
-
-.price {
-    font-size: 23px;
-    font-weight: bold;
-    color: var(--green);
-    margin: 5px 0 15px;
-}
-
-.product-info button {
-    margin-top: auto;
-}
-
-.btn {
-    border: none;
-    border-radius: 5px;
-    padding: 12px 15px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    width: 100%;
-    margin-top: 8px;
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: #26332B;
-}
-
-.btn-green {
-    background: var(--green);
-    color: white;
-}
-
-.btn:hover {
-    opacity: .88;
-}
-
-.details {
-    display: none;
-    padding: 14px;
-    border-top: 1px solid var(--line);
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--muted);
-}
-
-.details.open {
-    display: block;
-}
-
-.quantity {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.quantity input {
-    width: 65px;
-    padding: 8px;
-    border: 1px solid var(--line);
-    border-radius: 5px;
-}
-
-.cart-section {
-    background: white;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 25px;
-    margin-top: 45px;
-}
-
-.cart-section h2 {
-    color: var(--green);
-    margin-top: 0;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    border-bottom: 1px solid var(--line);
-    padding: 12px 0;
-    font-size: 14px;
-}
-
-.cart-total {
-    text-align: right;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 18px;
-}
-
-.empty-cart {
-    color: var(--muted);
-}
-
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
-    margin-top: 50px;
-    line-height: 1.8;
-}
-
-footer a {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-footer .footer-title {
-    font-size: 23px;
-    font-weight: bold;
-}
-
-@media (max-width: 1100px) {
-    .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 700px) {
-    .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .product-image {
-        height: 170px;
-    }
-
-    .product-info {
-        padding: 12px;
-    }
-
-    .product-info h3 {
-        font-size: 14px;
-    }
-
-    .price {
-        font-size: 19px;
-    }
-
-    .btn {
-        font-size: 12px;
-        padding: 10px 8px;
-    }
-}
-
-@media (max-width: 360px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-}
+:root{--brown:#6F4E37;--brown-dark:#4B3022;--gold:#B8875B;--ink:#211A16;--muted:#76695F;--line:#E4D7C8;--cream:#F7F0E5;--paper:#FFF9F0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+button,a{font:inherit;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+.site-header{background:#111;border-bottom:1px solid var(--brown-dark);position:sticky;top:0;z-index:20}
+.header-inner{max-width:1500px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:25px;letter-spacing:1px;color:var(--paper);text-decoration:none}
+.logo span{color:#C49A6C}
+.nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.nav a{color:#F7F0E5;text-decoration:none;font-size:14px;font-weight:700}
+.nav a:hover{color:#D5B58A}
+.header-actions{display:flex;align-items:center;gap:10px}
+.back-link{color:#F7F0E5;text-decoration:none;font-size:13px;font-weight:700}
+.cart-button{border:0;border-radius:8px;background:var(--brown);color:var(--paper);padding:10px 14px;cursor:pointer;font-weight:800;white-space:nowrap}
+.cart-button:hover{background:var(--brown-dark)}
+.cart-count{display:inline-flex;min-width:22px;height:22px;border-radius:20px;background:#E8D8B8;color:var(--ink);align-items:center;justify-content:center;margin-left:5px;font-size:12px}
+.hero{background:linear-gradient(120deg,#111 0%,#2A211B 62%,#5A3D2B 100%);color:white;padding:52px 22px;border-bottom:4px solid var(--gold)}
+.hero-inner{max-width:1500px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#E8D8B8;font-weight:800;font-size:12px}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.12;margin:10px 0 14px}
+.hero p{max-width:760px;color:#F2E7D8;margin:0;font-size:17px}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-tags span{border:1px solid #D5B58A88;background:#E8D8B812;border-radius:24px;padding:7px 12px;font-size:13px}
+.page-wrap{max-width:1500px;margin:0 auto;padding:34px 22px 60px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+.toolbar h2{margin:0;font-size:25px}
+.toolbar p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.product-card{background:var(--paper);border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px rgba(33,26,22,.08);transition:transform .18s,box-shadow .18s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(111,78,55,.18);border-color:var(--gold)}
+.product-image{aspect-ratio:1/1;background:#FFFDF8;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line);overflow:hidden}
+.product-image img{width:100%;height:100%;object-fit:contain;display:block}
+.image-fallback{display:none;text-align:center;color:var(--muted);font-weight:700;font-size:13px;padding:15px}
+.product-info{padding:15px;display:flex;flex-direction:column;flex:1}
+.sku{font-size:12px;color:var(--muted);font-weight:700;margin-bottom:6px}
+.product-info h3{font-size:17px;line-height:1.35;margin:0 0 8px;min-height:46px}
+.short-specs{font-size:13px;color:#66594F;margin:0 0 12px;flex:1}
+.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:4px 0 12px}
+.price{font-size:22px;font-weight:900;color:var(--brown)}
+.unit{font-size:11px;color:var(--muted)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn{border-radius:7px;padding:10px 8px;cursor:pointer;font-weight:800;font-size:12px;text-align:center}
+.btn-outline{background:var(--paper);color:var(--brown);border:1px solid var(--gold)}
+.btn-outline:hover{background:#F0E3D2}
+.btn-primary{background:var(--brown);color:var(--paper);border:1px solid var(--brown)}
+.btn-primary:hover{background:var(--brown-dark)}
+.quote-link{display:block;margin-top:8px;background:var(--gold);color:#211A16;text-decoration:none;text-align:center;padding:10px 8px;border-radius:7px;font-size:12px;font-weight:900}
+.quote-link:hover{background:#D5B58A}
+.about-box{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:22px}
+.about-box h2{margin:0 0 8px}
+.about-box p{color:var(--muted);margin:0}
+.footer{background:#111;color:var(--paper);padding:30px 22px;border-top:3px solid var(--gold)}
+.footer-inner{max-width:1500px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer p{margin:4px 0;color:#D8C8B7;font-size:14px}
+.footer a{color:#D5B58A;text-decoration:none}
+.overlay{position:fixed;inset:0;background:#17110dcc;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.overlay.open{display:flex}
+.modal{width:min(960px,100%);max-height:92vh;overflow:auto;background:var(--paper);border-radius:14px;box-shadow:0 24px 70px #0004;position:relative}
+.modal-head{position:sticky;top:0;background:#211A16;color:var(--paper);border-bottom:1px solid var(--brown-dark);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.close-btn{width:36px;height:36px;border:0;border-radius:50%;background:#E8D8B8;color:var(--ink);cursor:pointer;font-size:23px;line-height:1}
+.modal-content{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:25px;padding:22px}
+.modal-photo{background:var(--cream);border:1px solid var(--line);border-radius:10px;min-height:280px;display:flex;align-items:center;justify-content:center;padding:15px}
+.modal-photo img{width:100%;max-height:370px;object-fit:contain}
+.modal h2{font-size:25px;line-height:1.25;margin:3px 0 8px}
+.modal-price{font-size:28px;font-weight:900;color:var(--brown);margin:8px 0}
+.spec-list{padding-left:19px;margin:12px 0;color:#66594F;font-size:14px}
+.spec-list li{margin:5px 0}
+.qty-row{display:flex;align-items:center;gap:12px;margin:16px 0}
+.qty-control{display:inline-flex;align-items:center;border:1px solid #D5C2AD;border-radius:7px;overflow:hidden}
+.qty-control button{border:0;background:#F0E3D2;color:var(--ink);width:34px;height:38px;cursor:pointer;font-size:20px}
+.qty-control input{width:45px;height:38px;border:0;text-align:center;outline:none;background:var(--paper)}
+.modal-add{width:100%;padding:12px;background:var(--gold);color:var(--ink);border:0;border-radius:8px;font-weight:900;cursor:pointer}
+.modal-add:hover{background:#D5B58A}
+.notice{font-size:12px;color:var(--muted);margin-top:9px}
+.cart-drawer{position:fixed;inset:0;z-index:60;display:none}
+.cart-drawer.open{display:block}
+.drawer-shade{position:absolute;inset:0;background:#17110dcc}
+.drawer-panel{position:absolute;right:0;top:0;height:100%;width:min(450px,100%);background:var(--paper);box-shadow:-10px 0 40px #0002;display:flex;flex-direction:column}
+.drawer-head{padding:18px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.drawer-head h2{margin:0}
+.drawer-items{padding:15px 18px;overflow:auto;flex:1}
+.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:13px 0;border-bottom:1px solid var(--line)}
+.cart-item strong{display:block;font-size:14px}
+.cart-item small{color:var(--muted)}
+.cart-item-right{text-align:right;white-space:nowrap}
+.remove-item{border:0;background:transparent;color:#9A352C;cursor:pointer;font-size:12px;padding:5px 0}
+.drawer-bottom{padding:18px;border-top:1px solid var(--line)}
+.subtotal{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin-bottom:10px}
+.checkout-later{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:11px;color:var(--muted);font-size:13px}
+.empty-cart{text-align:center;color:var(--muted);padding:40px 10px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#211A16;color:var(--paper);padding:11px 17px;border:1px solid var(--gold);border-radius:9px;z-index:100;display:none;font-size:14px}
+.toast.show{display:block}
+@media(max-width:1150px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.header-inner{align-items:flex-start;flex-wrap:wrap;padding:12px 14px}.nav{order:3;width:100%;gap:13px}.nav a{font-size:13px}.header-actions{margin-left:auto}.back-link{display:none}.hero{padding:38px 16px}.page-wrap{padding:25px 12px 42px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.product-info{padding:10px}.product-info h3{font-size:14px;min-height:54px}.short-specs{font-size:12px}.price{font-size:19px}.actions{grid-template-columns:1fr}.quote-link{font-size:11px}.modal-content{grid-template-columns:1fr;padding:14px;gap:15px}.modal-photo{min-height:200px}.modal h2{font-size:21px}.toolbar h2{font-size:22px}}
 </style>
 </head>
-
 <body>
-
-<div class="top-bar">
-    🚚 FAST SHIPPING &nbsp; • &nbsp; TOP QUALITY &nbsp; • &nbsp; EXPERT LED LIGHTING
-</div>
-
-<header>
-    <div class="logo">LED <span>KING</span></div>
-    <div class="tagline">LIGHTING SOLUTIONS</div>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="LED KING home">LED <span>KING</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#products">Stadium Lights</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="back-link" href="index.html#products">← All Categories</a>
+      <button class="cart-button" type="button" onclick="openCart()">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </div>
 </header>
 
 <section class="hero">
-    <h1>LED Stadium & Sports Lights</h1>
-    <p>
-        Professional LED sports and stadium lighting solutions for
-        sports fields, stadiums, arenas, and large outdoor facilities.
-        Explore our high-performance LED sports lights.
-    </p>
+  <div class="hero-inner">
+    <div class="eyebrow">LED KING · Commercial & Sports Lighting</div>
+    <h1>Professional LED Stadium Lights</h1>
+    <p>Explore LED sports and stadium lighting options for athletic fields, sports facilities, and large outdoor areas. View product information and contact LED KING for project pricing and availability.</p>
+    <div class="hero-tags"><span>Sports & stadium applications</span><span>High-output LED options</span><span>Request project pricing</span></div>
+  </div>
 </section>
 
-<main class="container">
-
-    <div class="section-title">
-        <h2>Our Stadium Lights</h2>
-        <p>Professional quality LED sports lighting products.</p>
-    </div>
-
-    <div class="product-grid" id="productGrid"></div>
-
-    <section class="cart-section" id="cart">
-        <h2>Shopping Cart</h2>
-        <div id="cartItems">
-            <p class="empty-cart">Your cart is currently empty.</p>
-        </div>
-        <div class="cart-total" id="cartTotal">Total: $0.00</div>
-        <button class="btn btn-green" onclick="sendQuote()">
-            REQUEST A QUOTE
-        </button>
-    </section>
-
+<main class="page-wrap" id="products">
+  <div class="toolbar">
+    <div><h2>Our Stadium Lights</h2><p>Select a product to view its details, or request a quote.</p></div>
+    <p><strong>4 products</strong> · Prices shown per item</p>
+  </div>
+  <div class="grid" id="productGrid"></div>
 </main>
 
-<footer>
-    <div class="footer-title">LED KING</div>
-    <div>Professional LED Lighting Solutions</div>
-    <div>3701 Airport Fwy, Fort Worth, TX 76111</div>
-    <div>Phone: <a href="tel:6822003004">682-200-3004</a></div>
-    <div>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></div>
-    <div>Serving Customers Across the USA</div>
-    <p>© 2026 LED KING. All Rights Reserved.</p>
+<section class="page-wrap" id="about" style="padding-top:0">
+  <div class="about-box">
+    <h2>About LED KING</h2>
+    <p>LED KING provides professional LED lighting products and solutions for commercial, industrial, and outdoor applications. Contact us for product questions, bulk orders, and lighting project quotes.</p>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div><strong style="font-size:20px">LED KING</strong><p>Professional LED lighting products and solutions.</p></div>
+    <div><strong>Contact</strong><p>Phone: 682-200-3004</p><p>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p><p>3701 Airport Fwy, Fort Worth, TX 76111</p></div>
+  </div>
 </footer>
 
+<div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-label="Product details" onclick="overlayClick(event)">
+  <div class="modal">
+    <div class="modal-head"><strong>Product details</strong><button class="close-btn" onclick="closeProduct()" aria-label="Close product details">&times;</button></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<div class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-shade" onclick="closeCart()"></div>
+  <aside class="drawer-panel">
+    <div class="drawer-head"><h2>Your Cart</h2><button class="close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button></div>
+    <div class="drawer-items" id="cartItems"></div>
+    <div class="drawer-bottom"><div class="subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div><div class="checkout-later">Online checkout is not enabled yet. Your selected products and subtotal are shown here. Use Request a Quote to contact LED KING.</div></div>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-const imageBase =
-"https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/";
-
 const products = [
-    {
-        name: "400W LED Sport Light",
-        sku: "2031",
-        price: 750.00,
-        image: "ST1.png",
-        specs: [
-            "400W LED Sport Light",
-            "5700K Color Temperature",
-            "Black Housing",
-            "Reflector Included",
-            "Seoul 3030 LED Chips",
-            "Sosen Driver",
-            "AC100-277V",
-            "120-Degree Beam Angle",
-            "5 Years Warranty"
-        ]
-    },
-    {
-        name: "500W Square LED Sport Light",
-        sku: "2147",
-        price: 699.99,
-        image: "ST2.png",
-        specs: [
-            "500W Square LED Sport Light",
-            "5700K Color Temperature",
-            "Black Housing",
-            "Seoul 3030 LED Chips",
-            "Sosen Driver",
-            "AC100-277V",
-            "AM Bracket",
-            "5 Years Warranty"
-        ]
-    },
-    {
-        name: "750W LED Sport Light",
-        sku: "1838",
-        price: 1500.00,
-        image: "ST3.png",
-        specs: [
-            "750W LED Sport Light",
-            "HLG Meanwell Driver",
-            "AM Bracket",
-            "Reflector Included",
-            "Surge Protector",
-            "Black Housing",
-            "Osram LED Chips",
-            "UL / DLC",
-            "5 Years Warranty"
-        ]
-    },
-    {
-        name: "750W Square LED Sport Light",
-        sku: "2148",
-        price: 1500.00,
-        image: "ST4.png",
-        specs: [
-            "750W Square LED Sport Light",
-            "5700K Color Temperature",
-            "Black Housing",
-            "Seoul 3030 LED Chips",
-            "Sosen Driver",
-            "AC100-277V",
-            "AM Bracket",
-            "5 Years Warranty"
-        ]
-    }
+  {id:1,name:"400W LED Sport Light",sku:"2031",price:750.00,image:"ST1.png",watts:"400W",type:"Sport Light"},
+  {id:2,name:"500W LED Square Sport Light",sku:"2147",price:699.99,image:"ST2.png",watts:"500W",type:"Square Sport Light"},
+  {id:3,name:"750W LED Sport Light",sku:"1838",price:1500.00,image:"ST3.png",watts:"750W",type:"Sport Light"},
+  {id:4,name:"750W LED Square Sport Light",sku:"2148",price:1500.00,image:"ST4.png",watts:"750W",type:"Square Sport Light"}
 ];
-
-let cart = [];
-
-function renderProducts() {
-    const grid = document.getElementById("productGrid");
-
-    grid.innerHTML = products.map((product, index) => `
-        <article class="product-card">
-            <div class="product-image">
-                <img
-                    src="${imageBase + encodeURIComponent(product.image)}"
-                    alt="${product.name}"
-                    loading="lazy"
-                    onerror="this.onerror=null;this.alt='Product image unavailable';"
-                >
-            </div>
-
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <div class="sku">SKU: ${product.sku}</div>
-                <div class="price">$${product.price.toFixed(2)}</div>
-
-                <button class="btn btn-gold"
-                    onclick="toggleDetails(${index})">
-                    VIEW DETAILS
-                </button>
-
-                <div class="quantity">
-                    <label for="qty-${index}">Quantity:</label>
-                    <input id="qty-${index}" type="number"
-                        min="1" value="1">
-                </div>
-
-                <button class="btn btn-green"
-                    onclick="addToCart(${index})">
-                    ADD TO CART
-                </button>
-            </div>
-
-            <div class="details" id="details-${index}">
-                <strong>Product Specifications</strong>
-                <ul>
-                    ${product.specs.map(spec => `<li>${spec}</li>`).join("")}
-                </ul>
-            </div>
-        </article>
-    `).join("");
+let activeProduct=null;
+let cart={};
+let toastTimer;
+function imageUrl(file){return "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/"+encodeURIComponent(file).replace(/%2F/g,"/");}
+function money(value){return "$"+Number(value).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function escapeHtml(value){return String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function renderProducts(){
+  document.getElementById("productGrid").innerHTML=products.map(p=>`
+    <article class="product-card">
+      <div class="product-image"><img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="image-fallback">LED KING<br>${escapeHtml(p.name)}<br><small>Image not available</small></div></div>
+      <div class="product-info">
+        <div class="sku">SKU: ${escapeHtml(p.sku)}</div>
+        <h3>${escapeHtml(p.name)}</h3>
+        <p class="short-specs">${p.watts} · ${escapeHtml(p.type)}</p>
+        <div class="price-row"><span class="price">${money(p.price)}</span><span class="unit">per item</span></div>
+        <div class="actions"><button class="btn btn-outline" onclick="openProduct(${p.id})">View Details</button><button class="btn btn-primary" onclick="quickAdd(${p.id})">Add to Cart</button></div>
+        <a class="quote-link" href="index.html#quote">REQUEST A QUOTE</a>
+      </div>
+    </article>`).join("");
 }
-
-function toggleDetails(index) {
-    const details = document.getElementById("details-" + index);
-    details.classList.toggle("open");
+function openProduct(id){
+  activeProduct=products.find(p=>p.id===id);if(!activeProduct)return;const p=activeProduct;
+  document.getElementById("modalContent").innerHTML=`
+    <div class="modal-photo"><img src="${imageUrl(p.image)}" alt="${escapeHtml(p.name)}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('beforeend','<div class=&quot;image-fallback&quot; style=&quot;display:block&quot;>LED KING<br>${escapeHtml(p.name)}</div>')"></div>
+    <div><div class="sku">SKU: ${escapeHtml(p.sku)} · Stadium Lights</div><h2>${escapeHtml(p.name)}</h2><div class="modal-price">${money(p.price)}</div>
+      <p>LED stadium and sports lighting product. Contact LED KING for complete technical specifications, project suitability, availability, and volume pricing.</p>
+      <h3 style="font-size:16px;margin:16px 0 6px">Product Information</h3><ul class="spec-list"><li>Power: ${p.watts}</li><li>Product type: ${escapeHtml(p.type)}</li><li>SKU: ${escapeHtml(p.sku)}</li><li>Application: Sports fields, stadiums, and large outdoor areas</li></ul>
+      <div class="qty-row"><strong>Quantity</strong><div class="qty-control"><button type="button" onclick="changeModalQty(-1)" aria-label="Decrease quantity">−</button><input id="modalQty" type="number" min="1" step="1" value="1" aria-label="Quantity"><button type="button" onclick="changeModalQty(1)" aria-label="Increase quantity">+</button></div></div>
+      <button class="modal-add" onclick="addFromModal()">🛒 Add to Cart — <span id="modalLinePrice">${money(p.price)}</span></button><a class="quote-link" href="index.html#quote" style="margin-top:9px">REQUEST A QUOTE</a><div class="notice">Contact LED KING for detailed product specifications and project recommendations.</div>
+    </div>`;
+  document.getElementById("productOverlay").classList.add("open");document.body.style.overflow="hidden";
 }
-
-function addToCart(index) {
-    const product = products[index];
-    const quantityInput = document.getElementById("qty-" + index);
-    const quantity = Math.max(1, parseInt(quantityInput.value, 10) || 1);
-
-    const existing = cart.find(item => item.sku === product.sku);
-
-    if (existing) {
-        existing.quantity += quantity;
-    } else {
-        cart.push({
-            sku: product.sku,
-            name: product.name,
-            price: product.price,
-            quantity: quantity
-        });
-    }
-
-    renderCart();
+function closeProduct(){document.getElementById("productOverlay").classList.remove("open");document.body.style.overflow="";}
+function overlayClick(e){if(e.target.id==="productOverlay")closeProduct();}
+function changeModalQty(delta){const input=document.getElementById("modalQty");input.value=Math.max(1,(parseInt(input.value,10)||1)+delta);document.getElementById("modalLinePrice").textContent=money(activeProduct.price*(parseInt(input.value,10)||1));}
+function addFromModal(){const qty=Math.max(1,parseInt(document.getElementById("modalQty").value,10)||1);addToCart(activeProduct.id,qty);closeProduct();openCart();}
+function quickAdd(id){addToCart(id,1);showToast("Added to cart");}
+function addToCart(id,qty){cart[id]=(cart[id]||0)+qty;renderCart();updateCartCount();}
+function updateCartCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0);}
+function renderCart(){
+  const holder=document.getElementById("cartItems");const ids=Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){holder.innerHTML='<div class="empty-cart"><div style="font-size:34px">🛒</div><strong>Your cart is empty</strong><p>Add a stadium light to get started.</p></div>';}
+  else{holder.innerHTML=ids.map(id=>{const p=products.find(x=>x.id===Number(id));const q=cart[id];return `<div class="cart-item"><div><strong>${escapeHtml(p.name)}</strong><small>SKU: ${escapeHtml(p.sku)} · ${q} × ${money(p.price)}</small><div><button class="remove-item" onclick="removeFromCart(${p.id})">Remove</button></div></div><div class="cart-item-right"><strong>${money(q*p.price)}</strong><div class="qty-control" style="margin-top:7px"><button onclick="changeCartQty(${p.id},-1)" aria-label="Decrease quantity">−</button><input type="number" min="1" value="${q}" aria-label="Quantity" onchange="setCartQty(${p.id},this.value)" style="width:40px"><button onclick="changeCartQty(${p.id},1)" aria-label="Increase quantity">+</button></div></div></div>`;}).join("");}
+  const subtotal=ids.reduce((sum,id)=>sum+cart[id]*products.find(p=>p.id===Number(id)).price,0);document.getElementById("cartSubtotal").textContent=money(subtotal);
 }
-
-function removeFromCart(sku) {
-    cart = cart.filter(item => item.sku !== sku);
-    renderCart();
-}
-
-function renderCart() {
-    const cartItems = document.getElementById("cartItems");
-    const cartTotal = document.getElementById("cartTotal");
-
-    if (cart.length === 0) {
-        cartItems.innerHTML =
-            '<p class="empty-cart">Your cart is currently empty.</p>';
-        cartTotal.textContent = "Total: $0.00";
-        return;
-    }
-
-    let total = 0;
-
-    cartItems.innerHTML = cart.map(item => {
-        const subtotal = item.price * item.quantity;
-        total += subtotal;
-
-        return `
-            <div class="cart-item">
-                <span>
-                    ${item.name} × ${item.quantity}
-                    <br>
-                    $${subtotal.toFixed(2)}
-                </span>
-                <button class="btn btn-gold"
-                    style="width:auto;margin:0;"
-                    onclick="removeFromCart('${item.sku}')">
-                    REMOVE
-                </button>
-            </div>
-        `;
-    }).join("");
-
-    cartTotal.textContent = "Total: $" + total.toFixed(2);
-}
-
-function sendQuote() {
-    if (cart.length === 0) {
-        alert("Please add products to your cart first.");
-        return;
-    }
-
-    let message = "Hello LED KING,%0D%0A%0D%0AI would like a quote for:%0D%0A%0D%0A";
-    let total = 0;
-
-    cart.forEach(item => {
-        const subtotal = item.price * item.quantity;
-        total += subtotal;
-
-        message +=
-            encodeURIComponent(item.name) +
-            " | SKU: " + encodeURIComponent(item.sku) +
-            " | Quantity: " + item.quantity +
-            " | Price: $" + subtotal.toFixed(2) +
-            "%0D%0A";
-    });
-
-    message += "%0D%0AEstimated Total: $" + total.toFixed(2);
-    message += "%0D%0A%0D%0APlease contact me with a quote.";
-
-    window.location.href =
-        "mailto:ledkingfortworth@gmail.com?subject=" +
-        encodeURIComponent("Stadium Lights Quote Request") +
-        "&body=" + message;
-}
-
-renderProducts();
+function changeCartQty(id,delta){cart[id]=Math.max(0,(cart[id]||0)+delta);if(cart[id]===0)delete cart[id];renderCart();updateCartCount();}
+function setCartQty(id,value){const q=parseInt(value,10);if(!Number.isFinite(q)||q<1)delete cart[id];else cart[id]=q;renderCart();updateCartCount();}
+function removeFromCart(id){delete cart[id];renderCart();updateCartCount();}
+function openCart(){renderCart();document.getElementById("cartDrawer").classList.add("open");document.body.style.overflow="hidden";}
+function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.body.style.overflow="";}
+function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeProduct();closeCart();}});
+renderProducts();renderCart();updateCartCount();
 </script>
-
 </body>
 </html>
