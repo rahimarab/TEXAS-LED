@@ -1,516 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LED Security Lights | LED KING</title>
 
-    <title>Security Lights | LED KING Lighting Solutions</title>
-    <meta name="description" content="Explore security lighting solutions from LED KING in Fort Worth, Texas. Contact us for product specifications, pricing, and availability.">
+<style>
+:root {
+  --black:#171411;
+  --brown:#6F4E37;
+  --brown-dark:#4B3022;
+  --cream:#F7F0E5;
+  --card:#FFF9F0;
+  --gold:#B8875B;
+  --ink:#211A16;
+  --muted:#76695F;
+  --line:#E4D7C8;
+}
 
-    <style>
-        :root {
-            --black: #080b0b;
-            --teal: #00B8A9;
-            --teal-dark: #009688;
-            --lime: #B7E532;
-            --white: #ffffff;
-            --light-bg: #f5f8f7;
-            --text: #202727;
-            --muted: #687373;
-        }
+* {box-sizing:border-box;}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--light-bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
+header {
+  background:var(--black);
+  color:white;
+  padding:18px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
 
-        a {
-            text-decoration: none;
-        }
+.brand {
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:1px;
+}
 
-        header {
-            background: var(--black);
-            color: var(--white);
-            border-bottom: 4px solid var(--teal);
-        }
+.brand span {color:var(--gold);}
 
-        .header-inner {
-            width: min(100% - 36px, 1800px);
-            margin: auto;
-            min-height: 86px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px;
-            flex-wrap: wrap;
-            padding: 16px 0;
-        }
+.brand small {
+  display:block;
+  font-size:11px;
+  letter-spacing:2px;
+  color:#e8d9c8;
+  margin-top:4px;
+}
 
-        .logo {
-            color: var(--white);
-            font-size: 27px;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
+header a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-        .logo span {
-            color: var(--lime);
-        }
+.hero {
+  background:linear-gradient(120deg,#171411,#4B3022);
+  color:white;
+  text-align:center;
+  padding:50px 5%;
+}
 
-        .tagline {
-            color: #c6d1cf;
-            font-size: 12px;
-            letter-spacing: 1.5px;
-            margin-top: 2px;
-        }
+.hero .eyebrow {
+  color:#D8B48E;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+}
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: center;
-        }
+.hero h1 {
+  font-size:clamp(30px,5vw,46px);
+  margin:12px 0;
+}
 
-        nav a {
-            color: var(--white);
-            font-size: 14px;
-            font-weight: 700;
-        }
+.hero p {
+  max-width:760px;
+  margin:auto;
+  color:#eee2d4;
+  line-height:1.7;
+}
 
-        nav a:hover {
-            color: var(--lime);
-        }
+.marquee {
+  background:#E9DDCC;
+  color:#211A16;
+  text-align:center;
+  padding:12px;
+  font-size:13px;
+  font-weight:bold;
+}
 
-        .announcement {
-            background: var(--teal);
-            color: var(--black);
-            text-align: center;
-            padding: 10px 14px;
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: 0.4px;
-        }
+main {
+  max-width:1500px;
+  margin:auto;
+  padding:35px 4% 60px;
+}
 
-        .hero {
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 55px 20px 60px;
-            border-bottom: 5px solid var(--lime);
-        }
+.intro {
+  text-align:center;
+  margin-bottom:30px;
+}
 
-        .hero .eyebrow {
-            color: var(--lime);
-            font-size: 13px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
-        }
+.intro h2 {
+  font-size:28px;
+  margin:0 0 10px;
+}
 
-        .hero h1 {
-            font-size: clamp(32px, 5vw, 54px);
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
+.intro p {
+  color:var(--muted);
+  line-height:1.6;
+}
 
-        .hero h1 span {
-            color: var(--teal);
-        }
+.products {
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:20px;
+}
 
-        .hero p {
-            max-width: 760px;
-            margin: auto;
-            color: #d6dfdd;
-            font-size: 17px;
-        }
+.card {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 5px 18px rgba(45,30,18,.07);
+}
 
-        .hero-button {
-            display: inline-block;
-            margin-top: 25px;
-            background: var(--lime);
-            color: var(--black);
-            padding: 13px 25px;
-            border-radius: 5px;
-            font-weight: 900;
-        }
+.photo {
+  height:230px;
+  background:white;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid var(--line);
+}
 
-        .hero-button:hover {
-            background: var(--teal);
-        }
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
 
-        main {
-            width: min(100% - 36px, 1800px);
-            margin: auto;
-            padding: 42px 0 60px;
-        }
+.card-body {
+  padding:17px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
 
-        .section-heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.sku {
+  font-size:11px;
+  color:var(--muted);
+  font-weight:bold;
+  letter-spacing:.7px;
+}
 
-        .section-heading h2 {
-            color: var(--black);
-            font-size: clamp(25px, 3vw, 36px);
-            margin-bottom: 8px;
-        }
+.card h3 {
+  font-size:17px;
+  line-height:1.4;
+  margin:9px 0;
+}
 
-        .section-heading h2 span {
-            color: var(--teal-dark);
-        }
+.short {
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.6;
+  flex:1;
+}
 
-        .section-heading p {
-            color: var(--muted);
-            font-size: 15px;
-        }
+.price {
+  font-size:23px;
+  font-weight:900;
+  color:var(--brown-dark);
+  margin:15px 0;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 24px;
-        }
+.actions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
 
-        .product-card {
-            background: var(--white);
-            border: 1px solid #e0e8e6;
-            border-bottom: 4px solid var(--teal);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+.btn {
+  border:0;
+  border-radius:6px;
+  padding:11px 8px;
+  font-weight:bold;
+  font-size:12px;
+  cursor:pointer;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+}
 
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
+.btn-primary {
+  background:var(--brown);
+  color:white;
+}
 
-        .product-image {
-            height: 300px;
-            padding: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--white);
-            border-bottom: 1px solid #edf1f0;
-        }
+.btn-primary:hover {
+  background:var(--brown-dark);
+}
 
-        .product-image img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
+.btn-outline {
+  background:transparent;
+  color:var(--brown-dark);
+  border:1px solid var(--brown);
+}
 
-        .product-info {
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            align-items: center;
-        }
+.quote {
+  display:block;
+  margin-top:9px;
+  background:var(--black);
+  color:white;
+}
 
-        .product-number {
-            color: var(--teal-dark);
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
+footer {
+  background:var(--black);
+  color:var(--cream);
+  text-align:center;
+  padding:28px 5%;
+  line-height:1.8;
+}
 
-        .product-info h3 {
-            font-size: 21px;
-            color: var(--black);
-            margin-bottom: 8px;
-        }
+footer a {
+  color:#E4C49F;
+  text-decoration:none;
+}
 
-        .product-info p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
+/* PRODUCT DETAILS POPUP */
 
-        .quote-button {
-            display: inline-block;
-            margin-top: auto;
-            background: var(--teal-dark);
-            color: var(--white);
-            padding: 12px 22px;
-            border-radius: 5px;
-            font-weight: 800;
-            transition: background 0.2s ease;
-        }
+.overlay {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  z-index:20;
+  padding:20px;
+  overflow:auto;
+}
 
-        .quote-button:hover {
-            background: var(--black);
-            color: var(--lime);
-        }
+.overlay.show {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-        .back-link {
-            text-align: center;
-            margin-top: 38px;
-        }
+.modal {
+  background:var(--card);
+  width:min(760px,100%);
+  border-radius:12px;
+  padding:25px;
+  position:relative;
+  max-height:90vh;
+  overflow:auto;
+}
 
-        .back-link a {
-            display: inline-block;
-            color: var(--black);
-            border: 2px solid var(--teal-dark);
-            padding: 11px 22px;
-            border-radius: 5px;
-            font-weight: 800;
-        }
+.close {
+  position:absolute;
+  right:15px;
+  top:10px;
+  border:0;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
+}
 
-        .back-link a:hover {
-            background: var(--teal-dark);
-            color: var(--white);
-        }
+.modal-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
 
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 38px 18px 22px;
-            border-top: 5px solid var(--teal);
-        }
+.modal img {
+  width:100%;
+  height:270px;
+  object-fit:contain;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
 
-        .footer-inner {
-            width: min(100%, 1400px);
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 30px;
-        }
+.modal h2 {margin-top:5px;}
 
-        footer h3 {
-            color: var(--lime);
-            margin-bottom: 12px;
-            font-size: 18px;
-        }
+.modal p,.modal li {
+  line-height:1.6;
+  color:#51463D;
+  font-size:14px;
+}
 
-        footer p,
-        footer a {
-            color: #d3dcda;
-            font-size: 14px;
-            overflow-wrap: anywhere;
-        }
+.modal-price {
+  font-size:24px;
+  font-weight:900;
+  color:var(--brown-dark);
+}
 
-        footer a:hover {
-            color: var(--lime);
-        }
+/* CART */
 
-        .footer-bottom {
-            width: min(100%, 1400px);
-            margin: 28px auto 0;
-            padding-top: 18px;
-            border-top: 1px solid #303838;
-            text-align: center;
-            color: #aeb9b7;
-            font-size: 13px;
-        }
+.cart-fab {
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:10;
+  background:var(--brown-dark);
+  color:white;
+  border:0;
+  border-radius:30px;
+  padding:14px 20px;
+  font-weight:bold;
+  box-shadow:0 4px 15px #0003;
+  cursor:pointer;
+}
 
-        @media (min-width: 1500px) {
-            .product-image {
-                height: 360px;
-            }
-        }
+.cart-panel {
+  position:fixed;
+  right:0;
+  top:0;
+  height:100vh;
+  width:min(390px,100%);
+  background:var(--card);
+  z-index:30;
+  box-shadow:-8px 0 25px #0003;
+  padding:22px;
+  transform:translateX(105%);
+  transition:.25s;
+  overflow:auto;
+}
 
-        @media (max-width: 900px) {
-            .product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+.cart-panel.open {
+  transform:translateX(0);
+}
 
-            .footer-inner {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+.cart-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px;
+}
 
-        @media (max-width: 600px) {
-            .header-inner {
-                justify-content: center;
-                text-align: center;
-            }
+.cart-head button {
+  border:0;
+  background:none;
+  font-size:25px;
+  cursor:pointer;
+}
 
-            nav {
-                justify-content: center;
-                gap: 12px 16px;
-            }
+.cart-item {
+  padding:13px 0;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+  line-height:1.5;
+}
 
-            .product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 12px;
-            }
+.qty {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:7px;
+}
 
-            .product-image {
-                height: 190px;
-                padding: 10px;
-            }
+.qty button {
+  border:1px solid var(--line);
+  background:white;
+  border-radius:4px;
+  padding:3px 9px;
+  cursor:pointer;
+}
 
-            .product-info {
-                padding: 13px 9px;
-            }
+.total {
+  font-size:19px;
+  font-weight:bold;
+  margin:20px 0;
+}
 
-            .product-info h3 {
-                font-size: 17px;
-            }
+@media(max-width:1100px) {
+  .products {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
 
-            .product-info p {
-                font-size: 12px;
-            }
+@media(max-width:650px) {
+  main {padding:25px 4% 45px;}
 
-            .quote-button {
-                padding: 10px 12px;
-                font-size: 13px;
-            }
+  .products {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:11px;
+  }
 
-            .footer-inner {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+  .photo {height:160px;padding:9px;}
 
-            main {
-                width: min(100% - 24px, 1800px);
-                padding-top: 30px;
-            }
-        }
+  .card-body {padding:12px;}
 
-        @media (max-width: 360px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
+  .card h3 {font-size:14px;}
 
-            .product-image {
-                height: 240px;
-            }
-        }
-    </style>
+  .short {font-size:12px;}
+
+  .actions {grid-template-columns:1fr;}
+
+  .modal-grid {grid-template-columns:1fr;}
+
+  .modal img {height:210px;}
+}
+</style>
 </head>
 
 <body>
-    <header>
-        <div class="header-inner">
-            <div>
-                <a class="logo" href="index.html">LED <span>KING</span></a>
-                <div class="tagline">LIGHTING SOLUTIONS</div>
-            </div>
 
-            <nav aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About Us</a>
-                <a href="index.html#products">Products</a>
-                <a href="index.html#quote">Request a Quote</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="announcement">
-        🚚 FAST SHIPPING &nbsp; • &nbsp; 🛡️ TOP QUALITY &nbsp; • &nbsp; 🏷️ GREAT PRICES &nbsp; • &nbsp; EXPERT LIGHTING SOLUTIONS
+<header>
+  <a href="index.html">
+    <div class="brand">LED <span>KING</span>
+      <small>LIGHTING SOLUTIONS</small>
     </div>
+  </a>
 
-    <section class="hero">
-        <div class="eyebrow">LED KING • LIGHTING SOLUTIONS</div>
-        <h1>LED <span>Security Lights</span></h1>
-        <p>
-            Explore our security lighting products for commercial, residential,
-            and outdoor applications. Contact LED KING for product specifications,
-            pricing, and availability.
-        </p>
-        <a class="hero-button" href="index.html#quote">Request a Quote</a>
-    </section>
+  <a href="index.html#quote">REQUEST A QUOTE</a>
+</header>
 
-    <main>
-        <section class="section-heading">
-            <h2>Our <span>Security Lights</span></h2>
-            <p>Browse our available security lighting products below.</p>
-        </section>
+<section class="hero">
+  <div class="eyebrow">Outdoor Security Lighting</div>
+  <h1>LED Security Lights</h1>
+  <p>
+    Reliable outdoor security lighting with motion-sensing technology,
+    bright LED performance, and durable designs for residential and
+    commercial spaces.
+  </p>
+</section>
 
-        <section class="product-grid" aria-label="Security Lights products">
+<div class="marquee">
+  🚚 FAST SHIPPING &nbsp; • &nbsp;
+  🛡️ TOP QUALITY &nbsp; • &nbsp;
+  🏷️ BEST PRICES &nbsp; • &nbsp;
+  LED KING LIGHTING SOLUTIONS
+</div>
 
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="SC1.png" alt="Security Light product 1" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <div class="product-number">Security Light 01</div>
-                    <h3>Security Light</h3>
-                    <p>Contact us for specifications, pricing, and availability.</p>
-                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
-                </div>
-            </article>
+<main>
 
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="sc2.png" alt="Security Light product 2" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <div class="product-number">Security Light 02</div>
-                    <h3>Security Light</h3>
-                    <p>Contact us for specifications, pricing, and availability.</p>
-                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
-                </div>
-            </article>
+  <div class="intro">
+    <h2>Our LED Security Light Collection</h2>
+    <p>
+      Explore our motion-sensor and solar-powered LED security lights.
+      Select a product to view its specifications.
+    </p>
+  </div>
 
-            <article class="product-card">
-                <div class="product-image">
-                    <img src="sc3.png" alt="Security Light product 3" loading="lazy">
-                </div>
-                <div class="product-info">
-                    <div class="product-number">Security Light 03</div>
-                    <h3>Security Light</h3>
-                    <p>Contact us for specifications, pricing, and availability.</p>
-                    <a class="quote-button" href="index.html#quote">Request a Quote</a>
-                </div>
-            </article>
+  <section class="products" id="products"></section>
 
-        </section>
+</main>
 
-        <div class="back-link">
-            <a href="index.html#products">← Back to All Categories</a>
-        </div>
-    </main>
+<footer>
+  <strong>LED KING – Lighting Solutions</strong><br>
+  3701 Airport Fwy, Fort Worth, TX 76111<br>
+  Phone: <a href="tel:6822003004">682-200-3004</a><br>
+  Email: <a href="mailto:ledkingfortworth@gmail.com">
+    ledkingfortworth@gmail.com
+  </a><br>
+  <small>Serving Fort Worth and customers across the United States.</small>
+</footer>
 
-    <footer>
-        <div class="footer-inner">
-            <div>
-                <h3>LED KING</h3>
-                <p>Professional LED lighting products and solutions for businesses, contractors, and homeowners.</p>
-            </div>
+<!-- PRODUCT DETAILS POPUP -->
 
-            <div>
-                <h3>Contact Us</h3>
-                <p>Phone: <a href="tel:6822003004">682-200-3004</a></p>
-                <p>Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a></p>
-            </div>
+<div class="overlay" id="productOverlay"
+     onclick="if(event.target===this)closeProduct()">
 
-            <div>
-                <h3>Visit Our Store</h3>
-                <p>3701 Airport Fwy</p>
-                <p>Fort Worth, TX 76111</p>
-                <p><a href="https://maps.app.goo.gl/bjyUvjcwKhLtDpHf7" target="_blank" rel="noopener noreferrer">Get Directions</a></p>
-            </div>
-        </div>
+  <div class="modal">
+    <button class="close" onclick="closeProduct()">&times;</button>
+    <div id="modalContent"></div>
+  </div>
 
-        <div class="footer-bottom">
-            © <span id="year"></span> LED KING Lighting Solutions. All rights reserved.
-        </div>
-    </footer>
+</div>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+<!-- CART BUTTON -->
+
+<button class="cart-fab" onclick="toggleCart(true)">
+  🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+<!-- CART PANEL -->
+
+<aside class="cart-panel" id="cartPanel">
+
+  <div class="cart-head">
+    <h2>Your Cart</h2>
+    <button onclick="toggleCart(false)">&times;</button>
+  </div>
+
+  <div id="cartItems">
+    <p>Your cart is empty.</p>
+  </div>
+
+  <div class="total">
+    Subtotal: $<span id="cartTotal">0.00</span>
+  </div>
+
+  <p style="font-size:12px;color:#76695F">
+    Online checkout is not available yet.
+    Please use Request a Quote to contact LED KING.
+  </p>
+
+  <a class="btn btn-primary"
+     style="width:100%"
+     href="index.html#quote">
+    REQUEST A QUOTE
+  </a>
+
+</aside>
+
+<script>
+
+const products = [
+
+{
+ image:"SC1.png",
+ name:"3-Head LED Security Light with PIR Motion Sensor",
+ sku:"1377",
+ price:99,
+ summary:"20W • 120V AC • Bronze finish • 5000K • 3050 lumens",
+ specs:[
+  "3-head LED security light",
+  "120V AC power supply",
+  "20W power consumption",
+  "Bronze finish",
+  "5000K cool white color temperature",
+  "PIR motion sensor",
+  "Non-dimmable",
+  "Suitable for wet locations",
+  "Delivered lumen output: 3050 lumens",
+  "ETL and ES listed",
+  "Packaging: 6 pieces per carton"
+ ]
+},
+
+{
+ image:"sc2.png",
+ name:"2-Head LED Security Light with PIR Motion Sensor",
+ sku:"1376",
+ price:75,
+ summary:"20W • 120V AC • Bronze finish • 5000K • 1950 lumens",
+ specs:[
+  "2-head LED security light",
+  "120V AC power supply",
+  "20W power consumption",
+  "Bronze finish",
+  "5000K cool white color temperature",
+  "PIR motion sensor",
+  "Non-dimmable",
+  "Suitable for wet locations",
+  "Delivered lumen output: 1950 lumens",
+  "ETL and ES listed",
+  "Packaging: 8 pieces per carton"
+ ]
+},
+
+{
+ image:"sc3.png",
+ name:"5CCT Solar LED Security Light – 3 Head",
+ sku:"2575 / 2576",
+ price:49,
+ summary:"800 lumens • 3 adjustable heads • Remote control • IP65 waterproof",
+ specs:[
+  "5CCT solar LED security light with 3 adjustable heads",
+  "Up to 800 lumens",
+  "5000K daylight white light",
+  "210 ultra-bright LEDs",
+  "270-degree coverage angle",
+  "Motion detection range up to 26 feet",
+  "Remote control with 3 lighting modes",
+  "Mode 1: Full brightness on motion; turns off after 20 seconds",
+  "Mode 2: Full brightness on motion; dims after 20 seconds",
+  "Mode 3: Dim light for 4 hours, then switches to Mode 1",
+  "2000mAh rechargeable battery and solar panel",
+  "IP65 waterproof",
+  "Wireless installation"
+ ]
+}
+
+];
+
+let cart=[];
+
+function money(n) {
+ return Number(n).toFixed(2);
+}
+
+function renderProducts() {
+
+ document.getElementById("products").innerHTML =
+ products.map((p,i)=>`
+
+ <article class="card">
+
+  <div class="photo">
+   <img
+    src="https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/${encodeURIComponent(p.image)}"
+    alt="${p.name}"
+    loading="lazy"
+    onerror="this.style.display='none';this.parentElement.innerHTML='<span style=&quot;color:#76695F;font-size:13px&quot;>Image: ${p.image}</span>'">
+  </div>
+
+  <div class="card-body">
+
+   <div class="sku">SKU: ${p.sku}</div>
+
+   <h3>${p.name}</h3>
+
+   <div class="short">${p.summary}</div>
+
+   <div class="price">$${money(p.price)}</div>
+
+   <div class="actions">
+    <button class="btn btn-outline"
+      onclick="openProduct(${i})">
+      VIEW DETAILS
+    </button>
+
+    <button class="btn btn-primary"
+      onclick="addToCart(${i})">
+      ADD TO CART
+    </button>
+   </div>
+
+   <a class="btn quote" href="index.html#quote">
+    REQUEST A QUOTE
+   </a>
+
+  </div>
+
+ </article>
+
+ `).join("");
+
+}
+
+function openProduct(i) {
+
+ const p=products[i];
+
+ document.getElementById("modalContent").innerHTML=`
+
+ <div class="modal-grid">
+
+  <img
+   src="https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/${encodeURIComponent(p.image)}"
+   alt="${p.name}"
+   onerror="this.style.visibility='hidden'">
+
+  <div>
+
+   <div class="sku">SKU: ${p.sku}</div>
+
+   <h2>${p.name}</h2>
+
+   <div class="modal-price">$${money(p.price)}</div>
+
+   <p>${p.summary}</p>
+
+   <button class="btn btn-primary"
+     onclick="addToCart(${i});closeProduct()">
+     ADD TO CART
+   </button>
+
+   <a class="btn btn-outline"
+     href="index.html#quote">
+     REQUEST A QUOTE
+   </a>
+
+  </div>
+
+ </div>
+
+ <h3>Product Description & Specifications</h3>
+
+ <ul>
+  ${p.specs.map(s=>`<li>${s}</li>`).join("")}
+ </ul>
+
+ `;
+
+ document.getElementById("productOverlay").classList.add("show");
+
+}
+
+function closeProduct() {
+ document.getElementById("productOverlay").classList.remove("show");
+}
+
+function addToCart(i) {
+
+ const found=cart.find(x=>x.i===i);
+
+ if(found) {
+  found.qty++;
+ } else {
+  cart.push({i,qty:1});
+ }
+
+ renderCart();
+ toggleCart(true);
+
+}
+
+function changeQty(i,d) {
+
+ const x=cart.find(x=>x.i===i);
+
+ if(!x) return;
+
+ x.qty+=d;
+
+ if(x.qty<=0) {
+  cart=cart.filter(x=>x.i!==i);
+ }
+
+ renderCart();
+
+}
+
+function renderCart() {
+
+ document.getElementById("cartCount").textContent =
+ cart.reduce((s,x)=>s+x.qty,0);
+
+ document.getElementById("cartTotal").textContent =
+ money(cart.reduce((s,x)=>
+ s+products[x.i].price*x.qty,0));
+
+ document.getElementById("cartItems").innerHTML =
+ cart.length
+ ? cart.map(x=>`
+
+  <div class="cart-item">
+
+   <strong>${products[x.i].name}</strong><br>
+
+   SKU: ${products[x.i].sku}<br>
+
+   $${money(products[x.i].price)} each
+
+   <div class="qty">
+
+    <button onclick="changeQty(${x.i},-1)">−</button>
+
+    ${x.qty}
+
+    <button onclick="changeQty(${x.i},1)">+</button>
+
+    <span style="margin-left:auto">
+     $${money(products[x.i].price*x.qty)}
+    </span>
+
+   </div>
+
+  </div>
+
+ `).join("")
+ : "<p>Your cart is empty.</p>";
+
+}
+
+function toggleCart(open) {
+ document.getElementById("cartPanel")
+ .classList.toggle("open",open);
+}
+
+renderProducts();
+renderCart();
+
+</script>
+
 </body>
 </html>
-```
