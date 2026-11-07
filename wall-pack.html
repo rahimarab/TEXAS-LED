@@ -4,312 +4,308 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LED Wall Pack Lights | LED KING</title>
-<meta name="description" content="Shop LED KING wall pack lights, mini wall packs, full cutoff wall packs and outdoor LED wall lighting.">
+<meta name="description" content="Shop LED KING outdoor LED wall pack lights, mini wall packs and full cutoff wall packs.">
+
 <style>
 :root {
-  --black: #171411;
-  --brown: #59402e;
-  --brown-dark: #38271d;
-  --cream: #f5efe4;
-  --cream-light: #fffdf8;
-  --gold: #b9945b;
-  --text: #28221d;
+  --black:#171411;
+  --brown:#59402e;
+  --dark-brown:#38271d;
+  --cream:#f5efe4;
+  --white:#fffdf8;
+  --gold:#b9945b;
 }
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--cream);
+  color:#28221d;
 }
-.topbar {
-  background: var(--black);
-  color: var(--cream);
-  text-align: center;
-  padding: 11px 15px;
-  font-size: 13px;
-  letter-spacing: 1px;
+.topbar{
+  background:var(--black);
+  color:var(--cream);
+  text-align:center;
+  padding:11px;
+  font-size:13px;
+  letter-spacing:1px;
 }
-header {
-  background: var(--brown-dark);
-  color: white;
-  padding: 23px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+header{
+  background:var(--dark-brown);
+  color:white;
+  padding:22px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
 }
-.logo {
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: 2px;
+.logo{
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:2px;
 }
-.logo span { color: var(--gold); }
-.logo small {
-  display: block;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  margin-top: 4px;
+.logo span{color:var(--gold)}
+.logo small{
+  display:block;
+  font-size:11px;
+  font-weight:normal;
+  letter-spacing:3px;
+  margin-top:5px;
 }
-.header-contact {
-  font-size: 14px;
-  line-height: 1.8;
-  text-align: right;
+.contact{
+  text-align:right;
+  font-size:14px;
+  line-height:1.9;
 }
-.header-contact a { color: var(--cream); text-decoration: none; }
-.hero {
-  background: linear-gradient(120deg, #211912, #684a32);
-  color: var(--cream-light);
-  text-align: center;
-  padding: 65px 20px;
+.contact a,footer a{
+  color:var(--cream);
+  text-decoration:none;
 }
-.hero h1 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin: 0 0 15px;
-  letter-spacing: 1px;
+.hero{
+  background:linear-gradient(120deg,#211912,#684a32);
+  color:var(--white);
+  text-align:center;
+  padding:65px 20px;
 }
-.hero p {
-  font-size: 16px;
-  line-height: 1.7;
-  max-width: 750px;
-  margin: auto;
-  color: #eee1ce;
+.hero h1{
+  font-size:clamp(30px,5vw,48px);
+  margin:0 0 15px;
 }
-.hero-line {
-  width: 75px;
-  height: 4px;
-  background: var(--gold);
-  margin: 22px auto 0;
+.hero p{
+  max-width:780px;
+  margin:auto;
+  line-height:1.8;
+  color:#eee1ce;
 }
-.marquee {
-  background: var(--gold);
-  color: var(--black);
-  padding: 12px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  letter-spacing: 1px;
+.hero-line{
+  width:75px;
+  height:4px;
+  background:var(--gold);
+  margin:22px auto 0;
 }
-.container {
-  max-width: 1800px;
-  margin: auto;
-  padding: 35px 3%;
+.marquee{
+  background:var(--gold);
+  color:var(--black);
+  text-align:center;
+  padding:12px;
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
-.section-heading {
-  text-align: center;
-  margin-bottom: 30px;
+.container{
+  max-width:1800px;
+  margin:auto;
+  padding:38px 3%;
 }
-.section-heading h2 {
-  color: var(--brown-dark);
-  font-size: 30px;
-  margin: 0 0 10px;
+.heading{
+  text-align:center;
+  margin-bottom:30px;
 }
-.section-heading p { color: #6e6256; margin: 0; }
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 20px;
+.heading h2{
+  color:var(--dark-brown);
+  font-size:30px;
+  margin:0 0 10px;
 }
-.product-card {
-  background: var(--cream-light);
-  border: 1px solid #dfd2c0;
-  border-radius: 9px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: transform .2s, box-shadow .2s;
+.heading p{color:#75685b}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:20px;
 }
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px #38271d20;
+.product-card{
+  background:var(--white);
+  border:1px solid #dfd2c0;
+  border-radius:9px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:.2s;
 }
-.product-image {
-  height: 220px;
-  padding: 12px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #eee5d9;
+.product-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 22px #38271d20;
 }
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.product-image{
+  height:220px;
+  padding:12px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid #eee5d9;
 }
-.product-info {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
 }
-.product-info h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  margin: 0 0 9px;
-  color: var(--brown-dark);
+.product-info{
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
 }
-.sku {
-  font-size: 12px;
-  color: #766b60;
-  margin-bottom: 10px;
+.product-info h3{
+  font-size:16px;
+  line-height:1.4;
+  color:var(--dark-brown);
+  margin:0 0 9px;
 }
-.price {
-  font-size: 21px;
-  font-weight: 800;
-  color: #76502e;
-  margin: 0 0 13px;
+.sku{
+  color:#766b60;
+  font-size:12px;
+  margin-bottom:10px;
 }
-.product-buttons {
-  display: grid;
-  gap: 8px;
-  margin-top: auto;
+.price{
+  color:#76502e;
+  font-size:21px;
+  font-weight:bold;
+  margin-bottom:13px;
 }
-.btn {
-  display: block;
-  border: none;
-  border-radius: 5px;
-  padding: 11px 8px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  font-family: inherit;
+.buttons{
+  display:grid;
+  gap:8px;
+  margin-top:auto;
 }
-.btn-details {
-  background: var(--cream);
-  color: var(--brown-dark);
-  border: 1px solid #cdbba5;
+.btn{
+  display:block;
+  width:100%;
+  border:0;
+  border-radius:5px;
+  padding:11px 8px;
+  text-align:center;
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+  font-family:inherit;
 }
-.btn-cart {
-  background: var(--brown);
-  color: white;
+.details-btn{
+  background:var(--cream);
+  color:var(--dark-brown);
+  border:1px solid #cdbba5;
 }
-.btn-quote {
-  background: var(--black);
-  color: white;
+.cart-btn{
+  background:var(--brown);
+  color:white;
 }
-.btn:hover { opacity: .85; }
-footer {
-  background: var(--black);
-  color: var(--cream);
-  padding: 38px 5%;
-  text-align: center;
-  line-height: 1.9;
-  margin-top: 35px;
+.quote-btn{
+  background:var(--black);
+  color:white;
 }
-footer h2 { color: var(--gold); margin-top: 0; }
-footer a { color: var(--cream); text-decoration: none; }
-.footer-bottom {
-  border-top: 1px solid #665343;
-  margin-top: 22px;
-  padding-top: 15px;
-  font-size: 12px;
-  color: #c9b9a5;
+.btn:hover{opacity:.85}
+footer{
+  background:var(--black);
+  color:var(--cream);
+  padding:38px 5%;
+  text-align:center;
+  line-height:1.9;
+  margin-top:35px;
 }
-.cart-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 50;
-  background: var(--gold);
-  color: var(--black);
-  border: none;
-  border-radius: 30px;
-  padding: 14px 20px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 15px #0003;
+footer h2{color:var(--gold)}
+.footer-bottom{
+  border-top:1px solid #665343;
+  margin-top:22px;
+  padding-top:15px;
+  font-size:12px;
+  color:#c9b9a5;
 }
-.modal-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: #0009;
-  z-index: 100;
-  padding: 20px;
-  overflow-y: auto;
+.cart-button{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:50;
+  background:var(--gold);
+  color:var(--black);
+  border:0;
+  border-radius:30px;
+  padding:14px 20px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 4px 15px #0003;
 }
-.modal {
-  max-width: 650px;
-  margin: 45px auto;
-  background: var(--cream-light);
-  border-radius: 10px;
-  padding: 25px;
-  position: relative;
+.overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#0009;
+  z-index:100;
+  padding:20px;
+  overflow-y:auto;
 }
-.modal h2 { color: var(--brown-dark); margin-top: 0; }
-.modal-close {
-  position: absolute;
-  right: 15px;
-  top: 12px;
-  border: none;
-  background: none;
-  font-size: 28px;
-  cursor: pointer;
+.modal{
+  max-width:650px;
+  margin:45px auto;
+  background:var(--white);
+  border-radius:10px;
+  padding:25px;
+  position:relative;
 }
-.modal p { line-height: 1.65; white-space: pre-line; }
-.cart-panel {
-  max-width: 500px;
-  margin: 45px auto;
-  background: var(--cream-light);
-  border-radius: 10px;
-  padding: 25px;
+.modal h2{color:var(--dark-brown);margin-top:0}
+.close{
+  position:absolute;
+  right:15px;
+  top:10px;
+  border:0;
+  background:none;
+  font-size:28px;
+  cursor:pointer;
 }
-.cart-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  border-bottom: 1px solid #e3d7c8;
-  padding: 12px 0;
-  font-size: 14px;
+.modal p{line-height:1.7;white-space:pre-line}
+.cart-row{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  border-bottom:1px solid #e3d7c8;
+  padding:12px 0;
+  font-size:14px;
 }
-.cart-row button {
-  border: none;
-  background: transparent;
-  color: #8c3427;
-  cursor: pointer;
+.cart-row button{
+  border:0;
+  background:none;
+  color:#8c3427;
+  cursor:pointer;
 }
-.cart-total {
-  text-align: right;
-  font-size: 20px;
-  font-weight: bold;
-  margin: 20px 0;
+.cart-total{
+  text-align:right;
+  font-size:20px;
+  font-weight:bold;
+  margin:20px 0;
 }
-.empty-cart { color: #766b60; }
-@media (max-width: 1100px) {
-  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media(max-width:1100px){
+  .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
-@media (max-width: 650px) {
-  header { justify-content: center; text-align: center; }
-  .header-contact { text-align: center; }
-  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .product-image { height: 155px; }
-  .product-info { padding: 10px; }
-  .product-info h3 { font-size: 14px; }
-  .price { font-size: 18px; }
-  .btn { font-size: 11px; padding: 10px 5px; }
-  .container { padding: 25px 3%; }
+@media(max-width:650px){
+  header{justify-content:center;text-align:center}
+  .contact{text-align:center}
+  .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .product-image{height:155px}
+  .product-info{padding:10px}
+  .product-info h3{font-size:14px}
+  .price{font-size:18px}
+  .btn{font-size:11px;padding:10px 5px}
+  .container{padding:25px 3%}
 }
-@media (max-width: 360px) {
-  .product-grid { grid-template-columns: 1fr; }
-  .product-image { height: 220px; }
+@media(max-width:360px){
+  .product-grid{grid-template-columns:1fr}
+  .product-image{height:220px}
 }
 </style>
 </head>
+
 <body>
 
 <div class="topbar">
-  🚚 FAST SHIPPING &nbsp; • &nbsp; QUALITY LED LIGHTING &nbsp; • &nbsp; EXPERT SERVICE
+  🚚 FAST SHIPPING • QUALITY LED LIGHTING • EXPERT SERVICE
 </div>
 
 <header>
-  <div class="logo">LED <span>KING</span><small>LIGHTING SOLUTIONS</small></div>
-  <div class="header-contact">
+  <div class="logo">
+    LED <span>KING</span>
+    <small>LIGHTING SOLUTIONS</small>
+  </div>
+  <div class="contact">
     Call: <a href="tel:6822003004">682-200-3004</a><br>
     Email: <a href="mailto:ledkingfortworth@gmail.com">ledkingfortworth@gmail.com</a>
   </div>
@@ -317,7 +313,11 @@ footer a { color: var(--cream); text-decoration: none; }
 
 <section class="hero">
   <h1>LED WALL PACK LIGHTS</h1>
-  <p>Reliable outdoor LED wall pack lighting for commercial buildings, warehouses, businesses, parking areas and exterior walls. Explore our selection of mini wall packs, traditional wall packs and full cutoff fixtures.</p>
+  <p>
+    Professional outdoor LED wall pack lighting for commercial buildings,
+    warehouses, businesses, parking areas and exterior walls.
+    Explore our mini wall packs, traditional wall packs and full cutoff fixtures.
+  </p>
   <div class="hero-line"></div>
 </section>
 
@@ -326,11 +326,10 @@ footer a { color: var(--cream); text-decoration: none; }
 </div>
 
 <main class="container">
-  <div class="section-heading">
+  <div class="heading">
     <h2>Our Wall Pack Collection</h2>
     <p>Explore our available LED wall pack products below.</p>
   </div>
-
   <div class="product-grid" id="productGrid"></div>
 </main>
 
@@ -352,204 +351,170 @@ footer a { color: var(--cream); text-decoration: none; }
   🛒 Cart (<span id="cartCount">0</span>)
 </button>
 
-<div class="modal-overlay" id="detailsOverlay" onclick="overlayClose(event, 'detailsOverlay')">
+<div class="overlay" id="detailsOverlay" onclick="outsideClose(event,'detailsOverlay')">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('detailsOverlay')">&times;</button>
+    <button class="close" onclick="closeModal('detailsOverlay')">&times;</button>
     <div id="detailsContent"></div>
   </div>
 </div>
 
-<div class="modal-overlay" id="cartOverlay" onclick="overlayClose(event, 'cartOverlay')">
-  <div class="cart-panel">
-    <button class="modal-close" onclick="closeModal('cartOverlay')">&times;</button>
+<div class="overlay" id="cartOverlay" onclick="outsideClose(event,'cartOverlay')">
+  <div class="modal">
+    <button class="close" onclick="closeModal('cartOverlay')">&times;</button>
     <h2>Your Shopping Cart</h2>
     <div id="cartItems"></div>
     <div class="cart-total" id="cartTotal"></div>
-    <a class="btn btn-quote" href="index.html#quote">REQUEST A QUOTE</a>
+    <a class="btn quote-btn" href="index.html#quote">REQUEST A QUOTE</a>
   </div>
 </div>
 
 <script>
+const imageBase =
+"https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/";
+
 const products = [
-  {
-    name: "12W LED Outdoor Wall Light",
-    sku: "1970",
-    price: 45,
-    image: "WALLPACK 1.png",
-    description: `12W DOB LED outdoor wall light.
+{
+name:"12W LED Outdoor Wall Light",
+sku:"1970",price:45,image:"WALLPACK 1.png",
+description:`12W DOB LED outdoor wall light.
 5000K color temperature.
 Black aluminum housing with PC diffuser.
-Dimensions: 5-1/4" W x 2-5/8" D x 8-5/8" H.
-Designed for outdoor wall lighting.`
-  },
-  {
-    name: "20W Mini LED Wall Pack",
-    sku: "1322 / 1182",
-    price: 35,
-    image: "WALLPACK 2.png",
-    description: `20W mini LED wall pack.
+Dimensions: 5-1/4" W x 2-5/8" D x 8-5/8" H.`
+},
+{
+name:"20W Mini LED Wall Pack",
+sku:"1322 / 1182",price:35,image:"WALLPACK 2.png",
+description:`20W mini LED wall pack.
 5700K color temperature.
 Bronze housing.
-Photocell information differs between the supplied product descriptions. Please confirm the exact version and photocell option before ordering.`
-  },
-  {
-    name: "20W Old Style Mini Wall Pack",
-    sku: "937",
-    price: 35,
-    image: "WALLPACK 3.png",
-    description: `20W old style mini LED wall pack.
+The supplied descriptions differ about the photocell. Please confirm the exact version before ordering.`
+},
+{
+name:"20W Old Style Mini Wall Pack",
+sku:"937",price:35,image:"WALLPACK 3.png",
+description:`20W old style mini LED wall pack.
 5700K color temperature.
 Frosted cover.
 No photocell.`
-  },
-  {
-    name: "26W Mini LED Wall Pack",
-    sku: "1344 / 1368",
-    price: 40,
-    image: "WALLPACK 4.png",
-    description: `26W mini LED wall pack.
+},
+{
+name:"26W Mini LED Wall Pack",
+sku:"1344 / 1368",price:40,image:"WALLPACK4.png",
+description:`26W mini LED wall pack.
 5700K color temperature.
 Brown housing.
 3000 delivered lumens.
-120–277V.
-Non-dimmable.
+120–277V, non-dimmable.
 Wet-location rated.
 ETL and DLC listed.
 12 pieces per carton.
-Please confirm the photocell option for the exact version.`
-  },
-  {
-    name: "30W Mini LED Wall Pack with Photocell",
-    sku: "Not provided",
-    price: 50,
-    image: "WALLPACK 5.png",
-    description: `30W mini LED wall pack.
+Confirm photocell option for the exact version.`
+},
+{
+name:"30W Mini LED Wall Pack with Photocell",
+sku:"Not provided",price:50,image:"WALLPACK5.png",
+description:`30W mini LED wall pack.
 Model: SNC-MWP03-30W.
 5700K color temperature.
 Built-in photocell.
 ETL listed.`
-  },
-  {
-    name: "40W Rotatable LED Wall Pack",
-    sku: "1050",
-    price: 99,
-    image: "WALLPACK 6.png",
-    description: `40W rotatable LED wall pack.
+},
+{
+name:"40W Rotatable LED Wall Pack",
+sku:"1050",price:99,image:"WALLPACK6.png",
+description:`40W rotatable LED wall pack.
 5700K color temperature.
 Seoul 3030 LED chips.
 China driver.
 UL and DLC listed.`
-  },
-  {
-    name: "60W Full Cutoff LED Wall Pack",
-    sku: "2544",
-    price: 175,
-    image: "WALLPACK 7.png",
-    description: `Full cutoff LED wall pack.
+},
+{
+name:"60W Full Cutoff LED Wall Pack",
+sku:"2544",price:175,image:"WALLPACK7.png",
+description:`Full cutoff LED wall pack.
 Selectable wattage: 60W / 40W / 20W.
-Selectable color temperature: 3000K / 4000K / 5000K.
+Selectable CCT: 3000K / 4000K / 5000K.
 Black housing.
 China driver.
 AC 100–277V.`
-  },
-  {
-    name: "70W Traditional LED Wall Pack",
-    sku: "1415",
-    price: 106,
-    image: "WALLPACK 8.png",
-    description: `70W traditional LED wall pack.
-5000K color temperature.
-Bronze housing.
-100–277V.
-CRI 80+.
+},
+{
+name:"70W Traditional LED Wall Pack",
+sku:"1415",price:106,image:"WALLPACK8.png",
+description:`70W traditional LED wall pack.
+5000K, bronze housing.
+100–277V, CRI 80+.
 IP65 rated.
 Slip-fit AM bracket.
 Photocell compatible; photocell not included.
 cULus and DLC listed.
 50,000-hour rated life.
 5-year warranty.`
-  },
-  {
-    name: "SWP08 60W / 80W LED Wall Pack",
-    sku: "408 / 2014 / 2122",
-    price: 150,
-    image: "WALLPACK 9.png",
-    description: `SWP08 LED wall pack.
+},
+{
+name:"SWP08 60W / 80W LED Wall Pack",
+sku:"408 / 2014 / 2122",price:150,image:"WALLPACK9.png",
+description:`SWP08 LED wall pack.
 60W / 80W options.
-5700K color temperature.
-Brown housing.
+5700K, brown housing.
 Lumileds 2835 LED chips.
 China driver.
-Photocell option as described in product title.
+Photocell as described in supplied product title.
 AC 100–277V.
 UL and DLC listed.
 IP65 rated.
 5-year warranty.`
-  },
-  {
-    name: "72W LED Wall Pack",
-    sku: "2552",
-    price: 150,
-    image: "WALLPACK 10.png",
-    description: `72W LED wall pack.
+},
+{
+name:"72W LED Wall Pack",
+sku:"2552",price:150,image:"WALLPACK10.png",
+description:`72W LED wall pack.
 Lumileds 2835 LED chips.
 Up to 115 lumens per watt.
 120–277VAC.
 Die-cast aluminum housing.
 IP65 rated.
 UL and cUL listed.
-Flicker-free operation.
-Surge protection.
+Flicker-free operation and surge protection.
 0–10V dimming.
 Optional photocontrol.`
-  },
-  {
-    name: "80W New 01B Rotatable LED Wall Pack",
-    sku: "1051",
-    price: 199,
-    image: "WALLPACK 11.png",
-    description: `New 01B rotatable LED wall pack.
-80W.
-5700K color temperature.
+},
+{
+name:"80W New 01B Rotatable LED Wall Pack",
+sku:"1051",price:199,image:"WALLPACK11.png",
+description:`New 01B rotatable LED wall pack.
+80W, 5700K.
 Seoul 3030 LED chips.
 China driver.
 UL and DLC listed.`
-  },
-  {
-    name: "80W Adjustable LED Wall Pack",
-    sku: "2541",
-    price: 129,
-    image: "WALLPACK 12.png",
-    description: `80W adjustable LED wall pack.
-Selectable color temperature: 3000K / 4000K / 5000K.
+},
+{
+name:"80W Adjustable LED Wall Pack",
+sku:"2541",price:129,image:"WALLPACK12.png",
+description:`80W adjustable LED wall pack.
+Selectable CCT: 3000K / 4000K / 5000K.
 AC 100–277V.
 Black housing.
 China driver.`
-  },
-  {
-    name: "90W LED Flood Light",
-    sku: "2022",
-    price: 150,
-    image: "WALLPACK 13.png",
-    description: `AST-FL06-90W LED flood light.
-90W.
-5700K color temperature.
+},
+{
+name:"90W LED Flood Light",
+sku:"2022",price:150,image:"WALLPACK13.png",
+description:`AST-FL06-90W LED flood light.
+90W, 5700K.
 AC 120–277V.
 Seoul LED chips.
 China driver.
 Black housing.
 FM bracket.
 UL listed.
-This product was included in the supplied Wall Pack product group; please confirm its category if needed.`
-  },
-  {
-    name: "120W SWP05 LED Wall Pack",
-    sku: "695",
-    price: 225,
-    image: "WALLPACK 14.png",
-    description: `SWP05 larger LED wall pack.
-120W.
-5700K color temperature.
+Included in the supplied Wall Pack product group; confirm category if needed.`
+},
+{
+name:"120W SWP05 LED Wall Pack",
+sku:"695",price:225,image:"WALLPACK14.png",
+description:`SWP05 larger LED wall pack.
+120W, 5700K.
 Brown housing.
 China driver.
 No photocell.
@@ -558,184 +523,168 @@ UL and DLC listed.
 IP65 rated.
 cULus listed.
 5-year warranty.`
-  },
-  {
-    name: "SWP11M Selectable LED Wall Pack",
-    sku: "2123",
-    price: 199,
-    image: "WALLPACK 15.png",
-    description: `SWP11M LED wall pack.
+},
+{
+name:"SWP11M Selectable LED Wall Pack",
+sku:"2123",price:199,image:"WALLPACK15.png",
+description:`SWP11M LED wall pack.
 Selectable wattage: 120W / 80W / 60W.
-Selectable color temperature: 3000K / 4000K / 5000K.
+Selectable CCT: 3000K / 4000K / 5000K.
 AC 120–277V.
 Glass cover.
 Wet-location rated.
 ETL and DLC listed.`
-  },
-  {
-    name: "120W Semi-Cutoff LED Wall Pack",
-    sku: "2122",
-    price: 175,
-    image: "WALLPACK 16.png",
-    description: `120W semi-cutoff LED wall pack.
-5700K color temperature.
+},
+{
+name:"120W Semi-Cutoff LED Wall Pack",
+sku:"2122",price:175,image:"WALLPACK16.png",
+description:`120W semi-cutoff LED wall pack.
+5700K.
 Photocell.
 AC 100–277V.
 UL and DLC listed.`
-  },
-  {
-    name: "120W Full Cutoff Selectable LED Wall Pack",
-    sku: "2545",
-    price: 275,
-    image: "WALLPACK 17.png",
-    description: `Full cutoff LED wall pack.
+},
+{
+name:"120W Full Cutoff Selectable LED Wall Pack",
+sku:"2545",price:275,image:"WALLPACK17.png",
+description:`Full cutoff LED wall pack.
 Selectable wattage: 120W / 100W / 80W.
-Selectable color temperature: 3000K / 4000K / 5000K.
+Selectable CCT: 3000K / 4000K / 5000K.
 Black housing.
 China driver.
 AC 100–277V.`
-  },
-  {
-    name: "200W LED Wall Pack",
-    sku: "2015",
-    price: 350,
-    image: "WALLPACK 18.png",
-    description: `200W LED wall pack.
-5700K color temperature.
-Brown housing.
+},
+{
+name:"200W LED Wall Pack",
+sku:"2015",price:350,image:"WALLPACK18.png",
+description:`200W LED wall pack.
+5700K, brown housing.
 Lumileds 2835 LED chips.
 China driver.
 No photocell.
 AC 100–277V.
 UL and DLC listed.`
-  },
-  {
-    name: "30W Full Cutoff LED Wall Pack",
-    sku: "2313",
-    price: 109,
-    image: "WALLPACK 19.png",
-    description: `LED KING full cutoff LED wall pack.
+},
+{
+name:"30W Full Cutoff LED Wall Pack",
+sku:"2313",price:109,image:"WALLPACK19.png",
+description:`LED KING full cutoff LED wall pack.
 Model: LK-FWP01B-30W.
-30W.
-Up to 4200 lumens.
-Selectable color temperature: 3000K / 4000K / 5000K.
+30W, up to 4200 lumens.
+Selectable CCT: 3000K / 4000K / 5000K.
 Lumileds SMD2835 LED chips.
 Daermay driver.
 Die-cast aluminum housing.
-IP65 rated.
-0% uplight.
+IP65 rated, 0% uplight.
 0–10V dimming.
 UL and cUL listed.
 5-year warranty.`
-  }
+}
 ];
 
-const imageBase = "https://raw.githubusercontent.com/rahimarab/TEXAS-LED/main/";
-const grid = document.getElementById("productGrid");
-let cart = [];
+let cart=[];
 
-function renderProducts() {
-  grid.innerHTML = products.map((product, index) => `
+function renderProducts(){
+  const grid=document.getElementById("productGrid");
+
+  grid.innerHTML=products.map((p,i)=>`
     <article class="product-card">
       <div class="product-image">
         <img
-          src="${imageBase + encodeURIComponent(product.image)}"
-          alt="${product.name}"
+          src="${imageBase + encodeURIComponent(p.image)}"
+          alt="${p.name}"
           loading="lazy"
-          onerror="this.onerror=null;this.alt='Product image not available';"
+          onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<span style=&quot;color:#766b60;text-align:center;font-size:13px&quot;>Image not found:<br>${p.image}</span>';"
         >
       </div>
       <div class="product-info">
-        <h3>${product.name}</h3>
-        <div class="sku">SKU: ${product.sku}</div>
-        <div class="price">$${product.price.toFixed(2)}</div>
-        <div class="product-buttons">
-          <button class="btn btn-details" onclick="showDetails(${index})">VIEW DETAILS</button>
-          <button class="btn btn-cart" onclick="addToCart(${index})">ADD TO CART</button>
-          <a class="btn btn-quote" href="index.html#quote">REQUEST A QUOTE</a>
+        <h3>${p.name}</h3>
+        <div class="sku">SKU: ${p.sku}</div>
+        <div class="price">$${p.price.toFixed(2)}</div>
+        <div class="buttons">
+          <button class="btn details-btn" onclick="showDetails(${i})">VIEW DETAILS</button>
+          <button class="btn cart-btn" onclick="addToCart(${i})">ADD TO CART</button>
+          <a class="btn quote-btn" href="index.html#quote">REQUEST A QUOTE</a>
         </div>
       </div>
     </article>
   `).join("");
 }
 
-function showDetails(index) {
-  const product = products[index];
-  document.getElementById("detailsContent").innerHTML = `
-    <h2>${product.name}</h2>
-    <p><strong>SKU:</strong> ${product.sku}</p>
-    <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
-    <p>${product.description}</p>
-    <button class="btn btn-cart" onclick="addToCart(${index});closeModal('detailsOverlay')">ADD TO CART</button>
-    <a class="btn btn-quote" style="margin-top:10px" href="index.html#quote">REQUEST A QUOTE</a>
+function showDetails(i){
+  const p=products[i];
+  document.getElementById("detailsContent").innerHTML=`
+    <h2>${p.name}</h2>
+    <p><strong>SKU:</strong> ${p.sku}</p>
+    <p><strong>Price:</strong> $${p.price.toFixed(2)}</p>
+    <p>${p.description}</p>
+    <button class="btn cart-btn" onclick="addToCart(${i});closeModal('detailsOverlay')">ADD TO CART</button>
+    <a class="btn quote-btn" style="margin-top:10px" href="index.html#quote">REQUEST A QUOTE</a>
   `;
-  document.getElementById("detailsOverlay").style.display = "block";
+  document.getElementById("detailsOverlay").style.display="block";
 }
 
-function addToCart(index) {
-  const product = products[index];
-  const existing = cart.find(item => item.index === index);
-  if (existing) {
-    existing.quantity += 1;
-  } else {
-    cart.push({ index, quantity: 1 });
-  }
-  updateCart();
-  alert(product.name + " added to cart.");
-}
-
-function removeFromCart(index) {
-  cart = cart.filter(item => item.index !== index);
+function addToCart(i){
+  const item=cart.find(x=>x.index===i);
+  if(item){item.quantity++}
+  else{cart.push({index:i,quantity:1})}
   updateCart();
 }
 
-function updateCart() {
-  const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-  document.getElementById("cartCount").textContent = count;
+function removeFromCart(i){
+  cart=cart.filter(x=>x.index!==i);
+  updateCart();
+}
 
-  const cartItems = document.getElementById("cartItems");
-  if (cart.length === 0) {
-    cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
-    document.getElementById("cartTotal").textContent = "";
+function updateCart(){
+  document.getElementById("cartCount").textContent=
+    cart.reduce((sum,x)=>sum+x.quantity,0);
+
+  const box=document.getElementById("cartItems");
+  if(cart.length===0){
+    box.innerHTML='<p>Your cart is empty.</p>';
+    document.getElementById("cartTotal").textContent="";
     return;
   }
 
-  let total = 0;
-  cartItems.innerHTML = cart.map(item => {
-    const product = products[item.index];
-    const lineTotal = product.price * item.quantity;
-    total += lineTotal;
+  let total=0;
+  box.innerHTML=cart.map(item=>{
+    const p=products[item.index];
+    const line=p.price*item.quantity;
+    total+=line;
     return `
       <div class="cart-row">
         <div>
-          <strong>${product.name}</strong><br>
+          <strong>${p.name}</strong><br>
           Quantity: ${item.quantity}<br>
-          $${lineTotal.toFixed(2)}
+          $${line.toFixed(2)}
         </div>
         <button onclick="removeFromCart(${item.index})">Remove</button>
       </div>
     `;
   }).join("");
 
-  document.getElementById("cartTotal").textContent = "Subtotal: $" + total.toFixed(2);
+  document.getElementById("cartTotal").textContent=
+    "Subtotal: $"+total.toFixed(2);
 }
 
-function openCart() {
+function openCart(){
   updateCart();
-  document.getElementById("cartOverlay").style.display = "block";
+  document.getElementById("cartOverlay").style.display="block";
 }
 
-function closeModal(id) {
-  document.getElementById(id).style.display = "none";
+function closeModal(id){
+  document.getElementById(id).style.display="none";
 }
 
-function overlayClose(event, id) {
-  if (event.target.id === id) closeModal(id);
+function outsideClose(event,id){
+  if(event.target.id===id)closeModal(id);
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 renderProducts();
 updateCart();
 </script>
+
 </body>
 </html>
