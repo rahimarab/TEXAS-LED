@@ -1436,6 +1436,19 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 @media (max-width: 767px) {
   #products .product-grid > .product-card.category-card .product-image { width: 100% !important; height: auto !important; aspect-ratio: 1 / 1 !important; padding: 0 !important; }
 }
+
+/* LARGE PROMOTIONAL DISCOUNT SECTION */
+.discount-feature { padding: 34px 18px; background: #f3f6f6; }
+.discount-feature-inner { max-width: 1500px; margin: 0 auto; border-radius: 22px; overflow: hidden; text-align: center; padding: clamp(30px, 5vw, 68px) 24px; color: #fff; background: radial-gradient(circle at 85% 20%, rgba(0,184,169,.36), transparent 35%), linear-gradient(120deg,#07110f,#101716 65%,#073b37); border: 2px solid #d7f36a; box-shadow: 0 14px 38px rgba(0,0,0,.15); }
+.discount-feature .discount-kicker { font-size: clamp(17px, 2vw, 25px); font-weight: 900; letter-spacing: 2.5px; color: #d7f36a; margin-bottom: 12px; }
+.discount-feature h2 { font-size: clamp(48px, 8vw, 100px); line-height: .98; font-weight: 1000; letter-spacing: -2px; margin: 0 0 14px; color: #fff; }
+.discount-feature h2 span { color: #d7f36a; }
+.discount-feature .discount-subtitle { font-size: clamp(21px, 3.5vw, 40px); line-height: 1.15; font-weight: 900; margin: 0 auto 16px; color: #fff; }
+.discount-feature .discount-copy { font-size: clamp(16px, 2vw, 23px); line-height: 1.5; margin: 0 auto 25px; color: #f1f4f3; }
+.discount-feature .discount-cta { display: inline-flex; align-items: center; justify-content: center; padding: 16px 28px; border-radius: 999px; background: #d7f36a; color: #101716; font-size: clamp(16px, 1.8vw, 21px); font-weight: 950; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.discount-feature .discount-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(215,243,106,.25); }
+@media (max-width: 600px) { .discount-feature { padding: 22px 12px; } .discount-feature-inner { padding: 32px 16px; border-radius: 16px; } .discount-feature h2 { letter-spacing: -1px; } }
+
 </style>
 
 </head>
@@ -1443,7 +1456,7 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 <body>
 
 <!-- YELLOW ANNOUNCEMENT STRIP -->
-<div class="announcement-strip">COMMERCIAL LIGHTING SOLUTIONS <span>•</span> BULK ORDER PRICING AVAILABLE <span>•</span> SHIPPING NATIONWIDE</div>
+<div class="announcement-strip">UP TO 50% OFF SELECT PRODUCTS <span>•</span> FOR ADDITIONAL PRICING & BULK DISCOUNTS, CONTACT US <span>•</span> SHIPPING NATIONWIDE</div>
 
 <!-- MAIN HEADER: brand left, navigation centered, cart and quote right -->
 <header class="main-header">
@@ -1481,9 +1494,21 @@ footer{background:#26382E !important;color:#fff !important;border-top:3px solid 
 
 <!-- MOVING BENEFITS TICKER: transparent background, bold black text -->
 <div class="benefits-marquee" aria-label="LED KING benefits"><div class="benefits-marquee-track">
-  <div class="benefits-marquee-group">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
-  <div class="benefits-marquee-group" aria-hidden="true">🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🏷️ Best Prices <span>•</span> 🎧 Expert Support <span>•</span></div>
+  <div class="benefits-marquee-group">🔥 Up to 50% OFF Select Products <span>•</span> 💬 Contact Us for Additional Pricing <span>•</span> 🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🎧 Expert Support <span>•</span></div>
+  <div class="benefits-marquee-group" aria-hidden="true">🔥 Up to 50% OFF Select Products <span>•</span> 💬 Contact Us for Additional Pricing <span>•</span> 🚚 Fast Shipping <span>•</span> 🛡️ Top Quality <span>•</span> 🎧 Expert Support <span>•</span></div>
 </div></div>
+
+
+<!-- LARGE DISCOUNT PROMO SECTION -->
+<section class="discount-feature" aria-label="Special LED lighting discount offer">
+  <div class="discount-feature-inner">
+    <div class="discount-kicker">🔥 LIMITED-TIME SPECIAL OFFER 🔥</div>
+    <h2>UP TO <span>50% OFF</span></h2>
+    <p class="discount-subtitle">SELECT LED LIGHTING PRODUCTS</p>
+    <p class="discount-copy">Looking for wholesale, bulk, or additional pricing? <strong>Contact us for special prices!</strong></p>
+    <a class="discount-cta" href="#contact">CONTACT US FOR PRICING</a>
+  </div>
+</section>
 
 <!-- PRODUCTS -->
 <section class="section" id="products">
