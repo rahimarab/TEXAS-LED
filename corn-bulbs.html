@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Shop LED KING corn bulbs and commercial LED corn lights.">
-<title>Corn Bulbs | LED KING Lighting Solutions</title>
+<meta name="description" content="Shop RUSSIAN ELECTRIC corn bulbs and commercial LED corn lights.">
+<title>Corn Bulbs | RUSSIAN ELECTRIC Lighting Solutions</title>
 <style>
 :root{
   --bg:#080b0b;--panel:#111818;--panel2:#172120;--teal:#00b8a9;
@@ -76,7 +76,7 @@ footer strong{color:var(--white)}
 @media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.image-wrap{height:190px}.card-body{padding:12px}.nav{align-items:flex-start}.navlinks{gap:10px}.navlinks a{font-size:.82rem}.modal-content{grid-template-columns:1fr}}
 @media(max-width:460px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.image-wrap{height:150px;padding:8px}.card h2{font-size:.96rem}.specs{font-size:.8rem}.actions{flex-direction:column}.actions button{width:100%}.brand{font-size:1.15rem}}
 
-/* LED KING master website theme: forest green, ivory, champagne gold, and yellow */
+/* RUSSIAN ELECTRIC master website theme: forest green, ivory, champagne gold, and yellow */
 :root{
   --bg:#F4F0E8;
   --panel:#FFFFFF;
@@ -132,7 +132,7 @@ footer a{color:#FFD400}
 <body>
 <header>
   <nav class="nav">
-    <a class="brand" href="index.html" aria-label="LED KING home">LED <span>KING</span></a>
+    <a class="brand" href="index.html" aria-label="RUSSIAN ELECTRIC home">LED <span>KING</span></a>
     <div class="navlinks">
       <a href="index.html">Home</a>
       <a href="#products">Corn Bulbs</a>
@@ -144,7 +144,7 @@ footer a{color:#FFD400}
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">LED KING · Lighting Solutions</div>
+    <div class="eyebrow">RUSSIAN ELECTRIC · Lighting Solutions</div>
     <h1>LED Corn Bulbs</h1>
     <p>Commercial and industrial LED corn lights for retrofit applications, wall packs, post lights, parking lots, garages, warehouses, and more. Select a product to view specifications or add it to your cart.</p>
   </div>
@@ -161,7 +161,7 @@ footer a{color:#FFD400}
 <main class="grid" id="product-grid"></main>
 
 <footer>
-  <strong>LED KING · Lighting Solutions</strong><br>
+  <strong>RUSSIAN ELECTRIC · Lighting Solutions</strong><br>
   Professional LED lighting products and solutions in Fort Worth, Texas and across the United States.<br>
   <a href="index.html#quote">Request a quote</a>
 </footer>
@@ -262,7 +262,7 @@ function renderCart(){
 function toggleCart(open){document.getElementById("cart-panel").classList.toggle("open",open)}
 function requestQuote(){
   const lines=cart.map(item=>{const p=products.find(x=>x.id===item.id);return `${p.name} | SKU ${p.sku} | Qty ${item.qty} | ${p.price===null?'Price on request':money(p.price)}`});
-  const body=encodeURIComponent("Hello LED KING,\n\nPlease provide a quote for:\n"+lines.join("\n")+"\n\nPlease confirm final pricing, availability, and shipping.");
+  const body=encodeURIComponent("Hello RUSSIAN ELECTRIC,\n\nPlease provide a quote for:\n"+lines.join("\n")+"\n\nPlease confirm final pricing, availability, and shipping.");
   window.location.href="index.html#quote";
   // If the homepage quote form is not connected to cart data, users can copy the list from this cart.
   alert("Please mention these items in your quote request:\n\n"+lines.join("\n")+"\n\nEstimated merchandise total: "+document.getElementById("cart-total").textContent);
